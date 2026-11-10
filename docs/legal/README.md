@@ -1,6 +1,9 @@
 # goudduo — Legal e Privacidade (índice de minutas v0.1)
 
-> **STATUS:** documentos preparados em 10/11/2026, em **PR documental para revisão**. **Não aprovados juridicamente nem publicados para usuários.** Este conjunto preserva a identificação fornecida pelo controlador e reconcilia os contratos existentes da GODUOIT. **Não alterar as telas homologadas** de Acesso, Cadastro e OTP sem autorização separada.
+> **Homologação editorial do proprietário — 10/11/2026:** a modelagem v0.1 foi aprovada para servir como **baseline documental do goudduo**, incluindo Termos de Uso, Política de Privacidade, matriz de dados/retenção e UX de direitos/exclusão. **Não é parecer jurídico nem aprovação para produção.** Antes de publicar ou habilitar cadastro real: revisão jurídica especializada, confirmação de bases legais, contratos, regiões, prazos, exclusão operacional, links públicos e registro adequado de aceite.
+>
+
+> **STATUS (10/11/2026): HOMOLOGADO EDITORIALMENTE COMO BASELINE DOCUMENTAL V0.1** pelo proprietário. **Ainda não aprovado juridicamente, publicado, nem liberado para produção.** Sem alterar as telas homologadas de Acesso, Cadastro e OTP sem autorização separada.
 
 ## Documentos
 
