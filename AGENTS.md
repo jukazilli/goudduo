@@ -2,6 +2,12 @@
 
 > Este arquivo define **processo de trabalho**, não é uma segunda fonte de decisões de marca ou produto. O [README](README.md) e o [Manifesto](docs/brand/MANIFESTO.md) são as referências institucionais vigentes. O processo de redesign está em [docs/process/REDESIGN-SUPERFICIES.md](docs/process/REDESIGN-SUPERFICIES.md).
 
+## Convenção institucional obrigatória (homologada na main em 10/11/2026)
+
+**Sempre se referir à marca no feminino: a goudduo, da goudduo, na goudduo, pela goudduo.** O logotipo é escrito `goudduo`, minúsculo. Não alterar a assinatura institucional "Experiências, conexões e bem-estar." por conta própria; "Conecte-se com a vida real." é uma frase-manifesto e requer decisão por tela antes de uso visual.
+
+Consultar [README](README.md), [Manifesto](docs/brand/MANIFESTO.md) e [Plataforma estratégica](docs/brand/PLATAFORMA-ESTRATEGICA.md) atualizados na main. Homologação documental: [PR #3](https://github.com/jukazilli/goudduo/pull/3).
+
 ## Antes de qualquer tarefa de UI/UX
 
 1. Ler `README.md`, `docs/brand/MANIFESTO.md` e o processo de redesign.
