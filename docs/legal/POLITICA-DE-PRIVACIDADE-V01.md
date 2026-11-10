@@ -1,6 +1,9 @@
 # Política de Privacidade do goudduo — Minuta v0.1
 
-> **MINUTA PARA REVISÃO E HOMOLOGAÇÃO — NÃO PUBLICAR COMO POLÍTICA VIGENTE.**
+> **Homologação editorial do proprietário — 10/11/2026:** a modelagem v0.1 foi aprovada para servir como **baseline documental do goudduo**, incluindo Termos de Uso, Política de Privacidade, matriz de dados/retenção e UX de direitos/exclusão. **Não é parecer jurídico nem aprovação para produção.** Antes de publicar ou habilitar cadastro real: revisão jurídica especializada, confirmação de bases legais, contratos, regiões, prazos, exclusão operacional, links públicos e registro adequado de aceite.
+>
+
+> **HOMOLOGAÇÃO EDITORIAL V0.1 — APROVADA PELO PROPRIETÁRIO EM 10/11/2026; PENDENTE DE REVISÃO JURÍDICA E PUBLICAÇÃO. NÃO USAR COMO POLÍTICA VIGENTE.**
 >
 > Preparação: 10/11/2026. Versão de trabalho: 0.1. **Data de vigência:** a definir após confirmação dos fluxos técnicos, da infraestrutura, das bases legais, dos prazos e da revisão jurídica. As categorias descritas representam tratamento **previsto para funcionalidades aprovadas no produto ou investigadas para etapas futuras**; não afirmam que todos esses dados já estejam sendo coletados. Antes de publicar, a política deverá refletir apenas o tratamento efetivamente realizado, com previsão transparente de funções futuras em seção própria.
 
