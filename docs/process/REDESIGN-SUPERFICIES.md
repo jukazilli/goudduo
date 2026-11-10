@@ -8,6 +8,16 @@
 
 Usar sempre o masculino para a marca: **o goudduo**, **do goudduo**, **no goudduo**, **pelo goudduo**. O [Manifesto vigente](../brand/MANIFESTO.md) e a [Plataforma estratégica homologada](../brand/PLATAFORMA-ESTRATEGICA.md) definem o posicionamento e o escopo inicial de produto. A expressão "Seu parceiro na vida real." é a frase-manifesto oficial; sua aplicação na Splash está em refinamento visual após substituir a copy da V3 aprovada (Issue #1). Não transplantar automaticamente para outras telas.
 
+## Gate transversal — sistema antes da tela
+
+**Decisão do proprietário:** não começar o Login ou outro redesign criando imagem, HTML ou código. A primeira entrega é o **Design System da [Issue #7](https://github.com/jukazilli/goudduo/issues/7)**, reconciliando [referência do Login em JSON](../design-system/REFERENCE-LOGIN-EXTRACTION.json), [tokens semânticos](../design-system/TOKENS.json), [Foundations + Do/Don't](../design-system/FOUNDATIONS.md), e [checklist obrigatório dos agentes](../design-system/AI-HANDOFF-GATE.md).
+
+**Handoff de IA obrigatório:** confirmar leitura integral e preencher matriz de tokens, hierarquia, regras Do/Don't e QA; se faltar, não aprovar entrega da tela. **Os valores numéricos novos do design system são propostas até homologação.** Não tornar `#E3F0FF` ou uma cor medida da foto em token global por inferência.
+
+**Política de personalidade:** Login é a única experiência de acesso com gradiente multicolorido/hero energético. Cadastro, Google complementar, OTP, Recuperação, Nova senha, Sucesso e telas internas são predominantemente **branco/gelo, sem gradiente decorativo**. A **Home Treinos V5.3** preserva exceções locais homologadas — Bento pastel e Treino do Dia com gradiente charcoal — sem transferi-las para outras telas.
+
+**Restrições absolutas de composição:** não inserir textos que explicam a UI/UX desnecessariamente; não pôr círculos/fundos em ícones sem função; botões com **apenas ícone OU apenas texto**; preservar Lucide, wordmark SVG original e componentes já aprovados.
+
 ## 1. Princípios
 
 1. **goudduo é a fonte das decisões do produto novo**; o repositório [GODUOIT](https://github.com/jukazilli/GODUOIT) é fonte de referência e aprendizado, não código a importar sem crítica.
@@ -83,7 +93,7 @@ Quando uma decisão for substituída, referenciar o comentário anterior e indic
 
 **Primeiro recorte:** [Issue #1 — Splash Screen](https://github.com/jukazilli/goudduo/issues/1).
 
-**Sequência inicial:** Splash → Login → Cadastro/OTP/Recuperação → Onboarding enxuto → Home Treinos (V5.3 como referência) → demais superfícies inventariadas.
+**Sequência inicial:** Splash (V3 composição aprovada; V4 copy em revisão) → **Design System (Issue #7 antes de código visual)** → Login (Issue #6) → Cadastro/OTP/Recuperação → Onboarding enxuto → Home Treinos (V5.3 como referência) → demais superfícies inventariadas.
 
 **SVGs verificados em 10/11/2026:** [wordmark preta](https://github.com/jukazilli/goudduo/blob/main/assets/brand/goudduo/goudduo-wordmark-black.svg) e [wordmark branca](https://github.com/jukazilli/goudduo/blob/main/assets/brand/goudduo/goudduo-wordmark-white.svg). Os dois arquivos são vetoriais; símbolo isolado/lockup vertical não foi verificado. Ver detalhes na [Issue #1](https://github.com/jukazilli/goudduo/issues/1).
 
