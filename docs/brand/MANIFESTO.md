@@ -104,7 +104,7 @@ E não queremos ser uma rede social que disputa atenção sem propósito.
 
 Queremos ajudar pessoas a sair do isolamento, encontrar inspiração e construir relações que possam continuar fora das telas.
 
-**A goudduo. Conecte-se com a vida real.**
+**goudduo. Conecte-se com a vida real.**
 
 ## Nossa promessa
 
