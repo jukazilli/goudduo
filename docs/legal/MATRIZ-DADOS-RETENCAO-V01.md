@@ -1,6 +1,9 @@
 # goudduo — Matriz de tratamento, visibilidade, retenção e exclusão v0.1
 
-> **STATUS: MODELAGEM TÉCNICO-JURÍDICA PARA REVISÃO, NÃO IMPLEMENTADA / NÃO HOMOLOGADA.**
+> **Homologação editorial do proprietário — 10/11/2026:** a modelagem v0.1 foi aprovada para servir como **baseline documental do goudduo**, incluindo Termos de Uso, Política de Privacidade, matriz de dados/retenção e UX de direitos/exclusão. **Não é parecer jurídico nem aprovação para produção.** Antes de publicar ou habilitar cadastro real: revisão jurídica especializada, confirmação de bases legais, contratos, regiões, prazos, exclusão operacional, links públicos e registro adequado de aceite.
+>
+
+> **STATUS: MODELO V0.1 HOMOLOGADO EDITORIALMENTE EM 10/11/2026; NÃO IMPLEMENTADO, NÃO AUDITADO E NÃO VALIDADO JURIDICAMENTE.**
 >
 > **Controlador informado:** Juliano de Lima Pedroso (pessoa física); canal de privacidade e exclusão: **smkahrun01@gmail.com**.
 >
