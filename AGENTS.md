@@ -5,7 +5,7 @@
 ## Antes de qualquer tarefa de UI/UX
 
 1. Ler `README.md`, `docs/brand/MANIFESTO.md` e o processo de redesign.
-2. **Localizar ou abrir uma única Issue canônica por tela/família coerente na goudduo**. A Issue concentra todos os estados, decisões, versões e evidências da superfície. Não criar Issue para cada loading, erro, variação ou microinteração.
+2. **Localizar ou abrir uma Issue canônica para cada tela distinta na goudduo**. A Issue concentra estados, decisões, versões e evidências dessa tela. Não criar Issue para cada loading, erro, variação ou microinteração; telas distintas da mesma jornada (ex.: Login, Cadastro, OTP) devem ter Issues separadas e interligadas.
 3. Antes de propor tela, investigar a fonte relevante na [GODUOIT](https://github.com/jukazilli/GODUOIT): `AGENTS.md`, `README.md`, implementação, issues canônicas e comentários aprovados, assets originais e PRs. A implementação/decisão da goduoit **não equivale automaticamente a decisão ou implementação goudduo**.
 4. Registrar na Issue a situação de cada item separadamente: `APROVADO`, `PROPOSTA`, `ESTUDO`, `PENDENTE`, `SUBSTITUÍDO`; distinguir `visual homologado`, `código integrado`, `QA comprovado` e `demo simulada`.
 5. Explicar objetivos, alternativas, conflitos, dependências e riscos de regressão antes de começar alterações.
