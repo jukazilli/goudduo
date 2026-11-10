@@ -96,7 +96,7 @@ A direção da marca será ampliada somente conforme novas definições forem co
 
 ### Marco de evolução — 10/11/2026
 
-Por solicitação expressa do proprietário, foram **homologados e reconciliados** o novo texto do Manifesto e a Plataforma estratégica, com foco inicial em praticantes e iniciantes, primeiro valor em Treinos, inspiração social em Pulses/Publicações, expansão posterior para profissionais e negócios, seis valores comportamentais, a frase-manifesto e **a regra masculina “o goudduo”**.
+Por solicitação expressa do proprietário, foram **homologados e reconciliados** o novo texto do Manifesto e a Plataforma estratégica, com foco inicial em praticantes e iniciantes, primeiro valor em Treinos, inspiração social em Pulses/Publicações, expansão posterior para profissionais e negócios, seis valores comportamentais, a frase-manifesto e **a regra então vigente no feminino “a goudduo”**, posteriormente substituída pela revisão registrada abaixo.
 
 **Mantidos sem substituição:** identidade institucional de 09/11, assinatura “Experiências, conexões e bem-estar.”, propósito, missão, visão, promessa e cinco princípios anteriores. **Não homologados:** telas, cores, logo novo, aplicativo funcional, regras legais, investimentos ou entregas técnicas. O redesign de interface começa pela [Splash — Issue #1](https://github.com/jukazilli/goudduo/issues/1), em seu processo próprio.
 
