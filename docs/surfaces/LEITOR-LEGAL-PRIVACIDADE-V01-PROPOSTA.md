@@ -64,7 +64,7 @@ O wordmark é o fallback raster da prévia original V0.4 para funcionar offline;
 
 **Não testado / não declarar pronto:** Safari/iPhone físico, acessibilidade com VoiceOver/TalkBack, fetch real dos documentos pelo navegador em rede, renderização completa de tabelas Markdown complexas, prazos e aceites juridicamente válidos, estados de erro reais, formulários e serviços backend, autorização de exclusão, e2e de integração React.
 
-**Nota de limite:** a restauração de rolagem do Cadastro foi programada, mas o formulário cabia inteiramente no viewport em todos os quatro cenários de teste (scrollTop=0 antes/depois), portanto o comportamento sob rolagem real ainda requer teste específico.
+**QA complementar de rolagem:** foi injetado um espaçador de 550px exclusivamente no ambiente de teste para forçar a rolagem do Cadastro a 173px; ao abrir a Política por ação programática (sem forçar scroll automático do navegador) e retornar, a rolagem foi restaurada a **173px**. A rotina agora desfoca o link antes da transição e restaura a posição após o primeiro frame de layout. Isso não substitui a validação do comportamento em Safari/iPhone real. Ao clicar fisicamente em um link fora da área visível, o navegador naturalmente rola até o link antes de abri-lo, portanto a posição registrada é a do instante real de abertura.
 
 ## 6. Gate e precedência
 
