@@ -13,6 +13,7 @@ Consultar [README](README.md), [Manifesto](docs/brand/MANIFESTO.md) e [Plataform
 **NENHUM agente deve iniciar novo desenho, HTML, imagem, código de UI, reestilização de componente ou prompt de implementação antes de:**
 
 1. Ler integralmente [FOUNDATIONS.md](docs/design-system/FOUNDATIONS.md), inclusive **Do / Don't**, as regras de densidade/ícones/botões e a divisão de superfícies.
+   **Consultar também [FIGMA-BENTO-V03.md](docs/design-system/FIGMA-BENTO-V03.md)** e a [prancha editável Figma](https://www.figma.com/design/5hEOaSAGN1pLo6ml7ckV4Q?node-id=8-2) para contrastes, tipografia, botões e inputs. A seção de botões no Figma ainda tem defeito visual conhecido; o contrato correto está no documento e na Issue #7. `TOKENS.json` ainda é v0.1, enquanto o azul de ação v0.3 `#0866E8` é proposta em revisão.
 2. Ler [TOKENS.json](docs/design-system/TOKENS.json), **respeitando o status de homologação de cada valor**. Não promover tokens candidatos por inferência.
 3. Ler [AI-HANDOFF-GATE.md](docs/design-system/AI-HANDOFF-GATE.md) e incorporar o checklist na saída e no handoff Gemini/Codex.
 4. Para Login, confrontar [REFERENCE-LOGIN-EXTRACTION.json](docs/design-system/REFERENCE-LOGIN-EXTRACTION.json) com a referência enviada pelo proprietário. Cores do raster são **amostras observadas**, não tokens globais e não SVG recuperado.
