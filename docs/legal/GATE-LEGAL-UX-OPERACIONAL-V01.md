@@ -1,6 +1,9 @@
 # goudduo — Gate legal: UX, aceite, direitos e publicação v0.1
 
-> **Status: proposta para validação, SEM alteração de telas homologadas e SEM publicação.**
+> **Homologação editorial do proprietário — 10/11/2026:** a modelagem v0.1 foi aprovada para servir como **baseline documental do goudduo**, incluindo Termos de Uso, Política de Privacidade, matriz de dados/retenção e UX de direitos/exclusão. **Não é parecer jurídico nem aprovação para produção.** Antes de publicar ou habilitar cadastro real: revisão jurídica especializada, confirmação de bases legais, contratos, regiões, prazos, exclusão operacional, links públicos e registro adequado de aceite.
+>
+
+> **Status: UX E GATES APROVADOS COMO MODELO DOCUMENTAL V0.1 EM 10/11/2026; sem alteração de telas homologadas, sem implementação e sem publicação.**
 >
 > Controlador informado: **Juliano de Lima Pedroso (pessoa física)**. Canal LGPD: **smkahrun01@gmail.com**.
 >
