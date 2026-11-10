@@ -1,6 +1,6 @@
 # goudduo — Acesso Mobile V0.4 · Verificação de e-mail OTP
 
-> **STATUS:** G2 / **PROPOSTA PARA AVALIAÇÃO VISUAL**, **NÃO HOMOLOGADA** no goudduo.
+> **STATUS (10/11/2026): G4 / DIREÇÃO VISUAL E UX DO OTP V0.4 HOMOLOGADAS PELO PROPRIETÁRIO** — HTML de referência aprovado, sem envio/validação reais de código, sem integração React ou QA de produção. A PR #14 permanece Draft e não mesclada.
 >
 > **Tela canônica:** [Issue #13 — OTP](https://github.com/jukazilli/goudduo/issues/13).
 >
@@ -12,7 +12,7 @@ Apresentar **uma única tela de verificação de e-mail** com seis dígitos, fee
 
 O design segue a política **telas internas calmas**: branco, carvão `#10202B`, azul de ação `#0866E8` com texto branco, superfícies neutras, Plus Jakarta Sans e logomarca escura. Não há gradiente, imagem decorativa, ícones com fundos automáticos ou setas em botões de texto.
 
-**HTML para revisão:** [`goudduo-acesso-mobile-v04-otp-proposta.html`](../../lab/screens/access-mobile/goudduo-acesso-mobile-v04-otp-proposta.html).
+**HTML de referência homologado visualmente:** [`goudduo-acesso-mobile-v04-otp-proposta.html`](../../lab/screens/access-mobile/goudduo-acesso-mobile-v04-otp-proposta.html).
 
 ## 2. Contratos canônicos da goduoit reconciliados
 
@@ -58,13 +58,31 @@ Na origem, `AccessMobileSurface.tsx` usa **seis divs estáticas preenchidas via 
 
 ## 5. Navegação / gate seguinte
 
-1. Splash / Entrada/Login **V0.2 homologados visualmente** → Cadastro **V0.3 homologado visualmente** → OTP **V0.4 aguardando homologação**.
-2. Depois da homologação visual do OTP, **modelar, revisar e aprovar Termos de Uso e Política de Privacidade** na [Issue #12](https://github.com/jukazilli/goudduo/issues/12), **antes do Onboarding simplificado**.
+1. Splash / Entrada/Login **V0.2 homologados visualmente** → Cadastro **V0.3 homologado visualmente** → OTP **V0.4 HOMOLOGADO VISUALMENTE (10/11/2026)**.
+2. **Próxima frente de trabalho, após esta homologação:** modelar, revisar e aprovar Termos de Uso e Política de Privacidade na [Issue #12](https://github.com/jukazilli/goudduo/issues/12), **antes do Onboarding simplificado**.
 3. **Obrigação anterior na produção:** Termos/Privacidade completos, links reais e mecanismo de acordo adequado devem ser acessíveis no Cadastro antes de habilitar criação real de conta; o gate processual antes do Onboarding não autoriza iniciar contas de produção sem documentos.
 
 ## 6. Estado de aprovação
 
 - **HOMOLOGADO (origem GODUOIT, UX):** composição OTP, seis dígitos, 90 segundos, sete feedbacks/duas regiões.
-- **PROPOSTO PARA AVALIAÇÃO (goudduo):** UI V0.4 rebrand com CTA azul, espaçamentos, peso tipográfico e apresentação responsiva.
+- **HOMOLOGADO PARA REFERÊNCIA VISUAL (goudduo, decisão expressa em 10/11/2026):** UI V0.4 com CTA azul, hierarquia, composição responsiva, seis dígitos e regras de UX recuperadas. Aprovação do HTML visual, não da implementação funcional.
 - **NÃO IMPLEMENTADO:** cadastro real, envio de e-mail, verificação, OAuth, aceite, servidor, regra de reenvio autoritativa e integração no app.
 - **NÃO MESCALAR AUTOMATICAMENTE** esta branch. A PR da OTP fica empilhada em Cadastro #11, por sua vez derivada do Acesso #8.
+
+## 7. Registro de homologação do proprietário — 10/11/2026
+
+**Aprovação expressa:** “pode homologar chat é isso mesmo que quero.” A validação se refere à apresentação e aos estados demonstrativos da **tela OTP V0.4** anteriormente entregue, sem ressalvas visuais adicionais.
+
+**Aprovado como contrato visual e UX:**
+- uma tela `check-email` com seis dígitos, foco/colagem e botão `Confirmar código`;
+- fundo branco, tipografia Plus Jakarta Sans, grafite, CTA azul com texto branco e ausência de gradientes;
+- erros na região A, avisos de reenvio na região B, **sete mensagens literais herdadas da GODUOIT**;
+- contador de **90 segundos** e link `Reenviar código` oculto durante a espera, sempre subordinado à autorização do backend no produto real;
+- ação `Corrigir e-mail` retornando ao Cadastro, preservando dados relevantes;
+- continuidade visual da Entrada/Login V0.2 e Cadastro V0.3 previamente homologados.
+
+**Não aprovado como implementação:** emissão de código/entregabilidade, autenticação, confirmação atômica, TTL, máximo de tentativas, provedor, regras de autorização por servidor, mecanismos legais de aceite, testes em dispositivos reais, liberação para produção ou salto automático para o Onboarding.
+
+**Governança:** manter a [PR Draft #14](https://github.com/jukazilli/goudduo/pull/14) empilhada na [PR #11](https://github.com/jukazilli/goudduo/pull/11), sem merge automático; a [Issue #13](https://github.com/jukazilli/goudduo/issues/13) permanece aberta somente para dependências/QA técnicos, enquanto a **frente visual está concluída**. A próxima frente documental é a [Issue #12 — Termos de Uso e Política de Privacidade](https://github.com/jukazilli/goudduo/issues/12) **antes do Onboarding**; esses documentos devem existir e estar acessíveis já no cadastro de produção.
+
+**Controle de mudanças:** nenhuma alteração no HTML V0.4 é necessária; o commit desta homologação altera somente a documentação e o estado das Issues/PRs. Não reescrever o desenho aprovado.
