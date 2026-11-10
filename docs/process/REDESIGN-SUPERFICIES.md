@@ -10,7 +10,7 @@
 2. A experiência inicial atende **pessoas que treinam ou querem começar**: Treinos/Widgets como primeiro valor; Pulses, Publicações e conexões disponíveis como experiência social. Profissionais e negócios ficam para etapas de validação posteriores.
 3. O trabalho produz **protótipos de UI/UX navegáveis**, com estados controlados e dados simulados. Sem contratos de backend nem alegações de autenticação, pagamentos ou Match real.
 4. O proprietário decide o que é **APROVADO**. Alternativa proposta, HTML experimental, imagem, código commitado, PR aberta, teste de laboratório e homologação são dimensões diferentes.
-5. **Uma Issue canônica para cada tela ou família de fluxo coerente**, no repositório goudduo. Estados (loading, vazio, erro, sucesso, teclado, folha/modal) pertencem à Issue da tela e não geram automaticamente novas Issues.
+5. **Uma Issue canônica para cada tela distinta**, no repositório goudduo. Estados (loading, vazio, erro, sucesso, teclado, modal/variante) pertencem à Issue dessa mesma tela e não geram automaticamente novas Issues. Telas diferentes dentro de uma jornada (por exemplo Login, Cadastro e OTP) recebem Issues próprias, com links de dependência entre elas.
 6. **Toda alteração, decisão e evidência fica rastreada na Issue** por comentários cronológicos com links para os artefatos, PRs e commits correspondentes. Não apagar o histórico para fazê-lo parecer concluído.
 7. Não executar geração visual, HTML, código ou merge antes do respectivo gate de autorização.
 
