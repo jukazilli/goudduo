@@ -81,4 +81,6 @@ Quando uma decisão for substituída, referenciar o comentário anterior e indic
 
 **Sequência inicial:** Splash → Login → Cadastro/OTP/Recuperação → Onboarding enxuto → Home Treinos (V5.3 como referência) → demais superfícies inventariadas.
 
-**Pendente agora:** escolher composição/variantes da Splash, confirmar arquivos SVG oficiais goudduo, definir gatilho de navegação simulada (com e sem sessão), e autorizar a criação da referência visual/HTML.
+**SVGs verificados em 10/11/2026:** [wordmark preta](https://github.com/jukazilli/goudduo/blob/main/assets/brand/goudduo/goudduo-wordmark-black.svg) e [wordmark branca](https://github.com/jukazilli/goudduo/blob/main/assets/brand/goudduo/goudduo-wordmark-white.svg). Os dois arquivos são vetoriais; símbolo isolado/lockup vertical não foi verificado. Ver detalhes na [Issue #1](https://github.com/jukazilli/goudduo/issues/1).
+
+**Pendente agora:** escolher composição/variantes da Splash, definir gatilho de navegação simulada (com e sem sessão), validar o ativo visualmente e autorizar a criação da referência visual/HTML.
