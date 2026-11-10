@@ -2,7 +2,7 @@
 
 **Experiências, conexões e bem-estar.**
 
-**A goudduo** é uma plataforma de **social wellness** que conecta pessoas por meio de atividades físicas, interesses e experiências compartilhadas. Queremos ajudar quem deseja treinar, desenvolver hábitos saudáveis e **manter a motivação por meio de conexões humanas**, transformando interações digitais em oportunidades reais de movimento, convivência e bem-estar.
+**O goudduo** é uma plataforma de **social wellness** que conecta pessoas por meio de atividades físicas, interesses e experiências compartilhadas. Queremos ajudar quem deseja treinar, desenvolver hábitos saudáveis e **manter a motivação por meio de conexões humanas**, transformando interações digitais em oportunidades reais de movimento, convivência e bem-estar.
 
 > **Fonte incremental das decisões consolidadas.** Este README registra somente o que foi definido e firmado para a marca. Estudos, alternativas, hipóteses e trabalhos em andamento não se tornam decisões por aparecerem em conversas, protótipos ou propostas. Novas decisões devem ser incorporadas aqui de modo incremental, após confirmação explícita.
 
@@ -19,8 +19,8 @@ A tecnologia deve funcionar como ponte entre pessoas — não apenas como um lug
 | Elemento | Decisão |
 | --- | --- |
 | Nome da marca | **goudduo** (grafia visual sempre em minúsculas) |
-| Tratamento gramatical | Sempre no feminino: **a goudduo**, **da goudduo**, **na goudduo**, **pela goudduo** |
-| Frase-manifesto homologada em 10/11 | **Conecte-se com a vida real.** — expressão de campanha/narrativa que complementa, sem substituir, a assinatura institucional |
+| Tratamento gramatical | Sempre no masculino: **o goudduo**, **do goudduo**, **no goudduo**, **pelo goudduo** |
+| Frase-manifesto atual (revisão de 10/11) | **Seu parceiro na vida real.** — expressão central de comunicação que complementa, sem substituir automaticamente, a assinatura institucional |
 | Categoria | Plataforma de **social wellness** |
 | Posicionamento | Uma rede social de bem-estar que conecta pessoas para treinar, manter a motivação, criar hábitos saudáveis e compartilhar experiências |
 | Assinatura | **Experiências, conexões e bem-estar.** |
@@ -38,7 +38,7 @@ Nosso posicionamento é o de uma plataforma social voltada ao bem-estar — **n�
 
 **Missão.** Facilitar o acesso a atividades físicas, experiências de bem-estar, comunidades e profissionais, conectando pessoas com interesses e objetivos compartilhados e incentivando hábitos saudáveis.
 
-**Visão.** Tornar a goudduo uma marca de referência no Brasil em vida saudável, comunidade fitness e conexões que ultrapassam o ambiente digital. Essa é uma **ambição**, não uma alegação de liderança já alcançada.
+**Visão.** Tornar o goudduo uma marca de referência no Brasil em vida saudável, comunidade fitness e conexões que ultrapassam o ambiente digital. Essa é uma **ambição**, não uma alegação de liderança já alcançada.
 
 ## 4. Promessa e princípios
 
@@ -70,7 +70,7 @@ Os cinco princípios fundadores da seção 4 **continuam vigentes**. Sua express
 
 A fundamentação, os exemplos humanos, os limites de escopo e a reconciliação das decisões estão na **[Plataforma estratégica homologada](docs/brand/PLATAFORMA-ESTRATEGICA.md)**.
 
-**Regra de identidade:** em textos e interfaces, dizer **a goudduo**, **na goudduo**, **da goudduo** e **pela goudduo**. O masculino só pode se referir a outro substantivo, como *o aplicativo da goudduo*.
+**Regra de identidade atual:** em textos e interfaces, usar **o goudduo**, **no goudduo**, **do goudduo** e **pelo goudduo**. A grafia visual da marca permanece **goudduo**, sempre em minúsculas. Exemplo: *o aplicativo do goudduo*.
 
 ## 6. Manifesto da marca
 
@@ -78,7 +78,7 @@ O documento de identidade verbal e narrativa da marca está em:
 
 **[Manifesto goudduo](docs/brand/MANIFESTO.md)**
 
-O manifesto desenvolve a essência, o propósito, a missão, a visão, a promessa, a ideia de social wellness, os princípios e a nova direção de comunidade homologada em 10/11/2026. A frase-manifesto **“Conecte-se com a vida real.”** não substitui a assinatura institucional **“Experiências, conexões e bem-estar.”** e não deve ser inserida em telas sem aprovação específica.
+O manifesto desenvolve a essência, o propósito, a missão, a visão, a promessa, a ideia de social wellness, os princípios e a nova direção de comunidade homologada em 10/11/2026. A frase-manifesto **“Seu parceiro na vida real.”** não substitui a assinatura institucional **“Experiências, conexões e bem-estar.”** e não deve ser inserida em telas sem aprovação específica.
 
 ## 7. Governança do documento
 
@@ -96,6 +96,12 @@ A direção da marca será ampliada somente conforme novas definições forem co
 
 ### Marco de evolução — 10/11/2026
 
-Por solicitação expressa do proprietário, foram **homologados e reconciliados** o novo texto do Manifesto e a Plataforma estratégica, com foco inicial em praticantes e iniciantes, primeiro valor em Treinos, inspiração social em Pulses/Publicações, expansão posterior para profissionais e negócios, seis valores comportamentais, a frase-manifesto e **a regra feminina “a goudduo”**.
+Por solicitação expressa do proprietário, foram **homologados e reconciliados** o novo texto do Manifesto e a Plataforma estratégica, com foco inicial em praticantes e iniciantes, primeiro valor em Treinos, inspiração social em Pulses/Publicações, expansão posterior para profissionais e negócios, seis valores comportamentais, a frase-manifesto e **a regra então vigente no feminino “a goudduo”**, posteriormente substituída pela revisão registrada abaixo.
 
 **Mantidos sem substituição:** identidade institucional de 09/11, assinatura “Experiências, conexões e bem-estar.”, propósito, missão, visão, promessa e cinco princípios anteriores. **Não homologados:** telas, cores, logo novo, aplicativo funcional, regras legais, investimentos ou entregas técnicas. O redesign de interface começa pela [Splash — Issue #1](https://github.com/jukazilli/goudduo/issues/1), em seu processo próprio.
+
+### Revisão posterior de identidade verbal — 10/11/2026
+
+Por decisão expressa do proprietário, **SUBSTITUEM-SE** na identidade ativa: a forma anterior **“a goudduo”** por **“o goudduo”**, e a frase-manifesto anterior **“Conecte-se com a vida real.”** por **“Seu parceiro na vida real.”**. As formulações anteriores permanecem neste registro somente como **histórico, não como regras vigentes**.
+
+**Preservados:** nome oficial minúsculo `goudduo`, categoria *social wellness*, propósito, missão, visão, valores, foco inicial no treino, expansão contextual de conexões e assinatura institucional **“Experiências, conexões e bem-estar.”**. **A revisão do texto em telas requer o gate visual da respectiva Issue.**
