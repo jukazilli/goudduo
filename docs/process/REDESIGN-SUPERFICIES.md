@@ -6,7 +6,7 @@
 
 ## convenção verbal vigente
 
-Usar sempre o feminino para a marca: **o goudduo**, **do goudduo**, **no goudduo**, **pelo goudduo**. O [Manifesto vigente](../brand/MANIFESTO.md) e a [Plataforma estratégica homologada](../brand/PLATAFORMA-ESTRATEGICA.md) definem o posicionamento e o escopo inicial de produto. A expressão "Seu parceiro na vida real." é uma frase-manifesto; não inserir automaticamente na Splash ou em outra tela.
+Usar sempre o masculino para a marca: **o goudduo**, **do goudduo**, **no goudduo**, **pelo goudduo**. O [Manifesto vigente](../brand/MANIFESTO.md) e a [Plataforma estratégica homologada](../brand/PLATAFORMA-ESTRATEGICA.md) definem o posicionamento e o escopo inicial de produto. A expressão "Seu parceiro na vida real." é a frase-manifesto oficial; sua aplicação na Splash está em refinamento visual após substituir a copy da V3 aprovada (Issue #1). Não transplantar automaticamente para outras telas.
 
 ## 1. Princípios
 
@@ -64,7 +64,7 @@ Quando uma decisão for substituída, referenciar o comentário anterior e indic
 ## 4. Autoridade, marca e consistência
 
 - A [goudduo/README.md](../../README.md) registra somente decisões consolidadas de marca e produto; o [manifesto](../brand/MANIFESTO.md) é sua expressão verbal vigente.
-- O texto **“Seu parceiro na vida real.”** permanece **candidato**, não substituir automaticamente a assinatura vigente **“Experiências, conexões e bem-estar.”**
+- A frase-manifesto **“Seu parceiro na vida real.”** está **homologada como mensagem da marca**, complementa e não substitui a assinatura institucional vigente **“Experiências, conexões e bem-estar.”**
 - Os SVGs oficiais goudduo devem ser localizados e verificados antes de compor interfaces. **Não reconstruir a marca em CSS/fonte, não gerar logotipo por imagem**.
 - A Home Treinos V5.3 documentada na [GODUOIT #54](https://github.com/jukazilli/GODUOIT/issues/54) é referência **visual homologada**, mas os seus widgets ainda possuem refinamentos pendentes na [#159](https://github.com/jukazilli/GODUOIT/issues/159). Sua aprovação **não comprova implementação/QA no goudduo**.
 - Preservar a direção de **superfícies energéticas × calmas**: login pode ser energético; formulários e telas de leitura devem priorizar baixa carga cognitiva. As cores do novo login serão extraídas e homologadas depois da referência final; não inventar tokens como se já estivessem aprovados.
