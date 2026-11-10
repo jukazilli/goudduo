@@ -4,6 +4,10 @@
 >
 > **Marco:** 10/11/2026. Primeira superfície: [Splash Screen — Issue #1](https://github.com/jukazilli/goudduo/issues/1). Depois: Login → Cadastro/Acesso → Onboarding simplificado → demais jornadas conforme inventário e dependências.
 
+## Convenção verbal homologada
+
+Usar sempre o feminino para a marca: **a goudduo**, **da goudduo**, **na goudduo**, **pela goudduo**. O [Manifesto vigente](../brand/MANIFESTO.md) e a [Plataforma estratégica homologada](../brand/PLATAFORMA-ESTRATEGICA.md) definem o posicionamento e o escopo inicial de produto. A expressão "Conecte-se com a vida real." é uma frase-manifesto; não inserir automaticamente na Splash ou em outra tela.
+
 ## 1. Princípios
 
 1. **goudduo é a fonte das decisões do produto novo**; o repositório [GODUOIT](https://github.com/jukazilli/GODUOIT) é fonte de referência e aprendizado, não código a importar sem crítica.
