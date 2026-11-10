@@ -1,0 +1,259 @@
+{
+  "metadata": {
+    "schema": "goudduo.visual-reference-extraction.v1",
+    "status": "OBSERVACAO_DE_IMAGEM_NAO_HOMOLOGACAO_DE_TOKENS",
+    "date": "2026-11-10",
+    "source": {
+      "kind": "user_supplied_png",
+      "name": "Login de referência enviado na conversa",
+      "size_px": {
+        "width": 941,
+        "height": 1672
+      },
+      "aspect_ratio": 0.5628
+    },
+    "extraction_method": "Análise visual direta + amostras de pixels RGB em coordenadas específicas da imagem. Sem OCR nem vetorização.",
+    "limits": [
+      "Imagem é rasterizada e combina fundo, texto, foto, sombras e controles; cores capturadas são pixels compostos, não as cores CSS originais.",
+      "Não é possível recuperar o SVG original ou os códigos de fonte apenas do PNG.",
+      "Não existe o arquivo fotográfico isolado e transparente dos corredores; a foto de herói não foi extraída.",
+      "Não reutilizar dimensões em pixels de screenshot como dimensões CSS sem fator de escala.",
+      "A copy de marketing da referência NÃO substitui a frase-manifesto oficial 'Seu parceiro na vida real.'."
+    ]
+  },
+  "identity": {
+    "brand": "goudduo",
+    "grammar": "o goudduo",
+    "official_wordmark_svg_white": "assets/brand/goudduo/goudduo-wordmark-white.svg",
+    "official_wordmark_svg_black": "assets/brand/goudduo/goudduo-wordmark-black.svg",
+    "svg_extracted_from_png": false,
+    "procedure": "Reutilizar SVG oficial existente; nunca auto-trace/reconstruir lettering pelo screenshot."
+  },
+  "visual_direction": {
+    "role": "login_energetic_exception",
+    "composition": "mobile-fullscreen com cantos arredondados apenas no mock de dispositivo; hero no topo, fotografia de 2 corredores, slogan, área de credenciais e opções sociais na metade inferior",
+    "background": "mescla espacial de azul vivo/ciano no topo-esquerda para verde menta no topo-direita; gelo claro embaixo; aparenta gradientes múltiplos, fórmula CSS original não recuperável",
+    "image": "dois adultos correndo juntos, expressão espontânea, postura natural, vestuário esportivo; fotografia é referência de composição, não asset recuperável",
+    "typography_from_pixels": "família exata INDETERMINADA; usar Plus Jakarta Sans institucional como base futura, não alegar identificação pela imagem",
+    "emphasis": "Título grande branco, palavra final em lime, corpo médio branco; chamada compacta e CTA escuro",
+    "rounded_inputs": "campos glass/claro em formato cápsula; identidade do login, NÃO padrão para telas internas",
+    "lower_area": "quase branco/gelo, mesma composição degradê sutil, botões de provedor claros e rounded"
+  },
+  "content_observed": {
+    "title": [
+      "Treine junto.",
+      "Vá mais longe."
+    ],
+    "description": [
+      "Conexões reais para",
+      "uma vida ativa."
+    ],
+    "fields": [
+      "E-mail ou telefone",
+      "Senha"
+    ],
+    "remember_me": "Lembrar de mim",
+    "forgot_password": "Esqueceu a senha?",
+    "primary_action": "Entrar",
+    "social_separator": "ou continue com",
+    "social_providers": [
+      "Google",
+      "Apple",
+      "Meta"
+    ],
+    "footer": "Ainda não tem uma conta?",
+    "footer_action": "Criar conta"
+  },
+  "layout_regions_approx_px": {
+    "logo": {
+      "center_x": 470,
+      "top": 118,
+      "bottom": 215
+    },
+    "hero_media": {
+      "left": 405,
+      "top": 226,
+      "right": 880,
+      "bottom": 742
+    },
+    "headline": {
+      "left": 80,
+      "top": 328,
+      "right": 450,
+      "bottom": 452
+    },
+    "lead": {
+      "left": 85,
+      "top": 483,
+      "right": 380,
+      "bottom": 556
+    },
+    "first_input": {
+      "left": 99,
+      "top": 691,
+      "right": 830,
+      "bottom": 803
+    },
+    "password_input": {
+      "left": 99,
+      "top": 822,
+      "right": 830,
+      "bottom": 932
+    },
+    "primary_button": {
+      "left": 99,
+      "top": 1036,
+      "right": 829,
+      "bottom": 1150
+    },
+    "social_row": {
+      "left": 128,
+      "top": 1266,
+      "right": 804,
+      "bottom": 1392
+    },
+    "footer": {
+      "center_x": 471,
+      "top": 1442,
+      "bottom": 1550
+    }
+  },
+  "sampled_pixels": {
+    "hero_blue_upper_left": {
+      "point_px": [
+        160,
+        120
+      ],
+      "hex": "#50B0FB",
+      "status": "sampled_pixel"
+    },
+    "hero_blue_left_mid": {
+      "point_px": [
+        120,
+        445
+      ],
+      "hex": "#4DBEF9",
+      "status": "sampled_pixel"
+    },
+    "hero_cyan_upper_mid": {
+      "point_px": [
+        460,
+        100
+      ],
+      "hex": "#51CAF2",
+      "status": "sampled_pixel"
+    },
+    "hero_cyan_middle": {
+      "point_px": [
+        360,
+        490
+      ],
+      "hex": "#52D2F2",
+      "status": "sampled_pixel"
+    },
+    "hero_mint_upper_right": {
+      "point_px": [
+        825,
+        280
+      ],
+      "hex": "#A9FCDE",
+      "status": "sampled_pixel"
+    },
+    "hero_mint_mid_right": {
+      "point_px": [
+        868,
+        470
+      ],
+      "hex": "#B6FCD1",
+      "status": "sampled_pixel"
+    },
+    "hero_cyan_transition": {
+      "point_px": [
+        875,
+        800
+      ],
+      "hex": "#73EBE8",
+      "status": "sampled_pixel"
+    },
+    "hero_below_transition": {
+      "point_px": [
+        880,
+        1030
+      ],
+      "hex": "#87E4FC",
+      "status": "sampled_pixel"
+    },
+    "bottom_ice_left": {
+      "point_px": [
+        150,
+        1490
+      ],
+      "hex": "#D5EEFD",
+      "status": "sampled_pixel"
+    },
+    "bottom_ice_right": {
+      "point_px": [
+        800,
+        1500
+      ],
+      "hex": "#C8EEFE",
+      "status": "sampled_pixel"
+    },
+    "field_glass_1": {
+      "point_px": [
+        250,
+        748
+      ],
+      "hex": "#D8F1FC",
+      "status": "composited_pixel"
+    },
+    "field_glass_2": {
+      "point_px": [
+        280,
+        860
+      ],
+      "hex": "#DAF3FE",
+      "status": "composited_pixel"
+    },
+    "primary_ink_center": {
+      "point_px": [
+        440,
+        1080
+      ],
+      "hex": "#172B3C",
+      "status": "sampled_pixel"
+    },
+    "primary_ink_left": {
+      "point_px": [
+        170,
+        1080
+      ],
+      "hex": "#172F44",
+      "status": "sampled_pixel"
+    },
+    "approximate_lime_text": {
+      "hex": "#C7F878",
+      "status": "approximate_cluster_quantized",
+      "method": "Predominância de pixels RGB quantizados no recorte x260..520 y320..500, filtrando áreas amarelo-esverdeadas; não é token oficial"
+    }
+  },
+  "ux_interpretation": {
+    "surface_personality": "energética, calor humano, social wellness, com dois atletas",
+    "allowed_exception": "somente Login usa hero multicolor + foto como fundo da página",
+    "non_persistent_ui": [
+      "hora 9:41",
+      "sinal",
+      "wifi",
+      "bateria",
+      "moldura e cantos do mock"
+    ],
+    "not_approved_from_reference": [
+      "Texto publicitário do hero",
+      "Três provedores como integrações reais",
+      "Login com telefone como backend já implementado",
+      "Cores da imagem como novos tokens globais",
+      "Fotografia como asset de produto sem origem"
+    ],
+    "source_of_truth": "README+Manifesto+Design System, com decisões por tela na Issue correspondente"
+  }
+}
