@@ -346,8 +346,8 @@
   legalDocContainer.appendChild(safeMarkdown(textValue||fallback[type]));
   legalLoading.textContent=textValue?'Minuta editorial v0.1 — texto completo carregado do GitHub; ainda não vigente.':'Sem acesso à minuta integral neste momento. Resumo demonstrativo; consulte a íntegra pelo link abaixo.';
  }
- function showLegal(type,from){legalReturnScreen=from||state;if(legalReturnScreen==='signup'){signupScrollPosition=document.querySelector('[data-screen="signup"]').scrollTop;}open('legal-reader');displayLegal(type);}
- function returnLegal(){open(legalReturnScreen);}
+ function showLegal(type,from){legalReturnScreen=from||state;if(legalReturnScreen==='signup'){signupScrollPosition=document.querySelector('[data-screen="signup"]').scrollTop;}if(document.activeElement instanceof HTMLElement)document.activeElement.blur();open('legal-reader');displayLegal(type);}
+ function returnLegal(){if(document.activeElement instanceof HTMLElement)document.activeElement.blur();open(legalReturnScreen);if(legalReturnScreen==='signup'){requestAnimationFrame(()=>{const signup=document.querySelector('[data-screen="signup"]');signup.scrollTop=signupScrollPosition;});}}
  document.getElementById('legalBackTop').addEventListener('click',returnLegal);
  document.getElementById('legalBackBottom').addEventListener('click',returnLegal);
  document.querySelectorAll('[data-document]').forEach(b=>b.addEventListener('click',()=>displayLegal(b.dataset.document)));
