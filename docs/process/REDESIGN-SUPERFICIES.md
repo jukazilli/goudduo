@@ -4,9 +4,9 @@
 >
 > **Marco:** 10/11/2026. Primeira superfície: [Splash Screen — Issue #1](https://github.com/jukazilli/goudduo/issues/1). Depois: Login → Cadastro/Acesso → Onboarding simplificado → demais jornadas conforme inventário e dependências.
 
-## Convenção verbal homologada
+## convenção verbal vigente
 
-Usar sempre o feminino para a marca: **a goudduo**, **da goudduo**, **na goudduo**, **pela goudduo**. O [Manifesto vigente](../brand/MANIFESTO.md) e a [Plataforma estratégica homologada](../brand/PLATAFORMA-ESTRATEGICA.md) definem o posicionamento e o escopo inicial de produto. A expressão "Conecte-se com a vida real." é uma frase-manifesto; não inserir automaticamente na Splash ou em outra tela.
+Usar sempre o feminino para a marca: **o goudduo**, **do goudduo**, **no goudduo**, **pelo goudduo**. O [Manifesto vigente](../brand/MANIFESTO.md) e a [Plataforma estratégica homologada](../brand/PLATAFORMA-ESTRATEGICA.md) definem o posicionamento e o escopo inicial de produto. A expressão "Seu parceiro na vida real." é uma frase-manifesto; não inserir automaticamente na Splash ou em outra tela.
 
 ## 1. Princípios
 
@@ -23,7 +23,7 @@ Usar sempre o feminino para a marca: **a goudduo**, **da goudduo**, **na goudduo
 | Gate | Atividade | Registro obrigatório | Autorização |
 | --- | --- | --- | --- |
 | G0 — Criar Issue | Conferir se a tela já possui Issue, criar uma se não existir | Objetivo, fontes e dependências | Autorização para iniciar o recorte |
-| G1 — Investigar | Ler READMEs, fontes de código, Issues, comentários e artefatos da goduoit, confrontando com a goudduo | Diagnóstico, evidências, estados, conflitos e lacunas | Sem autorização de implementação |
+| G1 — Investigar | Ler READMEs, fontes de código, Issues, comentários e artefatos da goduoit, confrontando com o goudduo | Diagnóstico, evidências, estados, conflitos e lacunas | Sem autorização de implementação |
 | G2 — Propor | Apresentar alternativas de UX/UI, hierarquia, estados e acessibilidade | Proposta, Do/Don't, impactos e decisões abertas | Proprietário escolhe abordagem |
 | G3 — Experimentar | Criar imagem, HTML ou outra referência navegável apenas conforme escopo autorizado | Links de artefatos, versão, capturas e mudanças | Autorização expressa por etapa |
 | G4 — Refinar | Testar visualmente, revisar dispositivos, corrigir problemas sem regressão | Antes/depois, feedback e resultado do teste | Rodadas com o proprietário |
@@ -64,9 +64,9 @@ Quando uma decisão for substituída, referenciar o comentário anterior e indic
 ## 4. Autoridade, marca e consistência
 
 - A [goudduo/README.md](../../README.md) registra somente decisões consolidadas de marca e produto; o [manifesto](../brand/MANIFESTO.md) é sua expressão verbal vigente.
-- O texto **“Conecte-se com a vida real.”** permanece **candidato**, não substituir automaticamente a assinatura vigente **“Experiências, conexões e bem-estar.”**
+- O texto **“Seu parceiro na vida real.”** permanece **candidato**, não substituir automaticamente a assinatura vigente **“Experiências, conexões e bem-estar.”**
 - Os SVGs oficiais goudduo devem ser localizados e verificados antes de compor interfaces. **Não reconstruir a marca em CSS/fonte, não gerar logotipo por imagem**.
-- A Home Treinos V5.3 documentada na [GODUOIT #54](https://github.com/jukazilli/GODUOIT/issues/54) é referência **visual homologada**, mas os seus widgets ainda possuem refinamentos pendentes na [#159](https://github.com/jukazilli/GODUOIT/issues/159). Sua aprovação **não comprova implementação/QA na goudduo**.
+- A Home Treinos V5.3 documentada na [GODUOIT #54](https://github.com/jukazilli/GODUOIT/issues/54) é referência **visual homologada**, mas os seus widgets ainda possuem refinamentos pendentes na [#159](https://github.com/jukazilli/GODUOIT/issues/159). Sua aprovação **não comprova implementação/QA no goudduo**.
 - Preservar a direção de **superfícies energéticas × calmas**: login pode ser energético; formulários e telas de leitura devem priorizar baixa carga cognitiva. As cores do novo login serão extraídas e homologadas depois da referência final; não inventar tokens como se já estivessem aprovados.
 - Preservar acessibilidade, foco, safe areas, toque, navegação, `prefers-reduced-motion` e conteúdo real ou claramente simulado.
 - Não importar labels demonstrativos, dados inventados ou comportamentos exclusivos do Visual Lab como produto aprovado.
