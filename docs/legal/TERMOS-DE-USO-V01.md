@@ -1,6 +1,9 @@
 # Termos de Uso do goudduo — Minuta v0.1
 
-> **MINUTA PARA REVISÃO E HOMOLOGAÇÃO — NÃO PUBLICAR COMO CONTRATO VIGENTE.**
+> **Homologação editorial do proprietário — 10/11/2026:** a modelagem v0.1 foi aprovada para servir como **baseline documental do goudduo**, incluindo Termos de Uso, Política de Privacidade, matriz de dados/retenção e UX de direitos/exclusão. **Não é parecer jurídico nem aprovação para produção.** Antes de publicar ou habilitar cadastro real: revisão jurídica especializada, confirmação de bases legais, contratos, regiões, prazos, exclusão operacional, links públicos e registro adequado de aceite.
+>
+
+> **HOMOLOGAÇÃO EDITORIAL V0.1 — APROVADA PELO PROPRIETÁRIO EM 10/11/2026; PENDENTE DE REVISÃO JURÍDICA E PUBLICAÇÃO. NÃO USAR COMO CONTRATO VIGENTE.**
 >
 > Preparação: 10/11/2026. Versão de trabalho: 0.1. **Vigência:** a definir após revisão jurídica, aprovação do controlador e publicação. Este documento descreve o serviço pretendido; funções não lançadas não devem ser apresentadas como disponíveis. A minuta precisa ser ajustada às funcionalidades realmente ativadas e às práticas de tratamento verificadas antes do lançamento.
 >
