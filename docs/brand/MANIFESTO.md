@@ -62,7 +62,7 @@ Entendemos que uma vida saudável vai além de treinos, resultados físicos e in
 
 Ela também envolve pertencimento, motivação, convivência, apoio e oportunidades de compartilhar experiências.
 
-A **goudduo** reúne esses elementos em um ambiente que conecta pessoas, atividades e comunidades.
+O **goudduo** reúne esses elementos em um ambiente que conecta pessoas, atividades e comunidades.
 
 **Não importa se alguém está começando ou já possui uma rotina ativa. O importante é encontrar oportunidades para se movimentar, participar e evoluir.**
 
@@ -178,7 +178,7 @@ Este manifesto preserva a plataforma de marca aprovada em **09/11/2026** e incor
 
 **Preservados:** nome da marca, categoria *social wellness*, propósito, missão, visão como ambição, promessa, assinatura institucional e cinco princípios fundadores.
 
-**Acrescentados e homologados:** marca tratada no masculino (**o goudduo**), foco inicial em praticantes e iniciantes, Treinos como primeiro valor, Pulses e Publicações como inspiração e descoberta, conexões contextuais opcionais, expansão posterior para profissionais e negócios, pertencimento sem julgamento, conteúdo com propósito e a frase-manifesto *“Seu parceiro na vida real.”*.
+**Acrescentados e homologados na etapa anterior (posteriormente substituídos apenas no tratamento e na frase):** marca inicialmente tratada no feminino (**a goudduo**), foco inicial em praticantes e iniciantes, Treinos como primeiro valor, Pulses e Publicações como inspiração e descoberta, conexões contextuais opcionais, expansão posterior para profissionais e negócios, pertencimento sem julgamento, conteúdo com propósito e a frase-manifesto então vigente *“Conecte-se com a vida real.”*.
 
 A visão de ser referência nacional é **ambição**, não liderança já demonstrada. O manifesto não comprova implementação, segurança operacional, registro jurídico da marca nem aprovação visual de telas. Propostas técnicas e publicitárias permanecem sujeitas aos respectivos processos de homologação.
 
