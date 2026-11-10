@@ -1,6 +1,6 @@
-# goudduo — Cadastro Mobile V0.3 · proposta para homologação visual
+# goudduo — Cadastro Mobile V0.3 · direção visual homologada
 
-> **Status:** **EM REVISÃO** — HTML criado e commitado para avaliação do proprietário, **não homologado visualmente**; sem autenticação/backend implementados.
+> **Status (10/11/2026): HOMOLOGADO PELO PROPRIETÁRIO NO ESCOPO VISUAL E DE REGRAS DE CADASTRO.** HTML V0.3 commitado como referência; sem autenticação/backend implementados. **PR #11 permanece em revisão técnica, sem merge automático.**
 >
 > **Issue canônica:** [#9 — Cadastro Mobile](https://github.com/jukazilli/goudduo/issues/9).
 >
@@ -33,9 +33,9 @@ No protótipo, os nomes são links **sem URL real publicada**; ao tocar, um avis
 - [#20 — validação inline](https://github.com/jukazilli/GODUOIT/issues/20#issuecomment-6538545870): feedback sem nova tela, preservar campos, focar primeiro inválido, não exibir erro em campos intocados.
 - [Código `AccessMobileSurface.tsx`](https://github.com/jukazilli/GODUOIT/blob/main/src/surfaces/access-mobile/AccessMobileSurface.tsx): três IDs do catálogo para Cadastro `sign-up`, `sign-up-validation`, `sign-up-submitting`; autenticação real não implementada no protótipo legado.
 
-## 3. HTML para avaliação
+## 3. HTML de referência homologado
 
-[**Acesso Mobile V0.3 — Cadastro em revisão**](../../lab/screens/access-mobile/goudduo-acesso-mobile-v03-cadastro-proposta.html).
+[**Acesso Mobile V0.3 — Cadastro homologado visualmente**](../../lab/screens/access-mobile/goudduo-acesso-mobile-v03-cadastro-proposta.html).
 
 **Composição:** fundo branco, wordmark escuro de referência, Plus Jakarta Sans com fallback, 4 inputs de 16px, botão azul `#0866E8` com texto branco, texto legal abaixo do CTA, link Entrar, navegação de volta e estados inline. Sem gradientes na tela Cadastro, sem provedores externos.
 
@@ -55,10 +55,28 @@ No protótipo, os nomes são links **sem URL real publicada**; ao tocar, um avis
 - Dispositivos reais iOS/Android, teclado, leitor de tela, navegação de volta, foco durante erro, zoom, safe areas e formulários com mensagens longas.
 - Disponibilidade do @ real e atômica, aliases reservados, normalização no servidor, política de senha, tratamento de datas em timezone, Termos/Política publicados, consentimento, OTP e integração backend.
 
-**Critério de homologação da tela:** aprovação visual expressa do proprietário após abrir e navegar no HTML. Não fazer merge desta proposta antes disso.
+**Homologação visual recebida:** o proprietário autorizou expressamente: “ok chat pode homologar e mandar para o git”. A composição V0.3 e as regras de campos ficam **aprovadas** como referência. Isso **não homologa** integração de back-end, envio de OTP real, documentos jurídicos, acessibilidade em dispositivos, disponibilidade do @ ou QA de produção. Não fazer merge de implementação ou elevar o mock a serviço real.
 
 ## 5. Governança e integração
 
-Esta versão é uma **proposta v0.3 independente**, derivada da [PR #8](https://github.com/jukazilli/goudduo/pull/8). A PR de Cadastro deve ser **empilhada na branch da PR #8**, evitando uma segunda cópia da base do Login. A PR #8 permanece sem merge até autorização própria.
+Esta versão é uma **referência visual v0.3 homologada, porém não implementada no produto**, derivada da [PR #8](https://github.com/jukazilli/goudduo/pull/8). A PR de Cadastro deve ser **empilhada na branch da PR #8**, evitando uma segunda cópia da base do Login. A PR #8 permanece sem merge até autorização própria.
 
 Antes de implementar React, Gemini/Codex devem ler [Design System Figma v0.3](../design-system/FIGMA-BENTO-V03.md), [Foundations](../design-system/FOUNDATIONS.md), [Gate de IA](../design-system/AI-HANDOFF-GATE.md), [AGENTS.md](../../AGENTS.md), [Issue #9](https://github.com/jukazilli/goudduo/issues/9) e a proposta HTML atual. Não alterar o layout de Home Treinos V5.3.
+
+## 6. Novo gate obrigatório antes do Onboarding — Termos e Privacidade
+
+**Decisão expressa do proprietário, 10/11/2026:** “no final antes de ir para o onboarding temos que modelar os termos de privacidade e uso”. Registrada em [Issue #12 — Termos de Uso e Política de Privacidade](https://github.com/jukazilli/goudduo/issues/12), reconciliada com a frente histórica [GODUOIT #157](https://github.com/jukazilli/GODUOIT/issues/157).
+
+**Sequência:** Cadastro (homologado visualmente) → **Verificação de E-mail OTP (próxima tela)** → **modelagem e aprovação dos Termos de Uso e da Política de Privacidade** → Onboarding simplificado.
+
+**Importante na futura implementação funcional:** os **documentos reais e links de acesso devem estar disponíveis já no momento do cadastro**, pois o aviso “Ao criar uma conta…” aparece antes do envio; modelagem concluída só depois do OTP seria inadequada para o lançamento. O gate antes do Onboarding é um **marco do processo de design**, não autorização para coletar aceites sem documentos válidos.
+
+**A Issue #12 deve cobrir:** conteúdos jurídicos, inventário de dados (incluindo nascimento privado/18+, métricas de treino, fotos e compartilhamento), direitos do titular, regras de comunidade, políticas de publicação/exclusão, links navegáveis, redação do aviso, eventual tratamento de consentimentos distintos, revisão especializada e versionamento dos aceites.
+
+**Preservado:** a frase curta homologada no HTML V0.3; não inventar URL de termos, não simular aceite legal válido e não abrir onboarding funcional até liberar essa dependência.
+
+## 7. Histórico de homologação
+
+- **V0.3 — proposta original:** quatro campos, UI calma sem login social, validações locais, referência da GODUOIT reconciliada.
+- **V0.3 — homologação expressa posterior em 10/11/2026:** proprietário confirmou aprovação da tela e autorizou registro no GitHub. **Nenhuma mudança visual** foi necessária no HTML; a alteração desta revisão é **documental**.
+- **Pendências mantidas:** QA multi-viewport completo, dispositivos reais, @ único no backend, documentos legais, OTP, integração da autenticação e política definitiva de senha.
