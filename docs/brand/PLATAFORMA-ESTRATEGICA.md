@@ -116,7 +116,7 @@ A direção visual herdada de experimentos anteriores (como a Home Treinos Bento
 
 **Base anterior (09/11/2026):** nome, categoria, propósito, missão, visão, assinatura institucional, promessa e cinco princípios, conforme README e manifesto.
 
-**Ampliações homologadas (10/11/2026):** tratamento masculino obrigatório; público prioritário de praticantes e iniciantes; primeira experiência Treinos/Pulses/Publicações; conexões como consequência natural e opcional; Business/comércios/profissionais como expansão; personalidade da comunidade; seis valores; frase-manifesto “Seu parceiro na vida real.”.
+**Ampliações da etapa anterior (10/11/2026):** tratamento feminino então obrigatório; público prioritário de praticantes e iniciantes; primeira experiência Treinos/Pulses/Publicações; conexões como consequência natural e opcional; Business/comércios/profissionais como expansão; personalidade da comunidade; seis valores; frase-manifesto então vigente “Conecte-se com a vida real.”.
 
 **Preservados:** categoria social wellness, propósito, missão, visão como ambição, promessa, assinatura institucional e cinco princípios anteriores.
 
