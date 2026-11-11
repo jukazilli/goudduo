@@ -800,7 +800,7 @@ function update(){
   if(app.querySelector('.identity')&&handle&&data.handle&&handle.textContent!==data.handle)handle.textContent=data.handle;
   const bio=app.querySelector('.identity .bio');if(bio&&data.bio!==null&&bio.textContent!==data.bio)bio.textContent=data.bio;
   const cards=app.querySelector('.complete-box .complete-cards');
-  if(cards&&scenario.value==='own'&&!cards.querySelector('[data-r2-prof]')){
+  if(cards&&!profDismissed&&scenario.value==='own'&&!cards.querySelector('[data-r2-prof]')){
     const c=document.createElement('article');c.className='complete-card';c.setAttribute('data-r2-prof','true');
     c.innerHTML='<button type="button" class="complete-skip" aria-label="Dispensar Conta profissional" data-r2="dismiss-prof">×</button><div class="complete-art" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></div><h3>Conta profissional</h3><p>Atenda pessoas dentro do goudduo.</p><button type="button" class="complete-cta" data-r2="professional-card">Conhecer</button>';
     cards.appendChild(c);
