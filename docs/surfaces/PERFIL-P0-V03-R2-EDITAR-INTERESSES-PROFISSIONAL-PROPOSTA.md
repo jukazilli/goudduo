@@ -1,6 +1,6 @@
 # goudduo — Perfil P0 V0.3-R2: Editar perfil, Interesses e Conta profissional
 
-> **G2 — NOVA REFERÊNCIA HTML PARA AVALIAÇÃO, AINDA NÃO HOMOLOGADA.** A [V0.3 anterior](PERFIL-P0-COMPLETE-DUPLAS-V03-HOMOLOGADO-COM-RESSALVAS.md), aprovada com ressalvas, permanece intacta. Data de estudo: 10/11/2026.
+> **G4 — REFERÊNCIA VISUAL V0.3-R2 HOMOLOGADA EXPRESSAMENTE PELO PROPRIETÁRIO EM 11/11/2026.** Aprovação da tela Editar perfil, dos interesses em pills e da entrada para Conta profissional, seguindo a referência visual fornecida. A [V0.3 anterior](PERFIL-P0-COMPLETE-DUPLAS-V03-HOMOLOGADO-COM-RESSALVAS.md) permanece preservada. **A aprovação é da referência de UI/UX, não da implementação em produção nem da habilitação profissional.**
 
 ## Artefatos e fonte visual
 
@@ -52,6 +52,19 @@ Ao tocar, abre **Editar perfil** e rola até **Mudar para conta profissional**. 
 - O código original + módulo Perfil V0.3 + camada de edição R2 foram mantidos como **três scripts** e passaram em verificação **de sintaxe V8**; a interceptação de Editar perfil ocorre somente na referência.
 - Imagens históricas/externas continuam **placeholders**, sem aprovação como mídia final. Implementação posterior usa imagens reais WebP quando necessárias e assets da marca oficiais.
 - **PENDENTE:** QA real no navegador em 320/390/430 px; Safari/iPhone e Android, foco, rolagem, retorno, teclado, links, animações, seleção de pills, inputs, verificação de regressões e acesso ao catálogo IBGE. Teste de sintaxe **não equivale a QA funcional**.
-- **PENDENTE:** homologação expressa do proprietário da versão **R2** e implementação React / autorização para merge.
+- **CONCLUÍDO:** homologação visual expressa da referência **R2** em 11/11/2026. **PENDENTE:** implementação React, QA funcional e autorização específica para merge.
 
-**Governança:** manter esta referência e [PR Draft #22](https://github.com/jukazilli/goudduo/pull/22) sem merge. Não declarar profissional validado, Feed personalizado, conteúdo salvo em banco ou nova UI homologada antes dos respectivos gates.
+**Governança:** a **UI/UX de referência está homologada**; manter [PR Draft #22](https://github.com/jukazilli/goudduo/pull/22) sem merge até o gate técnico. Não declarar profissional validado, Feed personalizado, conteúdo salvo em banco ou implementação funcional antes dos respectivos gates.
+
+
+## Termo de homologação — 11/11/2026
+
+O proprietário declarou expressamente: **“Ok chat aprovado … pode homologar e enviar ao git”**. A aprovação recai sobre a **V0.3-R2 apresentada para avaliação**, com estas decisões:
+
+1. **Editar perfil** é uma tela própria no contexto do goudduo, visual sóbrio, campos Nome, @usuário, Bio (150), foto, região, interesses, links e informações pessoais. A entrada “Meu perfil” redundante sai das Configurações, sem remover as funcionalidades restantes.
+2. **Interesses por pills multisseleção**, não combobox; opcionais para personalização futura do Feed, sem coleta obrigatória na entrada.
+3. **Conta profissional** como card opcional em Complete seu perfil, com chamada para o botão **Mudar para conta profissional** dentro de Editar perfil. A ação é apenas explicativa na referência.
+4. **Preservação do contrato V0.3 anterior**: UF antes de cidade, seleção de município canônico IBGE, motion suave, múltiplas duplas, pendência/aceite bilateral e gerenciamento, sem regressão de Perfil.
+5. **Pendência antifraude #27 permanece ABERTA**: verificar habilitação e titularidade real da credencial, minimizar dados e não ativar atendimento sem autorização efetiva do backend.
+
+**Evidência técnica da versão:** HTML versionado em `lab/screens/profile/goudduo-perfil-p0-v03-r2-editar-interesses-profissional.html`, 3 blocos de JavaScript parseados sem erro sintático. **Isso não prova execução funcional nem QA mobile**; testes em navegador, Safari/Android, acessibilidade, autenticação, persistência, segurança e integrações permanecem pendentes. A PR #22 deve continuar **Draft e sem merge automático**.
