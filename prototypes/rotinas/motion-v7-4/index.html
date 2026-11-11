@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f1f8fb">
+  <title>Goudduo — Rotinas · Motion V7.4 · Exercícios adicionados</title>
+  <!--
+    REFERÊNCIA VISUAL / PROTÓTIPO NAVEGÁVEL, NÃO CÓDIGO DE PRODUÇÃO.
+    Motion V7.3: biblioteca de exercícios em bottom sheet 75%, botão fixo no rodapé, sugestões iniciais e adições sem fechar o popup; mantém proteção V7.2 e expansão V7.1.
+    Header: chevron de retorno | nome centralizado | check de salvar (44px).
+    Nenhuma ação de salvar no rodapé do editor. Check inativo enquanto o treino não possui exercícios.
+    Mantidas as demais telas, fluxos e dados demonstrativos da V1.
+    Nenhuma alteração no repositório GODUOIT ou goudduo é feita por este arquivo.
+  -->
+  <style>
+
+#gd-proto{--ink:#17232c;--muted:#7b8791;--line:#e6eaf0;--blue:#00a8e8;--ice:#f1f8fb;--lime:#c7f238;box-sizing:border-box;color:var(--ink);font-family:'Plus Jakarta Sans',Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;font-size:14px}#gd-proto *{box-sizing:border-box}#gd-proto button,#gd-proto input{font:inherit}#gd-proto button{cursor:pointer;-webkit-tap-highlight-color:transparent}#gd-proto button:focus-visible,#gd-proto input:focus-visible{outline:2px solid var(--blue);outline-offset:2px}#gd-proto .gd-wrapper{display:flex;flex-direction:column;align-items:center;gap:10px;padding:16px 6px 24px;background:#eef0f3;border-radius:20px;width:100%;min-height:740px}#gd-proto .gd-scene{display:flex;gap:5px;align-items:center;justify-content:center;flex-wrap:wrap}#gd-proto .gd-scene-label{font-size:11px;color:#6f7982;margin-right:5px;font-weight:600}#gd-proto .gd-chip-demo{border:1px solid #d3dbe1;border-radius:18px;background:#fff;color:#52616c;padding:6px 12px;font-size:11px;font-weight:650}#gd-proto .gd-chip-demo.active{border-color:#1c2d37;color:#fff;background:#243644}#gd-proto .gd-phone{width:min(100%,400px);height:720px;max-height:75vh;min-height:600px;background:#fff;border:5px solid #28343d;border-radius:34px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 14px 44px rgba(14,28,41,.18);position:relative}#gd-proto .gd-status{height:26px;flex:none;display:flex;justify-content:space-between;align-items:center;padding:8px 22px 0 26px;font-size:10px;font-weight:800;color:#1c2a34}#gd-proto .gd-camera{position:absolute;top:9px;left:calc(50% - 7px);height:14px;width:14px;background:#182027;border-radius:50%;box-shadow:inset 0 0 0 3px #303e4a}#gd-proto .gd-head{display:grid;grid-template-columns:48px minmax(0,1fr) 48px;align-items:center;min-height:59px;padding:4px 16px 9px;border-bottom:1px solid rgba(230,234,240,.45);flex:none}#gd-proto .gd-head-title{font-size:20px;letter-spacing:-.7px;line-height:1.12;font-weight:850;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#gd-proto .gd-iconbutton{display:flex;align-items:center;justify-content:center;width:44px;height:44px;background:transparent;color:#18242c;border:0;border-radius:12px}#gd-proto .gd-iconbutton.gd-right{justify-self:end}#gd-proto .gd-iconbutton:active{background:#f3f5f7}#gd-proto .gd-head--composer .gd-head-title{font-size:17px;letter-spacing:-.45px}#gd-proto .gd-save-check{min-width:44px;min-height:44px;transition:background-color .18s,color .18s,transform .18s}#gd-proto .gd-save-check.is-ready{color:#006da9}#gd-proto .gd-save-check.is-ready:active{background:#e6f6fc;transform:scale(.95)}#gd-proto .gd-save-check:disabled{opacity:.32;color:#6e808b;cursor:default}#gd-proto .gd-content{flex:1;overflow-y:auto;overflow-x:hidden;padding:14px 18px 28px;scrollbar-width:none;overscroll-behavior:contain}#gd-proto .gd-content::-webkit-scrollbar{display:none}#gd-proto .gd-enter{animation:gd-entrance .23s ease-out both}@keyframes gd-entrance{from{opacity:.5;transform:translateY(8px)}to{opacity:1;transform:none}}#gd-proto .gd-nav{display:grid;grid-template-columns:repeat(5,1fr);align-items:center;justify-items:center;flex:none;min-height:61px;padding:4px 6px 8px;border-top:1px solid #edf0f3;background:#fff}#gd-proto .gd-nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;background:transparent;border:0;color:#8a98a0;min-width:52px;min-height:45px;padding:2px 0}#gd-proto .gd-nav button.active{color:#0c202d}#gd-proto .gd-nav span{font-size:9px;font-weight:750}#gd-proto .gd-bottom{padding:10px 18px 12px;background:#fff;border-top:1px solid #f1f2f4;flex:none}#gd-proto .gd-primary{min-height:47px;border:0;border-radius:15px;background:#152632;color:#fff;font-weight:800;width:100%;font-size:14px}#gd-proto .gd-primary:active{transform:scale(.991);background:#30424c}#gd-proto .gd-secondary{min-height:43px;border:1px solid #dee5e9;border-radius:13px;background:#fff;color:#17232c;font-weight:750;padding:0 14px}#gd-proto .gd-note{color:#8c9aa3;font-size:11px}#gd-proto .gd-group-title{font-size:16px;letter-spacing:-.35px;font-weight:850;margin:22px 0 12px}#gd-proto .gd-card{position:relative;display:block;overflow:hidden;border-radius:18px;isolation:isolate;border:1px solid rgba(0,0,0,.025);background:#eef2f3;cursor:pointer;transition:transform .22s ease,box-shadow .22s ease}#gd-proto .gd-card:active{transform:scale(.987)}#gd-proto .gd-card:focus-visible{outline:2px solid #00a8e8}#gd-proto .gd-card-primary{height:194px;padding:18px;margin-top:5px}#gd-proto .gd-card .gd-over{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(244,247,249,.98) 0%,rgba(244,247,249,.78) 36%,rgba(244,247,249,0) 72%)}#gd-proto .gd-card[data-tone="mint"]{background:linear-gradient(118deg,#ebf2ee,#d5e1dd)}#gd-proto .gd-card[data-tone="blue"]{background:linear-gradient(118deg,#e7eff5,#bfcddd)}#gd-proto .gd-card[data-tone="peach"]{background:linear-gradient(118deg,#fbf0e6,#f0dcd5)}#gd-proto .gd-card[data-tone="lavender"]{background:linear-gradient(118deg,#eceaf7,#d5d5e8)}#gd-proto .gd-card[data-tone="gray"]{background:linear-gradient(118deg,#f0f1f2,#dadddf)}#gd-proto .gd-card[data-tone="white"]{background:linear-gradient(118deg,#f4f6f6,#e2e8ec)}#gd-proto .gd-athlete{position:absolute;right:-11px;bottom:-12px;width:67%;height:95%;opacity:.86;z-index:0;filter:drop-shadow(0 12px 9px rgba(29,45,58,.1));pointer-events:none}#gd-proto .gd-card-primary .gd-athlete{right:4px;bottom:-13px;width:54%;height:107%}#gd-proto .gd-card-content{position:absolute;bottom:15px;left:16px;right:12px;z-index:2}#gd-proto .gd-card-primary .gd-card-content{bottom:23px;left:20px;max-width:56%}#gd-proto .gd-card-name{font-size:17px;letter-spacing:-.5px;font-weight:850;line-height:1.15;overflow-wrap:anywhere;max-width:90%}#gd-proto .gd-card-primary .gd-card-name{font-size:25px;letter-spacing:-.9px}#gd-proto .gd-card-meta{font-size:11px;color:#50626d;font-weight:650;margin-top:8px}#gd-proto .gd-eyebrow{font-size:10px;font-weight:850;letter-spacing:.9px;text-transform:uppercase;opacity:.72}#gd-proto .gd-label-principal{position:absolute;top:15px;left:20px;z-index:2;background:#fff8;border:1px solid #fff9;border-radius:15px;padding:6px 8px;line-height:1;font-size:9px;letter-spacing:.6px;font-weight:850}#gd-proto .gd-menu-card{position:absolute;right:11px;top:10px;width:37px;height:37px;border:0;background:#ffffffa8;border-radius:50%;z-index:4;display:grid;place-items:center;color:#162631}#gd-proto .gd-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}#gd-proto .gd-card-small{height:176px;padding:12px}#gd-proto .gd-card-small .gd-card-content{bottom:13px;left:13px;max-width:90%}#gd-proto .gd-card-small .gd-card-name{font-size:16px;max-width:94%}#gd-proto .gd-card-small .gd-athlete{width:78%;right:-24px;height:90%}#gd-proto .gd-card-small .gd-over{background:linear-gradient(0deg,rgba(248,248,248,.9),rgba(247,247,247,0) 76%)}#gd-proto .gd-card-small .gd-card-meta{margin-top:6px}#gd-proto .gd-empty{display:grid;place-items:center;text-align:center;padding:70px 15px;gap:13px}#gd-proto .gd-empty-art{width:102px;height:102px;border-radius:25px;background:#f1f8fb;display:grid;place-items:center;color:#7497a6}#gd-proto .gd-empty h3{margin:4px 0 0;font-size:21px;letter-spacing:-.65px}#gd-proto .gd-empty p{color:#7c8991;font-size:13px;line-height:1.55;margin:0;max-width:230px}#gd-proto .gd-detail-cover{height:137px;padding:15px 18px;cursor:default}#gd-proto .gd-detail-cover .gd-athlete{height:120%;width:51%;right:5px}#gd-proto .gd-detail-cover .gd-over{background:linear-gradient(90deg,#f0f4f5e8 0%,#f0f4f5b0 33%,transparent 80%)}#gd-proto .gd-detail-cover .gd-card-content{bottom:15px;left:18px;max-width:60%}#gd-proto .gd-detail-cover .gd-card-name{font-size:21px}#gd-proto .gd-row{display:flex;align-items:center;justify-content:space-between;gap:10px}#gd-proto .gd-section{margin-top:24px}#gd-proto .gd-section h2{font-size:16px;letter-spacing:-.4px;margin:0 0 13px}#gd-proto .gd-week{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}#gd-proto .gd-day{min-width:0;min-height:59px;background:#f5f7f8;color:#74838f;border:0;border-radius:13px;padding:8px 0;display:flex;flex-direction:column;align-items:center;gap:7px;font-weight:800}#gd-proto .gd-day .gd-day-name{font-size:9px}#gd-proto .gd-day .gd-mark{height:5px;width:5px;background:#cbd5db;border-radius:50%}#gd-proto .gd-day.has .gd-mark{background:var(--blue)}#gd-proto .gd-day.selected{background:#19313c;color:white}#gd-proto .gd-day.selected .gd-mark{background:#c7f238}#gd-proto .gd-day-num{font-size:12px}#gd-proto .gd-workout-day{margin-top:14px;padding:21px;border:1px solid #e8edef;border-radius:20px;background:#fff;min-height:190px;touch-action:pan-y}#gd-proto .gd-workout-day .gd-name{font-size:19px;line-height:1.14;letter-spacing:-.5px;font-weight:850;margin:10px 0 5px}#gd-proto .gd-workout-day .gd-info{font-size:12px;color:#83909a;margin-bottom:16px;line-height:1.4}#gd-proto .gd-workout-preview{display:flex;flex-direction:column;gap:8px;margin-top:13px}#gd-proto .gd-preview-line{display:flex;justify-content:space-between;gap:6px;font-size:12px;color:#63737d}#gd-proto .gd-preview-line:before{content:'';height:6px;width:6px;border-radius:50%;background:#d2dce0;flex:none;margin-top:6px}#gd-proto .gd-preview-line span{flex:1}#gd-proto .gd-small-action{border:0;background:transparent;color:#143446;padding:6px 0;font-size:12px;font-weight:800}#gd-proto .gd-form{display:flex;flex-direction:column;gap:22px;padding:6px 1px 12px}#gd-proto .gd-field{display:flex;flex-direction:column;gap:8px;min-width:0}#gd-proto .gd-field label{font-weight:790;font-size:12px;color:#344650}#gd-proto .gd-input{width:100%;height:48px;border:1px solid #dde5e9;background:#f8fafb;border-radius:13px;padding:12px;font-size:16px!important;color:#1a303b;outline:0}#gd-proto .gd-input:focus{border-color:#00a8e8;background:#fff}#gd-proto .gd-pills{display:flex;flex-wrap:wrap;gap:8px}#gd-proto .gd-pill{padding:10px 13px;border:1px solid #d9e1e5;border-radius:22px;background:white;color:#455965;font-size:12px;font-weight:730}#gd-proto .gd-pill.active{background:#1b2d38;color:white;border-color:#1b2d38}#gd-proto .gd-swatches{display:flex;gap:10px;flex-wrap:wrap}#gd-proto .gd-swatch{width:60px;height:67px;border:2px solid transparent;border-radius:14px;background:#ecf0f1;position:relative;padding:0;overflow:hidden}#gd-proto .gd-swatch.active{border-color:#182a35;box-shadow:0 0 0 3px #fff inset}#gd-proto .gd-swatch:after{content:'';position:absolute;inset:8px 15px 0 20px;border-radius:30px 30px 0 0;background:#4c697b88;transform:rotate(-12deg)}#gd-proto .gd-cover-help{font-size:11px;color:#819098}#gd-proto .gd-panel{background:#f5f8fa;padding:14px;border-radius:15px}#gd-proto .gd-input-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}#gd-proto .gd-pill-read{display:flex;align-items:center;gap:6px;min-height:42px;padding:0 13px;background:#f5f8fa;border-radius:12px;font-weight:750}#gd-proto .gd-exercise-list{display:flex;flex-direction:column;gap:10px;margin:16px 0}#gd-proto .gd-exercise-line{display:flex;gap:12px;align-items:center;padding:14px 12px;border:1px solid #e8ecef;border-radius:14px}#gd-proto .gd-exercise-index{height:30px;width:30px;flex:none;background:#f0f7fa;border-radius:9px;display:grid;place-items:center;color:#38738d;font-weight:800}#gd-proto .gd-exercise-line strong{font-size:13px}#gd-proto .gd-exercise-line small{color:#839099;font-size:11px;display:block;margin-top:3px}#gd-proto .gd-search{display:flex;align-items:center;gap:9px;background:#f4f7f8;border:1px solid #e2e9ed;border-radius:13px;padding:0 12px;height:48px;position:relative}#gd-proto .gd-search input{font-size:16px!important;border:0;outline:0;background:transparent;min-width:0;width:100%;height:100%}#gd-proto .gd-search-results{margin:8px 0 14px;border:1px solid #e8edf0;border-radius:14px;box-shadow:0 10px 24px #1c303510;overflow:hidden;background:white}#gd-proto .gd-result{width:100%;padding:12px 10px;min-height:58px;border:0;border-bottom:1px solid #edf0f2;background:#fff;display:flex;align-items:center;gap:9px;text-align:left}#gd-proto .gd-result:last-child{border-bottom:0}#gd-proto .gd-result-title{flex:1;font-size:12px;font-weight:760}#gd-proto .gd-result small{display:block;font-weight:500;color:#839098;margin-top:3px;font-size:10px}#gd-proto .gd-addmark{height:29px;width:29px;border-radius:9px;background:#e9f7fc;color:#0086c6;display:grid;place-items:center;flex:none}#gd-proto .gd-ex-card{border:1px solid #e1e8ec;border-radius:20px;padding:16px;margin:15px 0 14px;touch-action:pan-y}#gd-proto .gd-ex-card-title{font-size:18px;font-weight:850;letter-spacing:-.5px;line-height:1.2}#gd-proto .gd-ex-card-sub{font-size:11px;color:#81909b;margin-top:5px}#gd-proto .gd-ex-illustration{height:125px;border-radius:13px;overflow:hidden;background:linear-gradient(90deg,#f4f6f7,#e7edf1);position:relative;margin:14px 0}#gd-proto .gd-ex-illustration .gd-athlete{right:23%;width:40%;height:126%;bottom:-25px}#gd-proto .gd-numerics{display:grid;grid-template-columns:1fr 1fr;gap:11px}#gd-proto .gd-numfield{min-width:0}#gd-proto .gd-numfield span{font-size:11px;font-weight:710;color:#677781;display:block;margin-bottom:5px}#gd-proto .gd-numfield input{width:100%;height:43px;background:#f7f9fa;border:1px solid #e4e9eb;border-radius:11px;padding:8px 10px;font-size:16px!important;min-width:0;color:#273f49}#gd-proto .gd-ex-controls{display:flex;align-items:center;justify-content:space-between;margin:11px 0;gap:10px}#gd-proto .gd-counter{display:flex;align-items:center;gap:5px;color:#738590;font-size:12px}#gd-proto .gd-counter button{height:35px;width:35px;border:1px solid #e1e8ed;background:#fff;border-radius:10px;display:grid;place-items:center;color:#203844}#gd-proto .gd-progress{display:flex;justify-content:center;gap:6px}#gd-proto .gd-progress i{width:6px;height:6px;background:#cbd6dc;border-radius:50%;display:block}#gd-proto .gd-progress i.active{background:#12313f;width:15px;border-radius:8px}#gd-proto .gd-inline-divider{height:1px;background:#edf0f3;margin:13px 0}#gd-proto .gd-sheet-backdrop{position:absolute;inset:0;z-index:40;background:rgba(16,28,35,.28);display:flex;align-items:flex-end;animation:gd-bg-in .2s ease-out}@keyframes gd-bg-in{from{opacity:0}to{opacity:1}}#gd-proto .gd-sheet{width:100%;max-height:75%;overflow-y:auto;background:white;border-radius:23px 23px 0 0;padding:14px 21px 26px;box-shadow:0 -5px 24px #152b351a;animation:gd-slide-in .26s cubic-bezier(.16,1,.3,1)}@keyframes gd-slide-in{from{transform:translateY(100%)}to{transform:translateY(0)}}#gd-proto .gd-grabber{width:43px;height:4px;border-radius:6px;background:#d8dee1;margin:0 auto 17px}#gd-proto .gd-sheet h3{margin:0 0 12px;font-size:18px;letter-spacing:-.5px}#gd-proto .gd-sheet-row{height:50px;display:flex;align-items:center;gap:13px;width:100%;background:transparent;border:0;border-bottom:1px solid #edf0f2;text-align:left;color:#243640;font-weight:720}#gd-proto .gd-sheet-row.danger{color:#c14c45}#gd-proto .gd-sheet-desc{color:#7f8c96;font-size:12px;line-height:1.5;margin:0 0 12px}#gd-proto .gd-sheet-row span{flex:1}#gd-proto .gd-toast{position:absolute;z-index:60;bottom:80px;left:50%;transform:translateX(-50%);background:#233942;color:white;border-radius:12px;padding:10px 15px;max-width:89%;text-align:center;box-shadow:0 5px 20px #132a3540;font-size:12px;pointer-events:none;animation:gd-entrance .2s ease-out}#gd-proto .gd-actions-row{display:flex;gap:9px;align-items:center}#gd-proto .gd-actions-row>*{flex:1}#gd-proto .gd-quiet-link{border:none;background:transparent;color:#006f9c;font-weight:780;font-size:12px;padding:9px 0}#gd-proto .gd-toggle{width:40px;height:24px;background:#d8e0e4;border-radius:20px;position:relative;flex:none;display:block}#gd-proto .gd-toggle:after{content:'';display:block;width:18px;height:18px;position:absolute;top:3px;left:3px;border-radius:50%;background:white;transition:transform .2s}#gd-proto .gd-toggle.on{background:#00a8e8}#gd-proto .gd-toggle.on:after{transform:translateX(16px)}#gd-proto .gd-helper{font-size:11px;color:#8b99a2;line-height:1.5}#gd-proto .gd-alt-label{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:740;font-size:12px;margin-top:11px}#gd-proto .gd-muted{color:#83929a}#gd-proto .gd-no-scroll{overflow:hidden}#gd-proto .gd-section-label{font-size:12px;color:#687983;font-weight:750;margin:7px 0 13px}#gd-proto .gd-no-margin{margin:0}#gd-proto .gd-spacer{height:14px}#gd-proto .gd-hr{height:1px;background:#e8edf0;margin:16px 0}
+@media(max-width:480px){#gd-proto .gd-wrapper{padding:10px 2px 16px;border-radius:10px}#gd-proto .gd-phone{height:700px;max-height:72vh;min-height:580px;width:min(100%,390px)}#gd-proto .gd-scene-label{display:none}}
+
+/* Motion V3 — Bento / disclosure / reorder */
+#gd-proto .gd-bento-home{padding-bottom:6px}
+#gd-proto .gd-bento-item{min-width:0;isolation:isolate;animation:gd-bento-enter .23s ease both;transition:transform .25s cubic-bezier(.2,.75,.3,1)}
+@keyframes gd-bento-enter{from{opacity:.8;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+#gd-proto .gd-bento-item>.gd-card{width:100%;position:relative;overflow:hidden}
+#gd-proto .gd-bento-hero{margin-bottom:3px}
+#gd-proto .gd-bento-section-heading{display:flex;align-items:center;justify-content:space-between;margin-top:2px}
+#gd-proto .gd-bento-section-heading .gd-group-title{margin:20px 0 13px}
+#gd-proto .gd-bento-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;grid-auto-flow:row;align-items:stretch}
+#gd-proto .gd-bento-grid>.gd-bento-item:nth-child(3)>.gd-card,#gd-proto .gd-bento-grid>.gd-bento-item:nth-child(4)>.gd-card{height:147px}
+#gd-proto .gd-bento-grid>.gd-bento-item.is-expanded{grid-column:1/-1}
+#gd-proto .gd-bento-grid>.gd-bento-item.is-expanded>.gd-card{height:146px}
+#gd-proto .gd-bento-grid>.gd-bento-item.is-expanded>.gd-card .gd-card-content{max-width:60%}
+#gd-proto .gd-bento-expander{position:absolute;z-index:5;right:12px;bottom:12px;width:37px;height:37px;display:grid;place-items:center;border-radius:12px;border:1px solid #ffffff9c;color:#243d4a;background:#ffffffe3;box-shadow:0 2px 10px #142b3310;transition:transform .23s ease,background .23s ease}
+#gd-proto .gd-bento-expander:active{transform:scale(.9)}
+#gd-proto .gd-bento-item.is-expanded .gd-bento-expander{background:#1c3340;color:white}
+#gd-proto .gd-bento-preview{background:white;border:1px solid #e1e9ed;border-top:0;margin-top:-2px;border-radius:0 0 18px 18px;padding:17px 13px 13px;box-shadow:0 8px 18px #172f3b09;animation:gd-preview-appear .27s ease both}
+@keyframes gd-preview-appear{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
+#gd-proto .gd-bento-week{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:12px}
+#gd-proto .gd-bento-week span{font-size:9px;letter-spacing:.1px;display:grid;place-items:center;border-radius:8px;height:27px;background:#f2f5f6;color:#95a0a7;font-weight:770}
+#gd-proto .gd-bento-week .is-planned{background:#dceffa;color:#196786}
+#gd-proto .gd-bento-session-list{display:flex;flex-direction:column;gap:0}
+#gd-proto .gd-bento-session-list button{width:100%;display:flex;align-items:center;gap:9px;min-height:40px;background:none;border:0;border-bottom:1px solid #eef1f3;padding:7px 2px;color:#354d59;text-align:left}
+#gd-proto .gd-bento-session-list button span{font-size:11px;color:#81919a;min-width:25px}
+#gd-proto .gd-bento-session-list button strong{flex:1;font-size:12px;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#gd-proto .gd-bento-session-list button svg{color:#86959d;flex:none}
+#gd-proto .gd-bento-preview-actions{display:flex;align-items:center;justify-content:space-between;margin-top:5px}
+#gd-proto .gd-bento-preview-actions button{font-size:12px;font-weight:790;display:flex;align-items:center;gap:3px;border:0;background:transparent;color:#007bab;padding:9px 0}
+#gd-proto .gd-bento-preview-actions button:last-child{color:#485f6c;width:36px;justify-content:center}
+#gd-proto .gd-preview-empty{font-size:12px;color:#85949c;padding:10px 0}
+#gd-proto .gd-reorder-surface .gd-reorder-fixed{position:relative}
+#gd-proto .gd-reorder-surface .gd-reorder-fixed .gd-bento-expander{display:none}
+#gd-proto .gd-reorder-surface .gd-reorder-fixed>.gd-bento-item>.gd-card{pointer-events:none}
+#gd-proto .gd-reorder-lock{position:absolute;right:12px;bottom:14px;z-index:5;display:flex;align-items:center;gap:5px;padding:6px 9px;background:#ffffffdc;border-radius:20px;font-size:10px;color:#465f6c;font-weight:800}
+#gd-proto .gd-reorder-stack{display:flex;flex-direction:column;gap:9px}
+#gd-proto .gd-reorder-row{min-height:70px;display:flex;align-items:center;gap:10px;border:1px solid #e4eaed;border-radius:15px;background:white;padding:9px;touch-action:pan-y;transition:border-color .16s ease,box-shadow .16s ease;position:relative}
+#gd-proto .gd-reorder-row.is-drop-target{border-color:#00a8e8;box-shadow:0 0 0 2px #00a8e824}
+#gd-proto .gd-reorder-row.is-dragging{z-index:20;box-shadow:0 12px 18px #12354229;border-color:#00a8e8;transition:none;pointer-events:none}
+#gd-proto .gd-drag-handle{border:0;background:#ecf4f8;color:#476d81;width:40px;height:44px;border-radius:12px;display:grid;place-items:center;touch-action:none;cursor:grab;flex:none}
+#gd-proto .gd-drag-handle:active{cursor:grabbing}
+#gd-proto .gd-reorder-info{min-width:0;flex:1}
+#gd-proto .gd-reorder-info b{font-size:13px;font-weight:820;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;display:block}
+#gd-proto .gd-reorder-info small{display:block;font-size:11px;color:#8b969d;margin-top:5px}
+#gd-proto .gd-reorder-controls{display:flex;gap:2px}
+#gd-proto .gd-reorder-controls button{width:29px;height:36px;display:grid;place-items:center;border:0;background:transparent;border-radius:8px;color:#657984}
+#gd-proto .gd-reorder-controls button:disabled{opacity:.2;cursor:default}
+#gd-proto .gd-reorder-surface .gd-group-title{margin-top:24px}
+@media(prefers-reduced-motion:reduce){#gd-proto .gd-bento-item,#gd-proto .gd-bento-preview,#gd-proto .gd-bento-expander{animation:none;transition:none}}
+
+  body{margin:0;background:#e9edf0;min-height:100vh}
+
+/* Motion V7: anchor-to-viewport reveal; maintains local position and responsive grid. */
+#gd-proto .gd-camera,#gd-proto .gd-status,#gd-proto .gd-athlete,#gd-proto .gd-bento-expander{display:none!important}
+#gd-proto .gd-wrapper{min-height:100dvh}
+#gd-proto .gd-card{user-select:none}
+#gd-proto .gd-card .gd-over{background:linear-gradient(98deg,#f9fbf9e2 0%,#f9fbf978 48%,transparent 92%)}
+#gd-proto .gd-card::after{content:"";position:absolute;z-index:0;width:125px;height:125px;right:-20px;top:15px;border-radius:39% 61% 43% 57%/59% 49% 51% 41%;border:1px solid #ffffffac;transform:rotate(25deg);pointer-events:none}
+#gd-proto .gd-v7-grid{display:flex!important;flex-wrap:wrap!important;gap:11px!important;align-items:flex-start}
+#gd-proto .gd-v7-grid .gd-bento-item{width:calc((100% - 11px)/2);min-width:0;flex:none;animation:none!important;transition:width .34s cubic-bezier(.22,1,.36,1),box-shadow .34s ease,background-color .34s ease;will-change:auto}
+#gd-proto .gd-v7-grid .gd-bento-item.gd-bento-hero,#gd-proto .gd-v7-grid .gd-bento-item.is-expanded{width:100%}
+#gd-proto .gd-v7-grid .gd-bento-item>.gd-card{margin:0;width:100%;height:171px;transition:height .34s cubic-bezier(.22,1,.36,1),border-radius .34s}
+#gd-proto .gd-v7-grid .gd-bento-hero>.gd-card{height:192px}
+#gd-proto .gd-v7-grid .gd-bento-item.is-expanded>.gd-card{height:124px;border-radius:17px 17px 0 0}
+#gd-proto .gd-v7-grid .gd-bento-item.is-expanded{background:#f4f9fb;border:1px solid #e2e9ed;border-radius:18px;overflow:hidden;box-shadow:0 4px 18px #1029390b}
+#gd-proto .gd-v7-grid .gd-card .gd-card-content{max-width:84%;left:14px;bottom:16px}
+#gd-proto .gd-v7-grid .gd-bento-hero .gd-card .gd-card-content{left:20px;bottom:23px}
+#gd-proto .gd-v7-grid .gd-bento-item.is-expanded .gd-card .gd-card-content{left:17px;bottom:17px;max-width:75%}
+#gd-proto .gd-v7-grid .gd-bento-item.is-expanded .gd-card-name{font-size:19px}
+#gd-proto .gd-v7-grid .gd-bento-item .gd-card-name{overflow-wrap:anywhere}
+#gd-proto .gd-v7-grid .gd-menu-card{width:34px;height:34px;right:12px;top:11px}
+#gd-proto .gd-expand-shell{display:grid;grid-template-rows:0fr;opacity:0;pointer-events:none;overflow:hidden;transition:grid-template-rows .34s cubic-bezier(.22,1,.36,1),opacity .25s ease}
+#gd-proto .gd-bento-item.is-expanded .gd-expand-shell{grid-template-rows:1fr;opacity:1;pointer-events:auto}
+#gd-proto .gd-bento-item .gd-bento-preview{min-height:0;overflow:hidden;animation:none!important;box-shadow:none;border:0;border-radius:0;padding:12px 15px 15px!important;background:transparent;margin:0}
+#gd-proto .gd-v7-week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;margin-bottom:12px}
+#gd-proto .gd-v7-week button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-width:0;height:40px;border:0;border-radius:9px;background:#eaf0f2;color:#6f858f;font-size:10px;font-weight:740;padding:4px 0}
+#gd-proto .gd-v7-week button.is-planned i{background:#00a8e8}
+#gd-proto .gd-v7-week button i{width:5px;height:5px;border-radius:50%;background:#cbd5db;display:block}
+#gd-proto .gd-v7-week button.chosen{background:#203642;color:white}
+#gd-proto .gd-v7-week button.chosen i{background:#c7f238}
+#gd-proto .gd-v7-overline{display:block;font-size:10px;letter-spacing:.5px;font-weight:820;color:#7b909b}
+#gd-proto .gd-v7-workout h3{font-size:19px;letter-spacing:-.45px;margin:7px 0 4px;font-weight:840}
+#gd-proto .gd-v7-muscles{font-size:12px;color:#778c98;margin:0 0 5px;line-height:1.4}
+#gd-proto .gd-v7-exercises{display:flex;flex-direction:column;gap:6px;margin:11px 0 3px;color:#526a75;font-size:12px}
+#gd-proto .gd-v7-exercises span:before{content:"";width:5px;height:5px;border-radius:50%;background:#bfcbd0;display:inline-block;vertical-align:middle;margin-right:8px}
+#gd-proto .gd-v7-exercises small{font-size:11px;color:#86969d;margin-left:13px}
+#gd-proto .gd-v7-cta{border:0;background:none;color:#006da9;font-size:12px;font-weight:820;padding:10px 0 0}
+#gd-proto .gd-v7-save-form{display:flex;flex-direction:column;gap:9px}
+#gd-proto .gd-v7-save-form label{font-size:12px;color:#536b78;font-weight:750}
+#gd-proto .gd-v7-save-form input{font-size:16px;width:100%;min-height:48px;border:1px solid #dce7ec;background:#f7fafb;border-radius:12px;padding:12px;color:#213a48;outline:none}
+#gd-proto .gd-v7-save-form input:focus{border-color:#00a8e8;background:#fff;box-shadow:0 0 0 2px #00a8e820}
+#gd-proto .gd-v7-save-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+#gd-proto .gd-v7-save-actions button{min-height:45px;border:0;border-radius:12px;background:#f0f4f6;color:#395463;font-weight:810;font-size:13px}
+#gd-proto .gd-v7-save-actions button.gd-v7-confirm{background:#203643;color:white}
+#gd-proto .gd-v7-save-actions button:disabled{opacity:.35;cursor:default}
+#gd-proto .gd-content{overflow-anchor:none}
+@media(max-width:640px){
+ body{margin:0;background:#fff}
+ #gd-proto{width:100%}
+ #gd-proto .gd-wrapper{padding:0;min-height:100dvh;border-radius:0;background:white;gap:0;justify-content:flex-start}
+ #gd-proto .gd-scene{padding:10px 5px;min-height:49px;width:100%;background:#eff3f5;flex:none}
+ #gd-proto .gd-phone{width:100%;height:calc(100dvh - 49px);max-height:none;min-height:0;border:0;border-radius:0;box-shadow:none}
+ #gd-proto .gd-head{min-height:59px}
+ #gd-proto .gd-content{flex:1;min-height:0}
+ #gd-proto .gd-nav{padding-bottom:max(8px,env(safe-area-inset-bottom));min-height:calc(61px + env(safe-area-inset-bottom))}
+ #gd-proto .gd-sheet{padding-bottom:max(26px,env(safe-area-inset-bottom))}
+}
+@media(max-width:350px){#gd-proto .gd-v7-grid{gap:8px!important}#gd-proto .gd-v7-grid .gd-bento-item{width:calc((100% - 8px)/2)}}
+@media(prefers-reduced-motion:reduce){#gd-proto .gd-v7-grid .gd-bento-item,#gd-proto .gd-expand-shell,#gd-proto .gd-v7-grid .gd-bento-item>.gd-card{animation:none!important;transition:none!important}}
+
+
+/* V7.1: última peça ocupa a largura total se for a única meia peça da linha.
+   A classe é atribuída pelo layout JS com base no número de peças compactas. */
+#gd-proto .gd-v7-grid .gd-bento-item.gd-v7-orphan:not(.is-expanded){width:100%!important}
+#gd-proto .gd-v7-grid .gd-bento-item.gd-v7-orphan>.gd-card{height:145px}
+#gd-proto .gd-content{scroll-behavior:auto;overscroll-behavior-y:contain;overflow-anchor:none}
+#gd-proto .gd-v7-grid .gd-bento-item{scroll-margin-top:14px}
+@media(max-width:350px){#gd-proto .gd-v7-grid .gd-bento-item.gd-v7-orphan:not(.is-expanded){width:100%!important}}
+
+  
+/* V7.2 — Proteção contra salvamento acidental de treino com somente um exercício. */
+#gd-proto .gd-v72-warning-desc{margin:0 0 16px;color:#586c78;font-size:14px;line-height:1.55}
+#gd-proto .gd-v72-confirm-actions{gap:9px}
+#gd-proto .gd-v72-confirm-actions button{font-size:12px;line-height:1.25;padding:9px;min-height:50px}
+#gd-proto .gd-v72-confirm-actions button:first-child{color:#385261}
+#gd-proto .gd-sheet[role="alertdialog"] h3{font-size:19px;line-height:1.3;margin-bottom:11px}
+@media(max-width:350px){#gd-proto .gd-v72-confirm-actions{grid-template-columns:1fr}#gd-proto .gd-v72-confirm-actions button{min-height:43px}}
+
+
+/* V7.3 — Biblioteca em bottom sheet persistente; CTA fixo acima da tab bar. */
+#gd-proto .gd-exercise-footer{position:relative;z-index:1;padding:9px 18px 11px;box-shadow:0 -2px 12px #1a344508}
+#gd-proto .gd-add-exercise-footer{display:flex;align-items:center;justify-content:center;gap:10px;min-height:49px;font-size:14px}
+#gd-proto .gd-add-exercise-footer svg{flex:none}
+#gd-proto .gd-composer-empty{padding:34px 20px 22px;min-height:185px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+#gd-proto .gd-composer-empty h3{font-size:18px;letter-spacing:-.4px;margin:0 0 7px}
+#gd-proto .gd-composer-empty p{margin:0;color:#8295a0;font-size:12px}
+#gd-proto .gd-sheet.gd-ex-library{height:75%;max-height:75%;padding:12px 18px max(16px,env(safe-area-inset-bottom));display:flex;flex-direction:column;overflow:hidden;touch-action:pan-y}
+#gd-proto .gd-ex-library .gd-grabber{flex:none;margin-bottom:16px}
+#gd-proto .gd-library-panel{display:flex;flex-direction:column;min-height:0;flex:1}
+#gd-proto .gd-library-panel h3{flex:none;font-size:20px;line-height:1.3;margin:0 0 16px;font-weight:850}
+#gd-proto .gd-library-search{height:48px;min-height:48px;flex:none;border-radius:12px;margin-bottom:13px}
+#gd-proto .gd-library-search input{font-size:16px!important}
+#gd-proto .gd-library-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;flex:none;margin:0 0 7px}
+#gd-proto .gd-library-meta strong{font-size:12px;font-weight:800;color:#314751}
+#gd-proto .gd-library-count{font-size:10px;color:#718994;white-space:nowrap}
+#gd-proto .gd-library-results{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;border-radius:11px}
+#gd-proto .gd-library-results::-webkit-scrollbar{display:none}
+#gd-proto .gd-library-row{min-height:60px;padding:10px 5px 10px 9px;gap:10px;border-bottom:1px solid #ecf1f3;transition:background-color .15s}
+#gd-proto .gd-library-row:active,#gd-proto .gd-library-row.gd-just-added{background:#eff9fc}
+#gd-proto .gd-library-row .gd-result-title{font-size:12px;line-height:1.35}
+#gd-proto .gd-library-row .gd-addmark{background:#e8f6fb;color:#007eb8;min-height:32px;min-width:32px}
+#gd-proto .gd-library-no-results{padding:28px 8px;color:#7e929c;font-size:13px;text-align:center}
+#gd-proto .gd-sheet-backdrop.gd-library-leaving{animation:gd-library-bg-out .25s ease forwards;pointer-events:none}
+#gd-proto .gd-library-leaving .gd-ex-library{animation:gd-library-slide-out .25s cubic-bezier(.4,0,1,1) forwards}
+@keyframes gd-library-slide-out{to{transform:translateY(101%)}}
+@keyframes gd-library-bg-out{to{background:transparent;opacity:0}}
+@media(prefers-reduced-motion:reduce){#gd-proto .gd-sheet.gd-ex-library,#gd-proto .gd-sheet-backdrop.gd-library-leaving{animation:none!important}}
+
+  
+/* Motion V7.4 — visual persistence and concise added feedback. */
+#gd-proto .gd-library-row.gd-is-added{background:#f8fbf9;cursor:default;opacity:1}
+#gd-proto .gd-library-row.gd-is-added .gd-addmark{background:#e4f4eb;color:#17754e;transition:background-color .18s ease,color .18s ease,transform .22s cubic-bezier(.2,1.2,.3,1)}
+#gd-proto .gd-library-row.gd-just-added .gd-addmark{transform:scale(1.08)}
+#gd-proto .gd-library-row.gd-is-added .gd-result-title{color:#3c5964}
+#gd-proto .gd-library-panel{position:relative}
+#gd-proto .gd-library-added-feedback{
+ position:absolute;z-index:2;left:50%;bottom:11px;transform:translate(-50%,8px);
+ background:#253a44;color:#fff;font-size:12px;font-weight:750;
+ padding:9px 16px;border-radius:20px;box-shadow:0 6px 18px #102a3525;
+ pointer-events:none;white-space:nowrap;opacity:0;
+ transition:opacity .20s ease,transform .24s cubic-bezier(.18,.75,.2,1)
+}
+#gd-proto .gd-library-added-feedback.gd-is-visible{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){#gd-proto .gd-library-added-feedback,#gd-proto .gd-library-row .gd-addmark{transition:none!important}}
+
+</style>
+</head>
+<body>
+  <div id="gd-proto"></div>
+  <script>
+
+(function(){
+const root=document.getElementById('gd-proto');
+const catalog=[
+ {name:'Supino reto com halteres',muscle:'Peito',equipment:'Halteres e banco',sets:'4',repMin:'8',repMax:'12'},
+ {name:'Remada unilateral com halter',muscle:'Costas',equipment:'Halteres e banco',sets:'4',repMin:'8',repMax:'12'},
+ {name:'Desenvolvimento com halteres',muscle:'Ombros',equipment:'Halteres',sets:'3',repMin:'8',repMax:'12'},
+ {name:'Agachamento goblet',muscle:'Quadríceps',equipment:'Kettlebell',sets:'4',repMin:'10',repMax:'12'},
+ {name:'Rosca alternada',muscle:'Bíceps',equipment:'Halteres',sets:'3',repMin:'10',repMax:'12'},
+ {name:'Tríceps francês com halter',muscle:'Tríceps',equipment:'Halteres',sets:'3',repMin:'10',repMax:'12'},
+ {name:'Flexão de braços',muscle:'Peito',equipment:'Peso corporal',sets:'4',repMin:'8',repMax:'15'},
+ {name:'Supino máquina',muscle:'Peito',equipment:'Máquina',sets:'4',repMin:'8',repMax:'12'},
+ {name:'Puxada frente na polia',muscle:'Costas',equipment:'Polia',sets:'4',repMin:'8',repMax:'12'},
+ {name:'Cadeira extensora',muscle:'Quadríceps',equipment:'Máquina',sets:'3',repMin:'10',repMax:'15'},
+];
+const ex=(name)=>{let c=catalog.find(v=>v.name===name)||catalog[0];return {...c,id:'e'+Math.random().toString(36).slice(2,9),rest:'01:00',load:'',alternatives:[]}};
+function ws(title, names){return {title,exercises:names.map(ex)}};
+const seed=[
+{id:'r1',name:'Hipertrofia',mode:'Musculação',tone:'blue',art:'muscle',primary:true,autoAdjust:false,workouts:{0:ws('Peito e bíceps',['Supino máquina','Rosca alternada','Supino reto com halteres']),1:ws('Costas e tríceps',['Puxada frente na polia','Tríceps francês com halter']),3:ws('Pernas',['Cadeira extensora','Agachamento goblet']),4:ws('Ombros',['Desenvolvimento com halteres']),5:ws('Peito e costas',['Supino máquina','Puxada frente na polia'])}},
+{id:'r2',name:'Academia cheia',mode:'Hipertrofia',tone:'mint',art:'free',primary:false,autoAdjust:false,workouts:{0:ws('Peito e bíceps',['Supino reto com halteres','Rosca alternada','Flexão de braços']),1:ws('Costas e tríceps',['Remada unilateral com halter','Tríceps francês com halter']),3:ws('Pernas',['Agachamento goblet']),4:ws('Ombros',['Desenvolvimento com halteres']),5:ws('Peito e costas',['Supino reto com halteres','Remada unilateral com halter'])}},
+{id:'r3',name:'Treino em casa',mode:'Funcional',tone:'peach',art:'home',primary:false,autoAdjust:false,workouts:{1:ws('Corpo inteiro',['Flexão de braços','Agachamento goblet'])}},
+{id:'r4',name:'Corrida',mode:'Corrida',tone:'lavender',art:'run',primary:false,autoAdjust:false,workouts:{2:ws('Corrida leve',[]),6:ws('Longão',[])}},
+{id:'r5',name:'Mobilidade',mode:'Mobilidade',tone:'gray',art:'yoga',primary:false,autoAdjust:false,workouts:{0:ws('Alongamento',[]),4:ws('Mobilidade geral',[])}}
+];
+let s={page:'list',selectedId:'r1',day:0, sheet:null, routines:seed, form:null,editing:false,workoutDraft:null,activeEx:0,search:'',toast:'',scenario:'multi',expandedId:null,daysByRoutine:{},reordering:false,reorderOriginal:null};
+const days=['Seg','Ter','Qua','Qui','Sex','Sáb','Dom'];
+function E(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function I(n,size=21){const paths={back:'<path d="m15 18-6-6 6-6"/>',plus:'<path d="M12 5v14M5 12h14"/>',more:'<circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/>',home:'<path d="m3 10 9-7 9 7v10H3z"/><path d="M9 20v-7h6v7"/>',dumbbell:'<path d="M6.5 6.5 17.5 17.5M4 8l4-4M2 6l4-4M16 20l4-4M18 22l4-4"/>',map:'<path d="m9 18-6 3V5l6-3m0 16 6 3 6-3V2l-6 3m-6-3v16m6-13v16"/>',message:'<path d="M20 11.5a8.5 8.5 0 0 1-8.5 8.5 8.2 8.2 0 0 1-4-.8L3 21l1.8-4.2a8.5 8.5 0 1 1 15.2-5.3Z"/>',user:'<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',copy:'<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/>',edit:'<path d="M3 21h5l12-12-5-5L3 16zM13.5 5.5l5 5"/>',trash:'<path d="M3 6h18M8 6V4h8v2M6 6l1 15h10l1-15"/>',share:'<circle cx="18" cy="5" r="2"/><circle cx="6" cy="12" r="2"/><circle cx="18" cy="19" r="2"/><path d="m8 11 8-5m-8 8 8 4"/>',star:'<path d="m12 3 3 6 6.5 1-4.75 4.7 1.1 6.5L12 18l-5.85 3.2 1.1-6.5L2.5 10 9 9Z"/>',search:'<circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/>',chevRight:'<path d="m9 18 6-6-6-6"/>',chevLeft:'<path d="m15 18-6-6 6-6"/>',settings:'<circle cx="12" cy="12" r="3"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-14.2-1.4 1.4M6.3 17.7l-1.4 1.4"/>',calendar:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/>',check:'<path d="m4 12 5 5L20 6"/>',swap:'<path d="M7 7h14m-4-4 4 4-4 4M17 17H3m4-4-4 4 4 4"/>',pause:'<path d="M8 5v14m8-14v14"/>',down:'<path d="m6 9 6 6 6-6"/>',up:'<path d="m6 15 6-6 6 6"/>',x:'<path d="M18 6 6 18M6 6l12 12"/>',camera:'<rect x="2" y="5" width="20" height="16" rx="2"/><path d="M7 5 9 2h6l2 3"/><circle cx="12" cy="13" r="4"/>'};return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[n]||paths.star}</svg>`}
+function art(type){const head='<ellipse cx="102" cy="32" rx="17" ry="19" fill="#d5ad97"/>';const muscle=`${head}<path d="M79 58 Q101 44 125 60 L135 114 Q109 124 79 113Z" fill="#4f6473"/><path d="M79 65q-33 13-38 44M124 66q32-4 39-38" stroke="#cda68e" stroke-width="16" stroke-linecap="round" fill="none"/><path d="M91 115 78 168M120 115l18 53" stroke="#384c5b" stroke-width="23" stroke-linecap="round"/><path d="m141 27 29-11" stroke="#3c4a52" stroke-width="7" stroke-linecap="round"/><path d="M161 11v16M173 6v16" stroke="#3c4a52" stroke-width="7"/>`;const run=`${head}<path d="m98 54 27 15-22 47-32-9Z" fill="#506979"/><path d="M90 67 54 89M121 74l32 14M108 117l-43 32m41-35 51 31" stroke="#b8846b" stroke-width="14" stroke-linecap="round"/><path d="m66 151-30 4m121-10 22 4" stroke="#374c5c" stroke-width="9" stroke-linecap="round"/>`;const yoga=`${head}<path d="M87 55h28l14 52-55 3z" fill="#778d94"/><path d="m87 63-34 39m63-38 38 43" stroke="#d3a58e" stroke-width="13" stroke-linecap="round"/><path d="M79 107q-26 14-48 38m94-37q32 18 56 35" stroke="#374c5b" stroke-width="21" fill="none" stroke-linecap="round"/><path d="M32 145q72 13 147-3" stroke="#bbcbd3" stroke-width="6"/>`;const home=`${head}<path d="M85 55h34l9 62-56-2Z" fill="#506b80"/><path d="m81 66-33 32m76-27 30 33" stroke="#d6a78c" stroke-width="13" stroke-linecap="round"/><path d="M84 116 77 168m38-52 22 52" stroke="#586676" stroke-width="22" stroke-linecap="round"/>`;const free=`${head}<path d="M83 55q22-9 40 4l4 59-51-5z" fill="#627b82"/><path d="m83 64-35 32m75-32 40-32" stroke="#c99378" stroke-width="15" stroke-linecap="round"/><path d="M84 117 67 166m46-49 21 48" stroke="#374e60" stroke-width="23" stroke-linecap="round"/><path d="m148 29 30-4m-2-12 4 26" stroke="#344450" stroke-width="7"/>`;return `<div class="gd-athlete"><svg viewBox="0 0 200 180" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><ellipse cx="100" cy="173" rx="72" ry="8" fill="#627685" opacity=".12"/>${({muscle,run,yoga,home,free})[type]||muscle}</svg></div>`}
+const rById=()=>s.routines.find(x=>x.id===s.selectedId)||s.routines[0];
+const dayCount=r=>Object.keys(r.workouts).length;
+const cover=(r,extra='')=>`<div class="gd-card ${extra}" data-tone="${r.tone||'blue'}"><div class="gd-over"></div>${art(r.art||'muscle')}<div class="gd-card-content"><div class="gd-card-name">${E(r.name)}</div><div class="gd-card-meta">${E(r.mode)} · ${dayCount(r)} ${dayCount(r)===1?'treino':'treinos'}</div></div></div>`;
+const work=(r,d)=>r.workouts[d]||null;
+function header(){const r=rById();const fullDays=['segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado','domingo'];const t={list:s.reordering?'Reordenar':'Rotinas',detail:r?.name||'Rotina',create:s.editing?'Editar rotina':'Nova rotina',workout:'Treino',workoutForm:'Novo treino',composer:s.workoutDraft?.title||'Treino de '+fullDays[s.day]}[s.page]||'Rotinas';const canSave=Boolean(s.workoutDraft?.exercises?.length);return `<div class="gd-head ${s.page==='composer'?'gd-head--composer':''}"><button class="gd-iconbutton" data-action="back" aria-label="Voltar">${I('back',25)}</button><div class="gd-head-title">${E(t)}</div>${s.page==='composer'?`<button class="gd-iconbutton gd-right gd-save-check ${canSave?'is-ready':'is-disabled'}" data-action="save-workout" aria-label="Salvar treino" title="Salvar treino" ${canSave?'':'disabled'}>${I('check',25)}</button>`:s.page==='list'&&s.reordering?`<button class="gd-iconbutton gd-right gd-save-check is-ready" data-action="finish-reorder" aria-label="Concluir reordenação">${I('check',25)}</button>`:s.page==='list'?`<button class="gd-iconbutton gd-right" data-action="new" aria-label="Criar rotina">${I('plus',25)}</button>`:s.page==='detail'?`<button class="gd-iconbutton gd-right" data-action="menu" data-id="${r.id}" aria-label="Opções da rotina">${I('more',25)}</button>`:'<span></span>'}</div>`}
+function preview(r){const dayIndex=(s.daysByRoutine&&s.daysByRoutine[r.id])??0;const w=work(r,dayIndex);const tags=w?[...new Set(w.exercises.map(e=>e.muscle))].join(' · '):'';return `<div class="gd-expand-shell" ${s.expandedId===r.id?'':'inert'} aria-hidden="${s.expandedId!==r.id}"><div class="gd-bento-preview"><div class="gd-bento-week gd-v7-week" role="tablist" aria-label="Semana de ${E(r.name)}">${days.map((d,i)=>`<button role="tab" aria-selected="${dayIndex===i}" class="${dayIndex===i?'chosen':''} ${r.workouts[i]?'is-planned':''}" data-action="inline-day" data-id="${E(r.id)}" data-day="${i}" aria-label="${E(d)}${r.workouts[i]?', com treino':', dia livre'}">${E(d)}<i></i></button>`).join('')}</div><div class="gd-v7-workout"><span class="gd-v7-overline">${E(days[dayIndex]).toUpperCase()} · ${w?w.exercises.length+' EXERCÍCIOS':'DIA LIVRE'}</span><h3>${w?E(w.title):'Sem treino'}</h3>${tags?`<p class="gd-v7-muscles">${E(tags)}</p>`:''}${w?`<div class="gd-v7-exercises">${w.exercises.slice(0,2).map(e=>`<span>${E(e.name)}</span>`).join('')}${w.exercises.length>2?`<small>+ ${w.exercises.length-2} exercício${w.exercises.length-2>1?'s':''}</small>`:''}</div>`:'<p class="gd-v7-muscles">Você pode adicionar um treino a este dia.</p>'}<button class="gd-v7-cta" data-action="workout-from-card" data-id="${E(r.id)}" data-day="${dayIndex}">${w?'Ver treino':'Adicionar treino'}</button></div></div></div>`}
+function bentoCard(r,kind='small'){const expanded=s.expandedId===r.id;const primary=kind==='primary';const menu=(primary||expanded)&&!s.reordering?`<button class="gd-menu-card" data-action="menu" data-id="${E(r.id)}" aria-label="Opções de ${E(r.name)}">${I('more',19)}</button>`:'';return `<section class="gd-bento-item ${primary?'gd-bento-hero':''} ${expanded?'is-expanded':''}" data-bento-id="${E(r.id)}"><div class="gd-card ${primary?'gd-card-primary':'gd-card-small'}" data-tone="${E(r.tone)}" role="button" tabindex="${s.reordering?'-1':'0'}" data-action="expand" data-id="${E(r.id)}" aria-expanded="${expanded}" aria-label="${expanded?'Recolher':'Expandir'} ${E(r.name)}"><div class="gd-over"></div>${primary?'<span class="gd-label-principal">PRINCIPAL</span>':''}${menu}<div class="gd-card-content"><div class="gd-card-name">${E(r.name)}</div><div class="gd-card-meta">${E(r.mode)} · ${dayCount(r)} ${dayCount(r)===1?'treino':'treinos'}</div></div></div>${preview(r)}</section>`}
+function list(){if(!s.routines.length)return `<div class="gd-empty"><div class="gd-empty-art">${I('dumbbell',42)}</div><h3>Suas rotinas começam aqui</h3><p>Crie uma rotina para organizar seus treinos.</p><button class="gd-secondary" data-action="new">Criar rotina</button></div>`;const primary=s.routines.find(r=>r.primary)||s.routines[0];const others=s.routines.filter(r=>r.id!==primary.id);if(s.reordering){return `<div class="gd-reorder-surface"><div class="gd-reorder-fixed">${bentoCard(primary,'primary')}<div class="gd-reorder-lock">Principal fixa</div></div><h2 class="gd-group-title">Outras rotinas</h2><div class="gd-reorder-stack">${others.map((r,i)=>`<div class="gd-reorder-row" data-reorder-id="${E(r.id)}"><button class="gd-drag-handle" data-action="drag-handle" aria-label="Arrastar ${E(r.name)}" title="Arrastar para reordenar">${I('more',21)}</button><div class="gd-reorder-info"><b>${E(r.name)}</b><small>${E(r.mode)}</small></div><div class="gd-reorder-controls"><button data-action="move-routine-up" data-id="${E(r.id)}" ${i===0?'disabled':''} aria-label="Mover ${E(r.name)} para cima">${I('up',19)}</button><button data-action="move-routine-down" data-id="${E(r.id)}" ${i===others.length-1?'disabled':''} aria-label="Mover ${E(r.name)} para baixo">${I('down',19)}</button></div></div>`).join('')}</div></div>`}const visible=[primary,...others];if(s.expandedId&&s.expandedId!==primary.id){const ix=others.findIndex(r=>r.id===s.expandedId);if(ix>=0&&ix%2===1){[visible[ix],visible[ix+1]]=[visible[ix+1],visible[ix]]}}return `<div class="gd-bento-home"><div class="gd-bento-grid gd-v7-grid">${visible.map(r=>bentoCard(r,r.primary?'primary':'small')).join('')}</div></div>`}
+function detail(){let r=rById();if(!r)return list();const w=work(r,s.day);return `<div class="gd-enter"><div class="gd-card gd-detail-cover" data-tone="${r.tone}"><div class="gd-over"></div>${art(r.art)}<div class="gd-card-content"><div class="gd-eyebrow">${r.primary?'Rotina principal':r.mode}</div><div class="gd-card-name">${E(r.name)}</div><div class="gd-card-meta">${dayCount(r)} treinos na semana</div></div></div><div class="gd-section"><h2>Semana de treinos</h2><div class="gd-week" role="tablist" aria-label="Dias da semana">${days.map((d,i)=>`<button class="gd-day ${wAt(r,i)?'has':''} ${s.day===i?'selected':''}" data-action="day" data-day="${i}" role="tab" aria-selected="${s.day===i}" aria-label="${d}${wAt(r,i)?', com treino':''}"><span class="gd-day-name">${d}</span><span class="gd-day-num">${i+1}</span><span class="gd-mark"></span></button>`).join('')}</div><div class="gd-workout-day" data-swipe="day">${w?`<div class="gd-eyebrow">${E(days[s.day])} · ${w.exercises.length} exercícios</div><div class="gd-name">${E(w.title)}</div><div class="gd-info">${E([...new Set(w.exercises.map(e=>e.muscle))].slice(0,4).join(' · ')||'Treino programado')}</div><div class="gd-workout-preview">${w.exercises.slice(0,2).map(e=>`<div class="gd-preview-line"><span>${E(e.name)}</span></div>`).join('')}</div>${w.exercises.length>2?`<div class="gd-helper" style="margin-top:12px">+${w.exercises.length-2} exercícios</div>`:''}`:`<div class="gd-eyebrow">${E(days[s.day])}</div><div class="gd-name">Sem treino</div><div class="gd-info">Dia livre nesta rotina.</div>`}<button class="gd-quiet-link" data-action="${w?'open-workout':'add-workout'}">${w?'Ver treino':'Adicionar treino'} ${I('chevRight',14)}</button></div><div class="gd-helper" style="text-align:center;margin-top:10px">Deslize para mudar o dia</div></div></div>`}
+function wAt(r,d){return !!r.workouts[d]}
+function create(){let d=s.form||{name:'',mode:'Musculação',tone:'blue',art:'muscle'};let mods=['Musculação','Corrida','Yoga','Funcional','Mobilidade','Caminhada'];let swatches=[['blue','#d5e1ed'],['mint','#d4e2d9'],['peach','#ead6cb'],['lavender','#dddaf0'],['gray','#e1e5e7']];return `<div class="gd-enter gd-form"><div class="gd-field"><label for="gd-rname">Nome da rotina</label><input id="gd-rname" class="gd-input" data-field="name" maxlength="45" placeholder="Ex.: Hipertrofia — academia cheia" value="${E(d.name)}" /></div><div class="gd-field"><label>Modalidade</label><div class="gd-pills">${mods.map(m=>`<button class="gd-pill ${d.mode===m?'active':''}" data-action="modality" data-value="${E(m)}">${E(m)}</button>`).join('')}</div></div><div class="gd-field"><label>Capa da rotina</label><div class="gd-swatches">${swatches.map(([tone,color])=>`<button class="gd-swatch ${d.tone===tone?'active':''}" data-action="cover" data-value="${tone}" aria-label="Capa ${tone}" style="background:${color}"></button>`).join('')}</div><span class="gd-cover-help">Capas demonstrativas; a versão final terá imagens da biblioteca e opção de foto própria.</span></div><div class="gd-panel"><div class="gd-row"><span style="font-size:12px;font-weight:750">Programação semanal</span>${I('calendar',18)}</div><div class="gd-helper" style="margin-top:6px">Adicione os treinos nos dias desejados após salvar.</div></div></div>`}
+function workout(){const r=rById(),w=work(r,s.day);if(!w)return detail();return `<div class="gd-enter"><div class="gd-section-label">${E(r.name)} · ${E(days[s.day])}</div><div class="gd-row"><h2 style="font-size:23px;letter-spacing:-.8px;margin:4px 0">${E(w.title)}</h2><button class="gd-iconbutton" data-action="workout-menu" aria-label="Opções do treino">${I('more')}</button></div><div class="gd-exercise-list">${w.exercises.length?w.exercises.map((e,i)=>`<div class="gd-exercise-line"><span class="gd-exercise-index">${i+1}</span><span style="flex:1"><strong>${E(e.name)}</strong><small>${E(e.muscle)} · ${E(e.sets||3)} séries</small></span>${I('chevRight',17)}</div>`).join(''):`<div class="gd-panel gd-note">Treino sem exercícios cadastrados.</div>`}</div></div>`}
+function workoutForm(){let d=s.workoutDraft;return `<div class="gd-enter gd-form"><div class="gd-field"><label for="gd-wname">Nome do treino</label><input id="gd-wname" class="gd-input" data-field="workout-title" placeholder="Ex.: Peito e bíceps" value="${E(d?.title||'')}" /></div><div class="gd-field"><label>Dia da semana</label><div class="gd-pill-read">${I('calendar',17)} ${E(days[s.day])}</div></div></div>`}
+function composer(){const d=s.workoutDraft;if(!d)return '';const e=d.exercises[s.activeEx];return `<div class="gd-enter">${e?`<div class="gd-ex-controls"><div class="gd-counter"><button data-action="prev-ex" aria-label="Exercício anterior">${I('chevLeft',18)}</button><strong style="color:#354c58">${s.activeEx+1} / ${d.exercises.length}</strong><button data-action="next-ex" aria-label="Próximo exercício">${I('chevRight',18)}</button></div><button class="gd-iconbutton" data-action="exercise-menu" aria-label="Opções do exercício">${I('more',22)}</button></div><div class="gd-ex-card" data-swipe="exercise"><div class="gd-ex-card-title">${E(e.name)}</div><div class="gd-ex-card-sub">${E(e.muscle)}</div><div class="gd-ex-illustration">${art('free')}</div><div class="gd-numerics">${[['Séries','sets'],['Carga (kg)','load'],['Rep. mín.','repMin'],['Rep. máx.','repMax'],['Descanso','rest'],['Equipamento','equipment']].map(([label,key])=>`<label class="gd-numfield"><span>${label}</span><input data-ex-field="${key}" value="${E(e[key]||'')}" ${key==='equipment'?'readonly data-action="choose-equipment"':''} inputmode="${key==='rest'||key==='equipment'?'text':'numeric'}" aria-label="${label}" /></label>`).join('')}</div><div class="gd-inline-divider"></div><button class="gd-small-action" data-action="substitutes">${I('plus',17)} Adicionar substituição</button>${e.alternatives?.length?`<div class="gd-helper">${e.alternatives.map(x=>E(x.name)).join(' · ')}</div>`:''}</div><div class="gd-progress">${d.exercises.map((v,i)=>`<i class="${i===s.activeEx?'active':''}"></i>`).join('')}</div>`:`<div class="gd-empty gd-composer-empty"><h3>Seu treino está vazio</h3><p>Adicione exercícios para começar.</p></div>`}</div>`}
+function foot(){const p=s.page;if(p==='create')return `<div class="gd-bottom"><button class="gd-primary" data-action="save-routine">Salvar rotina</button></div>`;if(p==='workout')return `<div class="gd-bottom"><button class="gd-primary" data-action="edit-workout">Editar treino</button></div>`;if(p==='composer')return `<div class="gd-bottom gd-exercise-footer"><button class="gd-primary gd-add-exercise-footer" data-action="open-exercise-library">${I('plus',20)}<span>Adicionar exercício</span></button></div>`;return ''}
+function nav(){const arr=[['home','Início'],['dumbbell','Rotinas'],['map','Match'],['message','Mensagens'],['user','Perfil']];return `<nav class="gd-nav" aria-label="Menu inferior">${arr.map(([k,name])=>`<button data-action="nav" data-value="${name}" class="${name==='Rotinas'?'active':''}" aria-label="${name}">${I(k,21)}<span>${name}</span></button>`).join('')}</nav>`}
+
+function libraryMatches(){
+ const q=s.search.trim().toLocaleLowerCase('pt-BR');
+ return (q?catalog.filter(c=>[c.name,c.muscle,c.equipment].some(v=>v.toLocaleLowerCase('pt-BR').includes(q))):catalog.slice(0,4)).slice(0,15);
+}
+const libraryKey=name=>String(name||'').trim().replace(/\s+/g,' ').toLocaleLowerCase('pt-BR');
+function inCurrentWorkout(name){
+ return Boolean(s.workoutDraft?.exercises.some(e=>libraryKey(e.name)===libraryKey(name)));
+}
+function libraryResults(){
+ const result=libraryMatches();
+ return result.length?result.map(c=>{
+   const added=inCurrentWorkout(c.name);
+   return `<button class="gd-result gd-library-row ${added?'gd-is-added':''}" data-action="add-exercise" data-name="${E(c.name)}"
+     aria-label="${E(c.name)} ${added?'já adicionado ao treino':'adicionar ao treino'}" ${added?'disabled':''}>
+     <span class="gd-result-title">${E(c.name)}<small>${E(c.muscle)} · ${E(c.equipment)}</small></span>
+     <span class="gd-addmark" aria-hidden="true">${I(added?'check':'plus',18)}</span></button>`;
+ }).join(''):`<div class="gd-library-no-results">Nenhum exercício encontrado.</div>`;
+}
+function librarySheet(){
+ const n=s.workoutDraft?.exercises.length||0;
+ return `<div class="gd-library-panel"><h3 id="gd-library-title" tabindex="-1">Adicionar exercício</h3>
+ <div class="gd-search gd-library-search">${I('search',20)}<input id="gd-ex-search" type="search" data-field="search" placeholder="Pesquisar exercícios" autocomplete="off" value="${E(s.search)}" aria-label="Pesquisar exercícios na biblioteca"/></div>
+ <div class="gd-library-meta"><strong>${s.search.trim()?'Resultados da busca':'Exercícios sugeridos'}</strong><span class="gd-library-count" role="status" aria-live="polite">${n} ${n===1?'exercício':'exercícios'} no treino</span></div>
+ <div class="gd-library-results" role="list" aria-label="Exercícios da biblioteca">${libraryResults()}</div>
+ <div class="gd-library-added-feedback" role="status" aria-live="polite" aria-atomic="true"></div></div>`;
+}
+
+function sheet(){if(!s.sheet)return '';const sh=s.sheet;let html='';if(sh.type==='exercise-library'){html=librarySheet()}else if(sh.type==='single-exercise-confirm'){html=`<h3>Salvar treino com 1 exercício?</h3><p class="gd-v72-warning-desc">Você adicionou apenas 1 exercício neste treino. Deseja salvar assim mesmo?</p><div class="gd-v7-save-actions gd-v72-confirm-actions"><button data-action="continue-workout-edit">Continuar editando</button><button data-action="confirm-single-exercise" class="gd-v7-confirm">Salvar assim mesmo</button></div>`}else if(sh.type==='name-workout'){const fullDays=['segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado','domingo'];html=`<h3>Dê um nome ao treino de ${fullDays[s.day]}</h3><div class="gd-v7-save-form"><label for="gd-final-name">Nome do treino</label><input id="gd-final-name" type="text" maxlength="60" data-field="workout-title" placeholder="Ex.: Peito e bíceps" value="${E(s.workoutDraft?.title||'')}" autocomplete="off"><div class="gd-v7-save-actions"><button data-action="close-sheet">Cancelar</button><button data-action="confirm-save-workout" class="gd-v7-confirm" ${s.workoutDraft?.title?.trim()?'':'disabled'}>Salvar treino</button></div></div>`}else if(sh.type==='routine'){const r=s.routines.find(r=>r.id===sh.id);if(!r)return '';html=`<h3>${E(r.name)}</h3>${!r.primary?row('star','Definir como principal','make-primary',r.id):''}${row('edit','Editar rotina','edit-routine',r.id)}${row('copy','Duplicar rotina','duplicate',r.id)}${row('share','Compartilhar','share',r.id)}${s.routines.length>2?row('swap','Reordenar rotinas','start-reorder',r.id):''}${row('settings','Ajustar programação','adjust-settings',r.id)}${row('trash','Excluir rotina','delete-routine',r.id,true)}`;}else if(sh.type==='adjust'){let r=rById();html=`<h3>Opções de ${E(r.name)}</h3><button class="gd-sheet-row" data-action="toggle-adjust"><span>Reajustar automaticamente</span><span class="gd-toggle ${r.autoAdjust?'on':''}"></span></button><p class="gd-sheet-desc">Configuração apenas demonstrativa.</p>`}else if(sh.type==='share'){html=`<h3>Compartilhar rotina</h3><p class="gd-sheet-desc">Prévia demonstrativa de compartilhamento.</p>${row('check','Concluir','close-sheet')}`}else if(sh.type==='delete'){html=`<h3>Excluir rotina?</h3><p class="gd-sheet-desc">Essa ação remove a rotina apenas desta demonstração.</p>${row('trash','Excluir rotina','confirm-delete',sh.id,true)}`;}else if(sh.type==='exercise'){html=`<h3>Exercício</h3>${row('swap','Reordenar','reorder')}${row('trash','Excluir exercício','delete-exercise',null,true)}`;}else if(sh.type==='reorder'){html=`<h3>Reordenar exercício</h3>${row('up','Mover para cima','move-up')}${row('down','Mover para baixo','move-down')}`;}else if(sh.type==='substitutes'){const e=s.workoutDraft?.exercises[s.activeEx];html=`<h3>Adicionar substituição</h3><p class="gd-sheet-desc">Escolha uma alternativa para ${E(e?.name)}.</p>${catalog.filter(c=>c.name!==e?.name).slice(0,6).map(c=>`<button class="gd-sheet-row" data-action="pick-substitute" data-name="${E(c.name)}"><span>${E(c.name)}<small style="display:block;color:#8b98a1;margin-top:3px">${E(c.equipment)}</small></span>${I('plus',16)}</button>`).join('')}`;}else if(sh.type==='equipment'){html=`<h3>Equipamento</h3>${[...new Set(catalog.map(c=>c.equipment))].map(c=>`<button class="gd-sheet-row" data-action="pick-equipment" data-name="${E(c)}"><span>${E(c)}</span></button>`).join('')}`;}else if(sh.type==='workout'){html=`<h3>Treino</h3>${row('edit','Editar treino','edit-workout')}${row('swap','Mover para outro dia','move-workout')}`;}else if(sh.type==='move-workout'){html=`<h3>Mover treino para</h3>${days.map((d,i)=>`<button class="gd-sheet-row" data-action="pick-move-day" data-day="${i}"><span>${d}</span></button>`).join('')}`;}return `<div class="gd-sheet-backdrop" data-action="close-sheet"><div class="gd-sheet ${sh.type==='exercise-library'?'gd-ex-library':''}" role="${sh.type==='single-exercise-confirm'?'alertdialog':'dialog'}" aria-modal="true" ${sh.type==='single-exercise-confirm'?'aria-label="Confirmação de treino com um exercício"':sh.type==='exercise-library'?'aria-labelledby="gd-library-title"':''}><div class="gd-grabber"></div>${html}</div></div>`}
+function row(ic,label,action,id,danger){return `<button class="gd-sheet-row ${danger?'danger':''}" data-action="${action}" ${id?'data-id="'+E(id)+'"':''}>${I(ic,19)}<span>${E(label)}</span></button>`}
+function render(){const oldPage=root.dataset.page;const pos=root.querySelector('.gd-content')?.scrollTop||0;root.innerHTML=`<div class="gd-wrapper"><div class="gd-scene"><span class="gd-scene-label">TESTAR ESTADO</span>${[['multi','Várias rotinas'],['one','Uma rotina'],['empty','Sem rotinas']].map(([k,n])=>`<button class="gd-chip-demo ${s.scenario===k?'active':''}" data-action="scene" data-value="${k}">${n}</button>`).join('')}</div><div class="gd-phone"><div class="gd-camera"></div><div class="gd-status"><span>9:41</span><span>●●●  ▰</span></div>${header()}<div class="gd-content">${({list,detail,create,workout,workoutForm,composer})[s.page]()}</div>${foot()}${nav()}${sheet()}${s.toast?`<div class="gd-toast" role="status">${E(s.toast)}</div>`:''}</div></div>`;root.dataset.page=s.page;const el=root.querySelector('.gd-content');if(el)el.scrollTop=(oldPage===s.page?pos:0);if(s.page==='list'&&!s.reordering){updateOrphanLayout(root.querySelector('.gd-v7-grid'));if(oldPage!==s.page&&s.expandedId){requestAnimationFrame(()=>requestAnimationFrame(()=>alignExpandedCard(s.expandedId,{behavior:'instant',force:true})))}}}
+function toast(v){s.toast=v;render();clearTimeout(toast.t);toast.t=setTimeout(()=>{s.toast='';let el=root.querySelector('.gd-toast');if(el)el.remove()},2400)}
+function setPage(p){s.page=p;s.sheet=null;s.search='';render()}
+
+/* V7.1: layout is based on the actual number of half-width widgets,
+   not on nth-child, because the hero and the expanded card span full width. */
+function updateOrphanLayout(grid){
+ if(!grid)return;
+ const tiles=[...grid.querySelectorAll(':scope > .gd-bento-item')];
+ tiles.forEach(el=>el.classList.remove('gd-v7-orphan'));
+ const half=tiles.filter(el=>!el.classList.contains('gd-bento-hero')&&!el.classList.contains('is-expanded'));
+ if(half.length%2===1)half.at(-1).classList.add('gd-v7-orphan');
+}
+let cardScrollToken=0;
+function alignExpandedCard(id,{behavior='smooth',force=false}={}){
+ const container=root.querySelector('.gd-content');
+ const card=[...root.querySelectorAll('[data-bento-id]')].find(el=>el.dataset.bentoId===id);
+ if(!container||!card||!card.classList.contains('is-expanded')||s.expandedId!==id)return;
+ const view=container.getBoundingClientRect(),box=card.getBoundingClientRect();
+ const margin=14,peek=42;
+ const safeTop=view.top+margin,safeBottom=view.bottom-peek;
+ const available=safeBottom-safeTop;
+ const needTop=box.height>available-12 || box.top<safeTop || box.top>safeBottom-95;
+ let delta=0;
+ if(needTop || (force && box.top>safeTop+24))delta=box.top-safeTop;
+ else if(box.bottom>safeBottom){
+   const toFit=box.bottom-safeBottom;
+   // Do not hide the card heading merely to fit its bottom edge.
+   delta=(box.top-toFit<safeTop)?box.top-safeTop:toFit;
+ }
+ if(Math.abs(delta)<3)return;
+ const dest=Math.max(0,Math.min(container.scrollHeight-container.clientHeight,container.scrollTop+delta));
+ if(Math.abs(dest-container.scrollTop)>3)container.scrollTo({top:dest,behavior});
+}
+function openRoutine(id){
+ if(s.reordering)return;
+ const container=root.querySelector('.gd-content'),grid=root.querySelector('.gd-v7-grid');
+ if(!container||!grid)return;
+ cardScrollToken++;
+ const runToken=cardScrollToken;
+ const before=new Map([...grid.querySelectorAll('[data-bento-id]')].map(el=>{
+   const r=el.getBoundingClientRect();return [el.dataset.bentoId,{x:r.left,y:r.top}];
+ }));
+ const opening=s.expandedId!==id;
+ s.expandedId=opening?id:null;
+ const primary=s.routines.find(r=>r.primary)||s.routines[0];
+ const others=s.routines.filter(r=>r.id!==primary.id);
+ const visible=[primary,...others];
+ if(s.expandedId&&s.expandedId!==primary.id){
+   const ix=others.findIndex(r=>r.id===s.expandedId);
+   // Right-hand tile swaps locally with its left neighbor, never with the hero.
+   if(ix>=0&&ix%2===1)[visible[ix],visible[ix+1]]=[visible[ix+1],visible[ix]];
+ }
+ const nodes=new Map([...grid.querySelectorAll('[data-bento-id]')].map(el=>[el.dataset.bentoId,el]));
+ visible.forEach(r=>grid.appendChild(nodes.get(r.id)));
+ for(const [key,node] of nodes){
+   const expanded=key===s.expandedId;
+   node.classList.toggle('is-expanded',expanded);
+   const tile=node.querySelector('.gd-card');
+   tile.setAttribute('aria-expanded',String(expanded));
+   tile.setAttribute('aria-label',(expanded?'Recolher ':'Expandir ')+s.routines.find(r=>r.id===key).name);
+   const pane=node.querySelector('.gd-expand-shell');
+   pane.setAttribute('aria-hidden',String(!expanded));
+   if(expanded)pane.removeAttribute('inert');else pane.setAttribute('inert','');
+ }
+ updateOrphanLayout(grid);
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ for(const [key,node] of nodes){
+   const from=before.get(key),after=node.getBoundingClientRect();
+   if(!from||reduced)continue;
+   const dx=from.x-after.left,dy=from.y-after.top;
+   if(Math.abs(dx)+Math.abs(dy)>3)node.animate([
+     {transform:`translate(${dx}px,${dy}px)`},{transform:'translate(0,0)'}
+   ],{duration:340,easing:'cubic-bezier(.22,1,.36,1)'});
+ }
+ if(!opening)return;
+ // The old algorithm evaluated scrollHeight while the 0fr->1fr expansion was
+ // still collapsed, so Safari clamped the target and landed inside the card.
+ // After layout settles, align the *actual* card top under the fixed header.
+ // Align early so the title appears quickly, and once more after the transition.
+ requestAnimationFrame(()=>{
+   if(runToken!==cardScrollToken||s.expandedId!==id)return;
+   alignExpandedCard(id,{behavior:reduced?'instant':'smooth'});
+ });
+ setTimeout(()=>{
+   if(runToken!==cardScrollToken||s.expandedId!==id)return;
+   alignExpandedCard(id,{behavior:reduced?'instant':'smooth'});
+ },380);
+}
+function beginRoutine(edit=false){s.editing=edit;const r=rById();s.form=edit?{name:r.name,mode:r.mode,tone:r.tone,art:r.art}:{name:'',mode:'Musculação',tone:'blue',art:'muscle'};setPage('create')}
+function beginWorkout(){let w=work(rById(),s.day);s.workoutDraft=w?{title:w.title,exercises:JSON.parse(JSON.stringify(w.exercises))}:{title:'',exercises:[]};s.activeEx=0;setPage('composer')}
+function startReorder(){const primary=s.routines.find(r=>r.primary)||s.routines[0];const others=s.routines.filter(r=>r.id!==primary?.id);if(others.length<2){s.sheet=null;toast('Crie outra rotina para reorganizar');return}s.reordering=true;s.reorderOriginal=s.routines.map(r=>r.id);s.expandedId=null;s.sheet=null;render()}
+function finishReorder(){s.reordering=false;s.reorderOriginal=null;render();toast('Ordem das rotinas atualizada')}
+function cancelReorder(){if(s.reorderOriginal){s.routines.sort((a,b)=>s.reorderOriginal.indexOf(a.id)-s.reorderOriginal.indexOf(b.id))}s.reordering=false;s.reorderOriginal=null;render()}
+function moveRoutine(id,delta){const primary=s.routines.find(r=>r.primary)||s.routines[0];const others=s.routines.filter(r=>r.id!==primary?.id);const from=others.findIndex(r=>r.id===id);const to=Math.max(0,Math.min(others.length-1,from+delta));if(from<0||from===to)return;const moved=others.splice(from,1)[0];others.splice(to,0,moved);s.routines=[primary,...others];render()}
+function goBack(){if(s.sheet){s.sheet=null;render();return}if(s.page==='list'&&s.reordering){cancelReorder();return}switch(s.page){case 'list':toast('Você está em Rotinas');break;case 'create':setPage('list');break;case 'workout':setPage('list');break;case 'composer':setPage(work(rById(),s.day)?'workout':'list');break;default:setPage('list')}}
+let libraryFeedbackTimer=null;
+root.addEventListener('click',(event)=>{const a=event.target.closest('[data-action]');if(!a||!root.contains(a))return;let action=a.dataset.action, id=a.dataset.id, value=a.dataset.value;if(action==='close-sheet'&&event.target!==a&&event.target.closest('.gd-sheet'))return;
+switch(action){case 'scene':s.scenario=value;s.routines=value==='empty'?[]:value==='one'?seed.slice(0,1).map(v=>JSON.parse(JSON.stringify(v))):seed.map(v=>JSON.parse(JSON.stringify(v)));s.selectedId='r1';s.sheet=null;s.page='list';s.expandedId=null;s.daysByRoutine={};s.reordering=false;s.reorderOriginal=null;render();break;
+case 'back':goBack();break;case 'expand':openRoutine(id);break;case 'inline-day':s.daysByRoutine[id]=Number(a.dataset.day);render();break;case 'workout-from-card':{s.selectedId=id;s.day=Number(a.dataset.day);if(work(rById(),s.day))setPage('workout');else beginWorkout();break}case 'open-day':s.selectedId=id;s.day=Number(a.dataset.day);setPage('workout');break;case 'start-reorder':startReorder();break;case 'finish-reorder':finishReorder();break;case 'move-routine-up':moveRoutine(id,-1);break;case 'move-routine-down':moveRoutine(id,1);break;case 'drag-handle':break;case 'new':beginRoutine();break;case 'open':openRoutine(id);break;case 'menu':s.sheet={type:'routine',id};render();break;case 'day':s.day=Number(a.dataset.day);render();break;
+case 'modality':s.form.mode=value;render();break;case 'cover':s.form.tone=value;render();break;
+case 'save-routine':{if(!s.form.name.trim()){toast('Dê um nome para a rotina');return}if(s.editing){Object.assign(rById(),s.form);s.form=null;s.expandedId=s.selectedId;setPage('list');}else{let nr={id:'r'+Date.now(),name:s.form.name.trim(),mode:s.form.mode,tone:s.form.tone,art:s.form.mode==='Corrida'?'run':s.form.mode==='Yoga'?'yoga':'free',primary:s.routines.length===0,autoAdjust:false,workouts:{}};s.routines.push(nr);s.selectedId=nr.id;s.form=null;s.day=0;s.daysByRoutine[nr.id]=0;s.expandedId=nr.id;setPage('list')}}break;
+case 'make-primary':s.routines.forEach(r=>r.primary=r.id===id);s.sheet=null;setPage('list');break;
+case 'edit-routine':s.selectedId=id;beginRoutine(true);break;
+case 'duplicate':{let orig=s.routines.find(r=>r.id===id);let cp=JSON.parse(JSON.stringify(orig));cp.id='r'+Date.now();cp.name=orig.name+' — cópia';cp.primary=false;s.routines.push(cp);s.selectedId=cp.id;s.day=0;s.daysByRoutine[cp.id]=0;s.expandedId=cp.id;s.sheet=null;setPage('list');toast('Rotina duplicada');}break;
+case 'share':s.sheet={type:'share'};render();break;case 'delete-routine':s.sheet={type:'delete',id};render();break;
+case 'confirm-delete':s.routines=s.routines.filter(r=>r.id!==id);if(s.routines.length&&!s.routines.some(r=>r.primary))s.routines[0].primary=true;s.selectedId=s.routines[0]?.id||'r1';setPage('list');break;
+case 'adjust-settings':s.selectedId=id;s.sheet={type:'adjust'};render();break;
+case 'toggle-adjust':rById().autoAdjust=!rById().autoAdjust;render();break;
+case 'open-workout':setPage('workout');break;case 'add-workout':case 'edit-workout':beginWorkout();break;
+case 'continue-workout':setPage('composer');break;
+case 'open-exercise-library':s.search='';s.sheet={type:'exercise-library'};render();break;
+case 'add-exercise':{
+ if(!s.workoutDraft||!a.dataset.name)return;
+ // Protect against repeated taps and already-present exercises.
+ if(inCurrentWorkout(a.dataset.name))return;
+ const added=ex(a.dataset.name);
+ s.workoutDraft.exercises.push(added);
+ s.activeEx=s.workoutDraft.exercises.length-1;
+ if(s.sheet?.type==='exercise-library'){
+   // Keep search, scroll, keyboard focus and sheet animation intact.
+   const editor=root.querySelector('.gd-content');
+   if(editor){const y=editor.scrollTop;editor.innerHTML=composer();editor.scrollTop=y;}
+   const save=root.querySelector('.gd-save-check');
+   if(save){save.disabled=false;save.classList.add('is-ready');save.classList.remove('is-disabled')}
+   const count=root.querySelector('.gd-library-count'),n=s.workoutDraft.exercises.length;
+   if(count)count.textContent=n+(n===1?' exercício':' exercícios')+' no treino';
+   a.disabled=true;
+   a.classList.add('gd-is-added','gd-just-added');
+   a.setAttribute('aria-label',added.name+' já adicionado ao treino');
+   const marker=a.querySelector('.gd-addmark');
+   if(marker)marker.innerHTML=I('check',18);
+   const feedback=root.querySelector('.gd-library-added-feedback');
+   if(feedback){
+     feedback.textContent='Adicionado';
+     feedback.classList.remove('gd-is-visible');
+     void feedback.offsetWidth;
+     feedback.classList.add('gd-is-visible');
+     clearTimeout(libraryFeedbackTimer);
+     libraryFeedbackTimer=setTimeout(()=>{if(feedback.isConnected)feedback.classList.remove('gd-is-visible')},1350);
+   }
+   setTimeout(()=>{if(a.isConnected)a.classList.remove('gd-just-added')},430);
+ }else render();
+ break;
+}
+case 'next-ex':s.activeEx=Math.min(s.workoutDraft.exercises.length-1,s.activeEx+1);render();break;
+case 'prev-ex':s.activeEx=Math.max(0,s.activeEx-1);render();break;
+case 'exercise-menu':s.sheet={type:'exercise'};render();break;
+case 'delete-exercise':s.workoutDraft.exercises.splice(s.activeEx,1);s.activeEx=Math.max(0,Math.min(s.activeEx,s.workoutDraft.exercises.length-1));s.sheet=null;render();break;
+case 'reorder':s.sheet={type:'reorder'};render();break;
+case 'move-up':case 'move-down':{const arr=s.workoutDraft.exercises,from=s.activeEx,to=Math.max(0,Math.min(arr.length-1,from+(action==='move-up'?-1:1)));if(from!==to){const t=arr.splice(from,1)[0];arr.splice(to,0,t);s.activeEx=to}s.sheet=null;render();break}
+case 'substitutes':s.sheet={type:'substitutes'};render();break;
+case 'pick-substitute':{let e=s.workoutDraft.exercises[s.activeEx];if(!e.alternatives.some(v=>v.name===a.dataset.name))e.alternatives.push(ex(a.dataset.name));s.sheet=null;render();break}
+case 'choose-equipment':s.sheet={type:'equipment'};render();break;
+case 'pick-equipment':s.workoutDraft.exercises[s.activeEx].equipment=a.dataset.name;s.sheet=null;render();break;
+case 'save-workout':if(!s.workoutDraft?.exercises?.length){toast('Adicione ao menos um exercício');return}s.sheet={type:s.workoutDraft.exercises.length===1?'single-exercise-confirm':'name-workout'};render();break;
+case 'continue-workout-edit':s.sheet=null;render();break;
+case 'confirm-single-exercise':if(s.workoutDraft?.exercises?.length!==1){s.sheet=null;render();break}s.sheet={type:'name-workout'};render();break;
+case 'confirm-save-workout':if(!s.workoutDraft?.exercises?.length){toast('Adicione ao menos um exercício');return}if(!s.workoutDraft?.title?.trim()){toast('Dê um nome para o treino');return}rById().workouts[s.day]=JSON.parse(JSON.stringify({...s.workoutDraft,title:s.workoutDraft.title.trim()}));s.daysByRoutine[s.selectedId]=s.day;s.expandedId=s.selectedId;s.workoutDraft=null;s.sheet=null;setPage('list');toast('Treino salvo');break;
+case 'workout-menu':s.sheet={type:'workout'};render();break;
+case 'move-workout':s.sheet={type:'move-workout'};render();break;
+case 'pick-move-day':{let d=Number(a.dataset.day),r=rById();if(r.workouts[d]){toast('Este dia já tem um treino');return}r.workouts[d]=r.workouts[s.day];delete r.workouts[s.day];s.day=d;s.daysByRoutine[s.selectedId]=d;s.expandedId=s.selectedId;s.sheet=null;setPage('list');break}
+case 'close-sheet':if(s.sheet?.type==='exercise-library')closeLibrarySheet();else{s.sheet=null;render()}break;
+case 'nav':if(value==='Rotinas')setPage('list');else toast(`${value} não faz parte deste teste`);break;
+}}
+);
+root.addEventListener('input',e=>{let inp=e.target;if(inp.dataset.field==='name'&&s.form)s.form.name=inp.value;if(inp.dataset.field==='workout-title'&&s.workoutDraft){s.workoutDraft.title=inp.value;const save=root.querySelector('.gd-v7-confirm');if(save)save.disabled=!inp.value.trim()}if(inp.dataset.exField&&s.workoutDraft?.exercises[s.activeEx])s.workoutDraft.exercises[s.activeEx][inp.dataset.exField]=inp.value;if(inp.dataset.field==='search'){s.search=inp.value;if(s.sheet?.type==='exercise-library'){const results=root.querySelector('.gd-library-results');if(results){results.innerHTML=libraryResults();results.scrollTop=0}const header=root.querySelector('.gd-library-meta strong');if(header)header.textContent=s.search.trim()?'Resultados da busca':'Exercícios sugeridos'}else{let start=inp.selectionStart;render();let el=root.querySelector('#gd-ex-search');if(el){el.focus();try{el.setSelectionRange(start,start)}catch(ex){}}}}});
+root.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-action="expand"]')){e.preventDefault();e.target.click()}if(e.key==='Enter'&&e.target.id==='gd-final-name'){e.preventDefault();root.querySelector('[data-action="confirm-save-workout"]')?.click()}if(e.key==='Escape'&&s.sheet?.type==='exercise-library'){e.preventDefault();closeLibrarySheet()}});
+
+let libraryGesture=null;
+function closeLibrarySheet(){
+ if(s.sheet?.type!=='exercise-library')return;
+ const backdrop=root.querySelector('.gd-sheet-backdrop');
+ if(!backdrop||backdrop.classList.contains('gd-library-leaving'))return;
+ backdrop.classList.add('gd-library-leaving');
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ setTimeout(()=>{if(s.sheet?.type!=='exercise-library')return;s.sheet=null;backdrop.remove();const back=root.querySelector('[data-action="open-exercise-library"]');back?.focus({preventScroll:true})},reduced?0:260);
+}
+root.addEventListener('pointerdown',event=>{
+ const pane=event.target.closest('.gd-ex-library');
+ if(!pane||s.sheet?.type!=='exercise-library')return;
+ const resultScroller=event.target.closest('.gd-library-results');
+ libraryGesture={y:event.clientY,x:event.clientX,canClose:!resultScroller||resultScroller.scrollTop<=0};
+});
+root.addEventListener('pointerup',event=>{
+ if(!libraryGesture)return;
+ const g=libraryGesture;libraryGesture=null;
+ if(!g.canClose)return;
+ if(event.clientY-g.y>82&&Math.abs(event.clientX-g.x)<85)closeLibrarySheet();
+});
+root.addEventListener('pointercancel',()=>{libraryGesture=null});
+// iOS Safari can cancel pointer events during a native touch gesture.
+let libraryTouchGesture=null;
+root.addEventListener('touchstart',event=>{
+ const pane=event.target.closest('.gd-ex-library');
+ if(!pane||s.sheet?.type!=='exercise-library')return;
+ const touch=event.changedTouches[0],scroll=event.target.closest('.gd-library-results');
+ libraryTouchGesture={x:touch.clientX,y:touch.clientY,canClose:!scroll||scroll.scrollTop<=0};
+},{passive:true});
+root.addEventListener('touchend',event=>{
+ if(!libraryTouchGesture)return;
+ const g=libraryTouchGesture;libraryTouchGesture=null;
+ const touch=event.changedTouches[0];
+ if(g.canClose&&touch.clientY-g.y>82&&Math.abs(touch.clientX-g.x)<85)closeLibrarySheet();
+},{passive:true});
+root.addEventListener('touchcancel',()=>{libraryTouchGesture=null},{passive:true});
+
+let drag=null;
+root.addEventListener('pointerdown',e=>{const handle=e.target.closest('.gd-drag-handle');if(!handle||!s.reordering)return;e.preventDefault();const row=handle.closest('[data-reorder-id]');drag={id:row.dataset.reorderId,y:e.clientY,pointerId:e.pointerId,row};row.classList.add('is-dragging');try{handle.setPointerCapture(e.pointerId)}catch(err){}});
+root.addEventListener('pointermove',e=>{if(!drag||e.pointerId!==drag.pointerId)return;const dy=e.clientY-drag.y;drag.row.style.transform=`translateY(${dy}px) scale(1.015)`;const rows=[...root.querySelectorAll('[data-reorder-id]')];rows.forEach(x=>x.classList.remove('is-drop-target'));const hovered=rows.find(x=>x!==drag.row&&e.clientY>=x.getBoundingClientRect().top&&e.clientY<=x.getBoundingClientRect().bottom);if(hovered)hovered.classList.add('is-drop-target')});
+root.addEventListener('pointerup',e=>{if(!drag||e.pointerId!==drag.pointerId)return;const rows=[...root.querySelectorAll('[data-reorder-id]')];const startIdx=rows.findIndex(x=>x.dataset.reorderId===drag.id);const centers=rows.map(x=>({id:x.dataset.reorderId,rect:x.getBoundingClientRect()}));const target=centers.find(x=>x.id!==drag.id&&e.clientY>=x.rect.top&&e.clientY<=x.rect.bottom);const delta=target?rows.findIndex(x=>x.dataset.reorderId===target.id)-startIdx:Math.round((e.clientY-drag.y)/78);drag.row.style.transform='';drag.row.classList.remove('is-dragging');drag=null;if(delta)moveRoutine(rows[startIdx].dataset.reorderId,delta);else render()});
+root.addEventListener('pointercancel',()=>{if(drag){drag.row.style.transform='';drag=null;render()}});
+let start=null;root.addEventListener('pointerdown',e=>{let el=e.target.closest('[data-swipe]');if(!el||e.target.closest('button,input'))return;start={x:e.clientX,y:e.clientY,type:el.dataset.swipe}});
+root.addEventListener('pointerup',e=>{if(!start)return;let dx=e.clientX-start.x,dy=e.clientY-start.y,type=start.type;start=null;if(Math.abs(dx)<48||Math.abs(dy)>Math.abs(dx)*.85)return;if(type==='day'&&s.page==='detail'){s.day=Math.max(0,Math.min(6,s.day+(dx<0?1:-1)));render()}if(type==='exercise'&&s.page==='composer'){s.activeEx=Math.max(0,Math.min(s.workoutDraft.exercises.length-1,s.activeEx+(dx<0?1:-1)));render()}});
+render();
+})();
+
+  </script>
+</body>
+</html>
