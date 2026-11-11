@@ -98,48 +98,6 @@
     .complete-actions{display:flex;gap:9px;margin-top:19px}.complete-actions button{flex:1;min-height:44px;border-radius:11px;border:1px solid #d7e0e6;background:#fff;color:var(--ink);font-weight:800}.complete-actions .primary{background:var(--action);color:white;border-color:var(--action)}
     .complete-photo{width:100%;height:100%;object-fit:cover;border-radius:50%}
     @media(max-width:360px){.complete-box{padding:19px 13px}.complete-card{flex-basis:77%}}
-
-    /* V0.2 additive: multi-duo discovery, pending invites, management and shared pair preview */
-    .complete-discovery{max-height:min(85vh,800px);overflow-y:auto;overscroll-behavior:contain;padding-top:12px}
-    .complete-handle{width:38px;height:4px;background:#cdd4dc;border-radius:99px;margin:0 auto 16px}
-    .complete-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
-    .complete-dialog-head h2{margin:0;font-size:19px;font-weight:800;letter-spacing:-.5px;color:var(--ink)}
-    .complete-close-icon{background:transparent;border:0;font-size:25px;color:var(--ink);width:38px;height:38px;padding:0;line-height:1}
-    .complete-summary{font-size:11px!important;color:var(--muted);line-height:1.6;margin:1px 0 14px!important}
-    .complete-search{border:1px solid #DCE3E9;background:#f5f7f9;width:100%;min-height:47px;border-radius:13px;padding:10px 13px;font-size:16px;color:var(--ink);outline-offset:3px}
-    .complete-people-list{display:grid;gap:0;margin-top:10px}
-    .complete-person{display:flex;align-items:center;gap:11px;border-bottom:1px solid #edf0f3;padding:13px 0;min-width:0}
-    .complete-person:last-child{border-bottom:0}
-    .complete-person-avatar{width:45px;height:45px;flex:0 0 45px;display:grid;place-items:center;border-radius:50%;background:#E6F0F7;color:var(--ink);font-weight:800;font-size:15px;border:1px solid #d8e4eb}
-    .complete-person-info{flex:1;min-width:0}
-    .complete-person-info strong{display:block;font-size:12px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
-    .complete-person-info small{display:block;font-size:10px;color:var(--muted);line-height:1.55}
-    .complete-person-action{background:var(--action);color:#fff;border:0;border-radius:10px;padding:0 11px;min-height:39px;font-size:11px;font-weight:800;white-space:nowrap;flex:0 0 auto}
-    .complete-person-action:disabled{background:#eff3f6;color:#687783;border:1px solid #dce3e9}
-    .duos-panel{position:absolute;inset:0;z-index:21;background:#fff;overflow-y:auto;overscroll-behavior:contain;padding-bottom:max(32px,env(safe-area-inset-bottom))}
-    .duos-header{position:sticky;top:0;z-index:2;background:rgba(255,255,255,.97);min-height:65px;padding:12px 17px;display:flex;gap:12px;align-items:center;border-bottom:1px solid #e8eef2}
-    .duos-header h2{margin:0;font-size:17px;font-weight:800;color:var(--ink);flex:1;text-align:center}
-    .duos-back{width:40px;height:40px;display:grid;place-items:center;font-size:26px;border:0;background:transparent;color:var(--ink);line-height:1}
-    .duos-content{padding:23px 19px 35px}
-    .duos-content h3{font-size:14px;font-weight:800;margin:18px 0 11px;color:var(--ink)}
-    .duos-content p{font-size:12px;line-height:1.55;color:var(--muted);margin:4px 0 12px}
-    .duos-item{display:flex;gap:12px;align-items:center;border-bottom:1px solid #edf0f3;padding:13px 0}
-    .duos-item-info{flex:1;min-width:0}
-    .duos-item-info strong{display:block;color:var(--ink);font-size:13px}
-    .duos-item-info small{display:block;color:var(--muted);font-size:11px;line-height:1.5;margin-top:3px}
-    .duos-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-    .duos-action{background:var(--action);border:1px solid var(--action);color:white;min-height:38px;padding:6px 12px;border-radius:10px;font-size:11px;font-weight:800}
-    .duos-action.outline{background:#fff;color:var(--ink);border-color:#dce3e9}
-    .duos-action.danger{background:#fff;color:#a82a32;border-color:#ebd1d3}
-    .duos-empty{border:1px solid #E7ECF1;border-radius:14px;padding:20px 15px;margin:12px 0;color:var(--muted);font-size:12px;line-height:1.6}
-    .duos-pair{display:flex;align-items:center;gap:16px;margin:20px 0;padding:18px 15px;border:1px solid #e1e8ed;border-radius:16px}
-    .duos-overlap{display:flex;min-width:87px}
-    .duos-overlap span{width:51px;height:51px;border:3px solid #fff;border-radius:50%;display:grid;place-items:center;background:#e2eff9;font-weight:800;color:var(--ink)}
-    .duos-overlap span+span{margin-left:-17px;background:#eaf3e2}
-    .duos-pair strong{font-size:14px}.duos-pair small{display:block;font-size:11px;color:var(--muted);margin-top:5px}
-    .duos-notice{background:#f1f8fb;border-radius:13px;padding:13px 15px;font-size:11px;line-height:1.65;color:#435765}
-    .complete-sheet .complete-error{font-size:11px;color:#ad2e39;margin-top:8px}
-    @media(max-width:360px){.complete-person{gap:8px}.complete-person-avatar{height:40px;width:40px;flex-basis:40px}.complete-person-action{font-size:10px;padding:0 8px}.duos-content{padding:19px 14px 30px}}
   </style>
 </head>
 <body>
@@ -379,242 +337,84 @@
 </script>
 
 <script>
-/* Goudduo experimental Profile V0.2: optional progressive completion and multiple fixed duo previews.
-   Preserves the legacy P0 profile engine. No API, notifications, GPS, server persistence or real invitations. */
+/* Additive profile completion in the Visual Lab. No backend, uploads or persistence. */
 (function(){
 'use strict';
-const app=document.getElementById('app');
-const phone=document.querySelector('.device');
-const scenes=document.getElementById('mobile-scenario');
+const app=document.getElementById('app'),phone=document.querySelector('.device'),scenes=document.getElementById('mobile-scenario');
 if(!app||!phone||!scenes)return;
-const state={
-  hidden:false, skipped:new Set(), done:new Set(),
-  name:'', city:'', uf:'', photo:'', interests:[],
-  duos:new Map(), currentPartner:null
-};
+const st={hidden:false,skipped:new Set(),done:new Set(),name:'',photo:'',interests:[]};
 const own=()=>scenes.value==='own'||scenes.value==='proOwn';
-const people=[
-  {id:'marcelo',name:'Marcelo',handle:'@marcelo.exemplo',city:'Joinville',uf:'SC',activity:'Corrida e musculação',initial:'M'},
-  {id:'emili',name:'Emili',handle:'@emili.exemplo',city:'Joinville',uf:'SC',activity:'Caminhada e corrida',initial:'E'},
-  {id:'bianca',name:'Bianca',handle:'@bianca.exemplo',city:'Curitiba',uf:'PR',activity:'Treino de força',initial:'B'},
-  {id:'osman',name:'Osman',handle:'@osmanexemplo',city:'Florianópolis',uf:'SC',activity:'Esportes e movimento',initial:'O'}
-];
-const ufList=['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'];
-const tasks=[
-  {id:'name',title:'Nome e região',description:'Adicione nome, cidade e estado.',cta:'Completar'},
-  {id:'photo',title:'Foto de perfil',description:'Mostre quem está por aqui.',cta:'Adicionar'},
-  {id:'interests',title:'Seus interesses',description:'Veja mais do que gosta.',cta:'Escolher'},
-  {id:'people',title:'Encontre pessoas',description:'Conheça gente para seguir.',cta:'Explorar'},
-  {id:'duo',title:'Encontrar uma dupla',description:'Convide pessoas para treinar e se conectar.',cta:'Encontrar'}
-];
-const glyph={
-  name:'<svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg>',
-  photo:'<svg viewBox="0 0 24 24"><path d="M14 4h-4l-2 3H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-4z"/><circle cx="12" cy="13" r="3"/></svg>',
-  interests:'<svg viewBox="0 0 24 24"><path d="M19 21 12 16 5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>',
-  people:'<svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M16 3a4 4 0 0 1 0 8M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2m6 0v-2a4 4 0 0 0-3-3.8"/></svg>',
-  duo:'<svg viewBox="0 0 24 24"><circle cx="8" cy="7" r="3.5"/><circle cx="17" cy="8" r="3"/><path d="M1.5 21v-2a6.5 6.5 0 0 1 13 0v2m2 0v-2a5 5 0 0 0-1.2-3.4M19 15h3m-1.5-1.5v3"/></svg>'
+const art={
+name:'<svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg>',
+photo:'<svg viewBox="0 0 24 24"><path d="M14 4h-4l-2 3H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-4z"/><circle cx="12" cy="13" r="3"/></svg>',
+interests:'<svg viewBox="0 0 24 24"><path d="M19 21 12 16 5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>',
+people:'<svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M16 3a4 4 0 0 1 0 8M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2m6 0v-2a4 4 0 0 0-3-3.8"/></svg>'
 };
-const escape=(s)=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-const partner=(id)=>people.find(p=>p.id===id);
-const closeModal=()=>phone.querySelector('.complete-overlay')?.remove();
-const closePage=()=>phone.querySelector('.duos-panel')?.remove();
-function hasVisibleProfile(){return !!app.querySelector('.identity')&&!!app.querySelector('.profile-tabs');}
-function enhanceOwn(){
+const tasks=[
+{key:'name',title:'Seu nome',copy:'Escolha como quer aparecer.',action:'Editar'},
+{key:'photo',title:'Foto de perfil',copy:'Mostre quem está por aqui.',action:'Adicionar'},
+{key:'interests',title:'Seus interesses',copy:'Veja mais do que gosta.',action:'Escolher'},
+{key:'people',title:'Encontre pessoas',copy:'Conheça gente para seguir.',action:'Explorar'}
+];
+function enhance(){
   if(!own())return;
   const name=app.querySelector('.display-name');
-  if(name&&state.name&&name.textContent!==state.name)name.textContent=state.name;
+  if(name&&st.name)name.textContent=st.name;
   const avatar=app.querySelector('.profile-avatar-wrap .avatar');
-  if(avatar&&state.photo&&!avatar.querySelector('.complete-photo')){
-    avatar.textContent='';
-    const img=document.createElement('img');img.className='complete-photo';img.src=state.photo;img.alt='';
-    avatar.appendChild(img);
+  if(avatar&&st.photo&&!avatar.querySelector('.complete-photo')){
+    avatar.textContent='';const image=document.createElement('img');image.className='complete-photo';image.src=st.photo;image.alt='';avatar.appendChild(image);
   }
 }
-function prepareSettings(){
+function settingsLink(){
   if(!own()||!app.querySelector('.settings-page'))return;
   const group=app.querySelector('.settings-group');
-  if(!group)return;
-  if(!group.querySelector('[data-completion="preferences"]')){
-    const row=document.createElement('button');row.type='button';row.className='settings-row';
-    row.dataset.completion='preferences';row.textContent='Preferências do perfil';group.appendChild(row);
-  }
-  if(!group.querySelector('[data-completion="manage"]')){
-    const row=document.createElement('button');row.type='button';row.className='settings-row';
-    row.dataset.completion='manage';row.textContent='Duplas';group.appendChild(row);
+  if(group&&!group.querySelector('[data-completion="reopen"]')){
+    const row=document.createElement('button');row.type='button';row.className='settings-row';row.dataset.completion='reopen';row.textContent='Preferências do perfil';group.appendChild(row);
   }
 }
 function draw(){
-  enhanceOwn();prepareSettings();
-  app.querySelector('.complete-box')?.remove();
-  if(!own()||state.hidden||!hasVisibleProfile())return;
-  const remaining=tasks.filter(t=>!state.done.has(t.id)&&!state.skipped.has(t.id));
+  enhance();settingsLink();const before=app.querySelector('.complete-box');if(before)before.remove();
+  if(!own()||st.hidden||!app.querySelector('.identity')||!app.querySelector('.profile-tabs'))return;
+  const remaining=tasks.filter(t=>!st.done.has(t.key)&&!st.skipped.has(t.key));
   if(!remaining.length)return;
-  const section=document.createElement('section');
-  section.className='complete-box';section.setAttribute('aria-label','Complete seu perfil');
-  section.innerHTML='<div class="complete-head"><div><h2>Complete seu perfil</h2><p>No seu tempo.</p></div><button type="button" class="complete-hide" data-completion="hide">Ocultar</button></div><div class="complete-cards">'+remaining.map(t=>'<article class="complete-card"><button type="button" class="complete-skip" data-completion="skip-'+t.id+'" aria-label="Dispensar '+escape(t.title)+'">×</button><div class="complete-art" aria-hidden="true">'+glyph[t.id]+'</div><h3>'+escape(t.title)+'</h3><p>'+escape(t.description)+'</p><button type="button" class="complete-cta" data-completion="open-'+t.id+'">'+escape(t.cta)+'</button></article>').join('')+'</div>';
-  app.appendChild(section);
+  const sec=document.createElement('section');sec.className='complete-box';sec.setAttribute('aria-label','Complete seu perfil');
+  sec.innerHTML='<div class="complete-head"><div><h2>Complete seu perfil</h2><p>No seu tempo.</p></div><button type="button" class="complete-hide" data-completion="hide">Ocultar</button></div><div class="complete-cards">'+remaining.map(t=>'<article class="complete-card"><button class="complete-skip" type="button" data-completion="skip-'+t.key+'" aria-label="Dispensar '+t.title+'">×</button><div class="complete-art" aria-hidden="true">'+art[t.key]+'</div><h3>'+t.title+'</h3><p>'+t.copy+'</p><button type="button" class="complete-cta" data-completion="open-'+t.key+'">'+t.action+'</button></article>').join('')+'</div>';
+  app.appendChild(sec);
 }
-function ensure(){
-  enhanceOwn();prepareSettings();
-  if(own()&&!state.hidden&&hasVisibleProfile()&&!app.querySelector('.complete-box'))draw();
-}
+function ensure(){enhance();settingsLink();if(own()&&!st.hidden&&app.querySelector('.identity')&&!app.querySelector('.complete-box'))draw();}
 new MutationObserver(ensure).observe(app,{childList:true});
-function sheet(title,body,options){
-  closeModal();
-  const overlay=document.createElement('div');overlay.className='complete-overlay';
-  const size=options&&options.large?' complete-discovery':'';
-  overlay.innerHTML='<section class="complete-sheet'+size+'" role="dialog" aria-modal="true" aria-label="'+escape(title)+'"><div class="complete-handle"></div><div class="complete-dialog-head"><h2>'+escape(title)+'</h2><button type="button" class="complete-close-icon" data-completion="close" aria-label="Fechar">×</button></div>'+body+'</section>';
-  phone.appendChild(overlay);
-  return overlay;
+function close(){const m=phone.querySelector('.complete-overlay');if(m)m.remove();}
+function open(key){
+  close();const el=document.createElement('div');el.className='complete-overlay';
+  let fields='';
+  if(key==='name')fields='<label for="demo-name">Nome de exibição</label><input id="demo-name" type="text" maxlength="40" placeholder="Como quer ser chamado?">';
+  else if(key==='photo')fields='<label for="demo-photo">Foto de perfil</label><input id="demo-photo" type="file" accept="image/png,image/jpeg,image/webp">';
+  else fields='<p>Escolha seus interesses.</p>'+['Treinos','Corrida','Caminhada','Bem-estar'].map(x=>'<label class="interest"><input type="checkbox" name="demo-interest" value="'+x+'">'+x+'</label>').join('');
+  const title=key==='name'?'Seu nome':key==='photo'?'Foto de perfil':'Seus interesses';
+  el.innerHTML='<div class="complete-sheet" role="dialog" aria-modal="true" aria-label="'+title+'"><h2>'+title+'</h2>'+fields+'<div class="complete-actions"><button type="button" data-completion="close">Cancelar</button><button type="button" class="primary" data-completion="save-'+key+'">Salvar</button></div><p>Apenas nesta prévia, sem enviar informações.</p></div>';
+  phone.appendChild(el);el.querySelector('input')?.focus();
 }
-function showForm(mode){
-  if(mode==='name'){
-    const options=ufList.map(uf=>'<option value="'+uf+'"'+(state.uf===uf?' selected':'')+'>'+uf+'</option>').join('');
-    const body='<p class="complete-summary">Cidade e estado podem ajudar na descoberta de parceiros. Não exibimos endereço ou localização exata.</p>'+
-      '<label for="complete-name">Nome de exibição</label><input type="text" id="complete-name" maxlength="45" placeholder="Como quer ser chamado?" value="'+escape(state.name)+'">'+
-      '<label for="complete-city">Cidade</label><input type="text" id="complete-city" maxlength="80" placeholder="Sua cidade" value="'+escape(state.city)+'">'+
-      '<label for="complete-uf">Estado</label><select id="complete-uf" class="complete-search" aria-label="Estado"><option value="">Selecione o estado</option>'+options+'</select>'+
-      '<p class="complete-summary">Dados opcionais, usados neste laboratório apenas nesta página. Não ativam Match nem tornam a região pública.</p>'+
-      '<div class="complete-error" id="complete-error" role="alert"></div><div class="complete-actions"><button type="button" data-completion="close">Cancelar</button><button type="button" class="primary" data-completion="save-name">Salvar</button></div>';
-    const modal=sheet('Nome e região',body);modal.querySelector('#complete-name')?.focus();
-  }else if(mode==='photo'){
-    sheet('Foto de perfil','<label for="complete-photo">Escolha uma foto</label><input type="file" id="complete-photo" accept="image/png,image/jpeg,image/webp"><p class="complete-summary">A foto não será enviada; fica apenas nesta prévia.</p><div class="complete-error" id="complete-error" role="alert"></div><div class="complete-actions"><button type="button" data-completion="close">Cancelar</button><button type="button" class="primary" data-completion="save-photo">Salvar</button></div>');
-  }else{
-    const choices=['Treinos','Corrida','Caminhada','Bem-estar'].map(x=>'<label class="interest"><input name="complete-interest" type="checkbox" value="'+x+'"'+(state.interests.includes(x)?' checked':'')+'>'+x+'</label>').join('');
-    sheet('Seus interesses','<p>Escolha o que gostaria de acompanhar.</p>'+choices+'<div class="complete-error" id="complete-error" role="alert"></div><div class="complete-actions"><button type="button" data-completion="close">Cancelar</button><button type="button" class="primary" data-completion="save-interests">Salvar</button></div>');
-  }
+function save(key){
+  if(key==='name'){const val=(phone.querySelector('#demo-name')?.value||'').trim();if(!val)return;st.name=val;}
+  else if(key==='interests'){const all=Array.from(phone.querySelectorAll('[name="demo-interest"]:checked')).map(x=>x.value);if(!all.length)return;st.interests=all;}
+  else if(key==='photo'){const file=phone.querySelector('#demo-photo')?.files?.[0];if(!file||!file.type.startsWith('image/')||file.size>6000000)return;const r=new FileReader();r.onload=()=>{st.photo=String(r.result||'');st.done.add('photo');close();draw();};r.readAsDataURL(file);return;}
+  st.done.add(key);close();draw();
 }
-function error(msg){const el=phone.querySelector('#complete-error');if(el)el.textContent=msg;}
-function saveForm(mode){
-  if(mode==='name'){
-    const name=(phone.querySelector('#complete-name')?.value||'').trim();
-    const city=(phone.querySelector('#complete-city')?.value||'').trim();
-    const uf=phone.querySelector('#complete-uf')?.value||'';
-    if(name.length<2||city.length<2||!uf){error('Preencha nome, cidade e estado para concluir esta tarefa.');return;}
-    state.name=name;state.city=city;state.uf=uf;
-  }else if(mode==='interests'){
-    const chosen=Array.from(phone.querySelectorAll('[name="complete-interest"]:checked')).map(el=>el.value);
-    if(!chosen.length){error('Selecione ao menos um interesse.');return;}
-    state.interests=chosen;
-  }else if(mode==='photo'){
-    const file=phone.querySelector('#complete-photo')?.files?.[0];
-    if(!file||!file.type.startsWith('image/')||file.size>6000000){error('Escolha uma imagem de até 6 MB.');return;}
-    const reader=new FileReader();
-    reader.onload=()=>{state.photo=String(reader.result||'');state.done.add('photo');closeModal();draw();};
-    reader.readAsDataURL(file);return;
-  }
-  state.done.add(mode);closeModal();draw();
-}
-function buttonStatus(id){
-  const record=state.duos.get(id);
-  if(!record)return '<button type="button" class="complete-person-action" data-completion="invite-'+id+'">Formar dupla</button>';
-  return '<button type="button" class="complete-person-action" disabled>'+ (record.status==='pending'?'Convite pendente':record.status==='active'?'Dupla ativa':'Em encerramento') +'</button>';
-}
-function suggestedMarkup(filter){
-  const term=(filter||'').toLocaleLowerCase('pt-BR').trim();
-  const arr=people.filter(p=>!term||[p.name,p.handle,p.city,p.uf,p.activity].join(' ').toLocaleLowerCase('pt-BR').includes(term));
-  if(!arr.length)return '<div class="duos-empty">Nenhuma pessoa encontrada nesta prévia.</div>';
-  return arr.map(p=>'<div class="complete-person"><div class="complete-person-avatar" aria-hidden="true">'+p.initial+'</div><div class="complete-person-info"><strong>'+escape(p.name)+'</strong><small>'+escape(p.handle)+' · '+escape(p.city)+' · '+escape(p.uf)+'</small><small>'+escape(p.activity)+'</small></div>'+buttonStatus(p.id)+'</div>').join('');
-}
-function discovery(){
-  const body='<p class="complete-summary">Convide pessoas para uma dupla fixa. O vínculo e o perfil compartilhado só surgem após o aceite. Você pode ter mais de uma dupla.</p>'+
-    '<input type="search" id="complete-search-people" class="complete-search" placeholder="Buscar pessoas" aria-label="Buscar pessoas" autocomplete="off">'+
-    '<div class="complete-people-list" id="complete-people-list">'+suggestedMarkup('')+'</div>'+
-    '<p class="complete-summary">Pessoas e localidades ilustrativas. Nenhum convite é enviado, nenhuma busca real ou GPS é utilizado.</p>';
-  sheet('Encontrar uma dupla',body,{large:true});
-}
-function refreshDiscovery(){
-  const el=phone.querySelector('#complete-people-list');if(el)el.innerHTML=suggestedMarkup(phone.querySelector('#complete-search-people')?.value||'');
-}
-function invite(id){
-  if(!partner(id)||state.duos.has(id))return;
-  state.duos.set(id,{status:'pending',createdAt:'Demonstração',by:'own'});
-  refreshDiscovery(); // Multiple invitations are independent. Never auto-accept.
-}
-function page(title,body){
-  closePage();closeModal();
-  const el=document.createElement('section');el.className='duos-panel';el.setAttribute('aria-label',title);
-  el.innerHTML='<header class="duos-header"><button type="button" class="duos-back" data-completion="back-duos" aria-label="Voltar">‹</button><h2>'+escape(title)+'</h2><span style="width:40px"></span></header><div class="duos-content">'+body+'</div>';
-  phone.appendChild(el);return el;
-}
-function duoRows(status){
-  const entries=Array.from(state.duos.entries()).filter(([k,v])=>v.status===status);
-  if(!entries.length)return '<div class="duos-empty">'+(status==='pending'?'Nenhum convite pendente.':'Nenhuma dupla neste estado.')+'</div>';
-  return entries.map(([id,r])=>{
-    const p=partner(id)||{name:id,initial:'?',city:'—',uf:''};
-    let controls='';
-    if(status==='pending')controls='<button type="button" class="duos-action outline" data-completion="demo-accept-'+id+'">Simular aceite</button><button type="button" class="duos-action outline" data-completion="cancel-'+id+'">Cancelar convite</button>';
-    if(status==='active')controls='<button type="button" class="duos-action" data-completion="view-duo-'+id+'">Ver perfil da dupla</button><button type="button" class="duos-action danger" data-completion="end-duo-'+id+'">Desfazer dupla</button>';
-    return '<div class="duos-item"><div class="complete-person-avatar" aria-hidden="true">'+escape(p.initial)+'</div><div class="duos-item-info"><strong>'+escape(p.name)+'</strong><small>'+(status==='pending'?'Aguardando aceite':status==='active'?'Dupla fixa ativa':'Em encerramento · até 3 dias')+'</small><div class="duos-actions">'+controls+'</div></div></div>';
-  }).join('');
-}
-function manage(){
-  const body='<p>Gerencie convites e parcerias fixas. Você pode ter várias duplas simultaneamente.</p>'+
-    '<h3>Duplas ativas</h3>'+duoRows('active')+
-    '<h3>Convites enviados</h3>'+duoRows('pending')+
-    (Array.from(state.duos.values()).some(r=>r.status==='closing')?'<h3>Em encerramento</h3>'+duoRows('closing'):'')+
-    '<div class="duos-notice">“Simular aceite” é um controle exclusivo do laboratório. No aplicativo real, só a pessoa convidada poderá aceitar. O convite será um evento da futura Central de Atividade.</div>'+
-    '<div style="margin-top:17px"><button type="button" class="duos-action" data-completion="discover-from-manage">Encontrar uma dupla</button></div>';
-  page('Duplas',body);
-}
-function viewDuo(id){
-  const p=partner(id),record=state.duos.get(id);
-  if(!p||record?.status!=='active')return;
-  const self=state.name||'Você',selfInitial=self.trim().slice(0,1).toUpperCase();
-  const body='<p>Perfil compartilhado da dupla fixa.</p>'+
-   '<div class="duos-pair"><div class="duos-overlap"><span>'+escape(selfInitial)+'</span><span>'+escape(p.initial)+'</span></div><div><strong>'+escape(self)+' e '+escape(p.name)+'</strong><small>Perfil da dupla · ativo</small></div></div>'+
-   '<div class="duos-notice">Este espaço pertence à dupla. Fica disponível para as duas pessoas após o aceite do convite. Fotos corporais, histórico privado, cargas e localização exata não são compartilhados automaticamente.</div>'+
-   '<h3>Publicações da dupla</h3><div class="duos-empty">Nenhuma publicação nesta prévia. A implementação utilizará o composer já mapeado para o Perfil da Dupla.</div>'+
-   '<div style="margin-top:15px"><button type="button" class="duos-action outline" data-completion="manage">Gerenciar duplas</button></div>';
-  page('Perfil da dupla',body);
-}
-function confirmEnd(id){
-  const p=partner(id);if(!p||state.duos.get(id)?.status!=='active')return;
-  sheet('Desfazer dupla','<p class="complete-summary">A parceria com '+escape(p.name)+' será encerrada por sua decisão, sem precisar do aceite da outra pessoa. O espaço compartilhado entra no processo de encerramento, previsto em até 3 dias na referência do produto.</p><p class="complete-summary">Suas contas, treinos pessoais e fotos privadas não são apagados por isso.</p><div class="complete-actions"><button type="button" data-completion="close">Cancelar</button><button type="button" class="primary" data-completion="confirm-end-'+id+'">Desfazer dupla</button></div>');
-}
-function preferences(){
-  sheet('Preferências do perfil','<p class="complete-summary">Dados e sugestões de perfil opcionais. Eles não ativam Match nem tornam a cidade pública.</p><div class="complete-actions" style="display:grid"><button type="button" data-completion="edit-region">Editar nome, cidade e estado</button><button type="button" data-completion="reopen-tasks">Rever tarefas dispensadas</button></div>');
-}
-document.addEventListener('input',e=>{
-  if(e.target.id==='complete-search-people')refreshDiscovery();
-});
 document.addEventListener('click',e=>{
-  const btn=e.target.closest('[data-completion]');
-  if(btn){
-    const action=btn.dataset.completion;
-    if(action==='close'){closeModal();return;}
-    if(action==='hide'){state.hidden=true;draw();return;}
-    if(action==='preferences'){preferences();return;}
-    if(action==='reopen-tasks'){state.hidden=false;state.skipped.clear();closeModal();app.querySelector('[data-action="back-page"]')?.click();requestAnimationFrame(()=>{ensure();app.scrollTop=app.scrollHeight;});return;}
-    if(action==='edit-region'){showForm('name');return;}
-    if(action==='manage'){manage();return;}
-    if(action==='discover-from-manage'){closePage();discovery();return;}
-    if(action==='back-duos'){if(phone.querySelector('.duos-panel')?.getAttribute('aria-label')==='Perfil da dupla')manage();else closePage();return;}
-    if(action.startsWith('skip-')){state.skipped.add(action.slice(5));draw();return;}
-    if(action.startsWith('open-')){
-      const task=action.slice(5);
-      if(task==='duo'){discovery();return;}
-      if(task==='people'){scenes.value='visitor';scenes.dispatchEvent(new Event('change',{bubbles:true}));return;}
-      if(['name','photo','interests'].includes(task)){showForm(task);return;}
-    }
-    if(action.startsWith('save-')){saveForm(action.slice(5));return;}
-    if(action.startsWith('invite-')){invite(action.slice(7));return;}
-    if(action.startsWith('demo-accept-')){const id=action.slice(12),r=state.duos.get(id);if(r?.status==='pending'){r.status='active';state.done.add('duo');manage();}return;}
-    if(action.startsWith('cancel-')){const id=action.slice(7);if(state.duos.get(id)?.status==='pending'){state.duos.delete(id);manage();}return;}
-    if(action.startsWith('view-duo-')){viewDuo(action.slice(9));return;}
-    if(action.startsWith('end-duo-')){confirmEnd(action.slice(8));return;}
-    if(action.startsWith('confirm-end-')){const id=action.slice(12),r=state.duos.get(id);if(r?.status==='active'){r.status='closing';closeModal();manage();}return;}
-  }
-  // Keep original profile invitation path and the new discovery path semantically consistent.
-  const legacy=e.target.closest('[data-action="sendInvite"]');
-  if(legacy&&scenes.value==='visitor'&&!state.duos.has('osman'))state.duos.set('osman',{status:'pending',createdAt:'Demonstração',by:'own'});
-  const follow=e.target.closest('[data-action="follow"]');
-  if(follow&&follow.textContent.trim()==='Seguir')state.done.add('people');
+  const button=e.target.closest('[data-completion]');
+  if(button){
+    const action=button.dataset.completion;
+    if(action==='hide'){st.hidden=true;draw();}
+    else if(action==='reopen'){st.hidden=false;st.skipped.clear();app.querySelector('[data-action="back-page"]')?.click();requestAnimationFrame(()=>{ensure();app.scrollTop=app.scrollHeight;});}
+    else if(action==='close')close();
+    else if(action.startsWith('skip-')){st.skipped.add(action.slice(5));draw();}
+    else if(action.startsWith('save-'))save(action.slice(5));
+    else if(action.startsWith('open-')){const t=action.slice(5);if(t==='people'){scenes.value='visitor';scenes.dispatchEvent(new Event('change',{bubbles:true}));}else open(t);}
+  }else{const follow=e.target.closest('[data-action="follow"]');if(follow&&follow.textContent.trim()==='Seguir')st.done.add('people');}
 });
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closePage();}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
 ensure();
 })();
 </script>
-
 </body>
 </html>
