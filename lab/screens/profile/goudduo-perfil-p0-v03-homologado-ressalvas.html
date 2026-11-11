@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="HTML de referência V0.3: Perfil goudduo, duplas múltiplas, cidade IBGE e transições suaves; não é produção.">
+  <title>goudduo · Perfil + Duplas V0.3 — homologado com ressalvas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#10202B;--brand-ink:#212121;--deep:#006DA9;--action:#0866E8;--ice:#F1F8FB;--white:#fff;--muted:#62737e;--line:#e8eef2;--lime:#C7F238;--green-proposal:#25834b;--silver-proposal:#83919c;--danger:#a93737;--shadow:0 28px 80px rgba(25,50,61,.14)}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;color:var(--ink)}body{background:#e9eff2}button,textarea,select,input{font:inherit}button{cursor:pointer}button:focus-visible,textarea:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--action);outline-offset:3px}button:disabled{cursor:not-allowed;opacity:.48}a{color:var(--deep)}
+    .workspace{display:grid;grid-template-columns:minmax(280px,330px) minmax(350px,470px) minmax(210px,280px);justify-content:center;align-items:start;gap:26px;min-height:100vh;padding:36px 24px 70px}
+    .panel{padding:25px;background:#fff;border:1px solid #e2e9ed;border-radius:23px;box-shadow:0 8px 25px rgba(25,50,61,.04)}
+    .panel h1{font-size:25px;letter-spacing:-.9px;line-height:1.24;margin:15px 0 9px;font-weight:800}.panel h2{font-size:14px;margin:0 0 14px}.panel p{font-size:12px;line-height:1.7;color:var(--muted);margin:0 0 17px}.eyebrow{font-size:9px;letter-spacing:.15em;text-transform:uppercase;font-weight:800;color:var(--deep)}.rule{height:1px;background:var(--line);margin:22px 0}
+    .brand-lockup{display:block;width:136px;max-height:55px;object-fit:contain;object-position:left center;margin:2px 0 12px}.brand-fallback{font-size:14px;font-weight:800;letter-spacing:.17em;display:none;margin:10px 0}.brand-lockup:not([src]){display:none}
+    .scenarios{display:grid;gap:7px}.scenario{width:100%;text-align:left;border:1px solid transparent;padding:12px 13px;border-radius:12px;background:#f4f7f8;color:var(--ink);font-size:12px;font-weight:700;transition:background .14s}.scenario[aria-pressed="true"]{background:var(--ice);border-color:var(--action);box-shadow:inset 3px 0 var(--action)}.scenario small{display:block;font-size:10px;color:var(--muted);font-weight:500;margin-top:3px}.scenario[aria-pressed="true"] small{color:var(--deep)}.lab-action{font-size:11px;text-align:center;border:1px solid #cedde5;border-radius:12px;background:#fff;min-height:40px;padding:8px 12px;color:var(--ink);width:100%;font-weight:700;margin-top:8px}.lab-action:hover{background:var(--ice)}.lab-action:disabled{opacity:.3}
+    .info-card{background:var(--ice);border-radius:15px;padding:14px;margin-top:14px}.info-card p{margin:7px 0 0}.source-links{display:flex;flex-wrap:wrap;gap:8px}.source-links a{font-size:10px;background:var(--ice);padding:6px 9px;border-radius:8px;text-decoration:none;font-weight:700}
+    .app-wrap{position:relative}.device{width:min(100%,430px);margin:0 auto;height:min(900px,calc(100vh - 72px));min-height:680px;border-radius:32px;overflow:hidden;border:1px solid #dce5ea;background:#fff;box-shadow:var(--shadow);position:relative}.device::before{content:"";position:absolute;left:50%;transform:translateX(-50%);top:0;width:25%;height:5px;border-radius:0 0 10px 10px;background:#d5e0e7;z-index:5;opacity:.5}.app-screen{height:100%;overflow-y:auto;overscroll-behavior:contain;background:var(--white);scrollbar-width:none}.app-screen::-webkit-scrollbar{display:none}
+    .app-top{height:67px;padding:13px 18px 9px;display:flex;align-items:center;gap:5px;position:sticky;top:0;z-index:6;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(232,238,242,.6)}
+    .top-label{font-size:16px;line-height:1.2;letter-spacing:-.45px;font-weight:800;min-width:0;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 3px}.top-side{display:flex;gap:1px;flex:0 0 auto}.icon-btn{border:0;background:transparent;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:42px;height:42px;border-radius:50%;color:var(--ink);padding:0}.icon-btn:hover{background:var(--ice)}.icon-btn svg{width:22px;height:22px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}.icon-btn.sm{width:30px;height:30px}.icon-btn.sm svg{width:17px;height:17px}
+    .identity{padding:22px 21px 15px}.identity-main{display:flex;gap:18px;align-items:center;min-height:105px}.avatar{position:relative;flex-shrink:0;width:92px;height:92px;border-radius:50%;display:grid;place-items:center;overflow:hidden;border:3px solid #fff;box-shadow:0 0 0 2px #e3edf2;background:linear-gradient(150deg,#d8e9ef 0%,#7698aa 70%,#37637b);color:#fff;font-size:27px;font-weight:800;letter-spacing:-1px}.avatar.avatar-visitor{background:linear-gradient(145deg,#f0c9a5,#bf8562 50%,#486a61)}.avatar.avatar-pro{background:linear-gradient(140deg,#89bfc9 5%,#59718b 48%,#273d59 100%)}.avatar.avatar-own{background:linear-gradient(145deg,#a1bfcf,#386d94 55%,#19405c)}.avatar img{width:100%;height:100%;object-fit:cover}.stats-block{flex:1;min-width:0}.name-line{display:flex;align-items:center;gap:6px;min-width:0;margin-bottom:10px}.display-name{font-size:16px;font-weight:800;letter-spacing:-.4px;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.credential{display:inline-flex;flex-shrink:0;align-items:center;justify-content:center;width:25px;height:25px;border:0;border-radius:50%;background:none;padding:0}.credential.verified{color:var(--green-proposal)}.credential.pending{color:var(--silver-proposal)}.credential svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;align-items:start}.metric{border:0;background:transparent;min-width:0;padding:2px 0;text-align:center;color:var(--ink)}.metric strong{display:block;font-size:19px;letter-spacing:-.6px;line-height:1.3;font-weight:800}.metric span{display:block;font-size:10px;color:var(--muted);font-weight:600;white-space:nowrap}.bio{font-size:12px;line-height:1.65;margin:16px 0 0;white-space:pre-line;color:var(--ink)}.subline{color:var(--muted);font-size:11px;margin-top:6px;line-height:1.55}.subline a{color:var(--deep)}
+    .action-row{display:flex;gap:8px;margin-top:15px}.text-btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 12px;border:1px solid transparent;background:var(--ice);border-radius:12px;color:var(--ink);font-size:11px;line-height:1.15;font-weight:800;flex:1;white-space:nowrap}.text-btn.primary{background:var(--action);color:#fff}.text-btn.outline{background:white;border-color:#d5e3eb}.text-btn.dark{background:var(--ink);color:#fff}.text-btn.danger{color:var(--danger);background:#fff4f4;border-color:#f7dede}.text-btn:focus-visible{outline-offset:1px}.action-row .icon-btn{width:42px;height:42px;border:1px solid var(--line);border-radius:12px;background:var(--ice)}
+    .divider{height:8px;background:#f5f8fa;margin:13px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .profile-tabs{display:flex;border-bottom:1px solid var(--line);padding:0 12px;position:sticky;top:67px;z-index:5;background:#fff}.profile-tab{position:relative;flex:1;padding:16px 4px 15px;background:white;border:0;color:#82909a;font-size:12px;font-weight:700;letter-spacing:-.2px}.profile-tab[aria-selected="true"]{color:var(--ink);font-weight:800}.profile-tab[aria-selected="true"]::after{content:"";position:absolute;bottom:0;left:12%;right:12%;height:3px;border-radius:8px 8px 0 0;background:var(--action)}
+    .posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:2px 0 36px}.media-tile{aspect-ratio:1;position:relative;overflow:hidden;background:linear-gradient(135deg,#345c6d,#a6c4cb);border:0;padding:0;color:white;isolation:isolate}.media-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1}.media-tile::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.48));z-index:-1}.media-tile strong{position:absolute;bottom:11px;left:9px;right:7px;font-size:10px;text-align:left;line-height:1.4;font-weight:800;color:#fff;text-shadow:0 1px 5px rgba(0,0,0,.28)}.media-tile .corner{position:absolute;top:7px;right:8px;display:grid;place-items:center;width:24px;height:24px;background:rgba(0,0,0,.24);border-radius:8px}.media-tile .corner svg{width:16px;height:16px;stroke:white;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.tile-1{background:linear-gradient(145deg,#153b4e 0%,#47798a 55%,#b2d1d3)}.tile-2{background:linear-gradient(130deg,#6e818b,#273947 68%,#0c1c2e)}.tile-3{background:linear-gradient(140deg,#8aa3a0,#356666,#172f3f)}.tile-4{background:linear-gradient(135deg,#687e78,#c2bba6,#43646a)}.tile-5{background:linear-gradient(135deg,#6d8997,#2c5265,#101a2d)}.tile-6{background:linear-gradient(135deg,#c1bb9a,#567673,#235b6d)}
+    .linked-destination{min-height:250px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;padding:34px 32px;text-align:center}.linked-destination .ghost{width:64px;height:64px;border-radius:19px;background:var(--ice);display:grid;place-items:center;color:var(--deep)}.linked-destination .ghost svg{width:27px;height:27px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}.linked-destination strong{font-size:14px}.linked-destination p{font-size:11px;line-height:1.75;color:var(--muted);margin:0}
+    .sheet-layer{position:absolute;inset:0;z-index:13;background:rgba(16,32,43,.51);display:flex;align-items:end;justify-content:center}.sheet{width:100%;max-height:90%;overflow-y:auto;border-radius:24px 24px 0 0;background:white;padding:11px 22px max(24px,env(safe-area-inset-bottom));box-shadow:0 -20px 50px rgba(0,0,0,.07);animation:rise .18s ease-out}@keyframes rise{from{transform:translateY(15px);opacity:.7}to{transform:translateY(0);opacity:1}}.sheet-handle{height:4px;width:38px;background:#d6e0e5;border-radius:3px;margin:0 auto 15px}.sheet-title{font-size:18px;font-weight:800;letter-spacing:-.55px;margin:4px 0 14px}.sheet-text{font-size:12px;line-height:1.75;color:var(--muted);margin:0 0 14px}.sheet-option{width:100%;min-height:51px;background:white;border:0;border-bottom:1px solid var(--line);text-align:left;font-size:13px;font-weight:650;color:var(--ink);padding:14px 5px}.sheet-option:last-child{border-bottom:0}.sheet-option.danger{color:var(--danger)}.sheet-cta{margin-top:13px;display:flex;gap:10px}.sheet .secondary{background:#f4f7f8}.sheet textarea{border:1px solid #d9e5eb;background:#fff;border-radius:13px;padding:13px;width:100%;min-height:102px;resize:vertical;font-size:13px;line-height:1.5;color:var(--ink)}.sheet label{display:block;font-weight:700;font-size:11px;margin:15px 0 7px}.sheet select{border:1px solid #d9e5eb;border-radius:12px;background:var(--ice);padding:12px 15px;width:100%;font-size:12px;font-weight:650;min-height:44px;color:var(--ink)}.sheet .field-hint{font-size:10px;color:var(--muted);line-height:1.55;margin-top:8px}
+    .duo-avatars{display:flex;align-items:center;margin-bottom:9px}.duo-avatars .avatar{width:75px;height:75px;font-size:20px}.duo-avatars .avatar+.avatar{margin-left:-15px;box-shadow:0 0 0 4px #fff}.duo-main{flex:1;min-width:0}.duo-header{display:flex;align-items:center;gap:16px}.duo-kicker{font-size:10px;text-transform:uppercase;letter-spacing:.13em;font-weight:800;color:var(--deep)}.duo-name{font-weight:800;font-size:17px;line-height:1.3;margin:5px 0}.duo-label{font-size:11px;color:var(--muted)}.duo-highlight{margin-top:15px;border:1px solid #d7e7ed;background:var(--ice);border-radius:13px;padding:12px 14px}.duo-highlight .status{font-size:11px;font-weight:800;margin-bottom:4px}.duo-highlight p{font-size:11px;line-height:1.6;margin:0;color:var(--muted)}.duo-closed{display:grid;place-items:center;text-align:center;padding:95px 22px}.duo-closed svg{width:42px;height:42px;stroke:var(--muted);fill:none;stroke-width:1.4;margin-bottom:14px}.duo-closed strong{font-size:18px;letter-spacing:-.5px}.duo-closed p{font-size:12px;color:var(--muted);line-height:1.65;max-width:245px}
+    .toast{position:absolute;left:22px;right:22px;bottom:22px;z-index:22;background:#10202B;color:#fff;border-radius:13px;padding:13px 15px;box-shadow:0 12px 26px rgba(16,32,43,.23);font-size:12px;font-weight:650;line-height:1.5;text-align:center;pointer-events:none}
+    .mobile-control{display:none}.panel-right .legend{display:grid;gap:14px}.legend .key{display:flex;gap:11px;align-items:flex-start}.legend .key span{width:7px;height:7px;background:var(--action);border-radius:50%;flex-shrink:0;margin-top:5px}.legend .key p{margin:0;font-size:11px}.legend strong{color:var(--ink)}.status-mark{font-size:10px;color:var(--muted);line-height:1.7;margin-top:15px}.phone-caption{text-align:center;color:#61727c;font-size:11px;line-height:1.6;margin-top:13px;font-weight:600}.sample-callout{display:inline-block;font-size:10px;font-weight:700;background:var(--ice);border-radius:7px;padding:5px 8px;color:var(--deep)}
+    @media(max-width:1060px){.workspace{grid-template-columns:280px minmax(340px,440px);gap:20px;padding:22px}.panel-right{display:none}.device{height:min(900px,calc(100vh - 46px))}}
+    @media(max-width:720px){body{background:white}.workspace{display:block;padding:0;min-height:100svh}.panel-left,.panel-right,.phone-caption{display:none}.app-wrap{width:100%;height:100svh;display:flex;flex-direction:column}.mobile-control{display:flex;flex-shrink:0;align-items:center;gap:9px;min-height:54px;padding:8px 12px;background:#eef4f7;border-bottom:1px solid #dae5eb}.mobile-control label{font-size:10px;font-weight:800;color:var(--deep);white-space:nowrap}.mobile-control select{border:1px solid #d0dce4;border-radius:9px;background:#fff;min-width:0;flex:1;padding:8px 10px;font-size:11px;font-weight:700;color:var(--ink)}.mobile-control .mobile-reset{background:transparent;border:1px solid #d0dce4;border-radius:10px;font-size:10px;font-weight:800;color:var(--ink);padding:8px 10px}.device{width:100%;height:calc(100svh - 54px);min-height:0;border:0;border-radius:0;box-shadow:none}.device::before{display:none}.app-screen{padding-bottom:env(safe-area-inset-bottom)}.app-top{padding-top:max(10px,env(safe-area-inset-top))}}
+    @media(max-width:360px){.identity{padding:19px 13px 14px}.identity-main{gap:11px}.avatar{width:79px;height:79px}.metric strong{font-size:17px}.metric span{font-size:9px}.display-name{font-size:14px}.text-btn{font-size:10px;padding:8px 6px}.profile-tab{font-size:11px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+
+    /* P0.2: Pulse coerente com Home #8/#73; visto gelo, nao-visto usa gradiente do src/surfaces/home/home-shell.css */
+    .profile-avatar-wrap{position:relative;flex:0 0 92px;width:92px;height:92px;align-self:center}
+    .profile-avatar-wrap .avatar{width:100%;height:100%;border:3px solid #fff;box-shadow:none}
+    .profile-avatar-wrap[data-pulse="unseen"]{border-radius:50%;padding:3px;background:linear-gradient(135deg,#fe5400 0%,#ff3b30 45%,#fd1466 100%)}
+    .profile-avatar-wrap[data-pulse="seen"]{border-radius:50%;padding:3px;background:var(--ice)}
+    .profile-avatar-wrap[data-pulse="empty"]{padding:3px;border-radius:50%;background:#e3edf2}
+    .profile-avatar-wrap .avatar{box-shadow:none}
+    .profile-avatar-wrap .avatar-pulse-target{border:0;position:absolute;inset:3px;border-radius:50%;cursor:pointer;background:transparent;display:block;z-index:1;color:transparent}
+    .profile-avatar-wrap .avatar-pulse-target:focus-visible{outline:3px solid var(--action);outline-offset:4px}
+    .avatar-add-pulse{position:absolute;z-index:2;right:-5px;bottom:-3px;width:31px!important;height:31px!important;background:var(--ink)!important;color:#fff!important;border:2px solid #fff!important;border-radius:50%!important;box-shadow:0 1px 7px rgba(16,32,43,.25)}
+    .avatar-add-pulse svg{width:17px!important;height:17px!important}
+    .routine-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:16px 16px 28px}
+    .routine-card{border:0;padding:0;background:white;color:var(--ink);text-align:left;min-width:0;border-radius:12px;overflow:hidden;display:block}
+    .routine-cover{aspect-ratio:4/3;position:relative;overflow:hidden;border-radius:13px;background:var(--ice)}
+    .routine-cover img{width:100%;height:100%;object-fit:cover;display:block}
+    .routine-cover .cover-fallback{position:absolute;inset:0;z-index:0;background:linear-gradient(135deg,#e1ebf1,#b6ccd7 65%,#d9e6eb)}
+    .routine-cover img{position:relative;z-index:1}
+    .routine-title{font-size:12px;font-weight:800;display:block;line-height:1.45;margin:8px 3px 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .routine-card[data-private="true"] .routine-cover::after{content:'Privada';position:absolute;right:7px;top:7px;color:#fff;background:rgba(16,32,43,.78);font-size:10px;font-weight:700;padding:5px 7px;border-radius:7px;z-index:2}
+    .routine-card:focus-visible{outline:3px solid var(--action);outline-offset:3px}
+    .media-tile::after,.media-tile strong{display:none!important}
+    .settings-page{background:#fff;min-height:100%;padding-bottom:36px}
+    .settings-group{border-bottom:8px solid #f2f6f8;padding:19px 17px 18px}
+    .settings-group h2{font-size:13px;font-weight:800;color:var(--muted);margin:2px 0 13px}
+    .settings-row{width:100%;min-height:54px;border:0;border-bottom:1px solid var(--line);padding:13px 3px;background:#fff;text-align:left;color:var(--ink);font-size:13px;font-weight:650;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .settings-row:last-child{border-bottom:0}
+    .settings-row .trail{color:#8796a2;font-size:11px;font-weight:600;text-align:right}
+    .settings-row.danger{color:var(--danger)}
+    .privacy-switch{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:8px 3px 12px}
+    .privacy-switch strong{font-size:13px}.privacy-switch small{display:block;color:var(--muted);font-size:10px;line-height:1.5;margin-top:4px}
+    .privacy-switch input{appearance:none;width:44px;height:26px;border-radius:99px;background:#d5e3eb;position:relative;flex-shrink:0;border:0;cursor:pointer}
+    .privacy-switch input:before{content:'';position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:white;box-shadow:0 1px 3px rgba(16,32,43,.2);transition:transform .14s}
+    .privacy-switch input:checked{background:var(--action)}.privacy-switch input:checked:before{transform:translateX(18px)}
+    .settings-hint{font-size:11px;color:var(--muted);line-height:1.7;padding:12px 17px}
+    .page-placeholder{padding:38px 25px;text-align:center;min-height:310px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px}
+    .page-placeholder p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+    .page-placeholder a{color:var(--deep);font-size:12px;font-weight:800}
+    .quick-menu .sheet-option{font-size:14px}
+    .pulse-viewer-preview{min-height:210px;border-radius:20px;background:var(--ice);display:grid;place-items:center;margin:12px 0 0}
+    .pulse-viewer-preview .icon-btn{width:58px;height:58px}
+    .pulse-viewer-preview .icon-btn svg{width:29px;height:29px}
+    @media(max-width:360px){.profile-avatar-wrap{flex-basis:79px;width:79px;height:79px}.mobile-control{gap:5px!important}.mobile-control select{padding:7px 4px!important;font-size:10px!important}.mobile-control .mobile-reset{padding:7px 5px!important}}
+
+    /* goudduo: additive, optional completion, no changes to original navigation/grids */
+    .complete-box{padding:20px 16px 25px;background:white;border-top:8px solid #f4f6f8}
+    .complete-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:15px}
+    .complete-head h2{font-size:17px;font-weight:800;letter-spacing:-.5px;margin:0}.complete-head p{font-size:11px;color:var(--muted);margin:4px 0 0}
+    .complete-hide,.complete-skip{border:0;background:transparent;color:var(--muted);font-weight:700}.complete-hide{font-size:11px;padding:8px 0}
+    .complete-cards{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:1px 1px 9px}.complete-cards::-webkit-scrollbar{display:none}
+    .complete-card{scroll-snap-align:start;flex:0 0 min(74%,223px);position:relative;border:1px solid #dce3e8;border-radius:17px;background:#fff;min-height:236px;text-align:center;padding:20px 13px 13px;display:flex;flex-direction:column;align-items:center;gap:7px}
+    .complete-skip{position:absolute;top:7px;right:7px;font-size:19px;line-height:1;padding:9px}
+    .complete-art{height:70px;display:grid;place-items:center}.complete-art svg{width:41px;height:41px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .complete-card h3{font-size:13px;font-weight:800;margin:3px 0 0}.complete-card p{font-size:11px;line-height:1.55;color:var(--muted);margin:0 0 10px}
+    .complete-cta{margin-top:auto;border:0;border-radius:11px;background:var(--action);color:#fff;font-size:12px;font-weight:800;min-height:41px;width:100%}
+    .complete-overlay{position:absolute;inset:0;z-index:30;background:#10202b70;display:flex;align-items:flex-end}.complete-sheet{border-radius:23px 23px 0 0;background:white;width:100%;padding:23px 20px max(23px,env(safe-area-inset-bottom))}
+    .complete-sheet h2{font-size:18px;margin:0 0 12px}.complete-sheet p{font-size:12px;color:var(--muted);line-height:1.6}
+    .complete-sheet label{font-size:12px;font-weight:700;display:block;margin:12px 0 6px}.complete-sheet input[type=text],.complete-sheet input[type=file]{width:100%;min-height:48px;border:1px solid #ced9df;border-radius:12px;padding:10px;font-size:16px}
+    .complete-sheet input[type=checkbox]{width:17px;height:17px;accent-color:var(--action)}.complete-sheet .interest{display:flex;gap:9px;align-items:center;font-size:13px}
+    .complete-actions{display:flex;gap:9px;margin-top:19px}.complete-actions button{flex:1;min-height:44px;border-radius:11px;border:1px solid #d7e0e6;background:#fff;color:var(--ink);font-weight:800}.complete-actions .primary{background:var(--action);color:white;border-color:var(--action)}
+    .complete-photo{width:100%;height:100%;object-fit:cover;border-radius:50%}
+    @media(max-width:360px){.complete-box{padding:19px 13px}.complete-card{flex-basis:77%}}
+
+    /* V0.2 additive: multi-duo discovery, pending invites, management and shared pair preview */
+    .complete-discovery{max-height:min(85vh,800px);overflow-y:auto;overscroll-behavior:contain;padding-top:12px}
+    .complete-handle{width:38px;height:4px;background:#cdd4dc;border-radius:99px;margin:0 auto 16px}
+    .complete-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+    .complete-dialog-head h2{margin:0;font-size:19px;font-weight:800;letter-spacing:-.5px;color:var(--ink)}
+    .complete-close-icon{background:transparent;border:0;font-size:25px;color:var(--ink);width:38px;height:38px;padding:0;line-height:1}
+    .complete-summary{font-size:11px!important;color:var(--muted);line-height:1.6;margin:1px 0 14px!important}
+    .complete-search{border:1px solid #DCE3E9;background:#f5f7f9;width:100%;min-height:47px;border-radius:13px;padding:10px 13px;font-size:16px;color:var(--ink);outline-offset:3px}
+    .complete-people-list{display:grid;gap:0;margin-top:10px}
+    .complete-person{display:flex;align-items:center;gap:11px;border-bottom:1px solid #edf0f3;padding:13px 0;min-width:0}
+    .complete-person:last-child{border-bottom:0}
+    .complete-person-avatar{width:45px;height:45px;flex:0 0 45px;display:grid;place-items:center;border-radius:50%;background:#E6F0F7;color:var(--ink);font-weight:800;font-size:15px;border:1px solid #d8e4eb}
+    .complete-person-info{flex:1;min-width:0}
+    .complete-person-info strong{display:block;font-size:12px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+    .complete-person-info small{display:block;font-size:10px;color:var(--muted);line-height:1.55}
+    .complete-person-action{background:var(--action);color:#fff;border:0;border-radius:10px;padding:0 11px;min-height:39px;font-size:11px;font-weight:800;white-space:nowrap;flex:0 0 auto}
+    .complete-person-action:disabled{background:#eff3f6;color:#687783;border:1px solid #dce3e9}
+    .duos-panel{position:absolute;inset:0;z-index:21;background:#fff;overflow-y:auto;overscroll-behavior:contain;padding-bottom:max(32px,env(safe-area-inset-bottom))}
+    .duos-header{position:sticky;top:0;z-index:2;background:rgba(255,255,255,.97);min-height:calc(65px + env(safe-area-inset-top));padding:max(12px,env(safe-area-inset-top)) 17px 12px;display:flex;gap:12px;align-items:center;border-bottom:1px solid #e8eef2}
+    .duos-header h2{margin:0;font-size:17px;font-weight:800;color:var(--ink);flex:1;text-align:center}
+    .duos-back{width:40px;height:40px;display:grid;place-items:center;font-size:26px;border:0;background:transparent;color:var(--ink);line-height:1}
+    .duos-content{padding:23px 19px 35px}
+    .duos-content h3{font-size:14px;font-weight:800;margin:18px 0 11px;color:var(--ink)}
+    .duos-content p{font-size:12px;line-height:1.55;color:var(--muted);margin:4px 0 12px}
+    .duos-item{display:flex;gap:12px;align-items:center;border-bottom:1px solid #edf0f3;padding:13px 0}
+    .duos-item-info{flex:1;min-width:0}
+    .duos-item-info strong{display:block;color:var(--ink);font-size:13px}
+    .duos-item-info small{display:block;color:var(--muted);font-size:11px;line-height:1.5;margin-top:3px}
+    .duos-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .duos-action{background:var(--action);border:1px solid var(--action);color:white;min-height:38px;padding:6px 12px;border-radius:10px;font-size:11px;font-weight:800}
+    .duos-action.outline{background:#fff;color:var(--ink);border-color:#dce3e9}
+    .duos-action.danger{background:#fff;color:#a82a32;border-color:#ebd1d3}
+    .duos-empty{border:1px solid #E7ECF1;border-radius:14px;padding:20px 15px;margin:12px 0;color:var(--muted);font-size:12px;line-height:1.6}
+    .duos-pair{display:flex;align-items:center;gap:16px;margin:20px 0;padding:18px 15px;border:1px solid #e1e8ed;border-radius:16px}
+    .duos-overlap{display:flex;min-width:87px}
+    .duos-overlap span{width:51px;height:51px;border:3px solid #fff;border-radius:50%;display:grid;place-items:center;background:#e2eff9;font-weight:800;color:var(--ink)}
+    .duos-overlap span+span{margin-left:-17px;background:#eaf3e2}
+    .duos-pair strong{font-size:14px}.duos-pair small{display:block;font-size:11px;color:var(--muted);margin-top:5px}
+    .duos-notice{background:#f1f8fb;border-radius:13px;padding:13px 15px;font-size:11px;line-height:1.65;color:#435765}
+    .complete-sheet .complete-error{font-size:11px;color:#ad2e39;margin-top:8px}
+    @media(max-width:360px){.complete-person{gap:8px}.complete-person-avatar{height:40px;width:40px;flex-basis:40px}.complete-person-action{font-size:10px;padding:0 8px}.duos-content{padding:19px 14px 30px}}
+
+    /* Motion contract V0.3: smooth enter/exit, reduced motion and no abrupt DOM removal */
+    :root{--g-motion-in:300ms;--g-motion-out:310ms;--g-motion-ease:cubic-bezier(.22,1,.36,1)}
+    .complete-overlay{opacity:0;transition:opacity var(--g-motion-in) var(--g-motion-ease)}
+    .complete-overlay .complete-sheet{transform:translateY(34px);opacity:.96;transition:transform var(--g-motion-in) var(--g-motion-ease),opacity var(--g-motion-in) ease}
+    .complete-overlay.is-open{opacity:1}
+    .complete-overlay.is-open .complete-sheet{transform:translateY(0);opacity:1}
+    .complete-overlay.is-closing{opacity:0;pointer-events:none;transition-duration:var(--g-motion-out)}
+    .complete-overlay.is-closing .complete-sheet{transform:translateY(100%);opacity:1;transition-duration:var(--g-motion-out)}
+    .duos-panel{opacity:0;transform:translateY(16px);transition:transform var(--g-motion-in) var(--g-motion-ease),opacity var(--g-motion-in) ease}
+    .duos-panel.is-open{opacity:1;transform:translateY(0)}
+    .duos-panel.is-closing{opacity:0;transform:translateY(24px);pointer-events:none;transition-duration:var(--g-motion-out)}
+    .complete-city-list{max-height:177px;overflow-y:auto;overscroll-behavior:contain;border:1px solid #dde5eb;border-radius:12px;margin-top:8px;background:#fff}
+    .complete-city-option{width:100%;display:block;min-height:44px;background:#fff;color:var(--ink);border:0;border-bottom:1px solid #edf1f3;text-align:left;padding:12px 13px;font-size:13px;font-weight:600}
+    .complete-city-option:last-child{border-bottom:0}
+    .complete-city-option:focus-visible,.complete-city-option:hover{background:#eff6fc;outline-offset:-2px}
+    .complete-city-list[hidden]{display:none}
+    .complete-city-help{margin-top:9px;font-size:11px;line-height:1.5;color:var(--muted)}
+    .complete-sheet select{min-height:46px;border-radius:12px;border:1px solid #cfdbe3;background:#f9fbfc;color:var(--ink);font-size:16px}
+    .complete-sheet input[type=search]{font-size:16px}
+    .sheet-layer{animation:g-backdrop-enter var(--g-motion-in) ease both}
+    .sheet{animation:g-sheet-enter var(--g-motion-in) var(--g-motion-ease) both}
+    .sheet-layer.closing{animation:g-backdrop-exit var(--g-motion-out) ease both;pointer-events:none}
+    .sheet-layer.closing .sheet{animation:g-sheet-exit var(--g-motion-out) var(--g-motion-ease) both}
+    @keyframes g-backdrop-enter{from{opacity:0}to{opacity:1}}
+    @keyframes g-backdrop-exit{from{opacity:1}to{opacity:0}}
+    @keyframes g-sheet-enter{from{transform:translateY(34px);opacity:.98}to{transform:translateY(0);opacity:1}}
+    @keyframes g-sheet-exit{from{transform:translateY(0)}to{transform:translateY(100%)}}
+    @media(prefers-reduced-motion:reduce){
+      .complete-overlay,.complete-overlay .complete-sheet,.duos-panel,
+      .sheet-layer,.sheet,.sheet-layer.closing,.sheet-layer.closing .sheet{animation:none!important;transition:none!important}
+    }
+  </style>
+</head>
+<body>
+<div class="workspace">
+  <aside class="panel panel-left" aria-label="Controles da referência">
+    <span class="eyebrow">Laboratório · perfil P0</span>
+    <img class="brand-lockup" alt="Logo oficial goudduo" src="data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22214%22%20height%3D%2262%22%20viewBox%3D%220%200%20214%2062%22%20role%3D%22img%22%20aria-label%3D%22goudduo%20%E2%80%94%20logotipo%20preto%22%3E%0A%20%20%3Ctitle%3Egoudduo%20%E2%80%94%20logotipo%20preto%3C%2Ftitle%3E%0A%20%20%3Cpath%20fill%3D%22%23000000%22%20fill-rule%3D%22evenodd%22%20d%3D%22M%2039.170%2021.660%20C%2038.843%2021.688%2038.488%2022.195%2038.170%2022.500%20C%2037.852%2022.805%2037.573%2023.163%2037.260%2023.490%20C%2036.947%2023.817%2036.605%2024.135%2036.290%2024.460%20C%2035.975%2024.785%2035.493%2025.080%2035.370%2025.440%20C%2035.247%2025.800%2035.452%2026.225%2035.550%2026.620%20C%2035.648%2027.015%2035.853%2027.400%2035.960%2027.810%20C%2036.067%2028.220%2036.165%2028.648%2036.190%2029.080%20C%2036.215%2029.512%2036.170%2029.973%2036.110%2030.400%20C%2036.050%2030.827%2035.960%2031.240%2035.830%2031.640%20C%2035.700%2032.040%2035.543%2032.432%2035.330%2032.800%20C%2035.117%2033.168%2034.833%2033.522%2034.550%2033.850%20C%2034.267%2034.178%2033.963%2034.502%2033.630%2034.770%20C%2033.297%2035.038%2032.925%2035.263%2032.550%2035.460%20C%2032.175%2035.657%2031.785%2035.828%2031.380%2035.950%20C%2030.975%2036.072%2030.555%2036.152%2030.120%2036.190%20C%2029.685%2036.228%2029.205%2036.225%2028.770%2036.180%20C%2028.335%2036.135%2027.913%2035.952%2027.510%2035.920%20C%2027.107%2035.888%2026.695%2035.815%2026.350%2035.990%20C%2026.005%2036.165%2025.748%2036.643%2025.440%2036.970%20C%2025.132%2037.297%2024.800%2037.618%2024.500%2037.950%20C%2024.200%2038.282%2023.897%2038.620%2023.640%2038.960%20C%2023.383%2039.300%2022.913%2039.692%2022.960%2039.990%20C%2023.007%2040.288%2023.567%2040.538%2023.920%2040.750%20C%2024.273%2040.962%2024.687%2041.107%2025.080%2041.260%20C%2025.473%2041.413%2025.873%2041.553%2026.280%2041.670%20C%2026.687%2041.787%2027.095%2041.892%2027.520%2041.960%20C%2027.945%2042.028%2028.383%2042.060%2028.830%2042.080%20C%2029.277%2042.100%2029.755%2042.105%2030.200%2042.080%20C%2030.645%2042.055%2031.075%2042.000%2031.500%2041.930%20C%2031.925%2041.860%2032.342%2041.772%2032.750%2041.660%20C%2033.158%2041.548%2033.557%2041.412%2033.950%2041.260%20C%2034.343%2041.108%2034.757%2040.853%2035.110%2040.750%20C%2035.463%2040.647%2035.887%2040.442%2036.070%2040.640%20C%2036.253%2040.838%2036.187%2041.495%2036.210%2041.940%20C%2036.233%2042.385%2036.233%2042.863%2036.210%2043.310%20C%2036.187%2043.757%2036.152%2044.198%2036.070%2044.620%20C%2035.988%2045.042%2035.875%2045.450%2035.720%2045.840%20C%2035.565%2046.230%2035.373%2046.602%2035.140%2046.960%20C%2034.907%2047.318%2034.622%2047.667%2034.320%2047.990%20C%2034.018%2048.313%2033.680%2048.648%2033.330%2048.900%20C%2032.980%2049.152%2032.605%2049.332%2032.220%2049.500%20C%2031.835%2049.668%2031.440%2049.823%2031.020%2049.910%20C%2030.600%2049.997%2030.142%2050.012%2029.700%2050.020%20C%2029.258%2050.028%2028.793%2050.033%2028.370%2049.960%20C%2027.947%2049.887%2027.548%2049.742%2027.160%2049.580%20C%2026.772%2049.418%2026.397%2049.230%2026.040%2048.990%20C%2025.683%2048.750%2025.338%2048.447%2025.020%2048.140%20C%2024.702%2047.833%2024.423%2047.470%2024.130%2047.150%20C%2023.837%2046.830%2023.588%2046.307%2023.260%2046.220%20C%2022.932%2046.133%2022.508%2046.413%2022.160%2046.630%20C%2021.812%2046.847%2021.500%2047.218%2021.170%2047.520%20C%2020.840%2047.822%2020.505%2048.132%2020.180%2048.440%20C%2019.855%2048.748%2019.388%2049.027%2019.220%2049.370%20C%2019.052%2049.713%2019.043%2050.140%2019.170%2050.500%20C%2019.297%2050.860%2019.695%2051.193%2019.980%2051.530%20C%2020.265%2051.867%2020.563%2052.208%2020.880%2052.520%20C%2021.197%2052.832%2021.540%2053.125%2021.880%2053.400%20C%2022.220%2053.675%2022.562%2053.938%2022.920%2054.170%20C%2023.278%2054.402%2023.653%2054.600%2024.030%2054.790%20C%2024.407%2054.980%2024.788%2055.155%2025.180%2055.310%20C%2025.572%2055.465%2025.972%2055.605%2026.380%2055.720%20C%2026.788%2055.835%2027.205%2055.928%2027.630%2056.000%20C%2028.055%2056.072%2028.488%2056.117%2028.930%2056.150%20C%2029.372%2056.183%2029.837%2056.213%2030.280%2056.200%20C%2030.723%2056.187%2031.162%2056.133%2031.590%2056.070%20C%2032.018%2056.007%2032.438%2055.927%2032.850%2055.820%20C%2033.262%2055.713%2033.665%2055.577%2034.060%2055.430%20C%2034.455%2055.283%2034.842%2055.125%2035.220%2054.940%20C%2035.598%2054.755%2035.972%2054.552%2036.330%2054.320%20C%2036.688%2054.088%2037.030%2053.827%2037.370%2053.550%20C%2037.710%2053.273%2038.052%2052.973%2038.370%2052.660%20C%2038.688%2052.347%2039.000%2052.008%2039.280%2051.670%20C%2039.560%2051.332%2039.815%2050.987%2040.050%2050.630%20C%2040.285%2050.273%2040.498%2049.907%2040.690%2049.530%20C%2040.882%2049.153%2041.048%2048.762%2041.200%2048.370%20C%2041.352%2047.978%2041.483%2047.587%2041.600%2047.180%20C%2041.717%2046.773%2041.822%2046.353%2041.900%2045.930%20C%2041.978%2045.507%2042.038%2045.082%2042.070%2044.640%20C%2042.102%2044.198%2042.087%2043.733%2042.090%2043.280%20C%2042.093%2042.827%2042.090%2042.375%2042.090%2041.920%20C%2042.090%2041.465%2042.090%2041.005%2042.090%2040.550%20C%2042.090%2040.095%2042.090%2039.645%2042.090%2039.190%20C%2042.090%2038.735%2042.090%2038.275%2042.090%2037.820%20C%2042.090%2037.365%2042.090%2036.915%2042.090%2036.460%20C%2042.090%2036.005%2042.090%2035.547%2042.090%2035.090%20C%2042.090%2034.633%2042.088%2034.173%2042.090%2033.720%20C%2042.092%2033.267%2042.098%2032.812%2042.100%2032.370%20C%2042.102%2031.928%2042.102%2031.513%2042.100%2031.070%20C%2042.098%2030.627%2042.092%2030.163%2042.090%2029.710%20C%2042.088%2029.257%2042.115%2028.795%2042.090%2028.350%20C%2042.065%2027.905%2042.010%2027.467%2041.940%2027.040%20C%2041.870%2026.613%2041.777%2026.200%2041.670%2025.790%20C%2041.563%2025.380%2041.448%2024.975%2041.300%2024.580%20C%2041.152%2024.185%2040.975%2023.795%2040.780%2023.420%20C%2040.585%2023.045%2040.398%2022.623%2040.130%2022.330%20C%2039.862%2022.037%2039.497%2021.632%2039.170%2021.660%20Z%20M%20149.810%2017.540%20C%20149.443%2017.692%20149.110%2018.030%20148.960%2018.400%20C%20148.810%2018.770%20148.918%2019.305%20148.910%2019.760%20C%20148.902%2020.215%20148.910%2020.673%20148.910%2021.130%20C%20148.910%2021.587%20148.910%2022.042%20148.910%2022.500%20C%20148.910%2022.958%20148.910%2023.422%20148.910%2023.880%20C%20148.910%2024.338%20148.910%2024.792%20148.910%2025.250%20C%20148.910%2025.708%20148.910%2026.172%20148.910%2026.630%20C%20148.910%2027.088%20148.910%2027.542%20148.910%2028.000%20C%20148.910%2028.458%20148.910%2028.922%20148.910%2029.380%20C%20148.910%2029.838%20148.898%2030.298%20148.910%2030.750%20C%20148.922%2031.202%20148.942%2031.648%20148.980%2032.090%20C%20149.018%2032.532%20149.058%2032.975%20149.140%2033.400%20C%20149.222%2033.825%20149.338%2034.237%20149.470%2034.640%20C%20149.602%2035.043%20149.753%2035.435%20149.930%2035.820%20C%20150.107%2036.205%20150.310%2036.582%20150.530%2036.950%20C%20150.750%2037.318%20150.983%2037.683%20151.250%2038.030%20C%20151.517%2038.377%20151.815%2038.713%20152.130%2039.030%20C%20152.445%2039.347%20152.792%2039.662%20153.140%2039.930%20C%20153.488%2040.198%20153.852%2040.423%20154.220%2040.640%20C%20154.588%2040.857%20154.965%2041.057%20155.350%2041.230%20C%20155.735%2041.403%20156.123%2041.557%20156.530%2041.680%20C%20156.937%2041.803%20157.358%2041.903%20157.790%2041.970%20C%20158.222%2042.037%20158.673%2042.068%20159.120%2042.080%20C%20159.567%2042.092%20160.032%2042.087%20160.470%2042.040%20C%20160.908%2041.993%20161.335%2041.903%20161.750%2041.800%20C%20162.165%2041.697%20162.567%2041.573%20162.960%2041.420%20C%20163.353%2041.267%20163.737%2041.085%20164.110%2040.880%20C%20164.483%2040.675%20164.847%2040.443%20165.200%2040.190%20C%20165.553%2039.937%20165.897%2039.660%20166.230%2039.360%20C%20166.563%2039.060%20166.905%2038.727%20167.200%2038.390%20C%20167.495%2038.053%20167.757%2037.698%20168.000%2037.340%20C%20168.243%2036.982%20168.465%2036.617%20168.660%2036.240%20C%20168.855%2035.863%20169.015%2035.473%20169.170%2035.080%20C%20169.325%2034.687%20169.475%2034.290%20169.590%2033.880%20C%20169.705%2033.470%20169.795%2033.052%20169.860%2032.620%20C%20169.925%2032.188%20169.960%2031.740%20169.980%2031.290%20C%20170.000%2030.840%20169.980%2030.378%20169.980%2029.920%20C%20169.980%2029.462%20169.980%2028.998%20169.980%2028.540%20C%20169.980%2028.082%20169.980%2027.628%20169.980%2027.170%20C%20169.980%2026.712%20169.980%2026.248%20169.980%2025.790%20C%20169.980%2025.332%20169.980%2024.878%20169.980%2024.420%20C%20169.980%2023.962%20169.980%2023.498%20169.980%2023.040%20C%20169.980%2022.582%20169.980%2022.127%20169.980%2021.670%20C%20169.980%2021.213%20169.980%2020.758%20169.980%2020.300%20C%20169.980%2019.842%20170.068%2019.337%20169.980%2018.920%20C%20169.892%2018.503%20169.753%2018.023%20169.450%2017.800%20C%20169.147%2017.577%20168.603%2017.617%20168.160%2017.580%20C%20167.717%2017.543%20167.247%2017.578%20166.790%2017.580%20C%20166.333%2017.582%20165.830%2017.497%20165.420%2017.590%20C%20165.010%2017.683%20164.550%2017.835%20164.330%2018.140%20C%20164.110%2018.445%20164.138%2018.978%20164.100%2019.420%20C%20164.062%2019.862%20164.100%2020.332%20164.100%2020.790%20C%20164.100%2021.248%20164.100%2021.712%20164.100%2022.170%20C%20164.100%2022.628%20164.100%2023.083%20164.100%2023.540%20C%20164.100%2023.997%20164.100%2024.452%20164.100%2024.910%20C%20164.100%2025.368%20164.100%2025.832%20164.100%2026.290%20C%20164.100%2026.748%20164.100%2027.202%20164.100%2027.660%20C%20164.100%2028.118%20164.100%2028.582%20164.100%2029.040%20C%20164.100%2029.498%20164.117%2029.958%20164.100%2030.410%20C%20164.083%2030.862%20164.078%2031.323%20164.000%2031.750%20C%20163.922%2032.177%20163.803%2032.585%20163.630%2032.970%20C%20163.457%2033.355%20163.232%2033.723%20162.960%2034.060%20C%20162.688%2034.397%20162.350%2034.737%20162.000%2034.990%20C%20161.650%2035.243%20161.262%2035.443%20160.860%2035.580%20C%20160.458%2035.717%20160.018%2035.803%20159.590%2035.810%20C%20159.162%2035.817%20158.697%2035.745%20158.290%2035.620%20C%20157.883%2035.495%20157.503%2035.308%20157.150%2035.060%20C%20156.797%2034.812%20156.440%2034.468%20156.170%2034.130%20C%20155.900%2033.792%20155.693%2033.420%20155.530%2033.030%20C%20155.367%2032.640%20155.265%2032.218%20155.190%2031.790%20C%20155.115%2031.362%20155.098%2030.910%20155.080%2030.460%20C%20155.062%2030.010%20155.080%2029.548%20155.080%2029.090%20C%20155.080%2028.632%20155.080%2028.168%20155.080%2027.710%20C%20155.080%2027.252%20155.080%2026.798%20155.080%2026.340%20C%20155.080%2025.882%20155.080%2025.418%20155.080%2024.960%20C%20155.080%2024.502%20155.080%2024.047%20155.080%2023.590%20C%20155.080%2023.133%20155.080%2022.678%20155.080%2022.220%20C%20155.080%2021.762%20155.080%2021.298%20155.080%2020.840%20C%20155.080%2020.382%20155.098%2019.920%20155.080%2019.470%20C%20155.062%2019.020%20155.165%2018.470%20154.970%2018.140%20C%20154.775%2017.810%20154.315%2017.598%20153.910%2017.490%20C%20153.505%2017.382%20152.998%2017.490%20152.540%2017.490%20C%20152.082%2017.490%20151.615%2017.482%20151.160%2017.490%20C%20150.705%2017.498%20150.177%2017.388%20149.810%2017.540%20Z%20M%2072.000%2017.430%20C%2071.632%2017.580%2071.280%2017.922%2071.130%2018.290%20C%2070.980%2018.658%2071.105%2019.187%2071.100%2019.640%20C%2071.095%2020.093%2071.100%2020.553%2071.100%2021.010%20C%2071.100%2021.467%2071.100%2021.925%2071.100%2022.380%20C%2071.100%2022.835%2071.100%2023.285%2071.100%2023.740%20C%2071.100%2024.195%2071.100%2024.653%2071.100%2025.110%20C%2071.100%2025.567%2071.100%2026.023%2071.100%2026.480%20C%2071.100%2026.937%2071.100%2027.395%2071.100%2027.850%20C%2071.100%2028.305%2071.100%2028.755%2071.100%2029.210%20C%2071.100%2029.665%2071.095%2030.125%2071.100%2030.580%20C%2071.105%2031.035%2071.090%2031.502%2071.130%2031.940%20C%2071.170%2032.378%2071.252%2032.792%2071.340%2033.210%20C%2071.428%2033.628%2071.530%2034.047%2071.660%2034.450%20C%2071.790%2034.853%2071.943%2035.247%2072.120%2035.630%20C%2072.297%2036.013%2072.497%2036.387%2072.720%2036.750%20C%2072.943%2037.113%2073.190%2037.467%2073.460%2037.810%20C%2073.730%2038.153%2074.032%2038.497%2074.340%2038.810%20C%2074.648%2039.123%2074.972%2039.420%2075.310%2039.690%20C%2075.648%2039.960%2076.005%2040.208%2076.370%2040.430%20C%2076.735%2040.652%2077.115%2040.847%2077.500%2041.020%20C%2077.885%2041.193%2078.277%2041.345%2078.680%2041.470%20C%2079.083%2041.595%2079.493%2041.700%2079.920%2041.770%20C%2080.347%2041.840%2080.793%2041.872%2081.240%2041.890%20C%2081.687%2041.908%2082.158%2041.915%2082.600%2041.880%20C%2083.042%2041.845%2083.472%2041.773%2083.890%2041.680%20C%2084.308%2041.587%2084.713%2041.460%2085.110%2041.320%20C%2085.507%2041.180%2085.892%2041.025%2086.270%2040.840%20C%2086.648%2040.655%2087.022%2040.445%2087.380%2040.210%20C%2087.738%2039.975%2088.083%2039.708%2088.420%2039.430%20C%2088.757%2039.152%2089.095%2038.858%2089.400%2038.540%20C%2089.705%2038.222%2089.993%2037.870%2090.250%2037.520%20C%2090.507%2037.170%2090.730%2036.808%2090.940%2036.440%20C%2091.150%2036.072%2091.337%2035.693%2091.510%2035.310%20C%2091.683%2034.927%2091.845%2034.540%2091.980%2034.140%20C%2092.115%2033.740%2092.228%2033.328%2092.320%2032.910%20C%2092.412%2032.492%2092.490%2032.068%2092.530%2031.630%20C%2092.570%2031.192%2092.555%2030.733%2092.560%2030.280%20C%2092.565%2029.827%2092.553%2029.363%2092.560%2028.910%20C%2092.567%2028.457%2092.587%2028.008%2092.600%2027.560%20C%2092.613%2027.112%2092.630%2026.658%2092.640%2026.220%20C%2092.650%2025.782%2092.657%2025.373%2092.660%2024.930%20C%2092.663%2024.487%2092.660%2024.017%2092.660%2023.560%20C%2092.660%2023.103%2092.660%2022.645%2092.660%2022.190%20C%2092.660%2021.735%2092.660%2021.285%2092.660%2020.830%20C%2092.660%2020.375%2092.680%2019.908%2092.660%2019.460%20C%2092.640%2019.012%2092.720%2018.480%2092.540%2018.140%20C%2092.360%2017.800%2091.967%2017.545%2091.580%2017.420%20C%2091.193%2017.295%2090.673%2017.395%2090.220%2017.390%20C%2089.767%2017.385%2089.308%2017.375%2088.860%2017.390%20C%2088.412%2017.405%2087.887%2017.308%2087.530%2017.480%20C%2087.173%2017.652%2086.862%2018.038%2086.720%2018.420%20C%2086.578%2018.802%2086.687%2019.317%2086.680%2019.770%20C%2086.673%2020.223%2086.680%2020.683%2086.680%2021.140%20C%2086.680%2021.597%2086.680%2022.055%2086.680%2022.510%20C%2086.680%2022.965%2086.680%2023.415%2086.680%2023.870%20C%2086.680%2024.325%2086.680%2024.783%2086.680%2025.240%20C%2086.680%2025.697%2086.680%2026.153%2086.680%2026.610%20C%2086.680%2027.067%2086.680%2027.525%2086.680%2027.980%20C%2086.680%2028.435%2086.680%2028.885%2086.680%2029.340%20C%2086.680%2029.795%2086.720%2030.270%2086.680%2030.710%20C%2086.640%2031.150%2086.558%2031.573%2086.440%2031.980%20C%2086.322%2032.387%2086.182%2032.782%2085.970%2033.150%20C%2085.758%2033.518%2085.473%2033.877%2085.170%2034.190%20C%2084.867%2034.503%2084.513%2034.807%2084.150%2035.030%20C%2083.787%2035.253%2083.398%2035.417%2082.990%2035.530%20C%2082.582%2035.643%2082.130%2035.713%2081.700%2035.710%20C%2081.270%2035.707%2080.815%2035.633%2080.410%2035.510%20C%2080.005%2035.387%2079.625%2035.210%2079.270%2034.970%20C%2078.915%2034.730%2078.567%2034.397%2078.280%2034.070%20C%2077.993%2033.743%2077.737%2033.388%2077.550%2033.010%20C%2077.363%2032.632%2077.240%2032.223%2077.160%2031.800%20C%2077.080%2031.377%2077.085%2030.920%2077.070%2030.470%20C%2077.055%2030.020%2077.070%2029.555%2077.070%2029.100%20C%2077.070%2028.645%2077.070%2028.195%2077.070%2027.740%20C%2077.070%2027.285%2077.070%2026.827%2077.070%2026.370%20C%2077.070%2025.913%2077.070%2025.457%2077.070%2025.000%20C%2077.070%2024.543%2077.070%2024.087%2077.070%2023.630%20C%2077.070%2023.173%2077.070%2022.715%2077.070%2022.260%20C%2077.070%2021.805%2077.070%2021.355%2077.070%2020.900%20C%2077.070%2020.445%2077.085%2019.980%2077.070%2019.530%20C%2077.055%2019.080%2077.148%2018.550%2076.980%2018.200%20C%2076.812%2017.850%2076.438%2017.565%2076.060%2017.430%20C%2075.682%2017.295%2075.163%2017.397%2074.710%2017.390%20C%2074.257%2017.383%2073.792%2017.383%2073.340%2017.390%20C%2072.888%2017.397%2072.368%2017.280%2072.000%2017.430%20Z%20M%20182.930%2017.330%20C%20182.492%2017.368%20182.065%2017.427%20181.650%2017.520%20C%20181.235%2017.613%20180.840%2017.757%20180.440%2017.890%20C%20180.040%2018.023%20179.633%2018.148%20179.250%2018.320%20C%20178.867%2018.492%20178.503%2018.702%20178.140%2018.920%20C%20177.777%2019.138%20177.417%2019.370%20177.070%2019.630%20C%20176.723%2019.890%20176.378%2020.180%20176.060%2020.480%20C%20175.742%2020.780%20175.443%2021.098%20175.160%2021.430%20C%20174.877%2021.762%20174.605%2022.117%20174.360%2022.470%20C%20174.115%2022.823%20173.893%2023.180%20173.690%2023.550%20C%20173.487%2023.920%20173.305%2024.303%20173.140%2024.690%20C%20172.975%2025.077%20172.823%2025.467%20172.700%2025.870%20C%20172.577%2026.273%20172.478%2026.688%20172.400%2027.110%20C%20172.322%2027.532%20172.275%2027.965%20172.230%2028.400%20C%20172.185%2028.835%20172.128%2029.280%20172.130%2029.720%20C%20172.132%2030.160%20172.190%2030.605%20172.240%2031.040%20C%20172.290%2031.475%20172.345%2031.912%20172.430%2032.330%20C%20172.515%2032.748%20172.617%2033.152%20172.750%2033.550%20C%20172.883%2033.948%20173.055%2034.337%20173.230%2034.720%20C%20173.405%2035.103%20173.587%2035.483%20173.800%2035.850%20C%20174.013%2036.217%20174.257%2036.572%20174.510%2036.920%20C%20174.763%2037.268%20175.033%2037.607%20175.320%2037.940%20C%20175.607%2038.273%20175.907%2038.623%20176.230%2038.920%20C%20176.553%2039.217%20176.910%2039.468%20177.260%2039.720%20C%20177.610%2039.972%20177.965%2040.212%20178.330%2040.430%20C%20178.695%2040.648%20179.068%2040.852%20179.450%2041.030%20C%20179.832%2041.208%20180.222%2041.363%20180.620%2041.500%20C%20181.018%2041.637%20181.423%2041.762%20181.840%2041.850%20C%20182.257%2041.938%20182.683%2041.992%20183.120%2042.030%20C%20183.557%2042.068%20184.017%2042.090%20184.460%2042.080%20C%20184.903%2042.070%20185.352%2042.033%20185.780%2041.970%20C%20186.208%2041.907%20186.623%2041.813%20187.030%2041.700%20C%20187.437%2041.587%20187.832%2041.448%20188.220%2041.290%20C%20188.608%2041.132%20188.990%2040.955%20189.360%2040.750%20C%20189.730%2040.545%20190.090%2040.313%20190.440%2040.060%20C%20190.790%2039.807%20191.133%2039.522%20191.460%2039.230%20C%20191.787%2038.938%20192.105%2038.633%20192.400%2038.310%20C%20192.695%2037.987%20192.972%2037.637%20193.230%2037.290%20C%20193.488%2036.943%20193.735%2036.595%20193.950%2036.230%20C%20194.165%2035.865%20194.345%2035.482%20194.520%2035.100%20C%20194.695%2034.718%20194.860%2034.337%20195.000%2033.940%20C%20195.140%2033.543%20195.257%2033.132%20195.360%2032.720%20C%20195.463%2032.308%20195.555%2031.897%20195.620%2031.470%20C%20195.685%2031.043%20195.728%2030.605%20195.750%2030.160%20C%20195.772%2029.715%20195.765%2029.248%20195.750%2028.800%20C%20195.735%2028.352%20195.712%2027.903%20195.660%2027.470%20C%20195.608%2027.037%20195.537%2026.613%20195.440%2026.200%20C%20195.343%2025.787%20195.217%2025.387%20195.080%2024.990%20C%20194.943%2024.593%20194.797%2024.202%20194.620%2023.820%20C%20194.443%2023.438%20194.240%2023.063%20194.020%2022.700%20C%20193.800%2022.337%20193.565%2021.985%20193.300%2021.640%20C%20193.035%2021.295%20192.740%2020.947%20192.430%2020.630%20C%20192.120%2020.313%20191.782%2020.012%20191.440%2019.740%20C%20191.098%2019.468%20190.742%2019.225%20190.380%2019.000%20C%20190.018%2018.775%20189.648%2018.572%20189.270%2018.390%20C%20188.892%2018.208%20188.505%2018.052%20188.110%2017.910%20C%20187.715%2017.768%20187.315%2017.635%20186.900%2017.540%20C%20186.485%2017.445%20186.057%2017.382%20185.620%2017.340%20C%20185.183%2017.298%20184.728%2017.292%20184.280%2017.290%20C%20183.832%2017.288%20183.368%2017.292%20182.930%2017.330%20Z%20M%20183.290%2023.330%20C%20183.718%2023.275%20184.192%2023.277%20184.620%2023.330%20C%20185.048%2023.383%20185.467%2023.490%20185.860%2023.650%20C%20186.253%2023.810%20186.630%2024.040%20186.980%2024.290%20C%20187.330%2024.540%20187.665%2024.832%20187.960%2025.150%20C%20188.255%2025.468%20188.523%2025.835%20188.750%2026.200%20C%20188.977%2026.565%20189.168%2026.943%20189.320%2027.340%20C%20189.472%2027.737%20189.587%2028.153%20189.660%2028.580%20C%20189.733%2029.007%20189.777%2029.463%20189.760%2029.900%20C%20189.743%2030.337%20189.667%2030.783%20189.560%2031.200%20C%20189.453%2031.617%20189.303%2032.017%20189.120%2032.400%20C%20188.937%2032.783%20188.722%2033.152%20188.460%2033.500%20C%20188.198%2033.848%20187.882%2034.203%20187.550%2034.490%20C%20187.218%2034.777%20186.848%2035.023%20186.470%2035.220%20C%20186.092%2035.417%20185.698%2035.572%20185.280%2035.670%20C%20184.862%2035.768%20184.397%2035.815%20183.960%2035.810%20C%20183.523%2035.805%20183.075%2035.748%20182.660%2035.640%20C%20182.245%2035.532%20181.848%2035.358%20181.470%2035.160%20C%20181.092%2034.962%20180.727%2034.732%20180.390%2034.450%20C%20180.053%2034.168%20179.718%2033.817%20179.450%2033.470%20C%20179.182%2033.123%20178.965%2032.753%20178.780%2032.370%20C%20178.595%2031.987%20178.438%2031.588%20178.340%2031.170%20C%20178.242%2030.752%20178.210%2030.295%20178.190%2029.860%20C%20178.170%2029.425%20178.158%2028.983%20178.220%2028.560%20C%20178.282%2028.137%20178.410%2027.718%20178.560%2027.320%20C%20178.710%2026.922%20178.897%2026.538%20179.120%2026.170%20C%20179.343%2025.802%20179.602%2025.430%20179.900%2025.110%20C%20180.198%2024.790%20180.552%2024.492%20180.910%2024.250%20C%20181.268%2024.008%20181.653%2023.813%20182.050%2023.660%20C%20182.447%2023.507%20182.862%2023.385%20183.290%2023.330%20Z%20M%2056.120%2017.030%20C%2055.680%2017.060%2055.245%2017.127%2054.820%2017.200%20C%2054.395%2017.273%2053.978%2017.358%2053.570%2017.470%20C%2053.162%2017.582%2052.762%2017.717%2052.370%2017.870%20C%2051.978%2018.023%2051.593%2018.193%2051.220%2018.390%20C%2050.847%2018.587%2050.487%2018.812%2050.130%2019.050%20C%2049.773%2019.288%2049.420%2019.543%2049.080%2019.820%20C%2048.740%2020.097%2048.398%2020.393%2048.090%2020.710%20C%2047.782%2021.027%2047.500%2021.377%2047.230%2021.720%20C%2046.960%2022.063%2046.703%2022.412%2046.470%2022.770%20C%2046.237%2023.128%2046.018%2023.493%2045.830%2023.870%20C%2045.642%2024.247%2045.495%2024.638%2045.340%2025.030%20C%2045.185%2025.422%2045.020%2025.813%2044.900%2026.220%20C%2044.780%2026.627%2044.695%2027.047%2044.620%2027.470%20C%2044.545%2027.893%2044.480%2028.318%2044.450%2028.760%20C%2044.420%2029.202%2044.423%2029.673%2044.440%2030.120%20C%2044.457%2030.567%2044.492%2031.008%2044.550%2031.440%20C%2044.608%2031.872%2044.687%2032.297%2044.790%2032.710%20C%2044.893%2033.123%2045.022%2033.527%2045.170%2033.920%20C%2045.318%2034.313%2045.493%2034.693%2045.680%2035.070%20C%2045.867%2035.447%2046.062%2035.818%2046.290%2036.180%20C%2046.518%2036.542%2046.775%2036.898%2047.050%2037.240%20C%2047.325%2037.582%2047.630%2037.905%2047.940%2038.230%20C%2048.250%2038.555%2048.575%2038.900%2048.910%2039.190%20C%2049.245%2039.480%2049.595%2039.730%2049.950%2039.970%20C%2050.305%2040.210%2050.668%2040.430%2051.040%2040.630%20C%2051.412%2040.830%2051.792%2041.008%2052.180%2041.170%20C%2052.568%2041.332%2052.965%2041.480%2053.370%2041.600%20C%2053.775%2041.720%2054.187%2041.812%2054.610%2041.890%20C%2055.033%2041.968%2055.468%2042.038%2055.910%2042.070%20C%2056.352%2042.102%2056.817%2042.105%2057.260%2042.080%20C%2057.703%2042.055%2058.143%2041.992%2058.570%2041.920%20C%2058.997%2041.848%2059.412%2041.762%2059.820%2041.650%20C%2060.228%2041.538%2060.628%2041.403%2061.020%2041.250%20C%2061.412%2041.097%2061.797%2040.928%2062.170%2040.730%20C%2062.543%2040.532%2062.905%2040.300%2063.260%2040.060%20C%2063.615%2039.820%2063.962%2039.570%2064.300%2039.290%20C%2064.638%2039.010%2064.980%2038.698%2065.290%2038.380%20C%2065.600%2038.062%2065.893%2037.723%2066.160%2037.380%20C%2066.427%2037.037%2066.667%2036.683%2066.890%2036.320%20C%2067.113%2035.957%2067.312%2035.578%2067.500%2035.200%20C%2067.688%2034.822%2067.867%2034.442%2068.020%2034.050%20C%2068.173%2033.658%2068.310%2033.258%2068.420%2032.850%20C%2068.530%2032.442%2068.610%2032.027%2068.680%2031.600%20C%2068.750%2031.173%2068.813%2030.735%2068.840%2030.290%20C%2068.867%2029.845%2068.857%2029.378%2068.840%2028.930%20C%2068.823%2028.482%2068.797%2028.032%2068.740%2027.600%20C%2068.683%2027.168%2068.603%2026.752%2068.500%2026.340%20C%2068.397%2025.928%2068.262%2025.527%2068.120%2025.130%20C%2067.978%2024.733%2067.832%2024.340%2067.650%2023.960%20C%2067.468%2023.580%2067.252%2023.213%2067.030%2022.850%20C%2066.808%2022.487%2066.582%2022.127%2066.320%2021.780%20C%2066.058%2021.433%2065.765%2021.097%2065.460%2020.770%20C%2065.155%2020.443%2064.825%2020.108%2064.490%2019.820%20C%2064.155%2019.532%2063.807%2019.278%2063.450%2019.040%20C%2063.093%2018.802%2062.725%2018.583%2062.350%2018.390%20C%2061.975%2018.197%2061.592%2018.033%2061.200%2017.880%20C%2060.808%2017.727%2060.407%2017.587%2060.000%2017.470%20C%2059.593%2017.353%2059.183%2017.255%2058.760%2017.180%20C%2058.337%2017.105%2057.900%2017.045%2057.460%2017.020%20C%2057.020%2016.995%2056.560%2017.000%2056.120%2017.030%20Z%20M%2055.990%2023.130%20C%2056.423%2023.087%2056.888%2023.093%2057.320%2023.140%20C%2057.752%2023.187%2058.178%2023.273%2058.580%2023.410%20C%2058.982%2023.547%2059.367%2023.728%2059.730%2023.960%20C%2060.093%2024.192%2060.445%2024.490%2060.760%2024.800%20C%2061.075%2025.110%2061.375%2025.462%2061.620%2025.820%20C%2061.865%2026.178%2062.068%2026.557%2062.230%2026.950%20C%2062.392%2027.343%2062.517%2027.752%2062.590%2028.180%20C%2062.663%2028.608%2062.680%2029.077%2062.670%2029.520%20C%2062.660%2029.963%2062.620%2030.417%2062.530%2030.840%20C%2062.440%2031.263%2062.300%2031.670%2062.130%2032.060%20C%2061.960%2032.450%2061.758%2032.827%2061.510%2033.180%20C%2061.262%2033.533%2060.960%2033.882%2060.640%2034.180%20C%2060.320%2034.478%2059.957%2034.747%2059.590%2034.970%20C%2059.223%2035.193%2058.843%2035.382%2058.440%2035.520%20C%2058.037%2035.658%2057.607%2035.758%2057.170%2035.800%20C%2056.733%2035.842%2056.253%2035.827%2055.820%2035.770%20C%2055.387%2035.713%2054.968%2035.608%2054.570%2035.460%20C%2054.172%2035.312%2053.793%2035.113%2053.430%2034.880%20C%2053.067%2034.647%2052.705%2034.368%2052.390%2034.060%20C%2052.075%2033.752%2051.785%2033.388%2051.540%2033.030%20C%2051.295%2032.672%2051.085%2032.302%2050.920%2031.910%20C%2050.755%2031.518%2050.633%2031.105%2050.550%2030.680%20C%2050.467%2030.255%2050.415%2029.798%2050.420%2029.360%20C%2050.425%2028.922%2050.485%2028.470%2050.580%2028.050%20C%2050.675%2027.630%2050.813%2027.227%2050.990%2026.840%20C%2051.167%2026.453%2051.387%2026.083%2051.640%2025.730%20C%2051.893%2025.377%2052.188%2025.017%2052.510%2024.720%20C%2052.832%2024.423%2053.202%2024.170%2053.570%2023.950%20C%2053.938%2023.730%2054.317%2023.537%2054.720%2023.400%20C%2055.123%2023.263%2055.557%2023.173%2055.990%2023.130%20Z%20M%2028.870%2017.030%20C%2028.427%2017.063%2027.998%2017.125%2027.570%2017.200%20C%2027.142%2017.275%2026.712%2017.365%2026.300%2017.480%20C%2025.888%2017.595%2025.495%2017.738%2025.100%2017.890%20C%2024.705%2018.042%2024.310%2018.200%2023.930%2018.390%20C%2023.550%2018.580%2023.182%2018.797%2022.820%2019.030%20C%2022.458%2019.263%2022.103%2019.513%2021.760%2019.790%20C%2021.417%2020.067%2021.083%2020.375%2020.760%2020.690%20C%2020.437%2021.005%2020.105%2021.338%2019.820%2021.680%20C%2019.535%2022.022%2019.287%2022.380%2019.050%2022.740%20C%2018.813%2023.100%2018.595%2023.463%2018.400%2023.840%20C%2018.205%2024.217%2018.033%2024.605%2017.880%2025.000%20C%2017.727%2025.395%2017.595%2025.798%2017.480%2026.210%20C%2017.365%2026.622%2017.268%2027.043%2017.190%2027.470%20C%2017.112%2027.897%2017.042%2028.325%2017.010%2028.770%20C%2016.978%2029.215%2016.977%2029.692%2017.000%2030.140%20C%2017.023%2030.588%2017.077%2031.032%2017.150%2031.460%20C%2017.223%2031.888%2017.330%2032.297%2017.440%2032.710%20C%2017.550%2033.123%2017.668%2033.540%2017.810%2033.940%20C%2017.952%2034.340%2018.105%2034.728%2018.290%2035.110%20C%2018.475%2035.492%2018.692%2035.865%2018.920%2036.230%20C%2019.148%2036.595%2019.368%2037.025%2019.660%2037.300%20C%2019.952%2037.575%2020.345%2037.933%2020.670%2037.880%20C%2020.995%2037.827%2021.303%2037.297%2021.610%2036.980%20C%2021.917%2036.663%2022.210%2036.315%2022.510%2035.980%20C%2022.810%2035.645%2023.142%2035.317%2023.410%2034.970%20C%2023.678%2034.623%2024.088%2034.268%2024.120%2033.900%20C%2024.152%2033.532%2023.768%2033.147%2023.600%2032.760%20C%2023.432%2032.373%2023.235%2031.987%2023.110%2031.580%20C%2022.985%2031.173%2022.888%2030.748%2022.850%2030.320%20C%2022.812%2029.892%2022.835%2029.442%2022.880%2029.010%20C%2022.925%2028.578%2022.998%2028.138%2023.120%2027.730%20C%2023.242%2027.322%2023.408%2026.935%2023.610%2026.560%20C%2023.812%2026.185%2024.050%2025.818%2024.330%2025.480%20C%2024.610%2025.142%2024.950%2024.808%2025.290%2024.530%20C%2025.630%2024.252%2025.993%2024.007%2026.370%2023.810%20C%2026.747%2023.613%2027.142%2023.472%2027.550%2023.350%20C%2027.958%2023.228%2028.380%2023.125%2028.820%2023.080%20C%2029.260%2023.035%2029.750%2023.040%2030.190%2023.080%20C%2030.630%2023.120%2031.045%2023.235%2031.460%2023.320%20C%2031.875%2023.405%2032.307%2023.687%2032.680%2023.590%20C%2033.053%2023.493%2033.368%2023.043%2033.700%2022.740%20C%2034.032%2022.437%2034.347%2022.093%2034.670%2021.770%20C%2034.993%2021.447%2035.320%2021.127%2035.640%2020.800%20C%2035.960%2020.473%2036.465%2020.153%2036.590%2019.810%20C%2036.715%2019.467%2036.612%2019.015%2036.390%2018.740%20C%2036.168%2018.465%2035.645%2018.335%2035.260%2018.160%20C%2034.875%2017.985%2034.483%2017.827%2034.080%2017.690%20C%2033.677%2017.553%2033.260%2017.438%2032.840%2017.340%20C%2032.420%2017.242%2031.995%2017.157%2031.560%2017.100%20C%2031.125%2017.043%2030.678%2017.012%2030.230%2017.000%20C%2029.782%2016.988%2029.313%2016.997%2028.870%2017.030%20Z%20M%20141.280%207.040%20C%20140.862%207.123%20140.362%207.210%20140.130%207.500%20C%20139.898%207.790%20139.930%208.338%20139.890%208.780%20C%20139.850%209.222%20139.890%209.693%20139.890%2010.150%20C%20139.890%2010.607%20139.890%2011.063%20139.890%2011.520%20C%20139.890%2011.977%20139.890%2012.432%20139.890%2012.890%20C%20139.890%2013.348%20139.890%2013.812%20139.890%2014.270%20C%20139.890%2014.728%20139.890%2015.183%20139.890%2015.640%20C%20139.890%2016.097%20139.900%2016.557%20139.890%2017.010%20C%20139.880%2017.463%20140.007%2018.145%20139.830%2018.360%20C%20139.653%2018.575%20139.190%2018.393%20138.830%2018.300%20C%20138.470%2018.207%20138.065%2017.950%20137.670%2017.800%20C%20137.275%2017.650%20136.872%2017.510%20136.460%2017.400%20C%20136.048%2017.290%20135.630%2017.207%20135.200%2017.140%20C%20134.770%2017.073%20134.323%2017.012%20133.880%2017.000%20C%20133.437%2016.988%20132.980%2017.030%20132.540%2017.070%20C%20132.100%2017.110%20131.665%2017.160%20131.240%2017.240%20C%20130.815%2017.320%20130.397%2017.427%20129.990%2017.550%20C%20129.583%2017.673%20129.188%2017.815%20128.800%2017.980%20C%20128.412%2018.145%20128.033%2018.333%20127.660%2018.540%20C%20127.287%2018.747%20126.917%2018.975%20126.560%2019.220%20C%20126.203%2019.465%20125.855%2019.718%20125.520%2020.010%20C%20125.185%2020.302%20124.852%2020.638%20124.550%2020.970%20C%20124.248%2021.302%20123.968%2021.648%20123.710%2022.000%20C%20123.452%2022.352%20123.217%2022.712%20123.000%2023.080%20C%20122.783%2023.448%20122.587%2023.827%20122.410%2024.210%20C%20122.233%2024.593%20122.078%2024.980%20121.940%2025.380%20C%20121.802%2025.780%20121.673%2026.190%20121.580%2026.610%20C%20121.487%2027.030%20121.432%2027.463%20121.380%2027.900%20C%20121.328%2028.337%20121.275%2028.785%20121.270%2029.230%20C%20121.265%2029.675%20121.313%2030.128%20121.350%2030.570%20C%20121.387%2031.012%20121.418%2031.453%20121.490%2031.880%20C%20121.562%2032.307%20121.668%2032.718%20121.780%2033.130%20C%20121.892%2033.542%20122.010%2033.953%20122.160%2034.350%20C%20122.310%2034.747%20122.488%2035.132%20122.680%2035.510%20C%20122.872%2035.888%20123.085%2036.257%20123.310%2036.620%20C%20123.535%2036.983%20123.760%2037.343%20124.030%2037.690%20C%20124.300%2038.037%20124.623%2038.380%20124.930%2038.700%20C%20125.237%2039.020%20125.540%2039.325%20125.870%2039.610%20C%20126.200%2039.895%20126.552%2040.168%20126.910%2040.410%20C%20127.268%2040.652%20127.643%2040.863%20128.020%2041.060%20C%20128.397%2041.257%20128.778%2041.433%20129.170%2041.590%20C%20129.562%2041.747%20129.958%2041.888%20130.370%2042.000%20C%20130.782%2042.112%20131.208%2042.197%20131.640%2042.260%20C%20132.072%2042.323%20132.512%2042.362%20132.960%2042.380%20C%20133.408%2042.398%20133.885%2042.400%20134.330%2042.370%20C%20134.775%2042.340%20135.203%2042.275%20135.630%2042.200%20C%20136.057%2042.125%20136.482%2042.040%20136.890%2041.920%20C%20137.298%2041.800%20137.692%2041.647%20138.080%2041.480%20C%20138.468%2041.313%20138.847%2041.123%20139.220%2040.920%20C%20139.593%2040.717%20139.963%2040.505%20140.320%2040.260%20C%20140.677%2040.015%20141.023%2039.737%20141.360%2039.450%20C%20141.697%2039.163%20142.037%2038.863%20142.340%2038.540%20C%20142.643%2038.217%20142.918%2037.860%20143.180%2037.510%20C%20143.442%2037.160%20143.687%2036.805%20143.910%2036.440%20C%20144.133%2036.075%20144.335%2035.700%20144.520%2035.320%20C%20144.705%2034.940%20144.873%2034.557%20145.020%2034.160%20C%20145.167%2033.763%20145.297%2033.355%20145.400%2032.940%20C%20145.503%2032.525%20145.578%2032.102%20145.640%2031.670%20C%20145.702%2031.238%20145.748%2030.798%20145.770%2030.350%20C%20145.792%2029.902%20145.770%2029.438%20145.770%2028.980%20C%20145.770%2028.522%20145.770%2028.058%20145.770%2027.600%20C%20145.770%2027.142%20145.770%2026.687%20145.770%2026.230%20C%20145.770%2025.773%20145.770%2025.318%20145.770%2024.860%20C%20145.770%2024.402%20145.770%2023.938%20145.770%2023.480%20C%20145.770%2023.022%20145.770%2022.567%20145.770%2022.110%20C%20145.770%2021.653%20145.770%2021.197%20145.770%2020.740%20C%20145.770%2020.283%20145.770%2019.828%20145.770%2019.370%20C%20145.770%2018.912%20145.770%2018.448%20145.770%2017.990%20C%20145.770%2017.532%20145.770%2017.077%20145.770%2016.620%20C%20145.770%2016.163%20145.770%2015.707%20145.770%2015.250%20C%20145.770%2014.793%20145.770%2014.338%20145.770%2013.880%20C%20145.770%2013.422%20145.770%2012.958%20145.770%2012.500%20C%20145.770%2012.042%20145.770%2011.587%20145.770%2011.130%20C%20145.770%2010.673%20145.770%2010.217%20145.770%209.760%20C%20145.770%209.303%20145.855%208.803%20145.770%208.390%20C%20145.685%207.977%20145.553%207.510%20145.260%207.280%20C%20144.967%207.050%20144.447%207.057%20144.010%207.010%20C%20143.573%206.963%20143.095%206.995%20142.640%207.000%20C%20142.185%207.005%20141.698%206.957%20141.280%207.040%20Z%20M%20132.820%2023.130%20C%20133.245%2023.092%20133.693%2023.108%20134.120%2023.150%20C%20134.547%2023.192%20134.978%2023.258%20135.380%2023.380%20C%20135.782%2023.502%20136.163%2023.672%20136.530%2023.880%20C%20136.897%2024.088%20137.258%2024.343%20137.580%2024.630%20C%20137.902%2024.917%20138.203%2025.258%20138.460%2025.600%20C%20138.717%2025.942%20138.942%2026.302%20139.120%2026.680%20C%20139.298%2027.058%20139.433%2027.457%20139.530%2027.870%20C%20139.627%2028.283%20139.682%2028.723%20139.700%2029.160%20C%20139.718%2029.597%20139.702%2030.063%20139.640%2030.490%20C%20139.578%2030.917%20139.473%2031.327%20139.330%2031.720%20C%20139.187%2032.113%20138.995%2032.485%20138.780%2032.850%20C%20138.565%2033.215%20138.325%2033.588%20138.040%2033.910%20C%20137.755%2034.232%20137.413%2034.525%20137.070%2034.780%20C%20136.727%2035.035%20136.360%2035.265%20135.980%2035.440%20C%20135.600%2035.615%20135.203%2035.735%20134.790%2035.830%20C%20134.377%2035.925%20133.932%2036.005%20133.500%2036.010%20C%20133.068%2036.015%20132.615%2035.952%20132.200%2035.860%20C%20131.785%2035.768%20131.390%2035.632%20131.010%2035.460%20C%20130.630%2035.288%20130.262%2035.083%20129.920%2034.830%20C%20129.578%2034.577%20129.252%2034.262%20128.960%2033.940%20C%20128.668%2033.618%20128.387%2033.263%20128.170%2032.900%20C%20127.953%2032.537%20127.798%2032.155%20127.660%2031.760%20C%20127.522%2031.365%20127.408%2030.955%20127.340%2030.530%20C%20127.272%2030.105%20127.237%2029.643%20127.250%2029.210%20C%20127.263%2028.777%20127.320%2028.342%20127.420%2027.930%20C%20127.520%2027.518%20127.670%2027.118%20127.850%2026.740%20C%20128.030%2026.362%20128.245%2026.005%20128.500%2025.660%20C%20128.755%2025.315%20129.058%2024.962%20129.380%2024.670%20C%20129.702%2024.378%20130.065%2024.125%20130.430%2023.910%20C%20130.795%2023.695%20131.172%2023.510%20131.570%2023.380%20C%20131.968%2023.250%20132.395%2023.168%20132.820%2023.130%20Z%20M%20114.220%207.060%20C%20113.810%207.133%20113.305%207.178%20113.060%207.450%20C%20112.815%207.722%20112.802%208.253%20112.750%208.690%20C%20112.698%209.127%20112.750%209.610%20112.750%2010.070%20C%20112.750%2010.530%20112.750%2010.990%20112.750%2011.450%20C%20112.750%2011.910%20112.750%2012.370%20112.750%2012.830%20C%20112.750%2013.290%20112.750%2013.750%20112.750%2014.210%20C%20112.750%2014.670%20112.750%2015.130%20112.750%2015.590%20C%20112.750%2016.050%20112.762%2016.515%20112.750%2016.970%20C%20112.738%2017.425%20112.870%2018.082%20112.680%2018.320%20C%20112.490%2018.558%20111.987%2018.462%20111.610%2018.400%20C%20111.233%2018.338%20110.827%2018.078%20110.420%2017.950%20C%20110.013%2017.822%20109.593%2017.720%20109.170%2017.630%20C%20108.747%2017.540%20108.323%2017.450%20107.880%2017.410%20C%20107.437%2017.370%20106.965%2017.385%20106.510%2017.390%20C%20106.055%2017.395%20105.590%2017.392%20105.150%2017.440%20C%20104.710%2017.488%20104.288%2017.580%20103.870%2017.680%20C%20103.452%2017.780%20103.042%2017.898%20102.640%2018.040%20C%20102.238%2018.182%20101.842%2018.340%20101.460%2018.530%20C%20101.078%2018.720%20100.713%2018.950%20100.350%2019.180%20C%2099.987%2019.410%2099.628%2019.640%2099.280%2019.910%20C%2098.932%2020.180%2098.580%2020.485%2098.260%2020.800%20C%2097.940%2021.115%2097.638%2021.457%2097.360%2021.800%20C%2097.082%2022.143%2096.825%2022.497%2096.590%2022.860%20C%2096.355%2023.223%2096.148%2023.602%2095.950%2023.980%20C%2095.752%2024.358%2095.558%2024.737%2095.400%2025.130%20C%2095.242%2025.523%2095.113%2025.927%2095.000%2026.340%20C%2094.887%2026.753%2094.788%2027.177%2094.720%2027.610%20C%2094.652%2028.043%2094.622%2028.495%2094.590%2028.940%20C%2094.558%2029.385%2094.518%2029.835%2094.530%2030.280%20C%2094.542%2030.725%2094.598%2031.175%2094.660%2031.610%20C%2094.722%2032.045%2094.795%2032.473%2094.900%2032.890%20C%2095.005%2033.307%2095.147%2033.710%2095.290%2034.110%20C%2095.433%2034.510%2095.582%2034.905%2095.760%2035.290%20C%2095.938%2035.675%2096.140%2036.050%2096.360%2036.420%20C%2096.580%2036.790%2096.817%2037.158%2097.080%2037.510%20C%2097.343%2037.862%2097.633%2038.203%2097.940%2038.530%20C%2098.247%2038.857%2098.583%2039.177%2098.920%2039.470%20C%2099.257%2039.763%2099.603%2040.042%2099.960%2040.290%20C%20100.317%2040.538%20100.685%2040.757%20101.060%2040.960%20C%20101.435%2041.163%20101.817%2041.347%20102.210%2041.510%20C%20102.603%2041.673%20103.008%2041.822%20103.420%2041.940%20C%20103.832%2042.058%20104.250%2042.147%20104.680%2042.220%20C%20105.110%2042.293%20105.552%2042.353%20106.000%2042.380%20C%20106.448%2042.407%20106.920%2042.403%20107.370%2042.380%20C%20107.820%2042.357%20108.268%2042.310%20108.700%2042.240%20C%20109.132%2042.170%20109.548%2042.077%20109.960%2041.960%20C%20110.372%2041.843%20110.777%2041.700%20111.170%2041.540%20C%20111.563%2041.380%20111.945%2041.202%20112.320%2041.000%20C%20112.695%2040.798%20113.062%2040.575%20113.420%2040.330%20C%20113.778%2040.085%20114.130%2039.822%20114.470%2039.530%20C%20114.810%2039.238%20115.152%2038.908%20115.460%2038.580%20C%20115.768%2038.252%20116.057%2037.910%20116.320%2037.560%20C%20116.583%2037.210%20116.818%2036.848%20117.040%2036.480%20C%20117.262%2036.112%20117.468%2035.735%20117.650%2035.350%20C%20117.832%2034.965%20117.993%2034.573%20118.130%2034.170%20C%20118.267%2033.767%20118.373%2033.350%20118.470%2032.930%20C%20118.567%2032.510%20118.652%2032.085%20118.710%2031.650%20C%20118.768%2031.215%20118.802%2030.772%20118.820%2030.320%20C%20118.838%2029.868%20118.820%2029.400%20118.820%2028.940%20C%20118.820%2028.480%20118.820%2028.020%20118.820%2027.560%20C%20118.820%2027.100%20118.820%2026.640%20118.820%2026.180%20C%20118.820%2025.720%20118.820%2025.260%20118.820%2024.800%20C%20118.820%2024.340%20118.820%2023.880%20118.820%2023.420%20C%20118.820%2022.960%20118.820%2022.500%20118.820%2022.040%20C%20118.820%2021.580%20118.820%2021.122%20118.820%2020.660%20C%20118.820%2020.198%20118.820%2019.730%20118.820%2019.270%20C%20118.820%2018.810%20118.820%2018.358%20118.820%2017.900%20C%20118.820%2017.442%20118.820%2016.980%20118.820%2016.520%20C%20118.820%2016.060%20118.820%2015.600%20118.820%2015.140%20C%20118.820%2014.680%20118.820%2014.220%20118.820%2013.760%20C%20118.820%2013.300%20118.820%2012.840%20118.820%2012.380%20C%20118.820%2011.920%20118.820%2011.460%20118.820%2011.000%20C%20118.820%2010.540%20118.820%2010.080%20118.820%209.620%20C%20118.820%209.160%20118.923%208.647%20118.820%208.240%20C%20118.717%207.833%20118.522%207.385%20118.200%207.180%20C%20117.878%206.975%20117.337%207.038%20116.890%207.010%20C%20116.443%206.982%20115.965%207.002%20115.520%207.010%20C%20115.075%207.018%20114.630%206.987%20114.220%207.060%20Z%20M%20105.780%2023.240%20C%20106.203%2023.173%20106.663%2023.160%20107.100%2023.170%20C%20107.537%2023.180%20107.985%2023.208%20108.400%2023.300%20C%20108.815%2023.392%20109.215%2023.533%20109.590%2023.720%20C%20109.965%2023.907%20110.320%2024.152%20110.650%2024.420%20C%20110.980%2024.688%20111.298%2025.000%20111.570%2025.330%20C%20111.842%2025.660%20112.085%2026.028%20112.280%2026.400%20C%20112.475%2026.772%20112.618%2027.158%20112.740%2027.560%20C%20112.862%2027.962%20112.972%2028.383%20113.010%2028.810%20C%20113.048%2029.237%20113.015%2029.692%20112.970%2030.120%20C%20112.925%2030.548%20112.857%2030.977%20112.740%2031.380%20C%20112.623%2031.783%20112.465%2032.168%20112.270%2032.540%20C%20112.075%2032.912%20111.842%2033.273%20111.570%2033.610%20C%20111.298%2033.947%20110.972%2034.282%20110.640%2034.560%20C%20110.308%2034.838%20109.950%2035.082%20109.580%2035.280%20C%20109.210%2035.478%20108.823%2035.633%20108.420%2035.750%20C%20108.017%2035.867%20107.588%2035.950%20107.160%2035.980%20C%20106.732%2036.010%20106.275%2035.988%20105.850%2035.930%20C%20105.425%2035.872%20105.002%2035.777%20104.610%2035.630%20C%20104.218%2035.483%20103.857%2035.278%20103.500%2035.050%20C%20103.143%2034.822%20102.785%2034.558%20102.470%2034.260%20C%20102.155%2033.962%20101.853%2033.612%20101.610%2033.260%20C%20101.367%2032.908%20101.168%2032.537%20101.010%2032.150%20C%20100.852%2031.763%20100.745%2031.357%20100.660%2030.940%20C%20100.575%2030.523%20100.500%2030.080%20100.500%2029.650%20C%20100.500%2029.220%20100.577%2028.777%20100.660%2028.360%20C%20100.743%2027.943%20100.840%2027.535%20101.000%2027.150%20C%20101.160%2026.765%20101.378%2026.402%20101.620%2026.050%20C%20101.862%2025.698%20102.143%2025.352%20102.450%2025.040%20C%20102.757%2024.728%20103.108%2024.425%20103.460%2024.180%20C%20103.812%2023.935%20104.173%2023.727%20104.560%2023.570%20C%20104.947%2023.413%20105.357%2023.307%20105.780%2023.240%20Z%22%2F%3E%0A%3C%2Fsvg%3E%0A" onerror="this.style.display='none';document.getElementById('brand-fallback').style.display='block'">
+    <div id="brand-fallback" class="brand-fallback">PERFIL</div>
+    <h1>Uma identidade.<br>Vários contextos.</h1>
+    <p>Referência navegável candidata para comparar o Perfil próprio, visitantes, Business e a nova experiência da dupla fixa.</p>
+    <h2>Escolha o contexto</h2>
+    <div class="scenarios" id="scenario-buttons">
+      <button type="button" class="scenario" data-scenario="own" aria-pressed="true">01 · Meu perfil <small>Conta pessoal · visão do titular</small></button>
+      <button type="button" class="scenario" data-scenario="visitor" aria-pressed="false">02 · Pessoa visitada <small>Conta comum · visão de visitante</small></button>
+      <button type="button" class="scenario" data-scenario="pro" aria-pressed="false">03 · Profissional visitado <small>Perfil Business · situação de registro</small></button>
+      <button type="button" class="scenario" data-scenario="proOwn" aria-pressed="false">04 · Meu perfil profissional <small>Mesmo profissional · visão do titular</small></button>
+      <button type="button" class="scenario" data-scenario="duo" aria-pressed="false">05 · Perfil da dupla <small>Publicações e dissolução do vínculo</small></button>
+    </div>
+    <div class="rule"></div>
+    <h2>Simulações de estudo</h2>
+    <label for="desktop-pulse-state" class="eyebrow" style="display:block;margin-bottom:7px">Estado do Pulse</label>
+    <select id="desktop-pulse-state" class="lab-action" aria-label="Simular estado do Pulse"><option value="unseen">Publicado · não visto</option><option value="seen">Publicado · visto</option><option value="empty">Sem Pulse</option></select>
+    <button id="toggle-credential" class="lab-action" type="button">Alternar credencial profissional</button>
+    <button id="end-period" class="lab-action" type="button">Simular fim do prazo da dupla</button>
+    <button id="reset-demo" class="lab-action" type="button">Restaurar dados ilustrativos</button>
+    <div class="info-card"><span class="eyebrow">Regras já aplicadas</span><p>Botões com <strong>ícone OU texto</strong>; abas <strong>somente com texto</strong>; sem criar telas completas de outros módulos.</p></div>
+  </aside>
+  <main class="app-wrap" aria-label="Prévia mobile navegável">
+    <div class="mobile-control">
+      <label for="mobile-scenario">Contexto</label>
+      <select id="mobile-scenario" aria-label="Selecionar contexto de perfil">
+        <option value="own">Meu perfil</option><option value="visitor">Pessoa visitada</option><option value="pro">Profissional visitado</option><option value="proOwn">Meu perfil profissional</option><option value="duo">Perfil da dupla</option>
+      </select>
+      <select id="mobile-pulse-state" aria-label="Simular estado do Pulse"><option value="unseen">Pulse novo</option><option value="seen">Pulse visto</option><option value="empty">Sem Pulse</option></select><button class="mobile-reset" type="button" id="mobile-reset">Reiniciar</button>
+    </div>
+    <div class="device"><div class="app-screen" id="app"></div><div id="overlay-host"></div><div id="toast-host" aria-live="polite"></div></div>
+    <div class="phone-caption">Referência visual candidata · 390–430 px · sem dados de produção</div>
+  </main>
+  <aside class="panel panel-right" aria-label="Notas e limites de escopo">
+    <span class="eyebrow">Contexto do estudo</span>
+    <h1 style="font-size:21px">Escopo fechado.</h1>
+    <p>O Perfil principal compartilha a composição. As demais áreas permanecem vinculadas às próprias Issues.</p>
+    <div class="legend">
+      <div class="key"><span></span><p><strong>Publicações:</strong> somente fotos/vídeos nas miniaturas; sem títulos sobre a mídia.</p></div>
+      <div class="key"><span></span><p><strong>Rotinas:</strong> grade de capa e nome, pública por padrão; Atividades: privacidade contextual e área detalhada ainda na #77.</p></div>
+      <div class="key"><span></span><p><strong>Pulse:</strong> vazio, não visto com gradiente do código atual e visto com aro gelo #F1F8FB, conforme #8/#73.</p>
+      <div class="key"><span></span><p><strong>Profissionais:</strong> selos verde/prata são variantes de estudo, não prova de CREF real.</p></div></div>
+      <div class="key"><span></span><p><strong>Dupla:</strong> posts são locais e imediatos; dissolução e prazo de 3 dias são simulados.</p></div>
+    </div>
+    <div class="rule"></div>
+    <h2>Fontes canônicas</h2>
+    <div class="source-links"><a href="https://github.com/jukazilli/GODUOIT/issues/77" target="_blank" rel="noopener">#77 Perfil</a><a href="https://github.com/jukazilli/GODUOIT/issues/144" target="_blank" rel="noopener">#144 Dupla</a><a href="https://github.com/jukazilli/GODUOIT/issues/90" target="_blank" rel="noopener">#90 Profissional</a><a href="https://github.com/jukazilli/GODUOIT/issues/84" target="_blank" rel="noopener">#84 Config.</a><a href="https://github.com/jukazilli/GODUOIT/issues/114" target="_blank" rel="noopener">#114 Salvos</a><a href="https://github.com/jukazilli/GODUOIT/issues/75" target="_blank" rel="noopener">#75 Sessão</a></div>
+    <p class="status-mark">Proposta visual para avaliação. Fontes de imagem externas são ilustrativas e não são assets oficiais. Nenhum backend, publicação real, credencial de conselho ou remoção efetiva de dados é executado.</p>
+  </aside>
+</div>
+<script>
+(function(){
+  'use strict';
+  const ICONS={
+    back:'<path d="m15 18-6-6 6-6"/>',
+    more:'<circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/>',
+    menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',
+    plus:'<path d="M12 5v14M5 12h14"/>',
+    chevron:'<path d="m9 18 6-6-6-6"/>',
+    check:'<path d="m4 12 5 5L20 6"/>',
+    close:'<path d="M18 6 6 18M6 6l12 12"/>',
+    badge:'<path d="m9 12 2 2 4-4"/><path d="M12 2l2.5 1.4 2.8-.1 1.4 2.5 2.3 1.6-.2 2.8L22 12l-1.2 1.8.2 2.8-2.3 1.6-1.4 2.5-2.8-.1L12 22l-2.5-1.4-2.8.1-1.4-2.5-2.3-1.6.2-2.8L2 12l1.2-1.8-.2-2.8 2.3-1.6 1.4-2.5 2.8.1z"/>',
+    badgeHelp:'<path d="M12 2l2.5 1.4 2.8-.1 1.4 2.5 2.3 1.6-.2 2.8L22 12l-1.2 1.8.2 2.8-2.3 1.6-1.4 2.5-2.8-.1L12 22l-2.5-1.4-2.8.1-1.4-2.5-2.3-1.6.2-2.8L2 12l1.2-1.8-.2-2.8 2.3-1.6 1.4-2.5 2.8.1z"/><path d="M9.5 9a2.5 2.5 0 0 1 4.8.9c0 1.7-2.3 2-2.3 3.3M12 17h.01"/>',
+    shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/>',
+    lock:'<rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>',
+    bookmark:'<path d="M19 21 12 16 5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>',
+    image:'<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/>',
+    dumbbell:'<path d="m6.5 6.5 11 11m3-3-6 6m-11-11 6-6M7 3l-4 4m18 10-4 4"/>',
+    calendar:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18m-12 5 2 2 4-4"/>',
+    users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M16 3.1a4 4 0 0 1 0 7.8M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/>',
+    share:'<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.5 13.5 7 4m0-11-7 4"/>',
+    clock:'<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
+    file:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/>',
+    eye:'<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12"/><circle cx="12" cy="12" r="3"/>',
+    camera:'<path d="M14 4h-4l-2 3H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-4z"/><circle cx="12" cy="13" r="3"/>',
+    arrow:'<path d="M5 12h14m-7-7 7 7-7 7"/>',
+    trash:'<path d="M3 6h18m-2 0-1 14H6L5 6m3 0V4h8v2m-6 4v7m4-7v7"/>'
+  };
+  const icon=(name)=>`<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">${ICONS[name]||ICONS.file}</svg>`;
+  const esc=(s)=>String(s??'').replace(/[&<>"']/g,(ch)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const app=document.getElementById('app');
+  const host=document.getElementById('overlay-host');
+  const toastHost=document.getElementById('toast-host');
+  const demoProfiles={
+    own:{handle:'julianozilli',name:'Juliano',avatar:'J',cls:'own',treinos:'96',followers:'267',following:'238',bio:'Treino, amigos e bons encontros.\nEvoluindo um dia de cada vez.',sublabel:'Joinville · SC'},
+    visitor:{handle:'osmanexemplo',name:'Osman',avatar:'O',cls:'visitor',treinos:'160',followers:'12,6 mil',following:'6.810',bio:'Esporte, humor e vida real.\nSempre em movimento.',sublabel:'Perfil comum · dados ilustrativos'},
+    pro:{handle:'profissionalexemplo',name:'Janderson',avatar:'J',cls:'pro',treinos:'135',followers:'32,6 mil',following:'1.022',bio:'Movimento, treino e bem-estar.\nConteúdo sobre atividade física.',sublabel:'Profissional · habilitação depende da modalidade'},
+    proOwn:{handle:'profissionalexemplo',name:'Janderson',avatar:'J',cls:'pro',treinos:'135',followers:'32,6 mil',following:'1.022',bio:'Movimento, treino e bem-estar.\nConteúdo sobre atividade física.',sublabel:'Profissional · modo Business ativo'}
+  };
+  const tiles=[
+    {title:'Dia de treino',theme:'tile-1',url:'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=480&q=70'},
+    {title:'Publicação fotográfica',theme:'tile-2',url:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=480&q=70'},
+    {title:'Depois do treino',theme:'tile-3',url:'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=480&q=70'},
+    {title:'Foco no dia',theme:'tile-4',url:'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=480&q=70'},
+    {title:'Passo a passo',theme:'tile-5',url:'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=480&q=70'},
+    {title:'Movimento livre',theme:'tile-6',url:'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=480&q=70'}
+  ];
+  const sampleRoutines=[
+    {id:'superior',name:'Superiores · força',cover:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700&q=75'},
+    {id:'pernas',name:'Pernas e glúteos',cover:'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=700&q=75'},
+    {id:'corrida',name:'Corrida e cardio',cover:'https://images.unsplash.com/photo-1533561052604-c3beb6d55b8d?w=700&q=75'},
+    {id:'mobilidade',name:'Mobilidade diária',cover:'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=700&q=75'}
+  ];
+  let state={scene:'own',tab:'posts',screen:'profile',profileVisibility:{own:true,visitor:true,pro:true,proOwn:true},routinePrivacy:{},pulseStatus:'unseen',followed:false,invite:false,credential:'pending',duo:'active',duoPosts:[{text:'Mais um treino para lembrar.',author:'Nina'},{text:'Domingo em movimento.',author:'Leo'},{text:'Primeira semana da dupla.',author:'Nina'}],personalPosts:[],modal:null,composerText:'',composerTarget:'duo'};
+  let toastTimer;
+  const ownScene=()=>state.scene==='own'||state.scene==='proOwn';
+  const proScene=()=>state.scene==='pro'||state.scene==='proOwn';
+  const profileKey=()=>state.scene==='proOwn'?'pro':state.scene;
+  const SCOPES={publication:{title:'Publicação',issue:76},pulse:{title:'Pulse',issue:73},routine:{title:'Rotina',issue:74},exercise:{title:'Exercício',issue:126},equipment:{title:'Equipamento',issue:133}};
+  const ISSUEBASE='https://github.com/jukazilli/GODUOIT/issues/';
+  const duoScene=()=>state.scene==='duo';
+  const btnIcon=(name,label,action,extra='')=>`<button type="button" class="icon-btn ${extra}" data-action="${action}" aria-label="${esc(label)}" title="${esc(label)}">${icon(name)}</button>`;
+  const btnText=(label,action,type='')=>`<button type="button" class="text-btn ${type}" data-action="${action}">${esc(label)}</button>`;
+  const menuTrigger=()=>btnIcon(ownScene()?'menu':'more',ownScene()?'Abrir menu do perfil':'Mais ações','menu');
+  function credential(){if(!proScene())return '';const v=state.credential==='verified';return `<button type="button" class="credential ${v?'verified':'pending'}" data-action="credential" aria-label="${v?'Credencial ilustrativa validada':'Credencial ilustrativa não confirmada'}" title="Consultar credencial">${icon(v?'badge':'badgeHelp')}</button>`;}
+  function topbar(){let title=duoScene()?'dupla.nina.leo':demoProfiles[state.scene].handle;return `<header class="app-top">${btnIcon('back','Voltar ao contexto anterior','back')}<strong class="top-label">${esc(title)}</strong><div class="top-side">${ownScene()?btnIcon('plus','Criar conteúdo','quick'):''}${menuTrigger()}</div></header>`;}
+  function ownIdentity(){const p=demoProfiles[state.scene];let actions=ownScene()?`<div class="action-row">${btnText('Editar perfil','edit')}${btnText('Compartilhar perfil','share')}</div>`:`<div class="action-row">${btnText(state.followed?'Seguindo':'Seguir','follow',state.followed?'outline':'primary')}${btnText('Mensagem','message')}${btnIcon('users','Formar dupla','invite')}</div>`;return `<section class="identity"><div class="identity-main"><div class="profile-avatar-wrap" data-pulse="${state.pulseStatus}"><div class="avatar avatar-${p.cls}" role="img" aria-label="Avatar ilustrativo sem foto real">${esc(p.avatar)}</div><button class="avatar-pulse-target" type="button" data-action="pulse-view" aria-label="${state.pulseStatus==='empty'?'Pulse não publicado':state.pulseStatus==='seen'?'Ver Pulse visto':'Ver Pulse não visto'}"></button>${ownScene()?btnIcon('plus','Adicionar Pulse','quick-pulse','avatar-add-pulse'):''}</div><div class="stats-block"><div class="name-line"><span class="display-name">${esc(p.name)}</span>${credential()}</div><div class="stats"><button type="button" class="metric" data-action="countworkouts" aria-label="${esc(p.treinos)} treinos concluídos"><strong>${esc(p.treinos)}</strong><span>Treinos</span></button><button type="button" class="metric" data-action="followers"><strong>${esc(p.followers)}</strong><span>Seguidores</span></button><button type="button" class="metric" data-action="following"><strong>${esc(p.following)}</strong><span>Seguindo</span></button></div></div></div><p class="bio">${esc(p.bio)}</p><div class="subline">${esc(p.sublabel)}</div>${proScene()?`<div class="subline" style="margin-top:8px"><span class="sample-callout">${state.credential==='verified'?'Registro validado · exemplo':'Credencial não confirmada · exemplo'}</span></div>`:''}${actions}${state.scene==='pro'?`<div class="action-row" style="margin-top:8px">${btnText('Sobre a atuação','credential','outline')}</div>`:''}</section>`;}
+  function duoIdentity(){if(state.duo==='closed')return `<section class="duo-closed">${icon('lock')}<strong>Espaço encerrado</strong><p>O perfil e as publicações desta dupla deixaram de estar disponíveis.</p></section>`;return `<section class="identity"><div class="duo-header"><div class="duo-avatars"><div class="avatar avatar-own" role="img" aria-label="Avatar ilustrativo de Nina">N</div><div class="avatar avatar-visitor" role="img" aria-label="Avatar ilustrativo de Leo">L</div></div><div class="duo-main"><span class="duo-kicker">Perfil da dupla</span><div class="duo-name">Nina & Leo</div><span class="duo-label">Treinos e histórias compartilhadas</span></div></div><div class="duo-highlight"><div class="status">${state.duo==='active'?'Dupla ativa':'Encerramento solicitado'}</div><p>${state.duo==='active'?'Parceiros de treino.':'Espaço indisponível para novas publicações. Encerramento em até 3 dias · simulação.'}</p></div><div class="action-row">${state.duo==='active'?btnText('Publicar aqui','compose','primary'):btnText('Publicação indisponível','noop','outline')}${btnText('Ver integrantes','members','outline')}</div></section>`;}
+  function tabs(){if(duoScene())return `<nav class="profile-tabs" aria-label="Conteúdo da dupla"><button type="button" class="profile-tab" role="tab" aria-selected="true" data-tab="posts">Publicações</button></nav>`;const names=[['posts','Publicações'],['routines','Rotinas'],['activities','Atividades']];return `<nav class="profile-tabs" role="tablist" aria-label="Conteúdo do perfil">${names.map(([k,v])=>`<button type="button" role="tab" aria-selected="${state.tab===k}" class="profile-tab" data-tab="${k}">${v}</button>`).join('')}</nav>`;}
+  function posts(){
+    if(duoScene())return duoPosts();
+    const entries=[...state.personalPosts.map((p,i)=>({title:p.text,theme:'tile-'+((i%6)+1),url:tiles[i%tiles.length].url})),...tiles];
+    return `<section class="posts-grid" aria-label="Fotos e vídeos ilustrativos">${entries.map((p,i)=>`<button type="button" data-action="post-${i}" class="media-tile ${p.theme||'tile-1'}" aria-label="Abrir foto ou vídeo ${i+1}">${p.url?`<img src="${p.url}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:''}</button>`).join('')}</section>`;
+  }
+  function duoPosts(){if(state.duo==='closed')return '';if(state.duo==='closing')return `<section class="linked-destination"><div class="ghost">${icon('lock')}</div><strong>Espaço em encerramento</strong><p>O conteúdo não está disponível neste estado demonstrativo.</p></section>`;if(!state.duoPosts.length)return `<section class="linked-destination"><div class="ghost">${icon('image')}</div><strong>Nenhuma publicação</strong></section>`;return `<section class="posts-grid" aria-label="Publicações locais da dupla">${state.duoPosts.map((p,i)=>`<button type="button" data-action="duopost-${i}" class="media-tile tile-${i%6+1}" aria-label="Abrir publicação da dupla ${i+1}">${tiles[i%tiles.length].url?`<img src="${tiles[i%tiles.length].url}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:''}</button>`).join('')}</section>`;}
+  function routines(){
+    const own=ownScene(),permitted=state.profileVisibility[profileKey()]!==false||own;
+    const cards=sampleRoutines.filter(r=>own||(permitted&&!state.routinePrivacy[profileKey()+':'+r.id]));
+    if(!cards.length)return `<section class="linked-destination"><div class="ghost">${icon('lock')}</div><strong>Rotinas privadas</strong><p>Nenhuma rotina compartilhada neste perfil.</p></section>`;
+    return `<section class="routine-grid" aria-label="Grade de rotinas de treino">${cards.map(r=>`<button class="routine-card" type="button" data-action="routine-${r.id}" data-private="${!!state.routinePrivacy[profileKey()+':'+r.id]}" aria-label="${esc(r.name)}${state.routinePrivacy[profileKey()+':'+r.id]?' · privada':''}"><div class="routine-cover"><div class="cover-fallback"></div><img src="${r.cover}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div><span class="routine-title">${esc(r.name)}</span></button>`).join('')}</section>`;
+  }
+  function linked(){
+    if(state.tab==='routines')return routines();
+    const visible=ownScene()||state.profileVisibility[profileKey()]!==false;
+    const title=visible?'Atividades':'Atividades privadas';
+    const text=visible?'Atividades de treino visíveis quando o perfil é público. O detalhe de séries, cargas e registros pessoais pertence às Issues #77/#75.':'Perfil privado. Atividades não disponíveis para visitantes.';
+    return `<section class="linked-destination"><div class="ghost">${icon(visible?'calendar':'lock')}</div><strong>${title}</strong><p>${text}</p></section>`;
+  }
+  function settingsScreen(){
+    return `<div class="settings-page"><header class="app-top">${btnIcon('back','Voltar ao perfil','back-page')}<strong class="top-label">Configurações e atividade</strong></header>
+      <section class="settings-group"><h2>Minha conta</h2><button type="button" class="settings-row" data-action="link-account">Meu perfil </button><button type="button" class="settings-row" data-action="link-saved">Salvos </button><button type="button" class="settings-row" data-action="link-progress">Evolução fotográfica </button>${state.scene==='proOwn'?`<button type="button" class="settings-row" data-action="link-business">Business </button>`:''}</section>
+      <section class="settings-group"><h2>Privacidade</h2><label class="privacy-switch"><span><strong>Perfil público</strong><small>Atividades e rotinas públicas por padrão</small></span><input id="profile-public-toggle" type="checkbox" ${state.profileVisibility[profileKey()]!==false?'checked':''} aria-label="Perfil público"></label><button type="button" class="settings-row" data-action="link-routineprivacy">Privacidade das rotinas </button></section>
+      <section class="settings-group"><h2>Conta e segurança</h2><button type="button" class="settings-row" data-action="link-security">Segurança </button><button type="button" class="settings-row danger" data-action="logout">Sair da conta</button></section><div class="settings-hint">Referência da navegação #84, sem alterar dados da conta.</div></div>`;
+  }
+  function linkedScreen(){const d=state.linkedScreen||{title:'Destino',issue:77};return `<div class="settings-page"><header class="app-top">${btnIcon('back','Voltar','back-page')}<strong class="top-label">${esc(d.title)}</strong></header><div class="page-placeholder"><div class="ghost" style="display:none"></div><strong>${esc(d.title)}</strong><p>Etapa relacionada à Issue #${d.issue}. Esta tela ainda não foi modelada nesta referência.</p><a href="${ISSUEBASE+d.issue}" target="_blank" rel="noopener">Ver Issue #${d.issue}</a></div></div>`;}
+  function render(){
+    document.querySelectorAll('.scenario').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.scenario===state.scene)));
+    document.getElementById('mobile-scenario').value=state.scene;
+    document.getElementById('mobile-pulse-state').value=state.pulseStatus;
+    document.getElementById('desktop-pulse-state').value=state.pulseStatus;
+    document.getElementById('end-period').disabled=state.duo!=='closing';
+    if(state.screen==='settings')app.innerHTML=settingsScreen();
+    else if(state.screen==='linked')app.innerHTML=linkedScreen();
+    else app.innerHTML=topbar()+(duoScene()?(duoIdentity()+(state.duo==='closed'?'':tabs()+posts())):(ownIdentity()+`<div class="divider"></div>`+tabs()+(state.tab==='posts'?posts():linked())));
+    renderModal();
+  }
+  function showToast(msg){clearTimeout(toastTimer);toastHost.innerHTML=`<div class="toast" role="status">${esc(msg)}</div>`;toastTimer=setTimeout(()=>toastHost.innerHTML='',2600);}
+  function setScene(scene){state.scene=scene;state.screen='profile';state.tab='posts';state.modal=null;state.composerText='';state.composerTarget=scene==='duo'?'duo':'own';app.scrollTop=0;render();}
+  function openLinkedPage(title,issue){state.previousScreen=state.screen;state.screen='linked';state.linkedScreen={title,issue};state.modal=null;app.scrollTop=0;render();}
+  function openModal(type,detail){state.modal={type,detail};renderModal();}
+  function renderModal(){if(!state.modal){const node=host.querySelector('.sheet-layer');if(node&&!node.classList.contains('closing')&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){node.classList.add('closing');setTimeout(()=>{if(!state.modal&&host.firstElementChild===node)host.innerHTML='';},340);return;}if(!node)host.innerHTML='';return;}const {type,detail}=state.modal;let title='',content='';const option=(label,action,danger=false)=>`<button type="button" class="sheet-option ${danger?'danger':''}" data-action="${action}">${esc(label)}</button>`;
+    if(type==='quick'){title='Criar';content=`${option('Publicação','quick-publication')}${option('Pulse','quick-pulse')}${option('Rotina','quick-routine')}${option('Exercício','quick-exercise')}${option('Equipamento','quick-equipment')}`;}
+    else if(type==='pulse'){title='Pulse';content=`<div class="pulse-viewer-preview">${btnIcon('eye','Ver referência do Pulse','quick-pulse')}</div><p class="sheet-text">Estado: ${state.pulseStatus==='seen'?'visto':'não visto'} · Referência #8 e #73, sem visualizador real.</p>`;}
+    else if(type==='logout'){title='Sair da conta';content=`<p class="sheet-text">Simulação: a sessão real não será encerrada por este HTML.</p><div class="sheet-cta">${btnText('Cancelar','dismiss','outline')}${btnText('Sair','logout-confirm','danger')}</div>`;}
+    else if(type==='routine'){const id=detail.id,priv=!!state.routinePrivacy[profileKey()+':'+id];title=detail.title;content=`<p class="sheet-text">${priv?'Esta rotina está privada.':'Esta rotina está pública por padrão.'}</p><div class="sheet-cta">${btnText('Ver rotina','view-routine','outline')}${btnText(priv?'Tornar pública':'Privar rotina','routine-toggle',priv?'primary':'danger')}</div>`;}
+    else if(type==='menu'){title=duoScene()?'Perfil da dupla':ownScene()?'Meu perfil':'Ações do perfil';content=duoScene()?`${option('Ver integrantes','members')}${state.duo==='active'?option('Desfazer dupla','closeDuo',true):''}`:ownScene()?`${option('Configurações','link-settings')}${option('Salvos','link-saved')}${option('Evolução fotográfica','link-progress')}${state.scene==='proOwn'?option('Acessar Business','link-business'):''}${option('Compartilhar perfil','share')}`:`${option('Compartilhar perfil','share')}${option('Sobre esta conta','about')}${option('Restringir','restrict')}${option('Bloquear','block',true)}${option('Denunciar','report',true)}`;}
+    else if(type==='composer'){title='Nova publicação';content=`<label for="post-dest">Destino</label><select id="post-dest"><option value="own" ${state.composerTarget==='own'?'selected':''}>Meu perfil</option>${state.duo==='active'?`<option value="duo" ${state.composerTarget==='duo'?'selected':''}>Perfil da dupla</option>`:''}</select><label for="post-text">Legenda</label><textarea id="post-text" placeholder="Escreva algo sobre o treino..." maxlength="200">${esc(state.composerText)}</textarea><div class="field-hint">Publicação simulada. Nenhum dado é enviado para o goudduo.</div><div class="sheet-cta">${btnText('Cancelar','dismiss','outline')}${btnText('Publicar','publish','primary')}</div>`;}
+    else if(type==='closeDuo'){title='Desfazer dupla';content=`<p class="sheet-text">O vínculo será encerrado sem precisar da aprovação do outro participante. O espaço compartilhado deixará de estar disponível e será extinto em até três dias, sem restauração pelo produto.</p><div class="sheet-cta">${btnText('Manter dupla','dismiss','outline')}${btnText('Desfazer dupla','confirmClose','danger')}</div>`;}
+    else if(type==='invite'){title='Formar dupla';content=`<p class="sheet-text">A parceria fixa começa somente depois que a outra pessoa aceitar o convite. Encontros avulsos não criam o Perfil da Dupla.</p><div class="sheet-cta">${btnText('Cancelar','dismiss','outline')}${btnText('Enviar convite','sendInvite','primary')}</div>`;}
+    else if(type==='credential'){title='Credencial profissional';content=`<p class="sheet-text">${state.credential==='verified'?'Estado ilustrativo: credencial confirmada para uma modalidade elegível.':'Estado ilustrativo: comprovação ainda não confirmada. Isso não significa, por si só, que a atividade exige CREF.'}</p><p class="sheet-text">A atuação permitida depende da modalidade, da exigência legal aplicável e da validação correspondente (#36 e #90).</p>`;}
+    else if(type==='linked'){title=detail.title;content=`<p class="sheet-text">${esc(detail.text)}</p><p class="sheet-text">Esta referência mostra apenas a relação com o módulo, sem criar sua interface interna.</p>`;}
+    else if(type==='post'){title='Publicação';content=`<p class="sheet-text">${esc(detail.text)}</p><p class="sheet-text">Exemplo de conteúdo da referência visual, sem publicação real.</p>`;}
+    else if(type==='members'){title='Integrantes';content=`<p class="sheet-text">Nina · Leo</p><p class="sheet-text">Cada pessoa mantém seus próprios treinos, publicações e histórico privado.</p>`;}
+    else if(type==='success'){title=detail.title;content=`<p class="sheet-text">${esc(detail.text)}</p>`;}
+    host.innerHTML=`<div class="sheet-layer" data-backdrop="1"><section class="sheet" role="dialog" aria-modal="true" aria-label="${esc(title)}"><div class="sheet-handle"></div><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><h2 class="sheet-title">${esc(title)}</h2>${btnIcon('close','Fechar','dismiss','sm')}</div>${content}</section></div>`;
+    if(type==='composer'){const ta=document.getElementById('post-text'),de=document.getElementById('post-dest');ta.addEventListener('input',()=>state.composerText=ta.value);de.addEventListener('change',()=>state.composerTarget=de.value)}
+  }
+  function target(action){switch(action){
+    case 'menu':if(ownScene()){state.screen='settings';state.modal=null;app.scrollTop=0;render();}else openModal('menu');break;
+    case 'back-page':state.screen=state.screen==='linked'&&state.previousScreen==='settings'?'settings':'profile';state.linkedScreen=null;app.scrollTop=0;render();break;
+    case 'quick':openModal('quick');break;
+    case 'quick-pulse':openLinkedPage('Pulse',73);break;
+    case 'pulse-view':if(state.pulseStatus==='empty'){showToast('Sem Pulse publicado.');return;}openModal('pulse');break;
+    case 'logout':openModal('logout');break;
+    case 'logout-confirm':state.modal=null;renderModal();showToast('Sair da conta · simulação. Sessão real não alterada.');break;
+    case 'dismiss':state.modal=null;renderModal();break;
+    case 'back':state.modal=null;if(state.screen!=='profile'){state.screen='profile';render();}else if(state.scene!=='own')setScene('own');else showToast('Perfil · referência isolada');break;
+    case 'compose':state.composerTarget=duoScene()?'duo':'own';state.composerText='';openModal('composer');break;
+    case 'quick-publication':openLinkedPage('Publicação',76);break;
+    case 'quick-routine':openLinkedPage('Criar rotina',121);break;
+    case 'quick-exercise':openLinkedPage('Criar exercício',126);break;
+    case 'quick-equipment':openLinkedPage('Criar equipamento',133);break;
+    case 'publish':{const text=(state.composerText||'').trim();if(!text){showToast('Escreva uma legenda para publicar.');return;}if(state.composerTarget==='duo'&&state.duo!=='active'){showToast('O espaço da dupla não está disponível.');return;}if(state.composerTarget==='duo'){state.duoPosts.unshift({author:'Nina',text});}else{state.personalPosts.unshift({text});}state.modal=null;state.composerText='';render();showToast('Publicado imediatamente no destino escolhido · simulação.');break;}
+    case 'follow':state.followed=!state.followed;render();showToast(state.followed?'Seguindo · simulação':'Deixou de seguir · simulação');break;
+    case 'invite':openModal('invite');break;
+    case 'sendInvite':state.invite=true;state.modal=null;showToast('Convite enviado. Aguarda aceite da outra pessoa.');break;
+    case 'message':openModal('linked',{title:'Mensagens',text:'Destino relacionado à Issue #79; sem mensagens reais.'});break;
+    case 'credential':openModal('credential');break;
+    case 'share':openModal('linked',{title:'Compartilhar perfil',text:'Ações de compartilhamento de perfil ligadas à Issue #77.'});break;
+    case 'edit':openLinkedPage('Editar perfil',77);break;
+    case 'about':openModal('linked',{title:'Sobre esta conta',text:'Informações de identidade e transparência. Conteúdo e permissões ainda sujeitos à investigação.'});break;
+    case 'restrict':case 'block':case 'report':openModal('linked',{title:action==='block'?'Bloquear':action==='report'?'Denunciar':'Restringir',text:'Controles de segurança relacionados à Issue #88; ação não executada.'});break;
+    case 'closeDuo':openModal('closeDuo');break;
+    case 'confirmClose':state.duo='closing';state.modal=null;render();showToast('Encerramento unilateral registrado · simulação.');break;
+    case 'members':openModal('members');break;
+    case 'followers':openModal('linked',{title:'Seguidores',text:'Relacionamento social do Perfil #77.'});break;
+    case 'following':openModal('linked',{title:'Seguindo',text:'Relacionamento social do Perfil #77.'});break;
+    case 'view-routine':state.modal=null;openLinkedPage('Rotina',74);break;
+    case 'countworkouts':openModal('linked',{title:'Treinos',text:'Contagem a partir de sessões individuais elegíveis (#75). Histórico completo será investigado na #77.'});break;
+    case 'noop':showToast('Dupla em encerramento.');break;
+    case 'link-routineprivacy':openLinkedPage('Privacidade das rotinas',74);break;
+    case 'link-account':openLinkedPage('Meu perfil',77);break;
+    case 'link-security':openLinkedPage('Segurança',84);break;
+    default:
+      if(action.startsWith('routine-')&&action!=='routine-toggle'){const id=action.slice(8);const r=sampleRoutines.find(r=>r.id===id);if(!r)return;state.selectedRoutine=id;if(ownScene())openModal('routine',{title:r.name,id});else openLinkedPage('Rotina: '+r.name,74);}
+       else if(action.startsWith('link-')){const map={settings:['Configurações','#84 — preferências, segurança e privacidade'],saved:['Salvos','#114 — coleções salvas privadas'],progress:['Evolução fotográfica','#143 — diário fotográfico privado (estudo)'],business:['Business','#83 / #90 — capacidades e credenciais profissionais']};const k=action.slice(5);const item=map[k]||['Destino relacionado','Área em investigação'];openLinkedPage(item[0],({settings:84,saved:114,progress:143,business:83}[k])||77);}
+      else if(action==='routine-toggle'){const id=state.selectedRoutine;state.routinePrivacy[profileKey()+':'+id]=!state.routinePrivacy[profileKey()+':'+id];state.modal=null;render();showToast(state.routinePrivacy[profileKey()+':'+id]?'Rotina privada · simulação':'Rotina pública · simulação');}
+       else if(action.startsWith('duopost-')){const i=Number(action.slice(8));openModal('post',{text:(state.duoPosts[i]?.author||'')+' · '+(state.duoPosts[i]?.text||'')});}
+      else if(action.startsWith('post-')){const i=Number(action.slice(5));const posts=[...state.personalPosts.map(x=>({title:x.text})),...tiles];openModal('post',{text:posts[i]?.title||'Conteúdo ilustrativo'});}
+  }}
+  document.addEventListener('change',(e)=>{if(e.target.id==='profile-public-toggle'){state.profileVisibility[profileKey()]=e.target.checked;render();showToast(state.profileVisibility[profileKey()]?'Perfil público · simulação':'Perfil privado · simulação');}});
+   document.addEventListener('click',(e)=>{const scenario=e.target.closest('[data-scenario]');if(scenario){setScene(scenario.dataset.scenario);return;}const tab=e.target.closest('[data-tab]');if(tab){state.tab=tab.dataset.tab;render();return;}const action=e.target.closest('[data-action]');if(action){target(action.dataset.action);return;}if(e.target.matches('[data-backdrop]')){state.modal=null;renderModal();}});
+  document.addEventListener('keydown',(e)=>{if(e.key==='Escape'&&state.modal){state.modal=null;renderModal();}});
+  document.getElementById('mobile-scenario').addEventListener('change',(e)=>setScene(e.target.value));
+   for(const id of ['mobile-pulse-state','desktop-pulse-state'])document.getElementById(id).addEventListener('change',(e)=>{state.pulseStatus=e.target.value;state.modal=null;render();});
+  document.getElementById('toggle-credential').addEventListener('click',()=>{state.credential=state.credential==='pending'?'verified':'pending';if(proScene())render();showToast('Credencial alternada apenas nesta referência de estudo.');});
+  document.getElementById('end-period').addEventListener('click',()=>{if(state.duo!=='closing')return;state.duo='closed';state.duoPosts=[];state.modal=null;if(duoScene())render();showToast('Simulação: espaço encerrado, posts indisponíveis.');});
+  function reset(){state={scene:'own',tab:'posts',screen:'profile',profileVisibility:{own:true,visitor:true,pro:true,proOwn:true},routinePrivacy:{},pulseStatus:'unseen',followed:false,invite:false,credential:'pending',duo:'active',duoPosts:[{text:'Mais um treino para lembrar.',author:'Nina'},{text:'Domingo em movimento.',author:'Leo'},{text:'Primeira semana da dupla.',author:'Nina'}],personalPosts:[],modal:null,composerText:'',composerTarget:'duo'};render();showToast('Dados ilustrativos restaurados.');}
+  document.getElementById('reset-demo').addEventListener('click',reset);document.getElementById('mobile-reset').addEventListener('click',reset);
+  render();
+})();
+</script>
+
+<script>
+/* Goudduo experimental Profile V0.2: optional progressive completion and multiple fixed duo previews.
+   Preserves the legacy P0 profile engine. No API, notifications, GPS, server persistence or real invitations. */
+(function(){
+'use strict';
+const app=document.getElementById('app');
+const phone=document.querySelector('.device');
+const scenes=document.getElementById('mobile-scenario');
+if(!app||!phone||!scenes)return;
+const state={
+  hidden:false, skipped:new Set(), done:new Set(),
+  name:'', city:'', uf:'', cityId:null, photo:'', interests:[],
+  duos:new Map(), currentPartner:null
+};
+const own=()=>scenes.value==='own'||scenes.value==='proOwn';
+const people=[
+  {id:'marcelo',name:'Marcelo',handle:'@marcelo.exemplo',city:'Joinville',uf:'SC',activity:'Corrida e musculação',initial:'M'},
+  {id:'emili',name:'Emili',handle:'@emili.exemplo',city:'Joinville',uf:'SC',activity:'Caminhada e corrida',initial:'E'},
+  {id:'bianca',name:'Bianca',handle:'@bianca.exemplo',city:'Curitiba',uf:'PR',activity:'Treino de força',initial:'B'},
+  {id:'osman',name:'Osman',handle:'@osmanexemplo',city:'Florianópolis',uf:'SC',activity:'Esportes e movimento',initial:'O'}
+];
+const ufList=['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'];
+const tasks=[
+  {id:'name',title:'Nome e região',description:'Adicione nome, cidade e estado.',cta:'Completar'},
+  {id:'photo',title:'Foto de perfil',description:'Mostre quem está por aqui.',cta:'Adicionar'},
+  {id:'interests',title:'Seus interesses',description:'Veja mais do que gosta.',cta:'Escolher'},
+  {id:'people',title:'Encontre pessoas',description:'Conheça gente para seguir.',cta:'Explorar'},
+  {id:'duo',title:'Encontrar uma dupla',description:'Convide pessoas para treinar e se conectar.',cta:'Encontrar'}
+];
+const glyph={
+  name:'<svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg>',
+  photo:'<svg viewBox="0 0 24 24"><path d="M14 4h-4l-2 3H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-4z"/><circle cx="12" cy="13" r="3"/></svg>',
+  interests:'<svg viewBox="0 0 24 24"><path d="M19 21 12 16 5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>',
+  people:'<svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M16 3a4 4 0 0 1 0 8M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2m6 0v-2a4 4 0 0 0-3-3.8"/></svg>',
+  duo:'<svg viewBox="0 0 24 24"><circle cx="8" cy="7" r="3.5"/><circle cx="17" cy="8" r="3"/><path d="M1.5 21v-2a6.5 6.5 0 0 1 13 0v2m2 0v-2a5 5 0 0 0-1.2-3.4M19 15h3m-1.5-1.5v3"/></svg>'
+};
+const escape=(s)=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const partner=(id)=>people.find(p=>p.id===id);
+const motionOff=()=>window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function closeAnimated(el,immediate=false){
+  if(!el)return;
+  if(immediate||motionOff()){el.remove();return;}
+  if(el.classList.contains('is-closing'))return;
+  el.classList.remove('is-open');el.classList.add('is-closing');
+  window.setTimeout(()=>{if(el.isConnected)el.remove();},340);
+}
+const closeModal=(immediate=false)=>closeAnimated(phone.querySelector('.complete-overlay:not(.is-closing)'),immediate);
+const closePage=(immediate=false)=>closeAnimated(phone.querySelector('.duos-panel:not(.is-closing)'),immediate);
+const showSmooth=(el)=>requestAnimationFrame(()=>requestAnimationFrame(()=>{if(el.isConnected)el.classList.add('is-open');}));
+function hasVisibleProfile(){return !!app.querySelector('.identity')&&!!app.querySelector('.profile-tabs');}
+function enhanceOwn(){
+  if(!own())return;
+  const name=app.querySelector('.display-name');
+  if(name&&state.name&&name.textContent!==state.name)name.textContent=state.name;
+  const avatar=app.querySelector('.profile-avatar-wrap .avatar');
+  if(avatar&&state.photo&&!avatar.querySelector('.complete-photo')){
+    avatar.textContent='';
+    const img=document.createElement('img');img.className='complete-photo';img.src=state.photo;img.alt='';
+    avatar.appendChild(img);
+  }
+}
+function prepareSettings(){
+  if(!own()||!app.querySelector('.settings-page'))return;
+  const group=app.querySelector('.settings-group');
+  if(!group)return;
+  if(!group.querySelector('[data-completion="preferences"]')){
+    const row=document.createElement('button');row.type='button';row.className='settings-row';
+    row.dataset.completion='preferences';row.textContent='Preferências do perfil';group.appendChild(row);
+  }
+  if(!group.querySelector('[data-completion="manage"]')){
+    const row=document.createElement('button');row.type='button';row.className='settings-row';
+    row.dataset.completion='manage';row.textContent='Duplas';group.appendChild(row);
+  }
+}
+function draw(){
+  enhanceOwn();prepareSettings();
+  app.querySelector('.complete-box')?.remove();
+  if(!own()||state.hidden||!hasVisibleProfile())return;
+  const remaining=tasks.filter(t=>!state.done.has(t.id)&&!state.skipped.has(t.id));
+  if(!remaining.length)return;
+  const section=document.createElement('section');
+  section.className='complete-box';section.setAttribute('aria-label','Complete seu perfil');
+  section.innerHTML='<div class="complete-head"><div><h2>Complete seu perfil</h2><p>No seu tempo.</p></div><button type="button" class="complete-hide" data-completion="hide">Ocultar</button></div><div class="complete-cards">'+remaining.map(t=>'<article class="complete-card"><button type="button" class="complete-skip" data-completion="skip-'+t.id+'" aria-label="Dispensar '+escape(t.title)+'">×</button><div class="complete-art" aria-hidden="true">'+glyph[t.id]+'</div><h3>'+escape(t.title)+'</h3><p>'+escape(t.description)+'</p><button type="button" class="complete-cta" data-completion="open-'+t.id+'">'+escape(t.cta)+'</button></article>').join('')+'</div>';
+  app.appendChild(section);
+}
+function ensure(){
+  enhanceOwn();prepareSettings();
+  if(own()&&!state.hidden&&hasVisibleProfile()&&!app.querySelector('.complete-box'))draw();
+}
+new MutationObserver(ensure).observe(app,{childList:true});
+function sheet(title,body,options){
+  closeModal(true);
+  const overlay=document.createElement('div');overlay.className='complete-overlay';
+  const size=options&&options.large?' complete-discovery':'';
+  overlay.innerHTML='<section class="complete-sheet'+size+'" role="dialog" aria-modal="true" aria-label="'+escape(title)+'"><div class="complete-handle"></div><div class="complete-dialog-head"><h2>'+escape(title)+'</h2><button type="button" class="complete-close-icon" data-completion="close" aria-label="Fechar">×</button></div>'+body+'</section>';
+  phone.appendChild(overlay);showSmooth(overlay);
+  return overlay;
+}
+function showForm(mode){
+  if(mode==='name'){
+    cityDraft={uf:state.uf||'',selected:state.cityId?{id:state.cityId,nome:state.city,uf:state.uf}:null,rows:[],loading:false,source:'',version:cityDraft.version+1};
+    const options=ufList.map(uf=>'<option value="'+uf+'"'+(state.uf===uf?' selected':'')+'>'+uf+'</option>').join('');
+    const body='<p class="complete-summary">Cidade e estado poderão ajudar nas sugestões de duplas, sem compartilhar localização exata.</p>'+
+      '<label for="complete-name">Nome de exibição</label><input type="text" id="complete-name" maxlength="45" placeholder="Como quer ser chamado?" value="'+escape(state.name)+'">'+
+      '<label for="complete-uf">Estado</label><select id="complete-uf" class="complete-search" aria-label="Estado"><option value="">Selecione o estado</option>'+options+'</select>'+
+      '<label for="complete-city-query">Cidade</label><input type="search" id="complete-city-query" class="complete-search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="complete-city-options" autocomplete="off" placeholder="Primeiro escolha o estado" disabled>'+
+      '<div class="complete-city-help" id="complete-city-help" role="status" aria-live="polite">Selecione o estado para buscar cidades.</div>'+
+      '<div id="complete-city-options" class="complete-city-list" role="listbox" aria-label="Cidades disponíveis" hidden></div>'+
+      '<p class="complete-summary">Selecione a cidade nos resultados. O texto pesquisado sozinho não é salvo. Os dados desta prévia não ativam Match nem ficam públicos.</p>'+
+      '<div class="complete-error" id="complete-error" role="alert"></div><div class="complete-actions"><button type="button" data-completion="close">Cancelar</button><button type="button" class="primary" data-completion="save-name">Salvar</button></div>';
+    const modal=sheet('Nome e região',body,{large:true});
+    if(cityDraft.uf)loadCities(cityDraft.uf);
+    else modal.querySelector('#complete-name')?.focus();
+  }else if(mode==='photo'){
+    sheet('Foto de perfil','<label for="complete-photo">Escolha uma foto</label><input type="file" id="complete-photo" accept="image/png,image/jpeg,image/webp"><p class="complete-summary">A foto não será enviada; fica apenas nesta prévia.</p><div class="complete-error" id="complete-error" role="alert"></div><div class="complete-actions"><button type="button" data-completion="close">Cancelar</button><button type="button" class="primary" data-completion="save-photo">Salvar</button></div>');
+  }else{
+    const choices=['Treinos','Corrida','Caminhada','Bem-estar'].map(x=>'<label class="interest"><input name="complete-interest" type="checkbox" value="'+x+'"'+(state.interests.includes(x)?' checked':'')+'>'+x+'</label>').join('');
+    sheet('Seus interesses','<p>Escolha o que gostaria de acompanhar.</p>'+choices+'<div class="complete-error" id="complete-error" role="alert"></div><div class="complete-actions"><button type="button" data-completion="close">Cancelar</button><button type="button" class="primary" data-completion="save-interests">Salvar</button></div>');
+  }
+}
+// IBGE reference catalog: use the UF first and store municipality ID, never arbitrary city text.
+// Offline list is deliberately small and labeled; server must independently verify IBGE IDs.
+const cityCache=new Map();
+const demoCities={
+  SC:[{id:4209102,nome:'Joinville'},{id:4205407,nome:'Florianópolis'}],
+  PR:[{id:4106902,nome:'Curitiba'}]
+};
+let cityDraft={uf:'',selected:null,rows:[],loading:false,source:'',version:0};
+const normalizeCity=(s)=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt-BR');
+function renderCityOptions(){
+  const search=phone.querySelector('#complete-city-query');
+  const container=phone.querySelector('#complete-city-options');
+  const help=phone.querySelector('#complete-city-help');
+  if(!search||!container||!help)return;
+  search.disabled=!cityDraft.uf||cityDraft.loading||!cityDraft.rows.length;
+  search.placeholder=!cityDraft.uf?'Primeiro escolha o estado':cityDraft.loading?'Carregando cidades':!cityDraft.rows.length?'Cidades indisponíveis':'Buscar cidade na lista';
+  const q=normalizeCity(search.value);
+  const filtered=cityDraft.rows.filter(c=>normalizeCity(c.nome).includes(q)).slice(0,50);
+  if(cityDraft.loading)help.textContent='Carregando municípios oficiais do IBGE…';
+  else if(!cityDraft.uf)help.textContent='Selecione o estado para buscar cidades.';
+  else if(cityDraft.source==='sample')help.textContent='Prévia offline: amostra limitada de cidades com códigos IBGE, não catálogo completo.';
+  else if(cityDraft.source==='unavailable')help.textContent='Catálogo indisponível. Conecte-se para buscar cidades válidas deste estado.';
+  else if(cityDraft.selected)help.textContent='Cidade selecionada: '+cityDraft.selected.nome+' · código IBGE '+cityDraft.selected.id+'.';
+  else help.textContent='Escolha uma cidade nos resultados; digitar não basta.';
+  if(cityDraft.selected&&search.value===cityDraft.selected.nome){container.hidden=true;search.setAttribute('aria-expanded','false');return;}
+  container.hidden=!filtered.length||search.disabled;
+  search.setAttribute('aria-expanded',String(!container.hidden));
+  container.innerHTML=filtered.map(c=>'<button type="button" role="option" class="complete-city-option" data-completion="city-pick-'+c.id+'">'+escape(c.nome)+'</button>').join('');
+  if(!filtered.length&&!cityDraft.loading&&cityDraft.rows.length)help.textContent='Nenhuma cidade correspondente nesta lista. Revise a busca.';
+}
+async function loadCities(uf){
+  const version=++cityDraft.version;
+  cityDraft.uf=uf;cityDraft.rows=[];cityDraft.loading=!!uf;cityDraft.source='';
+  const search=phone.querySelector('#complete-city-query');if(search){search.value=cityDraft.selected?.uf===uf?cityDraft.selected.nome:'';search.disabled=true;}
+  renderCityOptions();
+  if(!uf)return;
+  try{
+    const key=uf.toUpperCase();
+    let rows=cityCache.get(key);
+    if(!rows){
+      const response=await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados/'+encodeURIComponent(key)+'/municipios?orderBy=nome',{headers:{'Accept':'application/json'}});
+      if(!response.ok)throw Error('IBGE indisponível');
+      const payload=await response.json();
+      if(!Array.isArray(payload))throw Error('Formato inesperado');
+      rows=payload.filter(x=>Number.isInteger(x.id)&&x.id>0&&typeof x.nome==='string').map(x=>({id:x.id,nome:x.nome})).sort((a,b)=>a.nome.localeCompare(b.nome,'pt-BR'));
+      if(!rows.length)throw Error('Sem cidades');
+      cityCache.set(key,rows);
+    }
+    if(cityDraft.version!==version||cityDraft.uf!==key)return;
+    cityDraft.rows=rows;cityDraft.source='ibge';
+  }catch(err){
+    if(cityDraft.version!==version||cityDraft.uf!==uf)return;
+    cityDraft.rows=demoCities[uf]||[];
+    cityDraft.source=cityDraft.rows.length?'sample':'unavailable';
+  }finally{
+    if(cityDraft.version===version&&cityDraft.uf===uf){
+      cityDraft.loading=false;
+      if(cityDraft.selected&&!cityDraft.rows.some(c=>c.id===cityDraft.selected.id)){cityDraft.selected=null;if(search)search.value='';}
+      renderCityOptions();
+    }
+  }
+}
+function error(msg){const el=phone.querySelector('#complete-error');if(el)el.textContent=msg;}
+function saveForm(mode){
+  if(mode==='name'){
+    const name=(phone.querySelector('#complete-name')?.value||'').trim();
+    const uf=phone.querySelector('#complete-uf')?.value||'';
+    const city=cityDraft.selected;
+    if(name.length<2||!uf||!city||city.uf!==uf||!cityDraft.rows.some(c=>c.id===city.id)){
+      error('Selecione o estado e escolha uma cidade válida na lista de resultados.');return;
+    }
+    state.name=name;state.city=city.nome;state.uf=uf;state.cityId=city.id;
+  }else if(mode==='interests'){
+    const chosen=Array.from(phone.querySelectorAll('[name="complete-interest"]:checked')).map(el=>el.value);
+    if(!chosen.length){error('Selecione ao menos um interesse.');return;}
+    state.interests=chosen;
+  }else if(mode==='photo'){
+    const file=phone.querySelector('#complete-photo')?.files?.[0];
+    if(!file||!file.type.startsWith('image/')||file.size>6000000){error('Escolha uma imagem de até 6 MB.');return;}
+    const reader=new FileReader();
+    reader.onload=()=>{state.photo=String(reader.result||'');state.done.add('photo');closeModal();draw();};
+    reader.readAsDataURL(file);return;
+  }
+  state.done.add(mode);closeModal();draw();
+}
+function buttonStatus(id){
+  const record=state.duos.get(id);
+  if(!record)return '<button type="button" class="complete-person-action" data-completion="invite-'+id+'">Formar dupla</button>';
+  return '<button type="button" class="complete-person-action" disabled>'+ (record.status==='pending'?'Convite pendente':record.status==='active'?'Dupla ativa':'Em encerramento') +'</button>';
+}
+function suggestedMarkup(filter){
+  const term=(filter||'').toLocaleLowerCase('pt-BR').trim();
+  const arr=people.filter(p=>!term||[p.name,p.handle,p.city,p.uf,p.activity].join(' ').toLocaleLowerCase('pt-BR').includes(term));
+  if(!arr.length)return '<div class="duos-empty">Nenhuma pessoa encontrada nesta prévia.</div>';
+  return arr.map(p=>'<div class="complete-person"><div class="complete-person-avatar" aria-hidden="true">'+p.initial+'</div><div class="complete-person-info"><strong>'+escape(p.name)+'</strong><small>'+escape(p.handle)+' · '+escape(p.city)+' · '+escape(p.uf)+'</small><small>'+escape(p.activity)+'</small></div>'+buttonStatus(p.id)+'</div>').join('');
+}
+function discovery(){
+  const body='<p class="complete-summary">Convide pessoas para uma dupla fixa. O vínculo e o perfil compartilhado só surgem após o aceite. Você pode ter mais de uma dupla.</p>'+
+    '<input type="search" id="complete-search-people" class="complete-search" placeholder="Buscar pessoas" aria-label="Buscar pessoas" autocomplete="off">'+
+    '<div class="complete-people-list" id="complete-people-list">'+suggestedMarkup('')+'</div>'+
+    '<p class="complete-summary">Pessoas e localidades ilustrativas. Nenhum convite é enviado, nenhuma busca real ou GPS é utilizado.</p>';
+  sheet('Encontrar uma dupla',body,{large:true});
+}
+function refreshDiscovery(){
+  const el=phone.querySelector('#complete-people-list');if(el)el.innerHTML=suggestedMarkup(phone.querySelector('#complete-search-people')?.value||'');
+}
+function invite(id){
+  if(!partner(id)||state.duos.has(id))return;
+  state.duos.set(id,{status:'pending',createdAt:'Demonstração',by:'own'});
+  refreshDiscovery(); // Multiple invitations are independent. Never auto-accept.
+}
+function page(title,body){
+  closePage(true);closeModal(true);
+  const el=document.createElement('section');el.className='duos-panel';el.setAttribute('aria-label',title);
+  el.innerHTML='<header class="duos-header"><button type="button" class="duos-back" data-completion="back-duos" aria-label="Voltar">‹</button><h2>'+escape(title)+'</h2><span style="width:40px"></span></header><div class="duos-content">'+body+'</div>';
+  phone.appendChild(el);showSmooth(el);return el;
+}
+function duoRows(status){
+  const entries=Array.from(state.duos.entries()).filter(([k,v])=>v.status===status);
+  if(!entries.length)return '<div class="duos-empty">'+(status==='pending'?'Nenhum convite pendente.':'Nenhuma dupla neste estado.')+'</div>';
+  return entries.map(([id,r])=>{
+    const p=partner(id)||{name:id,initial:'?',city:'—',uf:''};
+    let controls='';
+    if(status==='pending')controls='<button type="button" class="duos-action outline" data-completion="demo-accept-'+id+'">Simular aceite</button><button type="button" class="duos-action outline" data-completion="cancel-'+id+'">Cancelar convite</button>';
+    if(status==='active')controls='<button type="button" class="duos-action" data-completion="view-duo-'+id+'">Ver perfil da dupla</button><button type="button" class="duos-action danger" data-completion="end-duo-'+id+'">Desfazer dupla</button>';
+    return '<div class="duos-item"><div class="complete-person-avatar" aria-hidden="true">'+escape(p.initial)+'</div><div class="duos-item-info"><strong>'+escape(p.name)+'</strong><small>'+(status==='pending'?'Aguardando aceite':status==='active'?'Dupla fixa ativa':'Em encerramento · até 3 dias')+'</small><div class="duos-actions">'+controls+'</div></div></div>';
+  }).join('');
+}
+function manage(){
+  const body='<p>Gerencie convites e parcerias fixas. Você pode ter várias duplas simultaneamente.</p>'+
+    '<h3>Duplas ativas</h3>'+duoRows('active')+
+    '<h3>Convites enviados</h3>'+duoRows('pending')+
+    (Array.from(state.duos.values()).some(r=>r.status==='closing')?'<h3>Em encerramento</h3>'+duoRows('closing'):'')+
+    '<div class="duos-notice">“Simular aceite” é um controle exclusivo do laboratório. No aplicativo real, só a pessoa convidada poderá aceitar. O convite será um evento da futura Central de Atividade.</div>'+
+    '<div style="margin-top:17px"><button type="button" class="duos-action" data-completion="discover-from-manage">Encontrar uma dupla</button></div>';
+  page('Duplas',body);
+}
+function viewDuo(id){
+  const p=partner(id),record=state.duos.get(id);
+  if(!p||record?.status!=='active')return;
+  const self=state.name||'Você',selfInitial=self.trim().slice(0,1).toUpperCase();
+  const body='<p>Perfil compartilhado da dupla fixa.</p>'+
+   '<div class="duos-pair"><div class="duos-overlap"><span>'+escape(selfInitial)+'</span><span>'+escape(p.initial)+'</span></div><div><strong>'+escape(self)+' e '+escape(p.name)+'</strong><small>Perfil da dupla · ativo</small></div></div>'+
+   '<div class="duos-notice">Este espaço pertence à dupla. Fica disponível para as duas pessoas após o aceite do convite. Fotos corporais, histórico privado, cargas e localização exata não são compartilhados automaticamente.</div>'+
+   '<h3>Publicações da dupla</h3><div class="duos-empty">Nenhuma publicação nesta prévia. A implementação utilizará o composer já mapeado para o Perfil da Dupla.</div>'+
+   '<div style="margin-top:15px"><button type="button" class="duos-action outline" data-completion="manage">Gerenciar duplas</button></div>';
+  page('Perfil da dupla',body);
+}
+function confirmEnd(id){
+  const p=partner(id);if(!p||state.duos.get(id)?.status!=='active')return;
+  sheet('Desfazer dupla','<p class="complete-summary">A parceria com '+escape(p.name)+' será encerrada por sua decisão, sem precisar do aceite da outra pessoa. O espaço compartilhado entra no processo de encerramento, previsto em até 3 dias na referência do produto.</p><p class="complete-summary">Suas contas, treinos pessoais e fotos privadas não são apagados por isso.</p><div class="complete-actions"><button type="button" data-completion="close">Cancelar</button><button type="button" class="primary" data-completion="confirm-end-'+id+'">Desfazer dupla</button></div>');
+}
+function preferences(){
+  sheet('Preferências do perfil','<p class="complete-summary">Dados e sugestões de perfil opcionais. Eles não ativam Match nem tornam a cidade pública.</p><div class="complete-actions" style="display:grid"><button type="button" data-completion="edit-region">Editar nome, cidade e estado</button><button type="button" data-completion="reopen-tasks">Rever tarefas dispensadas</button></div>');
+}
+document.addEventListener('input',e=>{
+  if(e.target.id==='complete-search-people')refreshDiscovery();
+  if(e.target.id==='complete-city-query'){
+    cityDraft.selected=null;renderCityOptions();
+  }
+});
+document.addEventListener('change',e=>{
+  if(e.target.id==='complete-uf'){
+    const uf=e.target.value;
+    cityDraft.selected=null;
+    loadCities(uf);
+  }
+});
+document.addEventListener('click',e=>{
+  const btn=e.target.closest('[data-completion]');
+  if(btn){
+    const action=btn.dataset.completion;
+    if(action==='close'){closeModal();return;}
+    if(action.startsWith('city-pick-')){
+      const id=Number(action.slice(10));const match=cityDraft.rows.find(c=>c.id===id);
+      if(match&&cityDraft.uf){cityDraft.selected={...match,uf:cityDraft.uf};const search=phone.querySelector('#complete-city-query');if(search)search.value=match.nome;renderCityOptions();}
+      return;
+    }
+    if(action==='hide'){state.hidden=true;draw();return;}
+    if(action==='preferences'){preferences();return;}
+    if(action==='reopen-tasks'){state.hidden=false;state.skipped.clear();closeModal();app.querySelector('[data-action="back-page"]')?.click();requestAnimationFrame(()=>{ensure();app.scrollTop=app.scrollHeight;});return;}
+    if(action==='edit-region'){showForm('name');return;}
+    if(action==='manage'){manage();return;}
+    if(action==='discover-from-manage'){closePage(true);discovery();return;}
+    if(action==='back-duos'){if(phone.querySelector('.duos-panel')?.getAttribute('aria-label')==='Perfil da dupla')manage();else closePage();return;}
+    if(action.startsWith('skip-')){state.skipped.add(action.slice(5));draw();return;}
+    if(action.startsWith('open-')){
+      const task=action.slice(5);
+      if(task==='duo'){discovery();return;}
+      if(task==='people'){scenes.value='visitor';scenes.dispatchEvent(new Event('change',{bubbles:true}));return;}
+      if(['name','photo','interests'].includes(task)){showForm(task);return;}
+    }
+    if(action.startsWith('save-')){saveForm(action.slice(5));return;}
+    if(action.startsWith('invite-')){invite(action.slice(7));return;}
+    if(action.startsWith('demo-accept-')){const id=action.slice(12),r=state.duos.get(id);if(r?.status==='pending'){r.status='active';state.done.add('duo');manage();}return;}
+    if(action.startsWith('cancel-')){const id=action.slice(7);if(state.duos.get(id)?.status==='pending'){state.duos.delete(id);manage();}return;}
+    if(action.startsWith('view-duo-')){viewDuo(action.slice(9));return;}
+    if(action.startsWith('end-duo-')){confirmEnd(action.slice(8));return;}
+    if(action.startsWith('confirm-end-')){const id=action.slice(12),r=state.duos.get(id);if(r?.status==='active'){r.status='closing';closeModal();manage();}return;}
+  }
+  // Keep original profile invitation path and the new discovery path semantically consistent.
+  const legacy=e.target.closest('[data-action="sendInvite"]');
+  if(legacy&&scenes.value==='visitor'&&!state.duos.has('osman'))state.duos.set('osman',{status:'pending',createdAt:'Demonstração',by:'own'});
+  const follow=e.target.closest('[data-action="follow"]');
+  if(follow&&follow.textContent.trim()==='Seguir')state.done.add('people');
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closePage();}});
+ensure();
+})();
+</script>
+
+</body>
+</html>
