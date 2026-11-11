@@ -179,7 +179,7 @@
 .g-edit-header{position:sticky;top:0;z-index:2;background:#fff;border-bottom:1px solid #e7ebef;min-height:70px;display:grid;grid-template-columns:55px 1fr 55px;align-items:center;padding:10px 16px}
 .g-edit-header h2{font-size:18px;font-weight:800;letter-spacing:-.5px;text-align:center;margin:0}.g-edit-header button{border:0;background:transparent;min-height:44px;color:#10202B;font-size:26px}.g-edit-header .g-save{font-size:12px;color:#0866E8;font-weight:800}
 .g-edit-body{padding:21px 16px 42px}.g-edit-field{display:block;border:1px solid #d7dee5;border-radius:14px;padding:13px 14px;margin-bottom:14px}
-.g-edit-field label{display:block;color:#71808c;font-size:12px;font-weight:500;margin:0 0 6px}.g-edit-field input,.g-edit-field textarea{display:block;width:100%;border:0;outline:0;font:500 16px/1.45 inherit;color:#10202B;resize:vertical;background:transparent;min-height:26px}
+.g-edit-field label{display:block;color:#71808c;font-size:12px;font-weight:500;margin:0 0 6px}.g-edit-field input,.g-edit-field textarea{display:block;width:100%;border:0;outline:0;font-size:16px;font-weight:500;line-height:1.45;font-family:inherit;color:#10202B;resize:vertical;background:transparent;min-height:26px}
 .g-edit-field textarea{min-height:76px;font:500 16px/1.5 sans-serif}.g-edit-field:focus-within{border-color:#0866E8;outline:1px solid #0866E8}
 .g-edit-bio-label{display:flex;justify-content:space-between;align-items:center;gap:8px}.g-edit-bio-label small{color:#7b8993;font-size:11px}
 .g-edit-row{display:flex;align-items:center;width:100%;text-align:left;min-height:64px;border:0;border-bottom:1px solid #edf0f2;background:#fff;padding:11px 0;gap:10px;color:#10202B}
@@ -863,6 +863,8 @@ function originForm(action){
 document.addEventListener('click',e=>{
   const t=e.target.closest('[data-action="edit"]');
   if(t&&self()){e.preventDefault();e.stopImmediatePropagation();openEditor();return;}
+  const oldInterest=e.target.closest('[data-completion="open-interests"]');
+  if(oldInterest&&self()){e.preventDefault();e.stopImmediatePropagation();interestModal();return;}
   const s=e.target.closest('[data-scenario]');if(s){phone.querySelectorAll('.g-edit,.g-r2-modal').forEach(el=>el.remove());return;}
   const btn=e.target.closest('[data-r2]');
   if(!btn)return;
