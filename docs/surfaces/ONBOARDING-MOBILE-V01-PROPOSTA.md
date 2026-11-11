@@ -1,6 +1,6 @@
 # goudduo — Onboarding mobile V0.1: apresentação, não formulário
 
-> **G2 · PROPOSTA VISUAL E HTML PARA AVALIAÇÃO — NÃO HOMOLOGADO.** 10/11/2026.
+> **G4 · REFERÊNCIA VISUAL V0.1 HOMOLOGADA COM RESSALVA EXPRESSA — 10/11/2026.** O usuário aprovou as três cenas, a estrutura e a navegação do HTML **somente como referência**. **Ilustrações, avatares e cards de exemplo NÃO são assets finais de produção.**
 >
 > **Issue da tela:** [#19 — Onboarding](https://github.com/jukazilli/goudduo/issues/19). **Próxima tela separada:** [#20 — Perfil/Complete seu perfil](https://github.com/jukazilli/goudduo/issues/20). **Gate jurídico:** [#12](https://github.com/jukazilli/goudduo/issues/12), com minutas editoriais homologadas na PR #15, **sem vigência nem implementação de direitos/aceite**.
 
@@ -51,12 +51,21 @@
 - Testes com requisições externas bloqueadas (fonte fallback), para provar a independência de rede do HTML.
 - **Pendências de QA:** Safari/iPhone físico, Android, VoiceOver/TalkBack, teclado/foco completo, swipe em dispositivo físico, comparação tipográfica com Plus Jakarta Sans carregada, acessibilidade final e integração com app React.
 
+## Regra de produção de imagens — RESSALVA EXPRESSAMENTE HOMOLOGADA
+
+- **Este HTML é uma referência de direção visual e fluxo, NÃO a entrega final de assets.** A aprovação não autoriza publicar personagens genéricos, avatares fictícios ou desenhos demonstrativos como materiais definitivos do aplicativo.
+- **Quando a implementação realmente necessitar de imagens**, produzir ou selecionar **imagens reais, autênticas, coerentes com o goudduo e com a vida ativa/comunidade/treino**, preparar exports **WebP** responsivos, com dimensão apropriada, compressão sem artefatos perceptíveis e versões necessárias. Tratar origem, licenças, direitos de imagem e consentimento das pessoas retratadas.
+- Evitar estética artificial, composições que pareçam falsas, anatomia/mãos irreais e imagens de stock repetitivas. **Representar a diversidade de experiências** (treino em academia, corrida, caminhada, comunidade e conexões reais) sem limitar o uso a hipertrofia ou corpo idealizado.
+- Compor e otimizar imagens sem substituir o SVG oficial da marca. Aplicar lazy-loading quando apropriado, dimensões estáveis para evitar layout shift, `alt` adequado e verificar contraste de sobreposições.
+- Não inventar imagens agora: criar biblioteca de assets com briefing por cena **somente durante a etapa pertinente de implementação**, revisá-los e homologá-los separadamente. O HTML e suas ilustrações conceituais permanecem como snapshots visuais de referência.
+- A conversão para WebP não dispensa teste de qualidade, performance e compatibilidade nem documentar decisões de acessibilidade e privacidade. A Home Treinos V5.3 mantém sua própria direção aprovada.
+
 ## Gate de homologação e integração
 
 - [x] Inventário da GODUOIT recuperado e contraste entre catálogo e UI investigado.
 - [x] Três cenas HTML V0.1 versionadas.
 - [x] QA básico local.
-- [ ] **Homologação visual do proprietário**, incluindo copy e densidade.
+- [x] **Homologação visual do proprietário em 10/11/2026, COM RESSALVA DE ASSETS**: composição, copy e navegação aprovadas enquanto referência; **criar imagens reais WebP para implementação quando necessário**.
 - [ ] Definir destino real após Pular/Explorar: **Home Treinos V5.3 ou Publicações** sem restrição a quem só deseja consumir conteúdo; não presumir seletor de entrada nem mudar tabbar.
 - [ ] Definir exibição única versus repetir no futuro; persistência de `onboarding_seen` somente quando backend aplicável.
 - [ ] Garantir condições e aceite legal para cadastro/OTP reais antes de expor onboarding em produção.
@@ -65,3 +74,6 @@
 - [ ] PR review e merge somente após decisão expressa.
 
 **Não iniciar o HTML do Perfil nesta mesma Issue**: a [Issue #20](https://github.com/jukazilli/goudduo/issues/20) exige investigação do HTML GODUOIT P0 V0.2 e preservação de todos os contratos existentes antes de adicionar “Complete seu perfil”.
+## Próxima superfície — Perfil e conclusão progressiva
+
+[Issue #20 — Perfil/Complete seu perfil](https://github.com/jukazilli/goudduo/issues/20) passa a **G1/G2** após esta homologação. Inspecionar a referência [GODUOIT Perfil P0 V0.2](https://github.com/jukazilli/GODUOIT/blob/faa2276ecb56d6aaf6a3dd90d082c0693973bf02/lab/references/profile/goduoit-perfil-p0-v02.html), preservar estados/contadores/Pulse/grades/ações e acrescentar módulo opcional apenas ao Perfil próprio. **O layout herdado é candidato na GODUOIT, não tela de produção homologada automaticamente.** Criar HTML próprio e PR Draft separados, para nova aprovação, sem alterar esta PR de onboarding.
