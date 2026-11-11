@@ -456,8 +456,14 @@ function closeAnimated(el,immediate=false){
   el.classList.remove('is-open');el.classList.add('is-closing');
   window.setTimeout(()=>{if(el.isConnected)el.remove();},340);
 }
-const closeModal=(immediate=false)=>closeAnimated(phone.querySelector('.complete-overlay:not(.is-closing)'),immediate);
-const closePage=(immediate=false)=>closeAnimated(phone.querySelector('.duos-panel:not(.is-closing)'),immediate);
+const closeModal=(immediate=false)=>{
+  if(immediate){phone.querySelectorAll('.complete-overlay').forEach(el=>el.remove());return;}
+  closeAnimated(phone.querySelector('.complete-overlay:not(.is-closing)'),false);
+};
+const closePage=(immediate=false)=>{
+  if(immediate){phone.querySelectorAll('.duos-panel').forEach(el=>el.remove());return;}
+  closeAnimated(phone.querySelector('.duos-panel:not(.is-closing)'),false);
+};
 const showSmooth=(el)=>requestAnimationFrame(()=>requestAnimationFrame(()=>{if(el.isConnected)el.classList.add('is-open');}));
 function hasVisibleProfile(){return !!app.querySelector('.identity')&&!!app.querySelector('.profile-tabs');}
 function enhanceOwn(){
