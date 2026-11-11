@@ -105,3 +105,14 @@ Por solicitação expressa do proprietário, foram **homologados e reconciliados
 Por decisão expressa do proprietário, **SUBSTITUEM-SE** na identidade ativa: a forma anterior **“a goudduo”** por **“o goudduo”**, e a frase-manifesto anterior **“Conecte-se com a vida real.”** por **“Seu parceiro na vida real.”**. As formulações anteriores permanecem neste registro somente como **histórico, não como regras vigentes**.
 
 **Preservados:** nome oficial minúsculo `goudduo`, categoria *social wellness*, propósito, missão, visão, valores, foco inicial no treino, expansão contextual de conexões e assinatura institucional **“Experiências, conexões e bem-estar.”**. **A revisão do texto em telas requer o gate visual da respectiva Issue.**
+
+
+## 8. Regras de UI/UX homologadas — Perfil, localidade e movimento (10/11/2026)
+
+Por decisão expressa do proprietário, a referência **Perfil V0.2** foi **homologada com ressalvas**, incorporadas ao **[HTML corretivo V0.3](lab/screens/profile/goudduo-perfil-p0-v03-homologado-ressalvas.html)** e registradas no [handoff V0.3](docs/surfaces/PERFIL-P0-COMPLETE-DUPLAS-V03-HOMOLOGADO-COM-RESSALVAS.md). Essas decisões **não constituem uma implementação de produção**, nem substituem contratos legais/privacidade ou dão merge automático à PR.
+
+- **Dados de localização para descoberta:** Nome e região são opcionais; **selecionar UF antes da cidade**. Cidade é **pesquisa e seleção de município canônico** (nome oficial + código IBGE), jamais texto livre persistido. **Não iniciar Match nem divulgar cidade automaticamente** por concluir o Perfil. Validação obrigatória no backend quando houver integração.
+- **Conexões sociais:** uma pessoa pode formar **múltiplas duplas fixas simultâneas**, cada uma por **convite individual + aceite do destinatário** e com **Perfil da Dupla por par**; a gestão/desfazimento pertence a Configurações e atividade → Duplas, sem converter Match avulso em dupla fixa. Eventos de convite e aceite integrarão a futura Central de Atividade.
+- **Movimento sistêmico:** **entrada e saída suaves** de modais, bottom sheets e popups, com duração normal (~300 ms), sem fechamento seco nem desmontagem instantânea antes da animação; respeitar movimento reduzido. **[Contrato de Movimento V0.1](docs/design-system/MOTION-V01.md)** e [Issue #25](https://github.com/jukazilli/goudduo/issues/25) são leitura obrigatória nos próximos handoffs de implementação, **sem alegar que o padrão já tenha sido aplicado a todas as telas**.
+
+**Governança:** o visual V0.3 está commitado na [PR Draft #22](https://github.com/jukazilli/goudduo/pull/22) como referência homologada com ressalvas. Faltam QA real, integração, segurança, carregamento do catálogo IBGE e padronização global em componentes de produção. Todas as alterações de outras telas devem preservar suas decisões próprias já aprovadas.
