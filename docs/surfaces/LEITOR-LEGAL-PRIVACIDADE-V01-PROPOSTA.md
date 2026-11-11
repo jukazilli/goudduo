@@ -1,6 +1,6 @@
 # goudduo — Leitor Legal e Privacidade · referência UI V0.1
 
-> **Status:** proposta visual em avaliação, **não homologada pelo proprietário**. O fluxo foi criado no Visual Lab como **HTML demonstrativo**, não serviço funcional, política juridicamente publicada ou autorização para coletar dados.
+> **Status (10/11/2026): G4 — LEITOR LEGAL E PRIVACIDADE/SEUS DADOS V0.1 HOMOLOGADOS VISUALMENTE PELO PROPRIETÁRIO.** O HTML permanece uma **referência demonstrativa**; não é serviço funcional, não publica política juridicamente vigente, não registra aceite real e não autoriza coleta ou exclusão de dados.
 >
 > **Referências canônicas:** [Issue #16 (Leitor)](https://github.com/jukazilli/goudduo/issues/16), [Issue #17 (Seus dados)](https://github.com/jukazilli/goudduo/issues/17), [Issue #12 (gate jurídico)](https://github.com/jukazilli/goudduo/issues/12) e [PR #15 (textos editoriais v0.1)](https://github.com/jukazilli/goudduo/pull/15).
 >
@@ -72,11 +72,20 @@ O wordmark é o fallback raster da prévia original V0.4 para funcionar offline;
 - [x] Issues próprias para as novas superfícies #16 e #17.
 - [x] HTML experimental versionado em branch derivada da PR #15.
 - [x] QA básico de navegador e validação de navegação/preservação de campos.
-- [ ] **Avaliação e homologação visual do proprietário para as novas telas**.
+- [x] **Homologação visual expressa do proprietário em 10/11/2026:** "Aprovado chat" após entrega do HTML Leitor Legal + Privacidade e seus dados V0.1.
 - [ ] Revisão jurídica das minutas; confirmação de Cloudflare/Supabase, bases legais, prazos e processos de dados.
 - [ ] URLs públicas e vigentes de Termos e Política + aceite adequado **antes do cadastro real de produção**.
 - [ ] Modelagem do fluxo funcional de exportação e exclusão de conta, com autenticação e backend.
 - [ ] Integração e QA real da aplicação.
 - [ ] Gate da [Issue #12](https://github.com/jukazilli/goudduo/issues/12) antes de avançar ao Onboarding.
+
+## 7. Histórico de homologação — 10/11/2026
+
+- **Aprovação expressa:** “Aprovado chat”. Escopo: **as duas superfícies V0.1** — Leitor de Termos/Política de Privacidade ([Issue #16](https://github.com/jukazilli/goudduo/issues/16)) e área Privacidade e seus dados em Configurações ([Issue #17](https://github.com/jukazilli/goudduo/issues/17)).
+- **Homologados:** layout branco/gelo/charcoal/azul, tipografia, conteúdo identificado como minuta, navegação Cadastro → documento → retorno sem perda dos quatro campos, alternância Termos/Política e leitura via Configurações, apresentação informativa dos direitos e opção de exclusão.
+- **Não altera a homologação anterior:** Entrada V0.2, Cadastro V0.3, OTP V0.4 e Home Treinos V5.3. **Nenhuma alteração adicional no HTML** é necessária nesta aprovação.
+- **Ainda NÃO homologado como funcional:** Termos e Política vigentes, URLs publicadas, registro jurídico de aceite, exportação real, correção, exclusão de dados, serviços de banco/Auth/Storage/CDN/backup, acessibilidade em dispositivos reais e integração React.
+- **Dependências ativas:** revisão jurídica, fornecedores, bases legais, prazos, mecanismos e publicação na [Issue #12](https://github.com/jukazilli/goudduo/issues/12), que permanece aberta antes do avanço formal ao Onboarding.
+- **Git:** documentação de homologação commitada na [PR #18](https://github.com/jukazilli/goudduo/pull/18), ainda Draft, empilhada sobre a PR #15. Não mesclar automaticamente à `main`.
 
 **Não fazer merge automático desta referência e não alterar a Home Treinos V5.3.**
