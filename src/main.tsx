@@ -1,0 +1,12 @@
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { AppShell } from './app/AppShell';
+import { BrowserNavigation } from './app/navigation';
+import { NavigationProvider } from './app/NavigationProvider';
+import { DemoProvider } from './state/DemoProvider';
+import './styles/app.css';
+const root = document.getElementById('root');
+if (!root) throw new Error('Entrada da aplicação ausente');
+const navigation = new BrowserNavigation(window);
+createRoot(root).render(<StrictMode><DemoProvider><NavigationProvider navigation={navigation}><AppShell/></NavigationProvider></DemoProvider></StrictMode>);
+if (import.meta.hot) import.meta.hot.dispose(() => navigation.dispose());

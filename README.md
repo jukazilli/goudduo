@@ -105,3 +105,11 @@ Por solicitação expressa do proprietário, foram **homologados e reconciliados
 Por decisão expressa do proprietário, **SUBSTITUEM-SE** na identidade ativa: a forma anterior **“a goudduo”** por **“o goudduo”**, e a frase-manifesto anterior **“Conecte-se com a vida real.”** por **“Seu parceiro na vida real.”**. As formulações anteriores permanecem neste registro somente como **histórico, não como regras vigentes**.
 
 **Preservados:** nome oficial minúsculo `goudduo`, categoria *social wellness*, propósito, missão, visão, valores, foco inicial no treino, expansão contextual de conexões e assinatura institucional **“Experiências, conexões e bem-estar.”**. **A revisão do texto em telas requer o gate visual da respectiva Issue.**
+
+## 8. Fundação técnica — P1 em revisão
+
+A P0 foi **homologada documentalmente** pelo proprietário, com a [PR #30](https://github.com/jukazilli/goudduo/pull/30) integrada e registro na [Issue coordenadora #29](https://github.com/jukazilli/goudduo/issues/29#issuecomment-6818835814). Isso não homologa automaticamente as superfícies pendentes ou o protótipo funcional.
+
+A branch da P1 prepara uma fundação **React 19 + TypeScript + Vite**, com Shell, navegação, estado demonstrativo compartilhado e Visual Lab separado. Ela está em revisão; não representa o MVP nem serviços de produção. Nenhum arquivo privado GODUOIT foi transportado nesta etapa.
+
+Guia local, arquitetura, segurança, baseline e testes: **[docs/foundation/README.md](docs/foundation/README.md)**. Build da aplicação em `dist/app`; Lab em `dist/lab`. Cloudflare Workers + Static Assets é a plataforma principal, validada somente por dry-run local; deploy público depende de autorização específica.

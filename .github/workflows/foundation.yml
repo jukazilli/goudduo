@@ -1,0 +1,30 @@
+name: P1 foundation checks
+on:
+  pull_request:
+  push:
+    branches: [feat/p1-foundation-approved-prototype]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - run: npm install --global pnpm@11.25.0
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: node --test tests/bundle.test.mjs
+      - run: pnpm run build && pnpm run build:lab
+      - run: pnpm cloudflare:prepare
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm exec playwright test
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: foundation-qa
+          path: test-results/
+          retention-days: 14

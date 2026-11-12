@@ -1,0 +1,10 @@
+.lab-root { min-height: 100dvh; background: #f1f8fb; display: grid; grid-template-columns: minmax(240px, 300px) minmax(0, 1fr); gap: 24px; padding: 24px; align-items: start; }
+.lab-inspector { display: grid; gap: 16px; padding: 20px; background: #fff; border: 1px solid #10202b; border-radius: 14px; overflow-wrap: anywhere; }
+.lab-inspector h1 { margin: 0; font-size: 22px; }
+.lab-inspector p { font-size: 14px; line-height: 1.6; margin: 0; }
+.lab-inspector select { width: 100%; min-height: 48px; font: inherit; font-size: 16px; color: #10202b; background: #fff; }
+.lab-frame { width: 100%; justify-self: center; }
+.lab-frame .app-shell { height: 844px; max-height: calc(100dvh - 48px); border: 1px solid #10202b; }
+.lab-check { display: flex; gap: 12px; align-items: center; min-height: 44px; font-size: 14px; }
+.lab-check input { width: 24px; height: 24px; }
+@media (max-width: 700px) { .lab-root { grid-template-columns: minmax(0,1fr); padding: 12px; gap: 12px; } .lab-frame .app-shell { max-height: none; height: 740px; } }
