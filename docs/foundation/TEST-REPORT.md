@@ -31,6 +31,7 @@ Screenshots da fundação original P1, sem mídia privada: [390px](evidence/p1-s
 - Console 404 por ausência de favicon: HTML agora referencia a wordmark pública já existente, empacotada pelo Vite.
 - Papéis ARIA de main/abas: main mantém landmark e painel de abas fica em seção própria dentro dele; navegação da Home preserva landmark separado.
 - Retorno de foco intermitente em 320px: opener agora é capturado antes de aplicar inert; foco só retorna ao contexto apropriado após desmontagem. Rodada final de cinco larguras passou.
+- A primeira CI remota passou instalação/tipos/testes/build/CF, mas `ubuntu-latest` apontou para Ubuntu 26.04, não suportado pelo Playwright 1.56.1 fixado. Runner fixado em Ubuntu 24.04; resultado da nova execução deve ser consultado na PR. Não foi atualizada a stack para contornar a imagem do runner.
 - Dois fechamentos rápidos de overlay poderiam voltar duas entradas: guarda por chave impede back duplicado até popstate.
 - Primeira allowlist de build não contemplava o fallback WOFF legítimo do Fontsource: WOFF/WOFF2 agora explicitamente aceitos; fontes foram limitadas ao subset latino necessário ao português, mantendo licenças.
 - Primeira tentativa E2E ocorreu antes de existir build Lab e expirou aguardando servidor. O guia exige ambos os builds e a CI os gera antes do Playwright. Rodadas com falha não são apresentadas como aprovadas; os resultados finais substituem somente o estado técnico desses ensaios.
