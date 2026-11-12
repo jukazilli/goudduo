@@ -2,7 +2,19 @@
 
 Este documento separa investigação executada de testes futuros. Nenhuma versão React de Home V5.3/Rotinas V7.4 foi implementada/testada nesta P2-A. P1-R1 homologada é fundação, não screenshot dessas superfícies.
 
-## Evidência efetivamente produzida na P2-A
+## Evidência atual P2-A-R1 — Home recuperada
+
+[Auditoria completa e capturas por largura](HOME-V53-HTML-RECUPERADO.md). Git commit/caminho/blob/SHA256 conferidos. Curl RawGitHack HTTP200 trouxe bytes idênticos. No Chromium externo, houve aviso Open the page; após o clique, title V5.3/cinco Pulses e zero pageerrors. Disponibilidade não foi inferida só do status200.
+
+**Executado sem modificar a referência:** cinco sequências normais em320/375/390/414/430×844 e cinco em reduced-motion, todas concluídas. Medidos Bento/raios/gutters, cluster, hero/Pulse; capturados conteúdo inicial, Peso/Status abertos, inferior expandido e charcoal. Zero pageerrors; um404 de favicon.ico no primeiro320, confirmado no log HTTP local, demais consoles sem erro; zero overflow de documento/#screen. Pulse teve scroll horizontal intencional10px apenas em320.
+
+Casos normais: Peso abrir/fechar/ordem; Status Em construção/href160; Fotos/órfão flow-wide/retorno; toquePulse→toast; swipe nativo Pulse; dots do treino→título; CTA→Rotinas demonstrativa/voltar conservando seleção; update sintético de Peso somente em memória e reload resetando. Casos reduced-motion: Ranking abrir/fechar, transition1e-05s e zero animação ativa observada. Cinco sequências adicionais confirmaram swipe do hero e retorno de foco/scroll após abrir/fechar Fotos.
+
+Capturas públicas anexadas somente como documentos: [conteúdo390](evidence/home-v53/home-content-390.png), [Peso experimental320](evidence/home-v53/weight-expanded-320.png), demais larguras e hashes na auditoria. PNGs são recortes do #screen, sem chrome; valores e formulários são fixtures/experimentos, não aprovação funcional ou assets da aplicação. Capturas extras/logs/scripts integrais ficam em `/workspace/scratch/p2a-r1/`.
+
+**Não executados nesta R1:** estados vazios sem fixture canônica (não fabricados); viewer/publicação/ocultação reais; comparação React da Home (não existe); QA físico/Safari/Android; backend, merge/deploy/alteração de recursos. Rotinas V7.4 não foi redesenhada nem reexecutada, seus resultados anteriores e achado Escape390 permanecem válidos como investigação histórica. Check de integridade confirma app/Shell/lock/assets/P0/allowlist intocados. A CI da PR pode revalidar a fundação; isso não representa teste de implementação nova da Home.
+
+## Histórico executado na P2-A original — anterior à recuperação
 
 - Git/REST: snapshots/mains/PRs/branches/blobs, ancestralidade, integridade dos nove documentos P0 e igualdade do conteúdo homologado P1-R1 com o merge. Busca histórica Home e Drive com limites registrados no [índice](REFERENCIAS-E-SNAPSHOTS.md).
 - V7.4: bytes originais extraídos do commit homologado e servidos somente no loopback; Chromium do ambiente com touch em **320/375/390/414/430 ×844**. Nenhuma edição do HTML ou backend. `pageerror` vazio nos cinco cenários e documento sem overflow horizontal.
@@ -13,14 +25,14 @@ Este documento separa investigação executada de testes futuros. Nenhuma versã
 - Fundação pública: `pnpm typecheck` e `pnpm test` reexecutados, **20 testes/4 arquivos passaram**, sem alterar código. Suíte P1-R1 de35E2E/builds/bundle é evidência histórica da entrega homologada; não foi renomeada como novo teste V5.3/V7.4. CI documental poderá reexecutar checks existentes, mas não comprova paridade dessas telas.
 - Revisão de16 arquivos candidatos: bytes/blobs/imports e padrões GitHub/AWS/PEM; zero matches nesses padrões. Direitos de mídia, licença geral privada e ausência completa de dados pessoais **não** certificados.
 
-Não executados: navegador da Home V5.3 exata (ausente), comparação lado a lado com React dessas superfícies (não implementadas), QA físico Safari/iPhone/Android, leitor de tela real, backend, testes de novo código, merge ou deploy/recursos Cloudflare. Scripts/logs brutos ficam em `/workspace/scratch/p2a`, não fazem parte da PR pública e não são requisito de execução do produto.
+Na P2-A original não foram executados: navegador da Home V5.3 exata (então ausente), comparação lado a lado com React dessas superfícies (não implementadas), QA físico Safari/iPhone/Android, leitor de tela real, backend, testes de novo código, merge ou deploy/recursos Cloudflare. Scripts/logs brutos ficam em `/workspace/scratch/p2a`, não fazem parte da PR pública e não são requisito de execução do produto.
 
 ## Protocolo de comparação visual futuro
 
-1. Identificar commit+blob/hash da referência, estado/fixture e versão do navegador. Para Home, bloquear pixel parity até G01; nenhuma captura antiga V3.5/V5.1/V5.2 substitui V5.3.
+1. Identificar commit+blob/hash da referência, estado/fixture e versão do navegador. Para Home, **G01 está resolvido**: usar obrigatoriamente073183253fce5fcd0b3474c725e84ff67d3dfec5, blob8c698708dd79449472d6f5c7e536664939de4951 e extração A–E; nenhuma captura antiga V3.5/V5.1/V5.2 substitui V5.3.
 2. Usar larguras **320,375,390,414,430**, mesma altura844 e registrar também altura útil/teclado, DPR/zoom100%, font readiness, tema e scroll. No físico registrar modelo/iOS/Safari e modo browser/PWA. O HTML V7.4 móvel reserva 49px para controles técnicos e usa phone=100dvh−49px: equalizar a altura útil da região comparada e registrar esse delta, sem tratar a bancada como produto. Confirmar também a fonte efetivamente carregada, não apenas font-family computada.
 3. Capturar entrada normal, vazio, um/muitos itens, expanded esquerdo/direito, Editor0/1/2/6, Biblioteca vazia/busca/adicionado/rolada/teclado, confirmação/nome/erro/cancelamento e retorno. Aguardar motion concluir sem congelar estado intermediário; capturas reduced-motion são cenário próprio.
-4. Comparar lado a lado e, quando apropriado, diff por regiões: chrome compartilhado, corpo, overlay. **Registrar deltas autorizados**: marca goudduo, Lucide reais, TabBar P1 sem legendas e insets reais versus moldura/Nav de referência. Não exigir copiar defeito/artefato do HTML nem excluir regiões arbitrárias para esconder divergência.
+4. Para Home, recortar #homeView/conteúdo visível, excluindo totalmente chrome/frame/statusline/header/tabbar do HTML; comparar Shell React somente com P1-R1. Não impor app820/screen622 da bancada ao produto. Registrar largura interna/gutter/scroll/altura útil e normalizar o harness regional; em teste real manter AppShell dinâmico. Para ambas as superfícies, comparar lado a lado e, quando apropriado, diff por regiões: chrome compartilhado, corpo, overlay. **Registrar deltas autorizados**: marca goudduo, Lucide reais, TabBar P1 sem legendas e insets reais versus moldura/Nav de referência. Não exigir copiar defeito/artefato do HTML nem excluir regiões arbitrárias para esconder divergência.
 5. Medir retângulos/raios/gaps/tipografia do corpo no artefato real, distinguir valor CSS de dimensão renderizada. Gap V7.4 tem regra estreita; altura75% é relativa à região modal definida, não automaticamente 75% do restante do Editor depois do footer.
 6. Não estabelecer tolerância universal de pixel que ignore antialiasing/fonte ou mudanças geométricas. Proposta de tolerância por região e diferenças perceptíveis será homologada pelo proprietário. Toda diferença não autorizada fica aberta no registro, com causa/reprodução/impacto/decisão.
 7. Entregar capturas de ambas as versões, vídeo curto de interação relevante, resultado automatizado e revisão humana de fidelidade. Build/typecheck não substituem comparação visual.
@@ -29,8 +41,8 @@ Não executados: navegador da Home V5.3 exata (ausente), comparação lado a lad
 
 | ID | Cenário futuro | Automação proposta | Avaliação humana / aceite |
 |---|---|---|---|
-| H-01 | Bento/Ranking/Status/Treino do Dia conforme referência atual, charcoal sem imagem fixa | Screenshot regional/retângulos nas5larguras; paleta local | Hierarquia/ritmo/aproximações aprovadas; referência G01 disponível ou recorte visual homologado |
-| H-02 | Pulse Treinos squircle e Publicações circular | Shape/IDs/sem cross-CSS, swipe/foco/retorno | Placement/miniaturas/estados e direitos aprovados; sem toggle inventado |
+| H-01 | Bento/Ranking/Status/Treino do Dia conforme referência atual, charcoal sem imagem fixa | Screenshot regional/retângulos nas5larguras; paleta local | Geometria da referência0731832 computada por região; manter Jakarta e deltas explícitos, Shell fora do diff Home |
+| H-02 | Pulse Treinos squircle e Publicações circular | Shape/IDs/sem cross-CSS, swipe/foco/retorno | Posição/54–58/raio18–19/gap10 verificados; revisar identidade/anéis/dados/mídia/destino; sem toggle inventado |
 | H-03 | Home ativa→topo; tabs independentes; Home inferior selecionada | Scroll por contexto/back/forward/reload, body isolado | Toque/rolagem naturais; sem dashboard em Business |
 | H-04 | Peso/Medidas/Consistência/Recordes pendentes | Ausência de valores/CRUD/gráficos não autorizados | Tratamento G03 aprovado e composição sem buracos |
 | R-01 | Principal + secundárias, expandir direita e órfão full-width | IDs/ordem/boundingboxes, abrir/fechar/repetição, scroll pós-layout | Sem salto ao topo, overlap, lacuna ou movimento exagerado |

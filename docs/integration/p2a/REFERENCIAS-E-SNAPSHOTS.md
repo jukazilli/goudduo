@@ -1,6 +1,6 @@
 # Fontes congeladas e índice visual
 
-Consulta: **12/11/2026 UTC**. Evidência Git local + REST GitHub. Links privados requerem acesso do proprietário. Conteúdo bruto/capturas de origem privada permanecem em `/workspace/scratch/p2a`, fora da PR pública.
+Consulta P2-A e revisão **P2-A-R1, 12/11/2026 UTC**. Na R1, as duas mains continuam nos SHAs abaixo; PR #32 permanece Draft na mesma branch. Nova branch de referência Home foi buscada e conferida. Evidência Git local + REST GitHub. Links privados requerem acesso do proprietário. Conteúdo bruto/capturas de origem privada permanecem em `/workspace/scratch/p2a`, fora da PR pública.
 
 ## Preflight verificável
 
@@ -21,8 +21,9 @@ Estados são dimensões separadas: **HOMOLOGADO** (aprovação expressa), **IMPL
 
 | ID | Fonte / commit / blob quando verificável | Estado e uso |
 |---|---|---|
-| V-HOME | [#54 comentário V5.3](https://github.com/jukazilli/GODUOIT/issues/54#issuecomment-6756524720), [handoff](https://github.com/jukazilli/GODUOIT/blob/abfd989fb1b3e87d617dfd93c0527554b2e283b2/docs/handoffs/home-treinos-v5.3-direcao-ui-ux-homologada.md); blob a420a60e80d9c1c8ecfb056f0077eeb5b39ec26d | HOMOLOGADO como direção; documento na PR #161, não na main; HTML exato não encontrado |
-| V-HOME-AUDIT | [auditoria cromática](https://github.com/jukazilli/goudduo/blob/2eeffe9d2e9b12cbeb0c84fd1768a49d9f39786b/docs/design-system/HOME-V53-SOURCE-AUDIT.md); blob fade4c6c0404542c1e3c2241d60aeb6ad34614fd | Documento de investigação: registra V5.1 recuperada na Library e V5.3 ausente; não é nova aprovação dimensional |
+| V-HOME | [#54 comentário V5.3](https://github.com/jukazilli/GODUOIT/issues/54#issuecomment-6756524720), [handoff](https://github.com/jukazilli/GODUOIT/blob/abfd989fb1b3e87d617dfd93c0527554b2e283b2/docs/handoffs/home-treinos-v5.3-direcao-ui-ux-homologada.md); blob a420a60e80d9c1c8ecfb056f0077eeb5b39ec26d | HOMOLOGADO como direção; documento na PR #161, não na main; HTML recuperado na R1 conforme V-HOME-HTML |
+| V-HOME-HTML | [arquivo recuperado](https://github.com/jukazilli/goudduo/blob/073183253fce5fcd0b3474c725e84ff67d3dfec5/lab/previews/home-treinos-v5.3-charcoal.html), [RawGitHack](https://rawcdn.githack.com/jukazilli/goudduo/073183253fce5fcd0b3474c725e84ff67d3dfec5/lab/previews/home-treinos-v5.3-charcoal.html); commit073183253fce5fcd0b3474c725e84ff67d3dfec5, blob8c698708dd79449472d6f5c7e536664939de4951 | Fonte de superfície indicada pelo proprietário; 74.195bytes; SHA2567cb2bedd0af72c09c703337f889e94cb4e223ab9d5ff6104b584d62895ffb18f; title V5.3; [extração e evidências](HOME-V53-HTML-RECUPERADO.md); G01 resolvido, Shell experimental ignorado |
+| V-HOME-AUDIT | [auditoria cromática](https://github.com/jukazilli/goudduo/blob/2eeffe9d2e9b12cbeb0c84fd1768a49d9f39786b/docs/design-system/HOME-V53-SOURCE-AUDIT.md); blob fade4c6c0404542c1e3c2241d60aeb6ad34614fd | Documento de investigação: registrava V5.1 recuperada na Library e V5.3 ausente naquele snapshot; lacuna superada por V-HOME-HTML; não é nova aprovação dimensional |
 | V-ROT | [HTML V7.4](https://github.com/jukazilli/goudduo/blob/3f8b2c7c93a33a713c780305e672e1ec7998ceaf/prototypes/rotinas/motion-v7-4/index.html), [prévia rawcdn](https://rawcdn.githack.com/jukazilli/goudduo/3f8b2c7c93a33a713c780305e672e1ec7998ceaf/prototypes/rotinas/motion-v7-4/index.html) | HOMOLOGADO em [#28](https://github.com/jukazilli/goudduo/issues/28); blob 122275b3cb03bd996b477375d1bbc73ae29c5c3e, 81.601 bytes; SHA256 42ac581d3c76a3852da221ba68495025bbfa26f2d96aeda9c43ba0261a5a849d |
 | V-ROT-HEAD | preview/rotinas-motion-v7 head 1a0409f8b7d971f7883ec8d78fd88c0854868005 | Diff desde 3f8b2c7 apenas adiciona docs/surfaces/ROTINAS-MOTION-V7.4-HOMOLOGADA.md; HTML idêntico. Não substitui automaticamente o commit de referência |
 | V-SHELL | [#72](https://github.com/jukazilli/GODUOIT/issues/72#issuecomment-6566854507), [remoção chevron](https://github.com/jukazilli/GODUOIT/issues/72#issuecomment-6756546648), P1-R1 em 0fbc3ed8b3e1c59245d2349ae14160a2a9c43086 | HOMOLOGADO; cinco destinos, ícones, safe areas, Home ativa e estado compartilhado protegidos |
@@ -31,11 +32,13 @@ Estados são dimensões separadas: **HOMOLOGADO** (aprovação expressa), **IMPL
 | V-FEED | [#55](https://github.com/jukazilli/GODUOIT/issues/55) e baseline privada P1 em c093689 | Preservar experiência; versões históricas de PNG não são prova V5.3/V7.4 |
 | V-BRAND | [SVG público](https://github.com/jukazilli/goudduo/blob/0fbc3ed8b3e1c59245d2349ae14160a2a9c43086/assets/brand/goudduo/goudduo-wordmark-black.svg), blob 04276a5ac2a927294f48e7fec2c2281754ad75c3 | Asset oficial já público; não redesenhar/substituir por tipografia |
 
-## Busca da Home exata — alcance e limite
+## Histórico da busca inicial — resultado superado pela recuperação R1
 
 Reconsultadas as branches remotas, histórico `git log --all`, nomes/objetos alcançáveis e HTMLs em ambas as origens. Inventários locais: 2.796 objetos/nome na origem privada e 582 no destino; 9 caminhos HTML históricos privados. Buscas por v5.3/v53/v5.1/charcoal/home-motion/bento encontraram o handoff, não seu HTML final. `git fsck --no-reflogs --unreachable` não revelou objeto local perdido relevante. Isso não cobre commits apagados que nunca chegaram a estes clones ou artefatos externos.
 
-Drive: buscas restritas `goduoit-home-motion-v5`, `goduoit home v5.3`, `goduoit-home-motion-v5.1-homologada.html` retornaram zero resultados. Skill Google Drive usada somente para leitura; nenhuma alteração/compartilhamento. **Library de conversas ChatGPT não tem ferramenta de acesso disponível nesta sessão**. Não foi possível inspecionar uploads históricos externos ou recuperar uma URL/arquivo V5.3 inexistente nas fontes acessíveis. Não se afirma inexistência universal do HTML.
+Drive: buscas restritas `goduoit-home-motion-v5`, `goduoit home v5.3`, `goduoit-home-motion-v5.1-homologada.html` retornaram zero resultados. Skill Google Drive usada somente para leitura; nenhuma alteração/compartilhamento. **Library de conversas ChatGPT não tem ferramenta de acesso disponível nesta sessão**. Na P2-A inicial não foi possível inspecionar uploads históricos externos nem localizar o HTML nas fontes acessíveis naquele momento. Não se afirma inexistência universal do HTML.
+
+**R1:** proprietário forneceu a nova branch preview/home-treinos-v53-rawgithack e commit fixo acima. Git confirmou arquivo/blob; curl HTTP200 retornou os mesmos bytes. Chromium inicialmente recebeu External Content Notice; após Open the page, exibiu a V5.3 com cinco Pulses e zero pageerrors. Execução local dos bytes originais nas cinco larguras confirma geometria/comportamentos. Nenhuma inferência de indisponibilidade anterior continua como gate atual.
 
 V3.5/PNG antigo, V5.1, V5.2 e Motion V2 são históricos/estudos nas propriedades substituídas. Não produzir imagem nova da Home e chamá-la de recuperação.
 

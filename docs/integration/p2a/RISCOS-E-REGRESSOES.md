@@ -6,8 +6,8 @@ Nenhuma correção é executada na P2-A. P1-R1 está homologada; propostas abaix
 
 | ID | Problema / evidência atual | Impacto | Solução mínima PROPOSTA para P2-B | Teste/gate |
 |---|---|---|---|---|
-| R01 | HTML Home V5.3 ausente; medidas flexíveis em abfd989 | “Pixel perfeito” inventado, restauração V5.1 | Recuperar referência ou autorizar recorte visual homologável por contrato; não medir PNG antigo como final | G01; H-01, revisão humana |
-| R02 | Peso estrutural citado, detalhes #159 pendentes | Reordenar Bento ou implantar saúde falsa | Gate G03: adiar recorte dependente ou aprovar slot neutro sem número/coleta; sem fabricar UI definitiva | H-04; sem storage sensível |
+| R01 | **Lacuna de fonte resolvida** em0731832; CSS acumula V2/V4/V5/V5.1/V5.3 | Extrair camada antiga/frame em vez do conteúdo final | Usar V-HOME-HTML e estilos computados, medições e matriz A–E; G01 encerrado | H-01 regional; sem comparar chrome HTML |
+| R02 | Peso estrutural citado, detalhes #159 pendentes | Reordenar Bento ou implantar saúde falsa | Gate G03: manter footprint do Peso e aprovar slot neutro compacto sem número/coleta; não eliminar/reordenar o cluster, não portar formulário experimental | H-04; sem storage sensível |
 | R03 | P1 Routine só id/name/days; sem ordem/capa/modalidade; Exercise só id/name | Perder capacidade histórica ou criar stores paralelos | Estender entidades normalizadas com campos autorizados e UI-state por rotina/dia; catálogos separados; manter provider | D-01/D-02; G06 |
 | R04 | P1 não tem rascunho, catálogo completo/equipamentos; loadKg opcional/params numéricos | Modificações vazam antes de salvar, ID sem equipamento legítimo | Draft com origin/routine/day/sourceRevision/items e strings transitórias; validar/normalizar na confirmação; catálogo por ID | D-03; cancelamento/revisão obsoleta |
 | R05 | `workout/commit` pode vincular mesmo workoutId a dois dias; teste P1 atualiza ambos | Cópia de dia editar outro dia sem intenção | Definir cópia→novo ID versus referência compartilhada; evitar mudar semântica existente silenciosamente | D-04, decisão G06 |
@@ -20,9 +20,19 @@ Nenhuma correção é executada na P2-A. P1-R1 está homologada; propostas abaix
 | R12 | Duplicidade HTML por nome; legado permite forceDuplicate | IDs distintos/aliases duplicam ou bloqueiam exercícios errados | ID canônico de catálogo; guardas no draft+commit; registro de mapeamento/migração | L-02/L-03 |
 | R13 | Equipment domain importa foto; fixtures importam GIFs e autores | Vazamento transitivo no bundle público | Port granular A02 sem seed/foto; fixtures novas sintéticas; auditoria de imports/bytes reais | B-01; allowlist e direitos |
 | R14 | Bibliotecas contextual e independente têm papéis distintos | Perder ficha/criação/equipamentos ou ampliar escopo indevido | Reusar dados/seleção por IDs, manter dois consumidores/destinos; não importar upload/moderação só para incluir exercício | L-04 e gate de escopo |
-| R15 | HomeShell contém Feed/Pulse/Business/header/nav em arquivo único | Novo Bento redesenha Feed ou duplica chrome | Corpos locais em HomeCompositions; usar apenas um header/TabBar P1; CSS namespace e tokens locais | P-01–P-05 |
+| R15 | HomeShell contém Feed/Pulse/Business/header/nav em arquivo único | Novo Bento redesenha Feed ou duplica chrome | Corpos/Pulse locais em HomeCompositions, com gutters coordenados; um header/TabBar P1; não importar #screen com rotas sociais nem CSS global do HTML | P-01–P-05 |
 | R16 | #152 inclui posts extras e fallback de perfil ausente para próprio | QA vira conteúdo comum; perfil errado | Não portar #152 em massa. Futuro resolvedor own/visited por ID, unknown→indisponível, sem conteúdo QA | P-03/P-04; sem Feed na P2-A |
 | R17 | Público inclui bundle; revisão de licença ainda pendente | Divulgação não autorizada mesmo com minificação | Autorizar cada recorte, dados/mídia; repetir guardas de bundle/maps e registrar provenance/lock/SHA | B-01/B-02 |
+
+## Regra adicional da recuperação
+
+R18 — **Home não é Shell.** Evidência: HTML usa raster goduoit, SVGs inline, fonte sistema, viewport maximum-scale=1, frame max820, screen622 e variáveis de navegação próprias. Impacto: substituir chrome/fonte/zoom/estado homologados e redesenhar outras tabs. Solução mínima: extrair somente contrato do conteúdo #homeView, usar dois nós feature-owned para Pulse/Bento, manter P1-R1 integral; nenhuma alteração estrutural de Shell justificada pela bancada. Testes C-01/H-01/H-02/P-01–P-05 e matriz A–E. A proposta R09 continua restrita a necessidade real de Rotinas já documentada, não autorização de adotar header experimental da Home.
+
+R19 — **CTA mock e vazios ausentes.** Começar treino abre Rotinas demonstrativa, dados de seleção/datas são hardcoded e não há Home sem treino/evento configurável. Não importar o destino como sessão funcional nem fabricar um vazio “homologado”. Usar intenção com workoutId/revision/origin, destino autorizado ou estado indisponível honesto; revisar os vazios por recorte (G03/G06). Testes D-01/N-01/H-01/S-03.
+
+R20 — **Estado visual Pulse.** Geometria resolvida; HTML tem blue/lime/cinza, texto institucional goduoit e badge1. Preservar squircle/posição e adaptar SVG/identidade, sem globalizar cores ou dados. Semântica de vistos/não vistos, mídia/destino/ocultação permanecem gate G02. Testes H-02/P-02.
+
+R21 — **Alvos locais do HTML não substituem acessibilidade.** Dots7/19×7, fechar29 e CTA43 são medidas experimentais; P1 exige alvos44 e zoom acessível. Preservar geometria visual, propor hit areas não sobrepostas com espaço reservado; em320 validar acomodação do grupo de seletores sem colisão com CTA. Não copiar swipe que usa apenas dx e ignora dy. Solução/ajuste local deve ser revisado (G05), sem trocar Shell; QA C-01/H-01/H-03/touch/scroll.
 
 ## Fronteiras de CSS e composição
 

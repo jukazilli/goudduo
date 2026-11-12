@@ -58,3 +58,7 @@ Falha potencial de referência: handler Escape é registrado no root e o foco po
 O legado PR154 também foi executado em worktree separado, viewport390, abrindo Rotinas pelo HomeShell; screenshot privada e ausência de pageerrors confirmadas. Não é V7.4 nem baseline de paridade visual final.
 
 A melhoria de **descoberta de navegação entre exercícios** continua PENDENTE em #28. Não tornar setas sticky, criar dicas ou tutorial por inferência. Dados/modelos/overlays necessários estão nos riscos e plano; esta missão não os implementa.
+
+## P2-A-R1 — somente reconciliação com a Home recuperada
+
+[HTML Home0731832 auditado](HOME-V53-HTML-RECUPERADO.md) não revoga este contrato V7.4. O hero seleciona exemplos e Começar treino abre Rotinas ilustrativa; futuro adapter deve transportar rotina/dia/workoutId/revision e origem legítimos, não arrays locais ou uma sessão falsa. Salvar no Editor deve atualizar o mesmo treino que os seletores Home reconhecem. Reflow de widgets Home por grupos difere do reflow de Rotinas; não unificar seus algoritmos de desenho por conveniência. Nenhum teste/redesign V7.4 foi reaberto nesta R1; suas regras de Biblioteca/0–1–2/nomeação e o achado Escape390 permanecem documentados.
