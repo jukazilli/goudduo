@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<title>GODUOIT · Home Treinos V5.3 · Preview</title>
+<style>
+:root {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;color:#10202b;background:#eaf1f5;font-synthesis:none;}
+* {box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #00a8e8;outline-offset:2px}button:disabled{opacity:.45;cursor:default}
+.stage{padding:12px 0;display:flex;justify-content:center;min-width:0}.app{width:min(100%,440px);height:740px;max-height:calc(100dvh - 24px);min-height:560px;background:#f3f8fb;display:flex;flex-direction:column;border:1px solid #d7e2e9;border-radius:25px;box-shadow:0 18px 50px #253e4a1a;overflow:hidden;position:relative}
+.top{background:#fff;padding:15px 20px 11px;z-index:4;box-shadow:0 1px 0 #e4edf0}.top-row{display:flex;align-items:center;justify-content:space-between;gap:12px}.wordmark{font-weight:850;font-size:23px;letter-spacing:-1.25px;font-style:italic}.wordmark strong{color:#006da9}.top-right{display:flex;gap:7px;align-items:center}.icon-btn{width:34px;height:34px;display:grid;place-items:center;border:1px solid #dbe5eb;background:#f6fafb;border-radius:50%;color:#10202b}.icon-btn svg{height:19px;width:19px}.seg{display:flex;gap:21px;margin-top:11px;font-size:13px}.seg b{padding-bottom:8px;border-bottom:2px solid #00a8e8}.seg span{color:#7f909b;padding-bottom:8px}.labtag{font-size:10px;font-weight:700;background:#ebf8fd;color:#006da9;padding:4px 7px;border-radius:7px}
+.screen{padding:16px 14px 18px;overflow-y:auto;overscroll-behavior:contain;flex:1;scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:#bfd3df transparent}.intro{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:0 0 13px}.intro-min{justify-content:flex-end}.intro h1{font-size:20px;margin:0;letter-spacing:-.6px}.intro p{margin:3px 0 0;color:#738592;font-size:12px}.reset{font-size:11px;border:0;background:transparent;color:#006da9;font-weight:650;padding:8px}
+.dashboard{display:flex;flex-wrap:wrap;gap:11px;align-items:stretch}.tile{position:relative;order:var(--order);width:calc((100% - 11px)/2);min-width:0;flex-shrink:0;border:1px solid #d9e5ea;border-radius:22px;background:#fff;box-shadow:0 3px 13px #173c4b0a;min-height:153px;padding:14px;isolation:isolate;transition:box-shadow .25s ease,background .25s ease}.tile:focus-within{z-index:1}.tile.expanded{width:100%;min-height:0;background:#fff;box-shadow:0 7px 23px #153d4d16}.tile .tap{border:0;background:transparent;text-align:left;color:inherit;width:100%;padding:0;display:block}.tile .tap:active{opacity:.8}.tile-head{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:27px}.tile-label{font-size:13px;font-weight:760;letter-spacing:-.2px}.ico{width:19px;height:19px;stroke:currentColor;stroke-width:1.85;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.tile-icon{height:33px;width:33px;border-radius:12px;display:grid;place-items:center;background:#ebf6fc;color:#0079b1}.tile-icon.alt{background:#edf5de;color:#627e24}.tile-meta{color:#81939d;font-size:11px;margin:9px 0 0}.tile-value{font-weight:780;font-size:30px;letter-spacing:-1.1px;line-height:1;margin-top:20px;white-space:nowrap}.tile-value small{font-size:15px;letter-spacing:0}.tile-note{font-size:11px;color:#6b7c88;margin-top:6px;line-height:1.25}.chev{font-size:18px;color:#9eafba;line-height:1}.tile.expanded .chev{display:none}.xbtn{display:none;width:29px;height:29px;border:0;border-radius:50%;background:#ebf1f4;color:#354c59;align-items:center;justify-content:center}.tile.expanded .xbtn{display:flex}.tile.expanded .tile-value{margin-top:6px}.tile.expanded .tap{width:calc(100% - 35px)}.tile.expanded .tile-note{margin-bottom:4px}.card-top{display:flex;justify-content:space-between;align-items:flex-start}.expanded-body{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .36s cubic-bezier(.22,1,.36,1),opacity .28s ease}.expanded-body>.inner{overflow:hidden;min-height:0}.tile.expanded .expanded-body{grid-template-rows:1fr;opacity:1}.inside{padding-top:13px;margin-top:13px;border-top:1px solid #e6edf1}.inside h3{font-size:13px;margin:0 0 10px}.inside p{font-size:12px;color:#6a7e88;line-height:1.4;margin:8px 0}.tile.rank{background:linear-gradient(145deg,#f3f8fb 0%,#fff 100%)}.tile.rhythm{background:linear-gradient(145deg,#eff8ed,#fff 70%)}.tile.weight{background:linear-gradient(145deg,#eaf7fe,#fff 72%)}.tile.measure{background:linear-gradient(145deg,#f2f3ff,#fff 72%)}.tile.photos{background:linear-gradient(145deg,#f6f2ff,#fff 72%)}.tile.records{background:linear-gradient(145deg,#fff9ec,#fff 72%)}.tile.library{background:linear-gradient(135deg,#f3f9fc,#fff 80%)}
+.inline-row{display:flex;gap:9px;align-items:flex-end;flex-wrap:wrap}.field{display:flex;flex-direction:column;gap:5px;flex:1;min-width:105px}.field label{font-size:11px;color:#546a78;font-weight:700}.field input,.field select{border:1px solid #d0dce3;border-radius:12px;background:#fff;padding:11px 10px;min-height:42px;width:100%;font-size:16px;color:#10202b}.primary{border:0;border-radius:12px;background:#00a8e8;color:#10202b;font-weight:770;padding:11px 15px;min-height:42px;white-space:nowrap}.mini{border:1px solid #cbdce6;border-radius:10px;background:white;padding:8px 10px;font-size:12px;font-weight:650;color:#244b60}.hint{font-size:11px!important;color:#7a8c97!important}.confirm{font-size:12px;font-weight:670;color:#127b57!important;min-height:16px;margin:7px 0 0!important}.error{color:#bb4050!important}.chart{height:65px;width:100%;display:block;margin:7px 0 14px}.history{display:flex;gap:5px;justify-content:space-between;padding:8px 0;border-top:1px solid #edf2f5;font-size:12px}.history span{color:#778995}.history strong{font-variant-numeric:tabular-nums}.rank-row{display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid #edf2f5;font-size:13px}.rank-row:last-child{border:0}.rank-num{width:26px;height:26px;display:grid;place-items:center;background:#f0f5f8;border-radius:9px;font-size:11px;font-weight:780}.rank-row .points{margin-left:auto;font-size:12px;font-weight:760}.week{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin:12px 0}.day{text-align:center;font-size:10px;color:#81939d}.day b{display:grid;place-items:center;border-radius:50%;height:30px;width:30px;margin:4px auto 0;border:1px solid #d9e6ec;font-weight:720;color:#9aabb5}.day.done b{background:#c7f238;border-color:#c7f238;color:#10202b}.day.rest b{background:#eef3f6;border:0;color:#5d7483}.pills{display:flex;gap:6px;flex-wrap:wrap}.pill{font-size:11px;border-radius:30px;padding:7px 9px;background:#eef5f9;color:#477082;font-weight:650}.record{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid #e9eff3}.record:last-child{border:0}.record strong{font-size:12px}.record small{font-size:10px;display:block;color:#7d8c95;margin-top:3px}.record b{font-size:14px;white-space:nowrap}.photo-box{border:1px dashed #afbfca;border-radius:13px;padding:17px;text-align:center;background:#fff}.photo-box b{display:block;font-size:13px}.photo-box p{font-size:11px;margin:7px 0 12px}.file-label{display:inline-block;background:#eaf7fe;border-radius:11px;padding:10px 13px;font-size:12px;color:#006da9;font-weight:750;cursor:pointer}.photo-preview{max-width:100%;max-height:180px;border-radius:12px;margin-top:10px;display:none}.photo-box.has-photo .photo-preview{display:block;margin-inline:auto}.photo-box input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}.photo-box .photoName{margin-top:8px;font-size:11px;color:#6b7d88;word-break:break-word}
+.workout{width:100%;min-height:188px;background:linear-gradient(115deg,#0b3854 0%,#006da9 55%,#00a8e8 140%);border:0;color:#fff;padding:16px 17px 17px;box-shadow:0 8px 18px #03689930;overflow:hidden}.workout:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;border:35px solid #ffffff0c;right:-55px;top:-55px}.workout .eyebrow{font-size:10px;font-weight:760;letter-spacing:.9px;opacity:.72;text-transform:uppercase}.workout h2{font-size:22px;max-width:250px;line-height:1.13;margin:12px 0 4px;letter-spacing:-.7px}.workout p{margin:0;font-size:12px;color:#d9eff8}.workout-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:18px;gap:10px}.workout .workout-go{border:0;background:#fff;color:#064469;padding:10px 14px;border-radius:10px;font-weight:780;font-size:12px}.dots{display:flex;gap:4px}.dots span{width:5px;height:5px;background:#ffffff75;border-radius:50%}.dots span.on{width:16px;background:#fff;border-radius:10px}.workout-switch{display:flex;gap:5px}.workout-switch button{border:1px solid #ffffff50;background:#ffffff15;border-radius:50%;width:29px;height:29px;color:#fff;font-size:18px}.workout:focus-within{z-index:0}
+.bottom{background:#fff;box-shadow:0 -3px 15px #263d4c0d;border-top:1px solid #e5edf2;display:flex;justify-content:space-around;padding:9px 12px 14px;z-index:3}.bottom button{border:0;background:transparent;color:#8da0ad;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:10px;min-width:50px;min-height:42px}.bottom button.active{color:#006da9;font-weight:780}.bottom svg{width:20px;height:20px}
+.route{display:none}.route.show{display:block}.route-top{display:flex;align-items:center;gap:12px;margin-bottom:18px}.back{border:0;border-radius:12px;background:#e2ecf2;color:#10202b;padding:9px 13px;font-weight:750}.route h2{font-size:20px;margin:0}.route p{font-size:12px;color:#728592}.routine{background:#fff;border:1px solid #dae5eb;border-radius:16px;padding:16px;margin:10px 0}.routine strong{display:block;font-size:16px}.routine small{font-size:12px;color:#708592}.toast{position:absolute;bottom:79px;left:50%;transform:translate(-50%,12px);z-index:9;background:#10202b;color:white;border-radius:11px;padding:10px 14px;box-shadow:0 5px 20px #112e3d39;font-size:12px;width:max-content;max-width:90%;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (max-width:450px){.stage{padding:0}.app{border-radius:0;border:0;width:100%;height:min(780px,100dvh);max-height:none;min-height:560px}.top{padding-top:14px}.screen{padding-inline:12px}.tile{padding:12px;border-radius:19px;min-height:147px}.tile-value{font-size:27px}.tile-label{font-size:12px}}
+@media (max-width:345px){.dashboard{gap:8px}.tile{width:calc((100% - 8px)/2)}.tile-value{font-size:24px}.tile-head{gap:4px}.tile-icon{width:28px;height:28px}.tile-label{font-size:11px}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:0.01ms!important;animation-duration:0.01ms!important}}
+
+/* V2: shell unificado, mesmo vocabulário do GODUOIT */
+:root{background:#eef3f6}
+.app{background:#fff;box-shadow:0 20px 42px #20364611}
+.top{padding:0;background:#fff;box-shadow:0 3px 9px #0e29350b;z-index:5}
+.statusline{height:26px;padding:8px 19px 0;display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:750;letter-spacing:.2px;color:#10202b}
+.statusline .baticon{font-size:12px;color:#cb9a05}
+.top-row{height:63px;display:grid;grid-template-columns:1fr auto 1fr;gap:3px;padding:0 11px;position:relative}
+.top-left{display:flex;align-items:center;justify-content:flex-start}
+.top-right{display:flex;align-items:center;justify-content:flex-end;gap:3px}
+.icon-btn{border:none;background:transparent;border-radius:50%;width:40px;height:44px}
+.icon-btn svg{width:25px;height:25px;stroke-width:2.15}
+.brandcluster{display:flex;align-items:center;justify-content:center;min-width:130px}
+.brandlogo{border:0;background:transparent;display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:0}
+.brandlogo img{width:107px;height:auto;display:block;mix-blend-mode:multiply}
+.chevsmall{display:grid;place-items:center;width:15px}
+.chevsmall svg{height:15px;width:15px;stroke-width:2.5}
+.seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:0;padding:0 6px;height:48px;align-items:stretch;font-size:13px}
+.seg button{border:0;background:transparent;position:relative;color:#788a9a;font-weight:570;padding:8px 3px 13px;white-space:nowrap}
+.seg button.selected{color:#10202b;font-weight:760}
+.seg button.selected:after{content:"";position:absolute;left:28%;right:28%;bottom:0;background:#00a8e8;height:3px;border-radius:8px 8px 0 0}
+.screen{background:#fff;padding:13px 12px 22px;scroll-behavior:smooth}
+.intro{margin:0 3px 12px}
+.intro-title{font-size:12px;font-weight:750;color:#536c7b}
+.intro p{font-size:10px;margin:2px 0 0;color:#9aa9b3}
+.reset{font-size:10px;color:#8297a5}
+.dashboard{gap:10px}
+.tile{width:calc((100% - 10px)/2);border:1px solid #e3ebef;background:#fff;box-shadow:0 3px 13px #10202b0b;min-height:143px;border-radius:19px;padding:12px}
+.tile.rank,.tile.rhythm,.tile.weight,.tile.measure,.tile.photos,.tile.records,.tile.library{background:linear-gradient(155deg,#f7fbfd,#fff 76%)}
+.tile .tile-label{font-size:13px}
+.tile-value{font-size:29px;margin-top:18px}
+.tile-note{font-size:10.5px}
+.tile.expanded{box-shadow:0 8px 23px #10202b14}
+.tile-icon{background:#eef6fa;color:#10202b;border-radius:10px}
+.tile-icon.alt{background:#eff7e7;color:#537d20}
+.tile.workout{width:100%;min-height:229px;padding:20px 16px;background:#242a31;box-shadow:none}
+.workout:before{display:none}
+.workout .eyebrow{font-size:11px;opacity:.96}
+.workout h2{font-size:24px;max-width:none;text-shadow:0 1px 6px #0008;margin-top:36px}
+.workout p{font-size:13px;color:#0ad6ff;font-weight:780;text-shadow:0 1px 3px #0009}
+.workout .workout-go{background:#00a8e8;color:#10202b;min-height:40px;flex:1;font-size:13px}
+.workout-bottom{margin-top:15px}
+.workout-switch button{background:#ffffff26}
+.bottom{height:61px;min-height:61px;padding:7px 10px calc(10px + env(safe-area-inset-bottom,0px));border-top:1px solid #ebeff2;box-shadow:0 -3px 15px #10202b07}
+.bottom button{min-width:45px;min-height:42px;color:#718296;position:relative;border-radius:11px}
+.bottom button.active{color:#00a8e8}
+.bottom svg{width:26px;height:26px;stroke-width:2.1}
+.avatar{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;width:27px;height:27px;background:#dce9f0;color:#144865;font-size:12px;font-weight:800;border:2px solid #c0cfda}
+.avatar.tiny{width:33px;height:33px}
+.search-area{margin:0 14px 11px;padding:10px;border:1px solid #e4eef3;border-radius:13px;background:#f8fbfd}
+.search-area[hidden],.accountmenu[hidden]{display:none!important}
+.search-area label{font-size:11px;color:#77909e}
+.search-line{display:flex;align-items:center;gap:8px}
+.search-line .ico{color:#7995a3;flex-shrink:0}
+.search-line input{border:0;border-bottom:1px solid #d7e5ee;outline:0;background:none;min-width:0;flex:1;font-size:16px;padding:9px 0}
+.search-line button{border:0;background:none;font-size:21px;color:#718a9b}
+.search-result{font-size:11px;color:#6c8190;padding-top:7px}
+.route.show{display:block;animation:slidein .27s ease}
+@keyframes slidein{from{opacity:.2;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.feedhead{font-size:18px;font-weight:800;margin:8px 0 13px;display:flex;justify-content:space-between;align-items:center}
+.feedhead span{font-size:10px;color:#8295a5;font-weight:500}
+.post{border:1px solid #e7eff4;border-radius:17px;background:white;padding:13px;box-shadow:0 4px 18px #13313e0b}
+.post-author{display:flex;align-items:center;gap:9px}
+.post-author strong{font-size:12px}
+.post-author small{display:block;color:#8b9eaa;font-size:10px}
+.post-author button{margin-left:auto}
+.post-media{height:190px;background:linear-gradient(135deg,#b6d9e8,#f0f6f9);border-radius:13px;margin:13px 0;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#3d7087;font-size:12px;gap:8px}
+.post-media svg{height:35px;width:35px}
+.post p{font-size:12px}
+.post-actions{display:flex;gap:6px}
+.post-actions button{background:none;border:0;color:#42697c;font-size:11px;padding:7px 5px}
+.layer{pointer-events:none;opacity:0;position:absolute;inset:0;z-index:10;transition:opacity .22s}
+.layer.show{opacity:1;pointer-events:auto}
+.scrim{border:0;background:#10202b63;position:absolute;inset:0;width:100%;height:100%}
+.sheet{position:absolute;bottom:0;background:#fff;width:100%;border-radius:22px 22px 0 0;padding:9px 18px 24px;transform:translateY(105%);transition:transform .31s cubic-bezier(.2,.78,.2,1);box-shadow:0 -12px 30px #10202b20}
+.layer.show .sheet{transform:translateY(0)}
+.handle{width:42px;height:4px;background:#dce6eb;border-radius:9px;margin:0 auto 12px}
+.sheethead{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.sheethead h2{font-size:17px;margin:0 0 12px}
+.sheethead button{border:0;background:#eef3f6;border-radius:50%;width:30px;height:30px;font-size:20px}
+.sheetitem{width:100%;border:0;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:14px 3px;border-bottom:1px solid #edf2f5;font-size:14px;text-align:left;color:#10202b}
+.sheetitem:last-child{border:0}
+.sheetitem small{font-size:11px;color:#8da0aa}
+
+.pulse-shell{margin:0 0 14px}.pulse-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px}.pulse-head strong{font-size:13px;letter-spacing:-.2px}.pulse-head button{border:0;background:transparent;color:#006da9;font-size:11px;font-weight:700;padding:0}.pulse-row{display:flex;gap:10px;overflow:auto;padding-bottom:2px;scrollbar-width:none}.pulse-row::-webkit-scrollbar{display:none}.pulse-item{border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:6px;min-width:60px;padding:0;color:#435968}.pulse-avatar{position:relative;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:17px;color:#10202b;background:linear-gradient(145deg,#fff,#eef5f8);border:1px solid #d7e4eb;box-shadow:0 4px 10px #173c4b0b}.pulse-item.seen .pulse-avatar{border-color:#d4dfe7}.pulse-item.unseen .pulse-avatar{background:linear-gradient(145deg,#ffffff,#f1f8fb)}.pulse-item.unseen .pulse-avatar:before{content:"";position:absolute;inset:-3px;border-radius:50%;padding:2px;background:linear-gradient(160deg,#00a8e8,#c7f238);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}.pulse-item.own .pulse-avatar:after{content:"+";position:absolute;right:-1px;bottom:-1px;width:19px;height:19px;border-radius:50%;background:#00a8e8;color:#10202b;font-size:16px;display:grid;place-items:center;border:2px solid #f3f8fb}.pulse-item small{font-size:10px;color:#708390;line-height:1.1;text-align:center;max-width:64px}.pulse-note{font-size:11px;color:#81929d;margin:7px 0 0}.pulse-badge{position:absolute;right:-1px;top:-1px;min-width:18px;height:18px;padding:0 5px;border-radius:10px;background:#10202b;color:#fff;font-size:9px;font-weight:800;display:grid;place-items:center;border:2px solid #f3f8fb}.business-note{margin-bottom:12px}.business-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 14px}.bizcard{background:#fff;border:1px solid #dae5eb;border-radius:18px;padding:14px;min-height:112px;box-shadow:0 3px 12px #173c4b08}.bizcard strong{display:block;font-size:14px;margin-top:18px}.bizcard small{display:block;font-size:11px;color:#728491;margin-top:6px}.bizicon{width:34px;height:34px;border-radius:12px;background:#eef6fb;color:#006da9;display:grid;place-items:center}.bizicon svg{width:18px;height:18px;stroke-width:2}.bizstack{display:flex;justify-content:space-between;align-items:flex-start}.bizcount{font-size:12px;font-weight:800;color:#00a8e8;background:#ecf9fd;padding:4px 8px;border-radius:999px}
+
+.accountmenu{position:absolute;z-index:12;top:75px;left:50%;transform:translateX(-50%);padding:12px 14px;background:#fff;border:1px solid #dbe7ed;border-radius:13px;box-shadow:0 9px 23px #122a3b20;min-width:180px;font-size:12px}
+.accountmenu p{font-size:11px;color:#8799a6}
+.accountmenu button{border:0;background:none;color:#006da9;font-weight:700}
+@media(max-width:450px){.app{height:min(820px,100dvh)}.top{padding-top:0}}
+@media(max-width:350px){.top-row{padding:0 4px}.brandlogo img{width:93px}.tile-value{font-size:25px}.tile-label{font-size:11px}.seg button{font-size:12px}}
+
+
+/* =========================================================
+   V4 — HARMONIA BENTO / APPLIED FROM FITNESS UI REFERENCE JSON
+   Visual source: fitness_tres_telas_detalhadas.json
+   Scope: Home widgets, program highlight, support surfaces.
+   Do not change the established GODUOIT logo, tabs, navigation,
+   Pulse controls, route structure, or existing expanded contents.
+   ========================================================= */
+:root{
+  --bento-ink:#161719;
+  --bento-sub:#6d7982;
+  --bento-pale:#a0a8ae;
+  --bento-blue:#e3f0ff;
+  --bento-mint:#eff8e0;
+  --bento-neutral:#f3f3f3;
+  --bento-lavender:#f3f2fb;
+  --bento-ivory:#fff8e9;
+  --bento-radius:25px;
+  --bento-gap:11px;
+  --bento-shadow:0 3px 12px rgba(19,37,46,.035);
+  --bento-easing:cubic-bezier(.22,1,.36,1);
+}
+.app{background:#fff}
+.screen{background:#fff;padding:15px 16px 26px}
+.intro{margin:0 3px 12px}
+.pulse-shell{margin-bottom:19px}
+.pulse-head{margin-bottom:11px}
+.pulse-head strong{font-size:13px;font-weight:720;color:var(--bento-ink)}
+.pulse-row{gap:13px;padding:3px 1px 4px}
+.pulse-item{min-width:58px;gap:8px}
+.pulse-avatar{height:53px;width:53px}
+.pulse-item small{font-size:10px}
+.dashboard{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-auto-flow:row;
+  align-items:stretch;
+  gap:var(--bento-gap);
+}
+.tile,.tile.rank,.tile.rhythm,.tile.weight,.tile.measure,.tile.photos,.tile.records,.tile.library{
+  width:auto;
+  min-width:0;
+  border:1px solid rgba(32,55,67,.025);
+  box-shadow:var(--bento-shadow);
+  border-radius:var(--bento-radius);
+  padding:16px;
+  color:var(--bento-ink);
+  transition:box-shadow .3s ease,background .3s ease,border-color .3s ease;
+}
+.tile:focus-within{z-index:2}
+.tile.rank{background:var(--bento-blue);min-height:218px;grid-row:span 2;}
+.tile.rhythm{background:var(--bento-mint);min-height:103px;}
+.tile.weight{background:var(--bento-neutral);min-height:103px;}
+.tile.measure{background:#f2f4ff;min-height:144px;}
+.tile.library{background:#f1f6f9;min-height:144px;}
+.tile.photos{background:#f6f0fb;min-height:144px;}
+.tile.records{background:#fff7ea;min-height:144px;}
+.tile.streak{background:#f4f7f8;grid-column:span 2;min-height:99px;}
+.tile-icon,.tile-icon.alt{width:38px;height:38px;border-radius:15px;background:rgba(255,255,255,.93);color:var(--bento-ink);box-shadow:0 1px 3px #17293308}
+.tile-icon .ico{width:18px;height:18px;stroke-width:1.8}
+.tile-label,.tile .tile-label{font-size:12.5px;font-weight:720;letter-spacing:-.25px;line-height:1.15}
+.tile-head{min-height:38px;gap:6px}
+.tile-value{font-size:28px;line-height:1.06;margin-top:16px;font-weight:800;letter-spacing:-.8px}
+.tile-value small{font-size:14px;font-weight:700;letter-spacing:-.25px}
+.tile-note{color:#76838c;font-size:11px;line-height:1.3;margin-top:7px}
+.tile .tap{border-radius:8px}
+/* Dominant metric on left: vertically balanced, same hierarchy as JSON blue card. */
+.tile.rank{padding:19px 16px 18px}
+.tile.rank .tile-head{flex-direction:column-reverse;justify-content:center;gap:10px;min-height:0;margin-top:7px}
+.tile.rank .tile-icon{height:48px;width:48px;border-radius:50%}
+.tile.rank .tile-icon .ico{width:21px;height:21px}
+.tile.rank .tile-value{text-align:center;font-size:39px;letter-spacing:-1.4px;margin-top:18px}
+.tile.rank .tile-note{text-align:center;margin-top:7px;white-space:normal;color:#617284}
+/* Secondary stacked cards: compact, calm, and free of vertical dead zones. */
+.tile.rhythm,.tile.weight{padding:11px 13px}
+.tile.rhythm .tile-head,.tile.weight .tile-head{min-height:29px}
+.tile.rhythm .tile-icon,.tile.weight .tile-icon{height:32px;width:32px;border-radius:13px}
+.tile.rhythm .tile-value,.tile.weight .tile-value{margin-top:5px;font-size:24px;letter-spacing:-.7px}
+.tile.rhythm .tile-value small,.tile.weight .tile-value small{font-size:12px}
+.tile.rhythm .tile-note,.tile.weight .tile-note{margin-top:5px;font-size:10.5px;line-height:1.15}
+/* Supplementary cards vary softly by information type. */
+.tile.library .tile-value{font-size:22px!important;letter-spacing:-.65px}
+.tile.measure .tile-value,.tile.photos .tile-value,.tile.records .tile-value{margin-top:14px}
+/* Weekly activity becomes a slim, horizontal, full-width supporting band. */
+.tile.streak{padding:15px 18px}
+.tile.streak .card-top{display:flex;align-items:center;gap:12px}
+.tile.streak .tap{display:grid;grid-template-columns:1fr auto;align-items:center;gap:7px}
+.tile.streak .tile-head{grid-column:1;grid-row:1;min-height:32px;justify-content:flex-start;gap:10px}
+.tile.streak .tile-icon{height:33px;width:33px;border-radius:50%;order:-1}
+.tile.streak .tile-value{grid-column:1;grid-row:2;margin:0 0 0 42px;font-size:19px;letter-spacing:-.3px}
+.tile.streak .tile-value small{font-size:13px}
+.tile.streak .tile-note{display:none}
+.week-peek{margin-left:auto;display:flex;align-items:end;gap:5px;min-width:78px;height:29px}
+.week-peek span{width:7px;height:14px;border-radius:6px;background:#dbe6e9;display:block;flex-shrink:0}
+.week-peek span:nth-child(2n){height:23px}
+.week-peek span.on{background:#8abe4c}
+.week-peek span.rest{background:#d1dbe0;height:9px}
+/* Editorial hero: the JSON's smooth blue/mint program gradient,
+   with the pre-existing local artwork integrated as a soft right-side layer. */
+.tile.workout{
+  grid-column:span 2;
+  min-height:238px;
+  width:auto;
+  border:0;
+  padding:23px 20px 19px;
+  background:
+    radial-gradient(ellipse 76% 88% at 35% 57%,rgba(219,249,181,.96) 0%,rgba(186,236,202,.72) 47%,transparent 100%),
+    radial-gradient(ellipse 72% 79% at 90% 13%,rgba(145,206,249,.92) 0%,transparent 100%),
+    linear-gradient(128deg,#99d2eb 0%,#afe6da 52%,#86bef2 100%);
+  color:var(--bento-ink);
+  box-shadow:none;
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border-radius:28px;
+}
+.tile.workout:before{
+  content:"";display:block;
+  position:absolute;inset:0 0 0 auto;width:62%;height:100%;
+  background:var(--workout-photo) right 33% center/cover no-repeat;
+  opacity:.43;
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 55%);
+  mask-image:linear-gradient(to right,transparent 0%,#000 55%);
+  filter:saturate(.85) contrast(.92);
+  z-index:-1;
+  pointer-events:none;
+}
+.tile.workout:after{content:"";position:absolute;right:-53px;bottom:-91px;width:200px;height:200px;border-radius:50%;border:1px solid rgba(255,255,255,.24);pointer-events:none;z-index:-1}
+.workout .eyebrow,.workout h2,.workout p,.workout-bottom{position:relative;z-index:1}
+.workout .eyebrow{font-size:10px;letter-spacing:.85px;font-weight:780;opacity:1;color:#325660;text-transform:uppercase}
+.workout h2{font-size:25px;letter-spacing:-.95px;line-height:1.08;margin:29px 0 7px;max-width:64%;color:#121d22;text-shadow:none;overflow-wrap:break-word}
+.workout p{color:#3b6268;font-size:12.5px;font-weight:650;text-shadow:none}
+.workout-bottom{margin-top:21px;gap:9px}
+.workout .workout-go{background:#fff;color:#161719;border-radius:999px;min-height:43px;flex:0 0 auto;min-width:147px;padding:10px 19px;font-size:12.5px;font-weight:760;box-shadow:0 5px 14px #477a8520}
+.workout .workout-go:hover{background:#faffff}
+.workout-switch{display:none}
+.dots{display:flex;align-items:center;gap:6px;margin-left:auto}
+.dots button{appearance:none;width:7px;height:7px;min-width:7px;min-height:7px;padding:0;border:0;border-radius:999px;background:#244a536b;transition:width .25s ease,background .25s ease;cursor:pointer}
+.dots button.on{width:19px;background:#13292e}
+.dots button:focus-visible{outline:2px solid #10202b;outline-offset:4px}
+/* Expansion keeps original content + stable flow, but switches from bento
+   to a regular grid so opening a card never leaves an orphaned empty space. */
+.dashboard.has-expanded{grid-auto-rows:auto;grid-auto-flow:row}
+.dashboard.has-expanded .tile.rank{grid-row:auto;min-height:146px;padding:16px}
+.dashboard.has-expanded .tile.rank .tile-head{flex-direction:row;justify-content:space-between;margin:0;min-height:37px}
+.dashboard.has-expanded .tile.rank .tile-icon{height:38px;width:38px;border-radius:15px}
+.dashboard.has-expanded .tile.rank .tile-value{text-align:left;font-size:28px;margin-top:12px}
+.dashboard.has-expanded .tile.rank .tile-note{text-align:left}
+.dashboard.has-expanded .tile.rhythm,.dashboard.has-expanded .tile.weight{min-height:145px;padding:16px}
+.dashboard.has-expanded .tile.rhythm .tile-value,.dashboard.has-expanded .tile.weight .tile-value{margin-top:15px;font-size:26px}
+.dashboard.has-expanded .tile.streak{grid-column:span 2}
+.dashboard.has-expanded .tile.streak .tile-value{font-size:19px}
+.tile.expanded,.tile.rank.expanded,.tile.rhythm.expanded,.tile.weight.expanded,.tile.measure.expanded,.tile.photos.expanded,.tile.records.expanded,.tile.streak.expanded{
+  background:#fff;
+  grid-column:span 2;
+  border:1px solid #e9edf0;
+  min-height:0;
+  box-shadow:0 10px 28px #20384415;
+  padding:18px;
+}
+.tile.expanded .tile-head{justify-content:space-between}
+.tile.expanded .tile-value{font-size:29px;line-height:1.1;margin-top:7px}
+.tile.expanded .tile-note{display:block;font-size:11px}
+.tile.expanded .week-peek{display:none}
+.tile.expanded .tap{width:calc(100% - 35px)}
+.tile.expanded .xbtn{flex-shrink:0;display:flex}
+.inside{margin-top:13px;padding-top:16px;border-top:1px solid #e9eef1}
+.inside h3{font-size:13px;font-weight:730}
+.field input,.field select{font-size:16px}
+/* Context cards in the Business tab get the same quiet bento language. */
+.business-grid{gap:11px;margin:14px 0 17px}
+.bizcard{border:1px solid #eef1f1;border-radius:24px;min-height:140px;padding:17px;box-shadow:var(--bento-shadow)}
+.bizcard:first-child{background:var(--bento-blue)}
+.bizcard:last-child{background:var(--bento-mint)}
+.bizicon{background:#fff;color:#213c49;border-radius:14px;width:38px;height:38px}
+.bizcount{background:#fff;color:#1d4652}
+.bizcard strong{font-size:16px;letter-spacing:-.3px}
+.bizcard small{font-size:11px;line-height:1.4}
+/* Keep global chrome consistent with pre-existing UI approvals. */
+.top,.bottom{background:#fff}
+@media(max-width:450px){
+  .screen{padding:14px 13px 24px}
+  .dashboard{gap:10px}
+  .tile,.tile.rank,.tile.rhythm,.tile.weight,.tile.measure,.tile.photos,.tile.records,.tile.library{border-radius:23px}
+  .tile.rank{min-height:218px}
+  .workout h2{font-size:24px}
+}
+@media(max-width:355px){
+  .screen{padding-inline:10px}
+  .dashboard{gap:8px}
+  .tile.rank{padding-inline:11px}
+  .tile.rhythm,.tile.weight{padding:10px}
+  .tile.rhythm .tile-label,.tile.weight .tile-label{font-size:11.5px}
+  .tile.rhythm .tile-value,.tile.weight .tile-value{font-size:21px}
+  .tile.rhythm .tile-note,.tile.weight .tile-note{font-size:10px}
+  .tile.measure,.tile.library,.tile.photos,.tile.records{padding:12px}
+  .tile.workout{padding-inline:16px}
+  .workout h2{font-size:22px;max-width:67%}
+  .week-peek{gap:4px;min-width:70px}
+}
+@media(prefers-reduced-motion:reduce){.dots button{transition:none}}
+
+
+/* Expand top metrics as a pair of smaller cards; when lower widgets are expanded,
+   keep the original asymmetric metric cluster intact. */
+.dashboard.has-expanded.focus-lower .tile.rank:not(.expanded){
+  grid-row:span 2;min-height:218px;padding:19px 16px 18px;
+}
+.dashboard.has-expanded.focus-lower .tile.rank:not(.expanded) .tile-head{
+  flex-direction:column-reverse;justify-content:center;gap:10px;min-height:0;margin-top:7px;
+}
+.dashboard.has-expanded.focus-lower .tile.rank:not(.expanded) .tile-icon{width:48px;height:48px;border-radius:50%}
+.dashboard.has-expanded.focus-lower .tile.rank:not(.expanded) .tile-value{
+  text-align:center;font-size:39px;letter-spacing:-1.4px;margin-top:18px;
+}
+.dashboard.has-expanded.focus-lower .tile.rank:not(.expanded) .tile-note{text-align:center;margin-top:7px}
+.dashboard.has-expanded.focus-lower .tile.rhythm:not(.expanded):not(.streak),
+.dashboard.has-expanded.focus-lower .tile.weight:not(.expanded){min-height:103px;padding:11px 13px}
+.dashboard.has-expanded.focus-lower .tile.rhythm:not(.expanded):not(.streak) .tile-value,
+.dashboard.has-expanded.focus-lower .tile.weight:not(.expanded) .tile-value{font-size:24px;margin-top:5px}
+.dashboard.has-expanded .tile.flow-wide{grid-column:span 2;min-height:112px}
+.dashboard.has-expanded .tile.flow-wide .tap{display:grid;grid-template-columns:1fr auto;column-gap:14px;align-items:center}
+.dashboard.has-expanded .tile.flow-wide .tile-head{grid-column:1;grid-row:1}
+.dashboard.has-expanded .tile.flow-wide .tile-value{grid-column:2;grid-row:1;margin:0;font-size:23px}
+.dashboard.has-expanded .tile.flow-wide .tile-note{grid-column:1/-1;grid-row:2;margin-top:3px}
+
+
+/* V5 — HOME TREINOS / CHARCOAL HERO
+   The background is a quiet charcoal gradient, never solid black.
+   The optimized WebP is a small non-interactive right-side accent.
+   No changes to Publicações, Business, global navigation, or fonts. */
+#homeView .intro-min{display:none}
+#homeView .pulse-head{display:none}
+#homeView .pulse-item.own small{visibility:hidden}
+#homeView .pulse-shell{margin-top:0}
+#homeView .tile.workout{
+  min-height:236px;
+  padding:22px 19px 18px;
+  border:1px solid rgba(255,255,255,.035);
+  border-radius:26px;
+  background:
+    radial-gradient(ellipse 86% 94% at 84% 43%,rgba(94,109,119,.22) 0%,transparent 75%),
+    linear-gradient(132deg,#20262d 0%,#30363c 56%,#1c2228 100%);
+  box-shadow:0 9px 25px rgba(29,38,45,.11);
+  color:#f5f7f8;
+  overflow:hidden;
+  isolation:isolate;
+}
+#homeView .tile.workout::before,
+#homeView .tile.workout::after{content:none;display:none}
+#homeView .tile.workout .eyebrow{
+  font-size:10px;
+  font-weight:750;
+  letter-spacing:.75px;
+  color:#bfc9cf;
+  opacity:1;
+  text-shadow:none;
+}
+#homeView .tile.workout h2{
+  font-size:23px;
+  font-weight:775;
+  line-height:1.12;
+  letter-spacing:-.65px;
+  max-width:60%;
+  color:#fff;
+  text-shadow:none;
+  margin:29px 0 7px;
+  position:relative;
+}
+#homeView .tile.workout p{
+  color:#c4ced3;
+  font-size:12.5px;
+  font-weight:560;
+  text-shadow:none;
+  max-width:60%;
+}
+#homeView .tile.workout .workout-bottom{
+  margin-top:22px;
+  position:relative;
+  z-index:2;
+}
+#homeView .tile.workout .workout-go{
+  background:#fff;
+  color:#1b2228;
+  border-radius:999px;
+  min-height:43px;
+  min-width:145px;
+  padding:10px 17px;
+  font-size:12.5px;
+  font-weight:755;
+  box-shadow:0 4px 10px rgba(0,0,0,.11);
+}
+#homeView .tile.workout .workout-go:hover{background:#f1f4f5}
+#homeView .tile.workout .dots button{background:rgba(228,235,240,.35)}
+#homeView .tile.workout .dots button.on{background:#fff}
+#homeView .tile.workout .dots button:focus-visible{outline-color:#fff}
+@media(max-width:355px){
+  #homeView .tile.workout{padding:20px 16px 17px;min-height:236px}
+  #homeView .tile.workout h2{font-size:21px;max-width:61%}
+  
+  #homeView .tile.workout .workout-go{min-width:135px}
+}
+
+/* V5.1 APPROVED: Status is an entry point to #160, never a fake occupancy metric. */
+#homeView .tile.rhythm .tile-value{font-size:26px;letter-spacing:0}
+#homeView .tile.rhythm .tile-note{white-space:normal;overflow-wrap:anywhere}
+#homeView .tile.rhythm.expanded .tile-value{margin-top:10px}
+#homeView .status-issue-link{display:inline-flex;margin-top:8px;padding:9px 12px;border:1px solid #d8e7d2;border-radius:12px;background:#f2f8ec;color:#284d37;font-size:12px;font-weight:750;text-decoration:none}
+#homeView .status-issue-link:focus-visible{outline:3px solid #00a8e8;outline-offset:2px}
+.brandlogo{cursor:default}
+
+/* V5.3 TEST — pulses as rounded-square instants, based on the new shape reference.
+   IMPORTANT: ignore the black matte from the reference image; preserve only the inner squircle-ish shape. */
+#homeView .pulse-shell{margin-bottom:17px}
+#homeView .pulse-row{gap:10px;padding:2px 0 4px}
+#homeView .pulse-item{min-width:58px;gap:7px;align-items:flex-start}
+#homeView .pulse-avatar{
+  width:58px;height:58px;border-radius:19px;
+  display:grid;place-items:center;overflow:hidden;
+  background:linear-gradient(145deg,#fff,#eef4f7);
+  border:1px solid #d7e4eb;box-shadow:0 4px 10px #173c4b0b;
+  position:relative;color:#10202b;font-weight:800;font-size:17px;
+}
+#homeView .pulse-item.unseen .pulse-avatar:before{
+  content:"";position:absolute;inset:-3px;border-radius:21px;padding:2px;
+  background:linear-gradient(160deg,#00a8e8,#c7f238);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+}
+#homeView .pulse-item.seen .pulse-avatar{border-color:#d4dfe7}
+#homeView .pulse-item.own .pulse-avatar:after{
+  content:"+";position:absolute;right:-1px;bottom:-1px;width:19px;height:19px;border-radius:50%;
+  background:#00a8e8;color:#10202b;font-size:16px;display:grid;place-items:center;border:2px solid #f3f8fb;z-index:2;
+}
+#homeView .pulse-item small{font-size:10px;max-width:58px;line-height:1.08;text-align:center;color:#708390}
+#homeView .pulse-card-photo{width:100%;height:100%;object-fit:cover;display:block}
+#homeView .pulse-avatar.brand{background:linear-gradient(155deg,#1f262d,#374049);color:#fff;border-color:#2f3840}
+#homeView .pulse-avatar.brand .brand-mini{font-size:13px;font-weight:780;letter-spacing:-.4px;text-transform:lowercase}
+#homeView .pulse-badge{right:-2px;top:-2px;border-color:#f3f8fb}
+#homeView .tile.rhythm .tile-value{font-size:22px;letter-spacing:-.45px;margin-top:7px}
+#homeView .tile.rhythm .tile-note{font-size:10.8px;line-height:1.15;color:#6f7f89;margin-top:4px}
+#homeView .tile.rhythm .status-name{font-weight:790;color:#14181b}
+@media(max-width:355px){
+  #homeView .pulse-avatar{width:54px;height:54px;border-radius:18px}
+  #homeView .pulse-item{min-width:54px}
+  #homeView .pulse-item small{max-width:54px}
+}
+
+</style>
+</head>
+<body>
+<div class="stage"><div class="app" id="app">
+ <header class="top" id="chrome"><div class="statusline" aria-hidden="true"><b>20:30</b><span>▮▮▮ ◕ <span class="baticon">▰</span></span></div>
+<div class="top-row"><div class="top-left"><button class="icon-btn" id="searchBtn" aria-label="Buscar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.4-4.4M19 10.7a8.3 8.3 0 1 1-16.6 0 8.3 8.3 0 0 1 16.6 0Z"/></svg></button></div>
+<div class="brandcluster"><span class="brandlogo"><img src="data:image/webp;base64,UklGRqQHAABXRUJQVlA4IJgHAABQJgCdASqlACIAPm00lkikIqIhJdK5eIANiWUAxyfV7x+WKJXnuf9uNv6J2cf2L8jv532WPm32RziX16/D/mD6td9vAC/Ef5d/jPyw4ArMfMC9U/on+X+3jnK70f9G/3fHXeQewB/Nv7h/2PZK/lv/V/hfOn+Xf4L/uf5L4Bf5N/T/+X2GP3A9jz9ff/ooVhyt0KB1psDixs1eL5/2mruLDyO54y1ONVR5kVCNM77zkMxF3GYYdZZzEsJsXpr11aBmQXsLtgBazPsInTQuuDxTl8CJiahUUqUCLYU5VQYm+sXvfEBaKAQfMYHNwC7uYK3gUf955V9DxHwwI4F1LP1lzAeT+n/C6G8q2fuuLAzuKbZGoUxB5luod5kVMes7fhG60hTR7kkqb3FVV+UiBLYuxOdLLwvZrZxZewAA/uBAs5RIMinM5uZtYzrkxt7Scilg+4lsDc3RdD0g0XfAAGxGoT0cnMjN4GdQF8w9VMe/DtwMccTgIbN+R2aemQ1/8m3e2FPXmiczs+vGQztuc+auTfAqPDHQC0xRqC4vwQSP6fH0kAVkx+1QvzNnZ+GOdaw90I7JOOoyeLR+X8rVt/GOWsuJBzWrBjExyteaXxCaAjL/CGtfTu+kqN78B29bzR+j/+mG2CVijlkZoFtYLREgQUONNmYJZU36m7VMzNsWXr0Nb1ZMtWkbOhrD/Nvxsq/IB7fR4e4qJIHIv717tPubva9U7PE4VY4lgQXx6zGCIUXXJjG+5br2zOmaTpBsOtZ0IurDKGwTfs6/3ZmCnB5vQ4CwRCpuKuL3T9URNgpHWuHhg7Qi0UrrJxwms6x0NbLSXSnI3nFJwd3X+91fi36mwnOkEqj7Sg4C1qhzPENjZ/8f0wXwJlWVgOO6MRmZNuwknpjGICVgyJWa+7hrKCG5Ri4IggV/V2ZmwvOcYWAufg8ji2iu0oBAdVp5RnG6p5sxreV+KK4+blFFZXmb3w/sw2oZwBVsB/0OD+7i36iGcPt/kZtSd/fEV8CDXTfVEqC7hIBDyhTxTBgNPiqVnL9ji/P6l4Tn4Wl0AKw8Sxev1v5KJjhAKB2XXfCb1v69DpR1hiAMost31HVHL+VMTN7+VXi+KDPerZzUx0e9O0B8Jd1PyV4AUATad3lrgdMAoL0QN1M6UF99XmXWM+QWD6LAeNCQK2n/lEfzyex32KXy9HHRqqZTCEvmvniJzlpnggBaCbhch3hFzcudonyqSrBiRLcgH5b3ev6ND3vvhj6vxihr8LWYYl+P4BNP/lRiOQbeswI2nyGdfBjPR1uLvkrr1jJSB2QiRDwJ7YyVjBBrQTtfNWUfX7uPJR3DjngvlZCwphof1IO8taDs6Ou8t4O9q3LNnynLZttl4rZvAdamYKuty7FIdf8CIl7ydMzlcHNlWtqf7xhv6Ce2/g1FBbyaJesuw3zI9UOGnoq7gqGd42CSfmnJQ/31f6UhswtogjaEb8ahNnv1E440qR93oKfDhHvqLROReM3Lj03nAQaZMa6D22zNDQmLsTbrn54D569QZTzEjs/Skn6fCjOIrTzHBTy1Z5QlJoDUL2gXh42hdarOQ+q/i+rPpQ5Zju6VzH2DpPfuZ0152pVk4Ah/l690VVLe6PKxgdawZjHE+eT1vc5KZfhEEU2q8IVaxuEp9fhcrgn3yrvAFGytTvsmZwAuljw0eoAt9BEM6egBpgrbzqu6X8CMtqUc8MCmVt1qcRSAzTMbhjLpU/L69mvUL0Ps9BOG+DPuYD4SzOdhAL8M4TgNls6JQ6wq12PxfRuEbuEcB728Emahukv588Elmxe0CO00X+MFs7Eo4FWczBqGnGyu3AFh/xoN6FTfsP/8kv6vrR53254SRYzCcTbkIpyMdWNk2gbj4nSMa6jICGNuphhEcc/5s/uYfU/cEH7GklLUPomS/RHzZ/7BlCD94CKNxNmnLL8lhtfve6oqI9EbD+slVLorjrV84zz8PweFbbwDKHmUmthLXfiuZZuG2lLTcdQvgE17BPvu2mhWLtEd86GQYtuzUefXHA1Y28cXKNPb3C+Ru+26IMnyZPVBn5gxOJWxbtLMJ+knRWm18UWehXaTTuRqSY+LGx0hiA53ItlxUnLc1YsrVN4kVgLh+DpeRgZVgp/tnPZ4ngw0RAHolIxn62t0TBNYgIK2S5ynQ2VUYRQHNftViJ/F1g1MLDChW5ToheafKO6CLSGnKaeaPTb0dnS26aeljxLVj3kTEiEBUhW0bhCslYPYbJKijU0PeU/ErwIXg0lcvLhHA3W/foAzHOpFvMMrkaVU38afgQNRQwUDlCfCArVikxHghPmdVp6A/HHux1Sq7UbYiHFlT/8hDtDIBDpUdXfSEURXCGSDU9BYxs4k7iysYBY2Vsj+cMjSK6cR3MUxpOy01BurnuZgs0/vGgo06I6xIC2uB1eR35wQFgKPyWflTq8id4STh9KsjsNtxA1caZ4gF9E9M67L4J5S1TWjMdilMc202L7hMrLMzmUlP80D3G9ciZVAxmorf0UVCRTi99gdJ9x4SbW45Y9fY8H5LMKg2THgb2EXAnYa14xxzk9AMwXvYP+2yd/9E9idwAA=" alt="goduoit"/></span></div>
+<div class="top-right"><button class="icon-btn" id="createBtn" aria-label="Criar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></button><button class="icon-btn" id="activityBtn" aria-label="Atividade e notificações"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.9l-1.2-1.3a5.4 5.4 0 0 0-7.6 7.7L12 21l8.8-8.7a5.4 5.4 0 0 0 0-7.7Z"/></svg></button></div></div>
+<div class="seg" role="tablist" aria-label="Áreas da Home"><button class="selected" data-tab="treinos" role="tab" aria-selected="true">Treinos</button><button data-tab="publicacoes" role="tab" aria-selected="false">Publicações</button><button data-tab="business" role="tab" aria-selected="false">Business</button></div>
+<div class="search-area" id="searchArea" hidden><label for="globalSearch">Busca global · demonstração</label><div class="search-line"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.4-4.4M19 10.7a8.3 8.3 0 1 1-16.6 0 8.3 8.3 0 0 1 16.6 0Z"/></svg><input id="globalSearch" type="search" placeholder="Pessoas, exercícios, rotinas..."/><button id="searchClose" aria-label="Fechar busca">×</button></div><div class="search-result" id="searchResult">Digite para explorar a busca</div></div>
+</header>
+ <div class="screen" id="screen">
+ <div id="homeView"><div class="intro intro-min"><button class="reset" id="resetBtn">Reiniciar</button></div>
+ <div class="pulse-shell"><div class="pulse-head"><strong>Pulses</strong></div><div class="pulse-row" aria-label="Pulse na aba Treinos"><button class="pulse-item own" data-pulse-user="Você"><span class="pulse-avatar">J</span><small>Você</small></button><button class="pulse-item unseen" data-pulse-user="goduoit"><span class="pulse-avatar brand"><span class="brand-mini">goduoit</span><span class="pulse-badge">1</span></span><small>goduoit</small></button><button class="pulse-item unseen" data-pulse-user="Lia"><span class="pulse-avatar">L</span><small>Lia</small></button><button class="pulse-item seen" data-pulse-user="Ravi"><span class="pulse-avatar">R</span><small>Ravi</small></button><button class="pulse-item unseen" data-pulse-user="Bia"><span class="pulse-avatar">B</span><small>Bia</small></button></div></div>
+ <div class="dashboard" id="dashboard">
+  <article class="tile rank" data-card="rank" style="--order:0"><div class="card-top"><button class="tap" data-open="rank" aria-expanded="false"><div class="tile-head"><span class="tile-label">Ranking</span><span class="tile-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M8 21h8m-4-4v4M7 4h10v5a5 5 0 0 1-10 0V4Zm0 2H4v2a4 4 0 0 0 4 4M17 6h3v2a4 4 0 0 1-4 4"/></svg></span></div><div class="tile-value">8º</div><div class="tile-note">entre amigos</div></button><button class="xbtn" data-close aria-label="Recolher Ranking">×</button></div><div class="expanded-body"><div class="inner"><div class="inside"><h3>Ranking da semana</h3><div class="rank-row"><span class="rank-num">1</span><span>Marina</span><span class="points">480 pts</span></div><div class="rank-row"><span class="rank-num">2</span><span>Lucas</span><span class="points">440 pts</span></div><div class="rank-row"><span class="rank-num">3</span><span>Ana</span><span class="points">390 pts</span></div><div class="rank-row"><span class="rank-num">4</span><strong>Você</strong><span class="points">360 pts</span></div><p class="hint">Pontuação fictícia. Critério de Ranking ainda em investigação.</p></div></div></div></article>
+  <article class="tile rhythm" data-card="rhythm" style="--order:1"><div class="card-top"><button class="tap" data-open="rhythm" aria-expanded="false" aria-controls="statusFuture"><div class="tile-head"><span class="tile-label">Status</span><span class="tile-icon alt"><svg class="ico" viewBox="0 0 24 24"><path d="M12 22c4.5 0 7-3.2 7-7.1 0-3.4-2-5.2-3.3-6.7-.1 3.1-1.3 4-2.3 4-1-5-3.7-7.8-6.8-10.2.4 3.2-.2 5.3-1.7 7.8C2.5 13.2 4.2 22 12 22Z"/></svg></span></div><div class="tile-value"><span class="status-name">Ravi</span></div><div class="tile-note">enviou um feedback</div></button><button class="xbtn" data-close aria-label="Recolher Status">×</button></div><div class="expanded-body" id="statusFuture"><div class="inner"><div class="inside"><h3>Em construção</h3><p>Lotação colaborativa das academias.</p><a class="status-issue-link" href="https://github.com/jukazilli/GODUOIT/issues/160" target="_blank" rel="noopener noreferrer">Ver issue #160 — Status</a></div></div></div></article>
+  <article class="tile weight" data-card="weight" style="--order:2"><div class="card-top"><button class="tap" data-open="weight" aria-expanded="false"><div class="tile-head"><span class="tile-label">Peso</span><span class="tile-icon"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 7a5 5 0 0 1 4 2l-4 4-4-4a5 5 0 0 1 4-2Z"/></svg></span></div><div class="tile-value" id="weightValue">78,4 <small>kg</small></div><div class="tile-note" id="weightDate">Último registro · ontem</div></button><button class="xbtn" data-close aria-label="Recolher Peso">×</button></div><div class="expanded-body"><div class="inner"><div class="inside"><h3>Registrar peso</h3><svg viewBox="0 0 300 70" preserveAspectRatio="none" class="chart" role="img" aria-label="Tendência ilustrativa de peso"><path d="M0 20 L50 24 L100 19 L150 40 L205 33 L255 48 L300 44" fill="none" stroke="#00a8e8" stroke-width="3" stroke-linecap="round"/><path d="M0 20 L50 24 L100 19 L150 40 L205 33 L255 48 L300 44 L300 70 L0 70Z" fill="#00a8e817"/><path d="M0 69 H300" stroke="#cbdde7"/></svg><form id="weightForm" class="inline-row"><div class="field"><label for="weightInput">Peso (kg)</label><input id="weightInput" inputmode="decimal" type="number" min="1" max="600" step="0.1" value="78.4" required /></div><button class="primary" type="submit">Registrar</button></form><p class="confirm" id="weightFeedback" aria-live="polite"></p><div id="weightHistory"><div class="history"><span>Ontem</span><strong>78,4 kg</strong></div><div class="history"><span>Semana anterior</span><strong>78,9 kg</strong></div></div><p class="hint">Histórico privado. Valores apenas de demonstração.</p></div></div></div></article>
+  <section class="tile workout" style="--order:3" aria-label="Treino do dia"><div class="eyebrow">SEGUNDA, 9 DE NOVEMBRO</div><h2 id="workoutTitle">Quadríceps + Panturrilhas</h2><p id="workoutSub">6 exercícios</p><div class="workout-bottom"><button class="workout-go" id="workoutOpen">Começar treino</button><div class="dots" id="workoutDots" role="group" aria-label="Selecionar treino"><button type="button" class="on" aria-label="Treino 1" aria-pressed="true"></button><button type="button" aria-label="Treino 2" aria-pressed="false"></button><button type="button" aria-label="Treino 3" aria-pressed="false"></button></div></div></section>
+  <article class="tile measure" data-card="measure" style="--order:4"><div class="card-top"><button class="tap" data-open="measure" aria-expanded="false"><div class="tile-head"><span class="tile-label">Medidas</span><span class="tile-icon"><svg class="ico" viewBox="0 0 24 24"><path d="m21.3 8.7-6-6a2 2 0 0 0-2.8 0l-9.8 9.8a2 2 0 0 0 0 2.8l6 6a2 2 0 0 0 2.8 0l9.8-9.8a2 2 0 0 0 0-2.8Z"/><path d="m7.5 10.5 2 2m1-5 2 2m1-5 2 2"/></svg></span></div><div class="tile-value" id="measValue">4 <small>regiões</small></div><div class="tile-note" id="measDate">Atualizadas há 7 dias</div></button><button class="xbtn" data-close aria-label="Recolher Medidas">×</button></div><div class="expanded-body"><div class="inner"><div class="inside"><h3>Registrar medida corporal</h3><form id="measureForm"><div class="inline-row"><div class="field"><label for="region">Região</label><select id="region"><option value="Cintura">Cintura</option><option value="Braço">Braço</option><option value="Peito">Peito</option><option value="Coxa">Coxa</option></select></div><div class="field"><label for="measureInput">Circunferência (cm)</label><input id="measureInput" type="number" inputmode="decimal" min="1" max="300" step="0.1" value="80" required/></div></div><button type="submit" class="primary" style="width:100%;margin-top:9px">Salvar medida</button></form><p class="confirm" id="measureFeedback" aria-live="polite"></p><div id="measureHistory"><div class="history"><span>Cintura · há 7 dias</span><strong>80 cm</strong></div><div class="history"><span>Braço · há 7 dias</span><strong>35 cm</strong></div><div class="history"><span>Peito · há 7 dias</span><strong>104 cm</strong></div><div class="history"><span>Coxa · há 7 dias</span><strong>59 cm</strong></div></div><p class="hint">Registros parciais são permitidos. Nenhum dado é publicado.</p></div></div></div></article>
+  <article class="tile library" data-card="library" style="--order:5"><div class="card-top"><button class="tap" id="libraryOpen"><div class="tile-head"><span class="tile-label">Biblioteca</span><span class="tile-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5V4.5A2.5 2.5 0 0 1 6.5 2Z"/></svg></span></div><div class="tile-value" style="font-size:22px">Exercícios</div><div class="tile-note">Explorar catálogo</div></button></div></article>
+  <article class="tile photos" data-card="photos" style="--order:6"><div class="card-top"><button class="tap" data-open="photos" aria-expanded="false"><div class="tile-head"><span class="tile-label">Fotos</span><span class="tile-icon"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></span></div><div class="tile-value" id="photoCount">0 <small>fotos</small></div><div class="tile-note">Evolução privada</div></button><button class="xbtn" data-close aria-label="Recolher Fotos">×</button></div><div class="expanded-body"><div class="inner"><div class="inside"><h3>Seu diário fotográfico privado</h3><div class="photo-box" id="photoBox"><b>Adicionar foto de evolução</b><p>Uma imagem fica só nesta demonstração, sem upload.</p><label class="file-label" for="photoInput">Selecionar imagem</label><input id="photoInput" type="file" accept="image/*"/><img id="photoPreview" class="photo-preview" alt="Prévia local da foto escolhida"/><div class="photoName" id="photoName"></div></div><p class="hint">Não é publicação nem Pulse. Foto selecionada não será enviada a servidor.</p></div></div></div></article>
+  <article class="tile records" data-card="records" style="--order:7"><div class="card-top"><button class="tap" data-open="records" aria-expanded="false"><div class="tile-head"><span class="tile-label">Recordes</span><span class="tile-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M8 21h8m-4-4v4M7 4h10v5a5 5 0 0 1-10 0V4Zm0 2H4v2a4 4 0 0 0 4 4M17 6h3v2a4 4 0 0 1-4 4"/></svg></span></div><div class="tile-value">3 <small>PRs</small></div><div class="tile-note">No último mês</div></button><button class="xbtn" data-close aria-label="Recolher Recordes">×</button></div><div class="expanded-body"><div class="inner"><div class="inside"><h3>Meus recordes recentes</h3><div class="record"><div><strong>Supino reto</strong><small>Carga em uma série · demonstrativo</small></div><b>72 kg × 6</b></div><div class="record"><div><strong>Agachamento livre</strong><small>Carga em uma série · demonstrativo</small></div><b>96 kg × 8</b></div><div class="record"><div><strong>Remada baixa</strong><small>Repetições · demonstrativo</small></div><b>14 reps</b></div><p class="hint">Quando integrado, cada recorde deverá ter origem numa sessão real.</p></div></div></div></article>
+<article class="tile rhythm streak" data-card="streak" style="--order:8"><div class="card-top"><button class="tap" data-open="streak" aria-expanded="false"><div class="tile-head"><span class="tile-label">Consistência</span><span class="tile-icon alt"><svg class="ico" viewBox="0 0 24 24"><path d="M12 22c4.5 0 7-3.2 7-7.1 0-3.4-2-5.2-3.3-6.7-.1 3.1-1.3 4-2.3 4-1-5-3.7-7.8-6.8-10.2.4 3.2-.2 5.3-1.7 7.8C2.5 13.2 4.2 22 12 22Z"/></svg></span></div><div class="tile-value">2 <small>semanas</small></div><div class="tile-note">sua sequência</div></button><div class="week-peek" aria-hidden="true"><span class="on"></span><span class="on"></span><span class="rest"></span><span class="on"></span><span></span><span class="rest"></span><span class="rest"></span></div><button class="xbtn" data-close aria-label="Recolher Consistência">×</button></div><div class="expanded-body"><div class="inner"><div class="inside"><h3>Sua constância pessoal</h3><div class="week"><div class="day done">S<b>✓</b></div><div class="day done">T<b>✓</b></div><div class="day rest">Q<b>–</b></div><div class="day done">Q<b>✓</b></div><div class="day">S<b>·</b></div><div class="day rest">S<b>–</b></div><div class="day rest">D<b>–</b></div></div><div class="pills"><span class="pill">3 de 4 treinos</span><span class="pill">Descanso neutro</span></div><p class="hint">Streak ilustrativo. Regra definitiva na issue #9.</p></div></div></div></article> </div></div>
+
+ <section class="route" id="socialView"><div class="feedhead">Publicações <span>Feed demonstrativo</span></div><div class="post"><div class="post-author"><span class="avatar tiny">L</span><div><strong>@lia</strong><small>Treino de hoje</small></div><button class="mini" id="followDemo">Seguir</button></div><div class="post-media"><svg class="ico" viewBox="0 0 24 24"><path d="M3 20 9 11l4 4 3-3 5 8H3Z M16 6h.01"/></svg><span>Foto de treino · exemplo</span></div><p><strong>Lia</strong> Treino feito. Um passo de cada vez! 💪</p><div class="post-actions"><button id="likeDemo">♡ Curtir</button><button id="commentDemo">Comentar</button><button id="shareDemo">Compartilhar</button></div></div><p class="hint">Feed ilustrativo, sem dados reais ou publicação.</p></section>
+ <section class="route" id="businessView"><div class="route-top"><h2>Business</h2></div><div class="pulse-shell"><div class="pulse-head"><strong>Pulses</strong></div><div class="pulse-row" aria-label="Pulse na aba Business"><button class="pulse-item own" data-pulse-user="Você"><span class="pulse-avatar">J</span><small>Seu pulse</small></button><button class="pulse-item unseen" data-pulse-user="Aluno 1"><span class="pulse-avatar">A</span><small>Aluno 1</small></button><button class="pulse-item unseen" data-pulse-user="Aluno 2"><span class="pulse-avatar">N</span><small>Aluno 2</small></button><button class="pulse-item seen" data-pulse-user="Studio"><span class="pulse-avatar">S</span><small>Studio</small></button></div></div><div class="business-grid"><div class="bizcard"><div class="bizstack"><span class="bizicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M7 3v4m10-4v4M5 11h14v8H5z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="bizcount">3</span></div><strong>Agenda</strong><small>Próximos atendimentos e encaixes</small></div><div class="bizcard"><div class="bizstack"><span class="bizicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5V4.5A2.5 2.5 0 0 1 6.5 2Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="bizcount">12</span></div><strong>Programas</strong><small>Treinos e rotinas compartilhadas</small></div></div><div class="routine"><strong>Um único ecossistema</strong><small>Área profissional preservada como destino de interface. Fora do recorte funcional do primeiro MVP.</small></div><button class="primary" id="backTreinosBusiness">Voltar para Treinos</button></section>
+ <section class="route" id="genericView"><div class="route-top"><button class="back" data-back>‹ Voltar</button><h2 id="genericTitle">Em construção</h2></div><div class="routine"><strong id="genericSub">Este destino será modelado na sua frente.</strong><small>Estado de demonstração. Nenhuma navegação de produção é executada aqui.</small></div></section>
+ <section class="route" id="routineView"><div class="route-top"><button class="back" data-back>‹ Voltar</button><h2>Rotinas</h2></div><p>Destino ilustrativo da navegação. A tela real será preservada no Visual Lab.</p><div class="routine"><strong>Peito e ombros</strong><small>Segunda · 6 exercícios</small></div><div class="routine"><strong>Costas e bíceps</strong><small>Terça · 7 exercícios</small></div><div class="routine"><strong>Pernas</strong><small>Quarta · 6 exercícios</small></div><button class="primary" data-back>Voltar à Home</button></section>
+ <section class="route" id="libraryView"><div class="route-top"><button class="back" data-back>‹ Voltar</button><h2>Biblioteca</h2></div><p>Destino ilustrativo: preservar o catálogo real e suas duas abas.</p><div class="routine"><strong>Exercícios</strong><small>Busca, filtros e fichas</small></div><div class="routine"><strong>Equipamentos</strong><small>Catálogo de aparelhos</small></div></section>
+ </div>
+ <nav class="bottom" aria-label="Navegação global demonstrativa"><button class="active" id="navHome" aria-label="Home" title="Home"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10h-7v-6h-4v6H3Z"/></svg></button><button id="navRoutines" aria-label="Rotinas" title="Rotinas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14M18 5v14M3 8v8M21 8v8M6 12h12"/></svg></button><button id="navMap" aria-label="Match" title="Match"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6ZM9 3v15M15 6v15"/></svg></button><button id="navMessages" aria-label="Mensagens" title="Mensagens"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.6 0-3.3-.5-4.5-1.2L3 20l1.1-4.3A8.5 8.5 0 1 1 20 11.5Z"/></svg></button><button id="navProfile" aria-label="Perfil" title="Perfil"><span class="avatar">J</span></button></nav>
+ <div class="layer" id="sheetLayer" aria-hidden="true"><button class="scrim" id="sheetDismiss" aria-label="Fechar menu"></button><section class="sheet" role="dialog" aria-modal="true" aria-label="Ações rápidas"><div class="handle"></div><div class="sheethead"><h2 id="sheetTitle">Criar</h2><button id="sheetX" aria-label="Fechar">×</button></div><div id="sheetContent"></div></section></div>
+ 
+ <div role="status" aria-live="polite" class="toast" id="toast"></div>
+</div></div>
+<script>
+/* Visual mapping: dashboard bento / program hero gradient / workout progress compositional hierarchy from fitness_tres_telas_detalhadas.json */
+(()=>{
+ const $=id=>document.getElementById(id);const all=[...document.querySelectorAll('.tile[data-card]')],tiles=[...document.querySelectorAll('#dashboard>.tile')],screen=$('screen');let active=null,currentTab='treinos',currentRoute='home',weight=78.4, weightSaved=0, measureSaved=0, photoURL=null, lastFocus=null;let measure={Cintura:80,Braço:35,Peito:104,Coxa:59};let workoutIdx=0;const workouts=[['Quadríceps + Panturrilhas','6 exercícios'],['Costas e bíceps','7 exercícios · 60 min previstos'],['Peito e ombros','6 exercícios · 55 min previstos']];const prefersReduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;let toastT;
+ function showToast(t){const x=$('toast');x.textContent=t;x.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>x.classList.remove('show'),2200)}
+ function snap(){return new Map(tiles.map(el=>[el,el.getBoundingClientRect()]))}
+ function rearrange(mutate){const before=snap();mutate();if(prefersReduced)return;const after=snap();for(const el of tiles){const a=before.get(el),b=after.get(el);if(!a||!b)continue;const dx=a.left-b.left,dy=a.top-b.top;if(Math.abs(dx)+Math.abs(dy)>2){el.animate([{transform:`translate(${dx}px,${dy}px)`},{transform:'translate(0,0)'}],{duration:400,easing:'cubic-bezier(.22,1,.36,1)'})}}}
+ function applyDefaultOrders(){tiles.forEach(el=>{el.style.order=el.style.getPropertyValue('--order')||'0';el.classList.remove('flow-wide')});}
+ // Bento has one double-height metric, two compact metrics, a full-width workout hero,
+ // four support widgets, and one full-width consistency band. Expansion preserves
+ // those visual groups and fills the last unpaired slot rather than leaving a hole.
+ const topMetrics=['rank','rhythm','weight'],supportMetrics=['measure','library','photos','records'];
+ function open(id,source){const newTile=all.find(x=>x.dataset.card===id);if(!newTile)return;lastFocus=source||null;
+   rearrange(()=>{
+     applyDefaultOrders();const grid=$('dashboard');grid.classList.add('has-expanded');grid.classList.remove('focus-top','focus-lower');
+     all.forEach(el=>{const selected=el===newTile;el.classList.toggle('expanded',selected);const btn=el.querySelector('[data-open]');if(btn)btn.setAttribute('aria-expanded',String(selected));});
+     const original=[...tiles].sort((a,b)=>Number(a.style.getPropertyValue('--order'))-Number(b.style.getPropertyValue('--order')));
+     let reordered;
+     if(topMetrics.includes(id)){
+       grid.classList.add('focus-top');
+       reordered=[newTile,...topMetrics.filter(k=>k!==id).map(k=>all.find(el=>el.dataset.card===k)),...original.filter(el=>!topMetrics.includes(el.dataset.card))];
+     }else{
+       grid.classList.add('focus-lower');
+       if(supportMetrics.includes(id)){
+         const remainder=supportMetrics.filter(k=>k!==id).map(k=>all.find(el=>el.dataset.card===k));
+         reordered=[...original.filter(el=>topMetrics.includes(el.dataset.card)||el.classList.contains('workout')),newTile,...remainder,all.find(el=>el.dataset.card==='streak')];
+         // 3 remaining half-width support cards: promote final one to a full-width band.
+         if(remainder.length%2===1)remainder[remainder.length-1].classList.add('flow-wide');
+       }else{
+         reordered=original;
+       }
+     }
+     reordered.forEach((el,idx)=>{el.style.order=String(idx)});
+     active=id;
+   });
+   setTimeout(()=>{const r=newTile.getBoundingClientRect(),bounds=screen.getBoundingClientRect();if(r.top<bounds.top+3||r.bottom>bounds.bottom-7)newTile.scrollIntoView({behavior:prefersReduced?'auto':'smooth',block:'nearest'})},170);
+ }
+ function close(){if(!active)return;const id=active,tile=all.find(x=>x.dataset.card===id);
+   rearrange(()=>{all.forEach(el=>{el.classList.remove('expanded');const btn=el.querySelector('[data-open]');if(btn)btn.setAttribute('aria-expanded','false')});applyDefaultOrders();$('dashboard').classList.remove('has-expanded','focus-top','focus-lower');active=null});
+   if(lastFocus&&lastFocus.isConnected)lastFocus.focus({preventScroll:true});else tile?.querySelector('[data-open]')?.focus({preventScroll:true});
+ }
+ document.querySelectorAll('[data-open]').forEach(btn=>btn.addEventListener('click',()=>{let id=btn.closest('.tile').dataset.card;open(id,btn)}));document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+ function markNavigation(id){document.querySelectorAll('.bottom button').forEach(b=>b.classList.toggle('active',b.id===id));}
+ function selectTab(tab){if(!['treinos','publicacoes','business'].includes(tab))return;close();currentTab=tab;currentRoute='home';document.querySelectorAll('.seg button').forEach(btn=>{let on=btn.dataset.tab===tab;btn.classList.toggle('selected',on);btn.setAttribute('aria-selected',on?'true':'false')});$('homeView').style.display=tab==='treinos'?'':'none';$('socialView').classList.toggle('show',tab==='publicacoes');$('businessView').classList.toggle('show',tab==='business');['routineView','libraryView','genericView'].forEach(id=>$(id).classList.remove('show'));markNavigation('navHome');screen.scrollTop=0;}
+ function switchRoute(route,title,detail){close();currentRoute=route;if(route==='home'){selectTab(currentTab);return;}$('homeView').style.display='none';['socialView','businessView','routineView','libraryView','genericView'].forEach(id=>$(id).classList.remove('show'));const target=route==='routines'?'routineView':route==='library'?'libraryView':'genericView';$(target).classList.add('show');if(target==='genericView'){$('genericTitle').textContent=title||'Em construção';$('genericSub').textContent=detail||'Este destino será modelado posteriormente.';}markNavigation(route==='routines'?'navRoutines':route==='profile'?'navProfile':route==='match'?'navMap':route==='messages'?'navMessages':'navHome');screen.scrollTop=0;}
+ $('workoutOpen').addEventListener('click',()=>switchRoute('routines'));$('libraryOpen').addEventListener('click',()=>switchRoute('library'));$('navHome').addEventListener('click',()=>selectTab('treinos'));$('navRoutines').addEventListener('click',()=>switchRoute('routines'));$('navMap').addEventListener('click',()=>switchRoute('match','Match','Disponível apenas depois do primeiro MVP.'));$('navMessages').addEventListener('click',()=>switchRoute('messages','Mensagens','Será implementado em outra frente.'));$('navProfile').addEventListener('click',()=>switchRoute('profile','Perfil','Navegação real será preservada no Visual Lab.'));document.querySelectorAll('[data-back]').forEach(b=>b.addEventListener('click',()=>selectTab('treinos')));document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>selectTab(b.dataset.tab)));
+ $('backTreinosBusiness').addEventListener('click',()=>selectTab('treinos'));
+ $('followDemo').addEventListener('click',e=>{e.currentTarget.textContent=e.currentTarget.textContent==='Seguir'?'Seguindo':'Seguir';});
+ $('likeDemo').addEventListener('click',e=>{e.currentTarget.textContent=e.currentTarget.textContent.startsWith('♡')?'♥ Curtido':'♡ Curtir';});
+ $('commentDemo').addEventListener('click',()=>showToast('Composer de comentário: frente Publicações.'));
+ $('shareDemo').addEventListener('click',()=>showToast('Compartilhamento ilustrativo.'));
+ $('searchBtn').addEventListener('click',()=>{const box=$('searchArea'),show=box.hidden;box.hidden=!show;if(show)$('globalSearch').focus();});
+ $('searchClose').addEventListener('click',()=>{$('searchArea').hidden=true;$('searchBtn').focus();});
+ $('globalSearch').addEventListener('input',e=>{$('searchResult').textContent=e.target.value.trim()?'Busca por "'+e.target.value.trim()+'" · dados fictícios':'Digite para explorar a busca';});
+ 
+ function showSheet(which){const layer=$('sheetLayer');$('sheetTitle').textContent=which==='create'?'Criar':'Atividade';const content=which==='create'?[['Foto','Novo post fotográfico'],['Pulse','Conteúdo efêmero'],['Rotina','Abrir Rotinas'],['Discussão','Experimento futuro']]:[['Curtidas','Notificações sociais'],['Comentários','Interações nas publicações'],['Convites','Fora do MVP atual']];$('sheetContent').innerHTML=content.map(([a,b])=>'<button class="sheetitem" data-action="'+a+'"><span>'+a+'</span><small>'+b+'</small></button>').join('');layer.classList.add('show');layer.setAttribute('aria-hidden','false');layer.querySelector('[data-action]')?.focus();}
+ function hideSheet(){$('sheetLayer').classList.remove('show');$('sheetLayer').setAttribute('aria-hidden','true');}
+ $('createBtn').addEventListener('click',()=>showSheet('create'));$('activityBtn').addEventListener('click',()=>showSheet('activity'));$('sheetDismiss').addEventListener('click',hideSheet);$('sheetX').addEventListener('click',hideSheet);
+ $('sheetContent').addEventListener('click',e=>{const el=e.target.closest('[data-action]');if(!el)return;const val=el.dataset.action;hideSheet();if(val==='Rotina')switchRoute('routines');else if(val==='Foto'){selectTab('publicacoes');showToast('Composer de Foto será modelado na frente #76.')}else if(val==='Pulse')showToast('Pulse está em construção nesta Motion.');else showToast(val+' · em construção');});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'){hideSheet();$('searchArea').hidden=true;}});
+ function showWorkout(){let w=workouts[workoutIdx];$('workoutTitle').textContent=w[0];$('workoutSub').textContent=w[1];$('workoutDots').innerHTML=workouts.map((w,i)=>`<button type="button" class="${i===workoutIdx?'on':''}" data-workout-index="${i}" aria-label="Treino ${i+1}: ${w[0]}" aria-pressed="${i===workoutIdx}"></button>`).join('')}
+  $('workoutDots').addEventListener('click',event=>{let dot=event.target.closest('[data-workout-index]');if(dot){workoutIdx=Number(dot.dataset.workoutIndex);showWorkout()}});
+  let heroSwipeX=null;const hero=$('workoutTitle').closest('.workout');hero.addEventListener('touchstart',event=>{heroSwipeX=event.touches[0]?.clientX??null},{passive:true});hero.addEventListener('touchend',event=>{if(heroSwipeX===null)return;const dx=(event.changedTouches[0]?.clientX??heroSwipeX)-heroSwipeX;heroSwipeX=null;if(Math.abs(dx)>45){workoutIdx=(workoutIdx+(dx<0?1:workouts.length-1))%workouts.length;showWorkout()}},{passive:true});
+  showWorkout();
+ const kg=v=>Number(v).toLocaleString('pt-BR',{maximumFractionDigits:1,minimumFractionDigits:1});$('weightForm').addEventListener('submit',e=>{e.preventDefault();let v=Number($('weightInput').value);if(!Number.isFinite(v)||v<1||v>600){$('weightFeedback').textContent='Informe um valor válido.';$('weightFeedback').classList.add('error');return}const prev=weight;weight=v;weightSaved++;$('weightValue').innerHTML=kg(v)+' <small>kg</small>';$('weightDate').textContent='Registrado nesta demonstração';$('weightHistory').innerHTML=`<div class="history"><span>Agora · registro ${weightSaved}</span><strong>${kg(weight)} kg</strong></div><div class="history"><span>Anterior</span><strong>${kg(prev)} kg</strong></div>`;$('weightFeedback').textContent='Registro demonstrativo atualizado.';$('weightFeedback').classList.remove('error')});
+ $('region').addEventListener('change',()=>{$('measureInput').value=measure[$('region').value]??'';$('measureFeedback').textContent=''});$('measureForm').addEventListener('submit',e=>{e.preventDefault();let key=$('region').value,v=Number($('measureInput').value);if(!Number.isFinite(v)||v<1||v>300){$('measureFeedback').textContent='Informe uma medida válida.';$('measureFeedback').classList.add('error');return}measure[key]=v;measureSaved++;$('measDate').textContent='Atualizadas nesta demonstração';$('measValue').innerHTML=Object.keys(measure).length+' <small>regiões</small>';$('measureHistory').innerHTML=Object.entries(measure).map(([k,v])=>`<div class="history"><span>${k}</span><strong>${kg(v)} cm</strong></div>`).join('');$('measureFeedback').textContent=key+' atualizada nesta demonstração.';$('measureFeedback').classList.remove('error')});
+ $('photoInput').addEventListener('change',e=>{const file=e.target.files&&e.target.files[0];if(!file)return;if(file.type&&!file.type.startsWith('image/')){showToast('Selecione um arquivo de imagem.');return}if(photoURL)URL.revokeObjectURL(photoURL);photoURL=URL.createObjectURL(file);$('photoPreview').src=photoURL;$('photoBox').classList.add('has-photo');$('photoCount').innerHTML='1 <small>foto</small>';$('photoName').textContent='Prévia local: '+file.name});
+ document.querySelectorAll('[data-pulse-info]').forEach(btn=>btn.addEventListener('click',()=>showToast('No produto real, Pulse poderá ser removido desta aba em Configurações e Atividade.')));document.querySelectorAll('[data-pulse-user]').forEach(btn=>btn.addEventListener('click',()=>showToast('Pulse de '+btn.dataset.pulseUser+' · demonstração visual.')));
+ $('resetBtn').addEventListener('click',()=>{close();weight=78.4;weightSaved=0;measureSaved=0;measure={Cintura:80,Braço:35,Peito:104,Coxa:59};$('weightInput').value='78.4';$('weightValue').innerHTML='78,4 <small>kg</small>';$('weightDate').textContent='Último registro · ontem';$('weightHistory').innerHTML='<div class="history"><span>Ontem</span><strong>78,4 kg</strong></div><div class="history"><span>Semana anterior</span><strong>78,9 kg</strong></div>';$('weightFeedback').textContent='';$('measDate').textContent='Atualizadas há 7 dias';$('measureHistory').innerHTML='<div class="history"><span>Cintura · há 7 dias</span><strong>80 cm</strong></div><div class="history"><span>Braço · há 7 dias</span><strong>35 cm</strong></div><div class="history"><span>Peito · há 7 dias</span><strong>104 cm</strong></div><div class="history"><span>Coxa · há 7 dias</span><strong>59 cm</strong></div>';$('measureInput').value=80;$('region').value='Cintura';$('measureFeedback').textContent='';if(photoURL)URL.revokeObjectURL(photoURL);photoURL=null;$('photoBox').classList.remove('has-photo');$('photoPreview').removeAttribute('src');$('photoInput').value='';$('photoName').textContent='';$('photoCount').innerHTML='0 <small>fotos</small>';workoutIdx=0;showWorkout();switchRoute('home');showToast('Demonstração reiniciada.')});
+})();
+</script>
+</body>
+</html>
