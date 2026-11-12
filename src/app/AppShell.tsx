@@ -1,16 +1,13 @@
 import { useCallback, useLayoutEffect, useRef, useState, type KeyboardEvent, type ReactNode } from 'react';
-import { ChevronLeft, Dumbbell, Heart, House, Map, MessageCircle, Plus, Search, UserRound } from 'lucide-react';
-import wordmark from '../../assets/brand/goudduo/goudduo-wordmark-black.svg';
+import { ChevronLeft } from 'lucide-react';
+import { ShellHeader } from '../components/ShellHeader';
+import { TabBar } from '../components/TabBar';
+import { pageTitle, shellPolicy, type SurfaceIntegrations } from './surface-contracts';
 import { useDemoState } from '../state/DemoProvider';
 import { OverlayHost } from '../components/OverlayHost';
 import { EmptyState } from '../components/primitives';
 import { NavLink, useNavigation } from './NavigationProvider';
 import { type HomeContext, type Page } from './navigation';
-const destinations = [
-  { id: 'home', label: 'Home', icon: House }, { id: 'rotinas', label: 'Rotinas', icon: Dumbbell },
-  { id: 'match', label: 'Match', icon: Map }, { id: 'mensagens', label: 'Mensagens', icon: MessageCircle },
-  { id: 'perfil', label: 'Perfil', icon: UserRound },
-] as const;
 const contexts = [{ id: 'treinos', label: 'Treinos' }, { id: 'publicacoes', label: 'Publicações' }, { id: 'business', label: 'Business' }] as const;
 
 function PageContent({ page }: { page: Page }) {
@@ -24,11 +21,12 @@ function PageContent({ page }: { page: Page }) {
     case 'rotinas': return <EmptyState title="Rotinas">Rotinas ainda não estão disponíveis.</EmptyState>;
     case 'match': return <EmptyState title="Match">A busca por parceiros ainda não está disponível.</EmptyState>;
     case 'mensagens': return <EmptyState title="Mensagens">As conversas ainda não estão disponíveis.</EmptyState>;
-    case 'not-found': return <EmptyState title="Página não encontrada">Use a navegação para continuar.</EmptyState>;
+    case 'not-found': return <EmptyState title="Página não encontrada">Use o retorno para continuar.</EmptyState>;
+    default: return <EmptyState title={pageTitle(page)}>Esta superfície ainda não está disponível.</EmptyState>;
   }
 }
-export function AppShell({ contentExtension }: { contentExtension?: ReactNode } = {}) {
-  const { navigation, location, key, depth } = useNavigation();
+export function AppShell({ contentExtension, integrations }: { contentExtension?: ReactNode; integrations?: SurfaceIntegrations } = {}) {
+  const { navigation, location, key } = useNavigation();
   const main = useRef<HTMLElement>(null);
   const previousPath = useRef<string | null>(null);
   const [overlayPresent, setOverlayPresent] = useState(Boolean(location.panel));
@@ -41,6 +39,12 @@ export function AppShell({ contentExtension }: { contentExtension?: ReactNode } 
     }
     previousPath.current = pageKey;
   }, [key, pageKey, location.panel, navigation]);
+  const policy = shellPolicy(location.page);
+  const surface = location.page.destination === 'home' ? undefined : integrations?.resolve?.(location.page);
+  const homeComposition = location.page.destination === 'home' ? integrations?.home?.[location.page.context] : undefined;
+  const composition = homeComposition ?? surface;
+  const pulse = homeComposition?.pulse;
+  const hasFooter = Boolean(surface?.footer);
   const homeContext: HomeContext = location.page.destination === 'home' ? location.page.context : 'treinos';
   const arrowTabs = (event: KeyboardEvent<HTMLElement>) => {
     if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
@@ -51,30 +55,32 @@ export function AppShell({ contentExtension }: { contentExtension?: ReactNode } 
       event.currentTarget.querySelector<HTMLElement>(`[data-context="${context}"]`)?.focus(); }
   };
   return <>
-    <div className="app-shell" inert={overlayPresent || Boolean(location.panel)} data-testid="app-shell">
+    <div className="app-shell" data-foundation data-shell-mode={policy.mode}
+      data-home-context={location.page.destination === 'home' ? location.page.context : undefined}
+      inert={overlayPresent || Boolean(location.panel)} data-testid="app-shell">
       <a className="skip-link" href="#main-content">Ir para o conteúdo</a>
-      <header className="app-header">
-        <button className="icon-button" type="button" aria-label="Buscar" onClick={event => navigation.openPanel('search', event.currentTarget)}><Search size={22}/></button>
-        <img className="wordmark" src={wordmark} alt="goudduo" width="107" height="31"/>
-        <div className="header-actions">
-          <button className="icon-button" type="button" aria-label="Criar" onClick={event => navigation.openPanel('create', event.currentTarget)}><Plus size={22}/></button>
-          <button className="icon-button" type="button" aria-label="Atividade" onClick={event => navigation.openPanel('activity', event.currentTarget)}><Heart size={22}/></button>
-        </div>
-      </header>
+      <ShellHeader variant={policy.header} title={pageTitle(location.page)} configuration={surface?.header}/>
       {location.page.destination === 'home' && <nav aria-label="Navegação da Home"><div className="home-tabs" aria-label="Contextos da Home" role="tablist" onKeyDown={arrowTabs}>
         {contexts.map(context => <NavLink key={context.id} location={{ page: { destination: 'home', context: context.id }, panel: null }}
           id={`tab-${context.id}`} role="tab" data-context={context.id} aria-controls="home-panel" aria-selected={homeContext === context.id}
           tabIndex={homeContext === context.id ? 0 : -1}>{context.label}</NavLink>)}
       </div></nav>}
-      <main id="main-content" ref={main} className="app-content" tabIndex={-1} onScroll={event => navigation.saveScroll(event.currentTarget.scrollTop)}
->
-        {(depth > 0 || location.page.destination !== 'home') && <button type="button" className="icon-button back-button" aria-label="Voltar" onClick={navigation.back}><ChevronLeft size={24}/></button>}
-        <section id="home-panel" role={location.page.destination === 'home' ? 'tabpanel' : undefined} aria-labelledby={location.page.destination === 'home' ? `tab-${homeContext}` : undefined}><PageContent page={location.page}/>{contentExtension}</section>
+      <main id="main-content" ref={main} className="app-content" tabIndex={-1}
+        data-safe-top={policy.header === 'none' || undefined} data-safe-bottom={(!policy.tabBar && !hasFooter) || undefined}
+        onScroll={event => navigation.saveScroll(event.currentTarget.scrollTop)}>
+        {policy.mode === 'immersive' && !surface && <button type="button" className="shell-icon-button immersive-return" aria-label="Voltar" onClick={navigation.back}><ChevronLeft size={24}/></button>}
+        <section id="home-panel" role={location.page.destination === 'home' ? 'tabpanel' : undefined}
+          aria-labelledby={location.page.destination === 'home' ? `tab-${homeContext}` : undefined}>
+          {pulse && <div data-pulse-shape={pulse.shape}>{pulse.content}</div>}
+          {composition?.content ?? <PageContent page={location.page}/>}
+          {contentExtension}
+        </section>
       </main>
-      <nav className="tab-bar" aria-label="Navegação principal">
-        {destinations.map(({ id, label, icon: Icon }) => <NavLink key={id} location={{ page: id === 'home' ? navigation.homePage() : { destination: id }, panel: null }}
-          aria-label={label} aria-current={location.page.destination === id ? 'page' : undefined}><Icon size={24} aria-hidden="true"/></NavLink>)}
-      </nav>
+      {hasFooter && <footer className="surface-footer" data-safe-bottom={!policy.tabBar || undefined}>{surface?.footer}</footer>}
+      {policy.tabBar && <TabBar active={policy.activeDestination} onHomeReselect={() => {
+        navigation.saveScroll(0);
+        main.current?.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      }}/>}
     </div>
     <OverlayHost onPresence={onPresence}/>
   </>;

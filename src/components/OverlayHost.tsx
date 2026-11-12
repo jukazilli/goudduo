@@ -65,7 +65,7 @@ export function OverlayHost({ onPresence }: { onPresence: (present: boolean) => 
   if (!rendered) return null;
   const sheet = rendered === 'search' || rendered === 'create';
   const close = () => { if (!closing && requestedRef.current) navigation.closePanel(); };
-  return createPortal(<div className={`overlay-backdrop ${closing ? 'is-closing' : ''} ${sheet ? 'is-sheet' : ''}`}
+  return createPortal(<div data-foundation className={`overlay-backdrop ${closing ? 'is-closing' : ''} ${sheet ? 'is-sheet' : ''}`}
     data-testid="overlay-backdrop" onClick={event => { if (event.target === event.currentTarget) close(); }}>
     <div ref={dialog} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="panel-title" aria-describedby="panel-description"
       className="overlay-panel">

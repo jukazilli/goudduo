@@ -36,3 +36,19 @@ describe('typed browser navigation', () => {
     expect(router.getSnapshot().depth).toBe(0);
   });
 });
+
+describe('Home scroll and contextual return', () => {
+  it('restores independent positions when revisiting contexts, without copying a panel position across pages', () => {
+    history.replaceState(null, '', '/home/treinos'); router = new BrowserNavigation(window);
+    router.saveScroll(300);
+    router.navigate({ page: { destination: 'home', context: 'publicacoes' }, panel: null }); router.saveScroll(170);
+    router.navigate({ page: { destination: 'home', context: 'treinos' }, panel: null }); expect(router.scrollPosition()).toBe(300);
+    router.openPanel('create'); expect(router.scrollPosition()).toBe(300);
+    router.navigate({ page: { destination: 'perfil' }, panel: null }); expect(router.scrollPosition()).toBe(0);
+    router.navigate({ page: { destination: 'home', context: 'publicacoes' }, panel: null }); expect(router.scrollPosition()).toBe(170);
+  });
+  it('keeps an entry journey return inside access instead of fabricating a guest transition', () => {
+    history.replaceState(null, '', '/acesso/cadastro'); router = new BrowserNavigation(window);
+    router.back(); expect(router.getSnapshot().location.page).toEqual({ destination: 'access', step: 'login' });
+  });
+});

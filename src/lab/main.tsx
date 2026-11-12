@@ -1,28 +1,34 @@
 import { StrictMode, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { AppShell } from '../app/AppShell';
-import { BrowserNavigation } from '../app/navigation';
+import { BrowserNavigation, pagePath, parseLocation, type Page } from '../app/navigation';
 import { NavigationProvider, useNavigation } from '../app/NavigationProvider';
 import { DemoProvider, useDemoDispatch, useDemoState } from '../state/DemoProvider';
 import { selectWorkoutForDay } from '../state/model';
 import { Button, TextInput } from '../components/primitives';
 import '../styles/app.css';
 import './lab.css';
+const scenarios: readonly Page[] = [
+  { destination: 'home', context: 'treinos' }, { destination: 'home', context: 'publicacoes' }, { destination: 'home', context: 'business' },
+  { destination: 'rotinas' }, { destination: 'match' }, { destination: 'mensagens' }, { destination: 'perfil' },
+  ...(['splash', 'login', 'cadastro', 'otp', 'recuperacao', 'termos', 'privacidade'] as const).map(step => ({ destination: 'access' as const, step })),
+  { destination: 'onboarding' }, { destination: 'routine', routineId: 'demo-routine' }, { destination: 'editor', workoutId: 'demo-workout' },
+  { destination: 'session', sessionId: 'demo-session' }, { destination: 'history' }, { destination: 'profile-visited', userId: 'demo-other' },
+  { destination: 'profile-edit' }, { destination: 'interests' }, { destination: 'settings' }, { destination: 'pulse-viewer', pulseId: 'demo-pulse' },
+];
 function LabApp() {
   const state = useDemoState(), dispatch = useDemoDispatch();
   const { navigation, location } = useNavigation();
   const [width, setWidth] = useState('390');
   const [stress, setStress] = useState(false);
   const workout = selectWorkoutForDay(state, 'demo-routine', 'mon');
-  return <div className="lab-root">
+  return <div className="lab-root" data-foundation>
     <aside className="lab-inspector" aria-label="Inspetor do Visual Lab">
       <h1>Visual Lab · P1</h1><p>Dados sintéticos em memória. Superfícies finais ainda não integradas.</p>
-      <label className="field">Viewport<select aria-label="Viewport" value={width} onChange={e => setWidth(e.target.value)}>{['320','375','390','414','430'].map(w => <option key={w} value={w}>{w} px</option>)}</select></label>
-      <label className="field">Superfície<select aria-label="Superfície" value={location.page.destination === 'home' ? location.page.context : location.page.destination === 'not-found' ? '' : location.page.destination} onChange={event => {
-        const value = event.target.value;
-        if (value === 'treinos' || value === 'publicacoes' || value === 'business') navigation.navigate({ page: { destination: 'home', context: value }, panel: null });
-        else if (value === 'rotinas' || value === 'match' || value === 'mensagens' || value === 'perfil') navigation.navigate({ page: { destination: value }, panel: null });
-      }}><option value="" disabled>Rota indisponível</option>{['treinos','publicacoes','business','rotinas','match','mensagens','perfil'].map(s => <option key={s}>{s}</option>)}</select></label>
+      <label className="foundation-field">Viewport<select aria-label="Viewport" value={width} onChange={e => setWidth(e.target.value)}>{['320','375','390','414','430'].map(w => <option key={w} value={w}>{w} px</option>)}</select></label>
+      <label className="foundation-field">Superfície<select aria-label="Superfície" value={pagePath(location.page)} onChange={event => {
+        navigation.navigate({ page: parseLocation(new URL(event.target.value, window.location.origin)).page, panel: null });
+      }}><option value="/nao-encontrado" disabled>Rota indisponível</option>{scenarios.map(page => <option key={pagePath(page)} value={pagePath(page)}>{pagePath(page)}</option>)}</select></label>
       <TextInput id="scenario-name" label="Nome sintético do cenário" maxLength={60} value={state.user.displayName} onChange={event => dispatch({ type: 'user/name', name: event.target.value })}/>
       <p>Treino compartilhado: <output data-testid="shared-workout">{workout?.name} · revisão {workout?.revision}</output></p>
       <Button onClick={() => { if (workout) dispatch({ type: 'workout/commit', routineId: 'demo-routine', day: 'mon', workout: { ...workout, revision: workout.revision + 1, name: `Cenário ${workout.revision + 1}` } }); }}>Alterar treino sintético</Button>

@@ -115,3 +115,96 @@ test('layout, keyboard, reduced motion and automated accessibility', async ({ pa
   expect(await page.evaluate(() => Object.keys(localStorage))).toEqual([]);
   expect(await page.evaluate(() => Object.keys(sessionStorage))).toEqual([]);
 });
+
+test('R1 TabBar identity, geometry and local Home scroll contexts', async ({ page }) => {
+  await page.goto('http://127.0.0.1:4175/');
+  const nav = page.getByRole('navigation', { name: 'Navegação principal' });
+  expect(await nav.getByRole('link').evaluateAll(links => links.map(a => a.getAttribute('aria-label')))).toEqual(['Home','Rotinas','Match','Mensagens','Perfil']);
+  for (const [label, icon] of [['Home','house'],['Rotinas','dumbbell'],['Match','map'],['Mensagens','message-circle'],['Perfil','user']]) {
+    await expect(nav.getByRole('link', { name: label!, exact: true }).locator(`svg.lucide-${icon}`)).toHaveCount(1);
+  }
+  const bar = await nav.boundingBox(), match = await nav.getByRole('link', { name: 'Match', exact: true }).boundingBox();
+  expect(Math.abs(match!.x + match!.width / 2 - (bar!.x + bar!.width / 2))).toBeLessThan(1);
+  expect(bar!.height).toBe(50);
+  const frameTop = (await page.locator('.lab-frame').boundingBox())!.y;
+  await page.getByLabel('Cenário longo de scroll').check();
+  const content = page.locator('#main-content');
+  await content.evaluate(el => { el.scrollTop = 360; });
+  await expect.poll(() => content.evaluate(el => el.scrollTop)).toBe(360);
+  await page.getByRole('tab', { name: 'Publicações' }).click();
+  await expect.poll(() => content.evaluate(el => el.scrollTop)).toBe(0);
+  await content.evaluate(el => { el.scrollTop = 200; });
+  await expect.poll(() => content.evaluate(el => el.scrollTop)).toBe(200);
+  await page.getByRole('tab', { name: 'Treinos' }).click();
+  await expect.poll(() => content.evaluate(el => el.scrollTop)).toBe(360);
+  await expect(nav.getByRole('link', { name: 'Home', exact: true })).toHaveAttribute('aria-current','page');
+  await nav.getByRole('link', { name: 'Home', exact: true }).click();
+  await expect.poll(() => content.evaluate(el => el.scrollTop)).toBe(0);
+  await expect(page.getByRole('tab', { name: 'Treinos' })).toHaveAttribute('aria-selected','true');
+  const finalBar = (await nav.boundingBox())!, finalFrame = (await page.locator('.lab-frame').boundingBox())!;
+  expect(finalBar.height).toBe(bar!.height); expect(finalBar.y - finalFrame.y).toBeCloseTo(bar!.y - frameTop, 1);
+  expect(await page.evaluate(() => visualViewport?.scale)).toBe(1);
+});
+
+test('R1 direct access, contextual and immersive routes have explicit chrome and preserve back history', async ({ page }) => {
+  for (const path of ['/acesso/splash','/acesso/login','/acesso/cadastro','/acesso/otp','/acesso/recuperacao','/acesso/termos','/acesso/privacidade','/onboarding']) {
+    await page.goto(path);
+    await expect(page.getByRole('banner')).toHaveCount(0);
+    await expect(page.getByRole('navigation')).toHaveCount(0);
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    await expect(page.getByText('Esta superfície ainda não está disponível.')).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  }
+  await page.reload(); await expect(page).toHaveURL(/\/onboarding$/);
+  for (const path of ['/treinos/demo-workout/editar','/perfil/editar','/perfil/interesses','/configuracoes','/perfil/demo-other','/rotinas/demo-routine','/historico']) {
+    await page.goto(path);
+    await expect(page.getByRole('banner')).toHaveCount(1);
+    await expect(page.getByRole('navigation')).toHaveCount(path.startsWith('/treinos/') ? 1 : 0);
+    await expect(page.getByRole('button', { name: 'Buscar' })).toHaveCount(0);
+    await expect(page.getByRole('button', { name: 'Salvar' })).toHaveCount(0);
+    const header = await page.locator('.app-header').boundingBox(), title = await page.locator('.header-title').boundingBox();
+    expect(Math.abs(title!.x + title!.width / 2 - (header!.x + header!.width / 2))).toBeLessThan(1);
+  }
+  for (const path of ['/sessao/demo-session','/pulse/demo-pulse']) {
+    await page.goto(path); await page.reload();
+    await expect(page.getByRole('banner')).toHaveCount(0);
+    await expect(page.getByRole('navigation')).toHaveCount(0);
+    await expect(page.getByRole('button', { name: 'Voltar' })).toBeVisible();
+  }
+  await page.goto('/home/publicacoes');
+  await page.getByRole('link', { name: 'Rotinas', exact: true }).click();
+  await expect(page.locator('[data-header="contextual"]')).toBeVisible();
+  await page.getByRole('button', { name: 'Voltar' }).click();
+  await expect(page.getByRole('tab', { name: 'Publicações' })).toHaveAttribute('aria-selected','true');
+  await page.goForward(); await expect(page).toHaveURL(/\/rotinas$/);
+});
+
+test('R1 safe-area ownership, scoped styles and overlay on a surface without global chrome', async ({ page }) => {
+  await page.goto('/acesso/login?panel=search');
+  await expect(page.getByRole('dialog')).toBeVisible();
+  await page.keyboard.press('Escape'); await expect(page.getByRole('dialog')).toHaveCount(0);
+  await expect(page.getByTestId('app-shell')).not.toHaveAttribute('inert','');
+  await page.evaluate(() => {
+    document.documentElement.style.setProperty('--safe-top','47px');
+    document.documentElement.style.setProperty('--safe-bottom','34px');
+  });
+  expect(await page.locator('#main-content').evaluate(el => getComputedStyle(el).paddingTop)).toBe('47px');
+  expect(await page.locator('#main-content').evaluate(el => getComputedStyle(el).paddingBottom)).toBe('34px');
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  await page.goto('/home/publicacoes');
+  await page.evaluate(() => {
+    const outside = document.createElement('section'); outside.id = 'isolation-probe';
+    outside.innerHTML = '<button class="button">Sentinela técnica</button><input class="field">'; document.body.append(outside);
+  });
+  const snapshot = () => page.locator('#isolation-probe button').evaluate(el => {
+    const css = getComputedStyle(el); return { borderRadius: css.borderRadius, background: css.backgroundColor, padding: css.padding };
+  });
+  const before = await snapshot();
+  await page.getByRole('tab', { name: 'Treinos' }).click();
+  expect(await snapshot()).toEqual(before);
+  await expect(page.locator('[data-pulse-shape]')).toHaveCount(0);
+  await page.getByRole('tab', { name: 'Publicações' }).click();
+  await expect(page.locator('[data-pulse-shape]')).toHaveCount(0);
+  expect(await snapshot()).toEqual(before);
+  await page.locator('#isolation-probe').evaluate(el => el.remove());
+});
