@@ -1,0 +1,21 @@
+/* Institutional values documented in P0. Aliases below are scoped to foundation chrome.
+   #0866E8 and Bento pastels/charcoal are LOCAL contracts, not global defaults.
+   No candidate DS scale/palette is installed here. See P1-R1 reconciliation. */
+[data-foundation] {
+  color: var(--shell-ink);
+  --gd-ink: #10202b;
+  --gd-white: #fff;
+  --gd-soft: #f1f8fb;
+  --gd-orientation: #006da9;
+  --gd-selection: #00a8e8;
+  --shell-ink: var(--gd-ink);
+  --shell-surface: var(--gd-white);
+  --shell-divider: var(--gd-soft);
+  --shell-selection: var(--gd-selection);
+  --shell-focus: var(--gd-orientation);
+  --overlay-enter-duration: 300ms;
+  --overlay-exit-duration: 310ms;
+  --overlay-enter-easing: cubic-bezier(.22,1,.36,1);
+}
+/* Surface owners may define --surface-* on their own subtree. No Home context
+   implicitly changes the colour, spacing, Pulse shape or CSS of another context. */

@@ -1,0 +1,127 @@
+{
+  "suite": "P1 Chromium E2E",
+  "expected": 20,
+  "unexpected": 0,
+  "cases": [
+    {
+      "project": "chromium-320",
+      "test": "five destinations, Home contexts, direct routes, browser back/forward and reload",
+      "status": "passed",
+      "durationMs": 5310
+    },
+    {
+      "project": "chromium-320",
+      "test": "overlays preserve history, trap focus, exit smoothly and restore the trigger",
+      "status": "passed",
+      "durationMs": 7957
+    },
+    {
+      "project": "chromium-320",
+      "test": "shared scenario and scroll survive navigation; Lab is isolated from the app",
+      "status": "passed",
+      "durationMs": 4186
+    },
+    {
+      "project": "chromium-320",
+      "test": "layout, keyboard, reduced motion and automated accessibility",
+      "status": "passed",
+      "durationMs": 5249
+    },
+    {
+      "project": "chromium-375",
+      "test": "five destinations, Home contexts, direct routes, browser back/forward and reload",
+      "status": "passed",
+      "durationMs": 4157
+    },
+    {
+      "project": "chromium-375",
+      "test": "overlays preserve history, trap focus, exit smoothly and restore the trigger",
+      "status": "passed",
+      "durationMs": 7369
+    },
+    {
+      "project": "chromium-375",
+      "test": "shared scenario and scroll survive navigation; Lab is isolated from the app",
+      "status": "passed",
+      "durationMs": 4295
+    },
+    {
+      "project": "chromium-375",
+      "test": "layout, keyboard, reduced motion and automated accessibility",
+      "status": "passed",
+      "durationMs": 4092
+    },
+    {
+      "project": "chromium-390",
+      "test": "five destinations, Home contexts, direct routes, browser back/forward and reload",
+      "status": "passed",
+      "durationMs": 6633
+    },
+    {
+      "project": "chromium-390",
+      "test": "overlays preserve history, trap focus, exit smoothly and restore the trigger",
+      "status": "passed",
+      "durationMs": 7466
+    },
+    {
+      "project": "chromium-390",
+      "test": "shared scenario and scroll survive navigation; Lab is isolated from the app",
+      "status": "passed",
+      "durationMs": 3620
+    },
+    {
+      "project": "chromium-390",
+      "test": "layout, keyboard, reduced motion and automated accessibility",
+      "status": "passed",
+      "durationMs": 5353
+    },
+    {
+      "project": "chromium-414",
+      "test": "five destinations, Home contexts, direct routes, browser back/forward and reload",
+      "status": "passed",
+      "durationMs": 4074
+    },
+    {
+      "project": "chromium-414",
+      "test": "overlays preserve history, trap focus, exit smoothly and restore the trigger",
+      "status": "passed",
+      "durationMs": 7128
+    },
+    {
+      "project": "chromium-414",
+      "test": "shared scenario and scroll survive navigation; Lab is isolated from the app",
+      "status": "passed",
+      "durationMs": 4873
+    },
+    {
+      "project": "chromium-414",
+      "test": "layout, keyboard, reduced motion and automated accessibility",
+      "status": "passed",
+      "durationMs": 4334
+    },
+    {
+      "project": "chromium-430",
+      "test": "five destinations, Home contexts, direct routes, browser back/forward and reload",
+      "status": "passed",
+      "durationMs": 5189
+    },
+    {
+      "project": "chromium-430",
+      "test": "overlays preserve history, trap focus, exit smoothly and restore the trigger",
+      "status": "passed",
+      "durationMs": 7389
+    },
+    {
+      "project": "chromium-430",
+      "test": "shared scenario and scroll survive navigation; Lab is isolated from the app",
+      "status": "passed",
+      "durationMs": 3694
+    },
+    {
+      "project": "chromium-430",
+      "test": "layout, keyboard, reduced motion and automated accessibility",
+      "status": "passed",
+      "durationMs": 3373
+    }
+  ]
+}

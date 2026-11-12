@@ -1,0 +1,41 @@
+{
+  "browser": "156.0.8078.79",
+  "screenshots": [
+    {
+      "width": 320,
+      "height": 844,
+      "file": "p1-shell-320.png",
+      "sha256": "4f1ecf25cff99498f910ef406c74fde4bd1890963ddc0867b197845a6e673c87",
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "height": 844,
+      "file": "p1-shell-375.png",
+      "sha256": "1ca44cf839f8bc8a292049afee9444817b8098618c2dae803f5e3f7c955cf663",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "file": "p1-shell-390.png",
+      "sha256": "8df3192a9579df28b7d78672ba5afd678d2743cb9a9a581ac374f79c04f5802d",
+      "overflow": false
+    },
+    {
+      "width": 414,
+      "height": 844,
+      "file": "p1-shell-414.png",
+      "sha256": "5c029791d0dc61fa12e5c8a3df1a05984ba00ef8277ec5facbb4994b0a8403e6",
+      "overflow": false
+    },
+    {
+      "width": 430,
+      "height": 844,
+      "file": "p1-shell-430.png",
+      "sha256": "8e3b8f3fc510442462d1a247a96dbb7a6f679000a814c284776394c204223d18",
+      "overflow": false
+    }
+  ],
+  "scope": "Independent P1 shell only. No private baseline media included."
+}

@@ -1,0 +1,12 @@
+{
+  "scope": "P1-R1 Chromium, not physical Safari or Android",
+  "stats": {
+    "startTime": "2026-11-12T09:50:45.224Z",
+    "duration": 115411.898,
+    "expected": 35,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "source": "Local Playwright final run; complete logs/traces are outside Git or in CI artifacts"
+}
