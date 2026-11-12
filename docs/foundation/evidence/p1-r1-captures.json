@@ -1,0 +1,110 @@
+{
+  "scope": "P1-R1 original foundation; not homologated visual references; no private media",
+  "screenshots": [
+    {
+      "file": "p1-r1-home-320.png",
+      "route": "/home/treinos",
+      "width": 320,
+      "sha256": "6a445621f388a26c4769bfbe0b84cb84a9746816504ab00ee14e0fe9a44e7544",
+      "overflow": false
+    },
+    {
+      "file": "p1-r1-access-320.png",
+      "route": "/acesso/login",
+      "width": 320,
+      "sha256": "5cee7989fdb01459e2b1c682946bea66302c6176a858cec523ab16f741fbb675",
+      "overflow": false
+    },
+    {
+      "file": "p1-r1-editor-320.png",
+      "route": "/treinos/demo-workout/editar",
+      "width": 320,
+      "sha256": "42a7cb508b864086b313c30f5d47f0eda7ebc0d6c34f59235895eab471a43ff8",
+      "overflow": false
+    },
+    {
+      "file": "p1-r1-home-375.png",
+      "route": "/home/treinos",
+      "width": 375,
+      "sha256": "9df31262c05dd49c4f49dbf5a407058c2048d4b5a207dd5ab392f7a2bf49e867",
+      "overflow": false
+    },
+    {
+      "file": "p1-r1-access-375.png",
+      "route": "/acesso/login",
+      "width": 375,
+      "sha256": "5e9d49875c0b0ce6a9caacd1a69c66f20a9089ea4e57254ee7b6f46c82e5c75f",
+      "overflow": false
+    },
+    {
+      "file": "p1-r1-editor-375.png",
+      "route": "/treinos/demo-workout/editar",
+      "width": 375,
+      "sha256": "b586b5a26e71a269a5e58974d5be55729e0aebf5fd0fa916a7365a8233302a55",
+      "overflow": false
+    },
+    {
+      "file": "p1-r1-home-390.png",
+      "route": "/home/treinos",
+      "width": 390,
+      "sha256": "8ac0c8119b2f75ec28d156d2ebcad8ad4af3e72873b978f195f553f0537932f8",
+      "overflow": false
+    },
+    {
+      "file": "p1-r1-access-390.png",
+      "route": "/acesso/login",
+      "width": 390,
+      "sha256": "bfd16dcac6c49f5f8cc4c1a49498434e3ecb17503e3e6ad4ae2302877df72652",
+      "overflow": false
+    },
+    {
+      "file": "p1-r1-editor-390.png",
+      "route": "/treinos/demo-workout/editar",
+      "width": 390,
+      "sha256": "cee6226fd96e31b29c6db60d8bcdad4a44ee40001747055d2236f04cf13bfd39",
+      "overflow": false
+    },
+    {
+      "file": "p1-r1-home-414.png",
+      "route": "/home/treinos",
+      "width": 414,
+      "sha256": "8bf86e37aba5b07610d7732467afdfd8c199cc626623b2f37b70d2b85abb3e26",
+      "overflow": false
+    },
+    {
+      "file": "p1-r1-access-414.png",
+      "route": "/acesso/login",
+      "width": 414,
+      "sha256": "2e6597e753ecf577f79d818ed1d3bd523e1ba82989d97103dbc1811fae3442b4",
+      "overflow": false
+    },
+    {
+      "file": "p1-r1-editor-414.png",
+      "route": "/treinos/demo-workout/editar",
+      "width": 414,
+      "sha256": "2bc988716611ef8ad6931d13d20885428d8e424785b0da09e6ab8d1b09189752",
+      "overflow": false
+    },
+    {
+      "file": "p1-r1-home-430.png",
+      "route": "/home/treinos",
+      "width": 430,
+      "sha256": "c02ff64282031f0083104e0b9afb24b3e610f1566423a686c2b244b44b63529a",
+      "overflow": false
+    },
+    {
+      "file": "p1-r1-access-430.png",
+      "route": "/acesso/login",
+      "width": 430,
+      "sha256": "a524b5127f8b2bb92e2d12fc72d0bd1cb1bff9ef135f74c409671adc7df00d3a",
+      "overflow": false
+    },
+    {
+      "file": "p1-r1-editor-430.png",
+      "route": "/treinos/demo-workout/editar",
+      "width": 430,
+      "sha256": "c82bd2f5f121ab7c42bd12a23ee596013a35a9dd8cb097819c56b9a220f25a82",
+      "overflow": false
+    }
+  ]
+}

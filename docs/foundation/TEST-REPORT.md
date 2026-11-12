@@ -1,3 +1,30 @@
+# P1-R1 — Rodada de verificação estrutural (12/11/2026)
+
+[Reconciliação do Shell](P1-R1-RECONCILIACAO-SHELL.md). Esta seção é a evidência atual da R1; o relatório P1 original abaixo permanece como histórico.
+
+| Verificação R1 | Resultado local observado |
+|---|---|
+| Dependências | pnpm install --frozen-lockfile passou; package.json/lock sem alterações |
+| pnpm typecheck | Passou |
+| pnpm test | **20 testes em 4 arquivos passaram**, incluindo os 9 anteriores; rotas/composição/header/footer e retorno/scroll acrescentados |
+| node --test tests/bundle.test.mjs | **4 passaram** |
+| pnpm run build / build:lab | Ambos passaram com inventário allowlisted; Lab separado, mapas ausentes, nenhuma origem privada |
+| Playwright | **35 passaram**, zero falhas/skips/flaky na rodada final; 7 cenários × 320/375/390/414/430px |
+| Cloudflare | cloudflare:prepare e cloudflare:validate passaram em dry-run, assets-only, zero bindings/upload; nenhum recurso alterado |
+| Capturas | 16 capturas R1 próprias; 15 de Home/Acesso/Editor nas cinco larguras + sheet390; sem overflow nas capturas de página |
+
+[Evidência resumida E2E](evidence/p1-r1-qa-results.json) e [capturas/hashes](evidence/p1-r1-captures.json): [Home390](evidence/p1-r1-home-390.png), [Acesso320](evidence/p1-r1-access-320.png), [Editor320](evidence/p1-r1-editor-320.png), [sheet390](evidence/p1-r1-sheet-390.png). Imagens são execução da casca neutra, não referências visuais homologadas. Capturas estreitas/Home/modal foram inspecionadas visualmente.
+
+Os testes novos verificam ordem e classes Lucide (User em vez de UserRound), centro/altura da TabBar, retorno ao topo sem mudar contexto, scroll independente, rotas de entrada sem chrome, headers/contextos/imersivo, recarga, histórico, safe area sem header, foco de overlay e sentinela de CSS fora da fundação. Teste de consumidor Editor exercita ação de salvar fornecida por handler técnico e footer acima da TabBar; nenhuma operação de salvar fictícia existe no placeholder comum. Axe continua sem violações nos cenários automatizados; isso não comprova todo contraste de SVG.
+
+A primeira rodada R1 teve **30 aprovações e 5 falhas** de geometria do teste: a página externa do Lab rola para revelar o frame no viewport estreito. A asserção foi corrigida para medir a TabBar em relação ao frame, preservando a exigência de estabilidade interna. A rodada final completa passou; falhas anteriores não são apresentadas como sucesso.
+
+Revisão React após editar múltiplos TSX: hooks estáveis/cleanup mantidos, consumer resolve invocado uma vez, componentes extraídos sem estado duplicado, imports Lucide estáticos, sem dependências novas, efeitos de overlay preservados. Estado/domínio e mecanismo de foco/inert não foram reescritos.
+
+**Limites mantidos:** Publicações não foi transportada; paridade do Feed no destino não avaliável. C04/C05/C06 e autorizações de port/mídia mantêm seus gates. Safari/iPhone e Android físicos não executados; Chromium touch/insets simulados não substituem homologação real. CI atual da PR deve ser consultada no check do commit final; resultado local não é prova de execução remota. Builds finais são reconstruídos após commit com SHA/dirty=false e revalidados antes da entrega; nenhum deploy é feito.
+
+---
+
 # P1 — Relatório de verificação
 
 ## Resultado por escopo

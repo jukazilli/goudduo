@@ -28,3 +28,7 @@ A Publicações comum permanece em estado neutro enquanto o port não está auto
 publicDir desligado; importar apenas a wordmark já pública e fontes de dependência licenciada. Saídas independentes dist/app e dist/lab; nenhuma origem privada ou Lab na aplicação. Sem sourcemaps, service worker ou rede de backend. Usuário/rotina/exercício sintéticos, identificados no Lab; nenhum dado pessoal, senha, saúde, foto corporal, token ou persistência local. Versionar hashes de artefatos/metadados de build sem identidade da conta Cloudflare.
 
 Verificações posteriores devem conferir dependências/licenças, árvore transitiva e arquivos efetivamente gerados. Esta allowlist não é autorização de deploy público: criação de recurso, audiência e divulgação do artefato exigem gate posterior específico. Nenhum Worker existente será alterado.
+
+## P1-R1
+
+A allowlist continua sem transporte de origem privada. Contratos tipados, ShellHeader/TabBar, tokens e testes R1 são originais; nenhuma dependência/lock/SVG mudou. Capturas `evidence/p1-r1-*` são somente da fundação independente, com dados sintéticos/estados neutros. Caminhos/commits/blobs privados relevantes e seus bloqueios estão em [reconciliação R1](P1-R1-RECONCILIACAO-SHELL.md#6-fronteira-de-divulgação); não se concede redistribuição por identificá-los. Baseline privada P1 preservada fora do repo público.

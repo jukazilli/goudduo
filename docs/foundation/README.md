@@ -1,15 +1,18 @@
-# P1 — Fundação executável em revisão
+# P1 / P1-R1 — Fundação executável em revisão
 
 A P0 foi homologada documentalmente e a PR #30 integrada em `f04307eca83dbd8cc442f5f034e1665b3acb5c47`. Registros: [decisão](https://github.com/jukazilli/goudduo/issues/29#issuecomment-6818835814) e [integração](https://github.com/jukazilli/goudduo/issues/29#issuecomment-6818843535). A [Issue #29](https://github.com/jukazilli/goudduo/issues/29) permanece aberta. O pacote `docs/reconciliation/` é histórico auditado; esta P1 não homologa as superfícies pendentes nem resolve C03–C06 visualmente.
+
+**P1-R1:** [reconciliação do Shell](P1-R1-RECONCILIACAO-SHELL.md) registra diagnóstico, contratos, correções e gates. A P1 ainda não está homologada pelo proprietário.
 
 ## Arquitetura efetivamente implementada
 
 - React 19.3.1 + TypeScript 5.9.3 + Vite 6.4.5, versões exatas compatíveis com o lock investigado do GODUOIT. Resolução independente das dependências públicas, com lock próprio; não houve importação do lock privado.
 - `src/app/navigation.ts`: adaptador único da History API, destinos/contextos tipados, rotas diretas, push/pop/replace, Voltar/Avançar, último contexto Home, overlays no histórico e posições de scroll por entrada. Nenhum React Router ou runtime de aplicação adicional.
-- `src/app/AppShell.tsx`: header de marca/ações, cinco destinos Home/Rotinas/Match/Mensagens/Perfil e três contextos Treinos/Publicações/Business. Ícones House/Dumbbell/Map/MessageCircle/UserRound; usuário sintético sem foto. Sem chevron de contexto da marca. Superfícies finais não integradas usam estados neutros, sem métricas, Feed improvisado ou capability profissional.
+- `src/app/AppShell.tsx`: header Home ou contextual/Editor conforme rota; acesso e imersivo sem chrome global; cinco destinos Home/Rotinas/Match/Mensagens/Perfil e três contextos Treinos/Publicações/Business. Ícones House/Dumbbell/Map/MessageCircle/User; usuário sintético sem foto. Sem chevron de contexto da marca. Superfícies finais não integradas usam estados neutros, sem métricas, Feed improvisado ou capability profissional.
+- `src/app/surface-contracts.ts`, `ShellHeader` e `TabBar`: contratos de chrome/composição por família, slots independentes de Home/Pulse, ação somente com handler e footer do Editor acima da TabBar. Sem implementação das telas finais.
 - `src/state/`: Context de estado + Context de dispatch com useReducer; usuário/rotinas/dias/treinos/exercícios e estados sociais por IDs. Commit local atômico, revisão contra atualização obsoleta, parâmetros por instância, validação de duplicidade e clonagem de rascunho. Não é CRUD completo nem backend. Selectors de Home/Rotinas leem a mesma entidade; não há coleção independente por tela.
 - `src/components/`: Button/Input/EmptyState com consumidores reais no Shell/Lab; OverlayHost com sheet/modal, foco, inert, backdrop, Escape/Voltar, gesto descendente no handle, saída antes de unmount e reduced-motion. Fechamento idempotente impede dois eventos rápidos de voltar duas páginas. Opener é capturado antes de aplicar inert para retorno de foco confiável.
-- `src/styles/app.css`: Plus Jakarta Sans local, Lucide e SVG já público. Tokens técnicos de safe area sem offsets fixos; classes próprias do Shell/primitivas. Sem importação do CSS privado de Publicações, sem promoção do azul candidato #0866E8 a regra global. Medidas da casca neutra são escolhas técnicas de fundação para alvos/legibilidade, não nova homologação de design das telas.
+- `src/styles/app.css`: Plus Jakarta Sans local, Lucide e SVG já público. Tokens técnicos de safe area sem offsets fixos; papéis institucionais/chrome em tokens.css e primitives prefixadas foundation-*, sem reset genérico de controles. Sem importação do CSS privado de Publicações, sem promoção do azul candidato #0866E8 a regra global. Medidas da casca neutra são escolhas técnicas de fundação para alvos/legibilidade, não nova homologação de design das telas.
 - `src/lab/` e `lab/index.html`: entrada separada com seleção de superfície/viewport, edição de cenário sintético, teste de sheet/modal e stress de scroll. O inspetor não entra no grafo da aplicação comum. O Lab permite verificar estado compartilhado sem colocar controles de QA no produto.
 
 ## Fronteira e proveniência
@@ -26,9 +29,11 @@ Ver [allowlist e segurança](SECURITY-AND-PROVENANCE.md). **Zero arquivos privad
 
 ## Rotas e retorno
 
-`/` e `/home/treinos`, `/home/publicacoes`, `/home/business`, `/rotinas`, `/match`, `/mensagens`, `/perfil`. Caminho inválido recebe estado de página não encontrada. `?panel=search/create/activity` abre overlay diretamente sem dados pessoais na URL. Ao fechar uma entrada direta, replace preserva a página; em navegação interna, back recupera a entrada anterior. Controles modificados de link (Ctrl/Cmd/Shift) preservam comportamento nativo.
+Rotas principais: `/` e `/home/treinos`, `/home/publicacoes`, `/home/business`, `/rotinas`, `/match`, `/mensagens`, `/perfil`. Caminho inválido recebe estado de página não encontrada. `?panel=search/create/activity` abre overlay diretamente sem dados pessoais na URL. Ao fechar uma entrada direta, replace preserva a página; em navegação interna, back recupera a entrada anterior. Controles modificados de link (Ctrl/Cmd/Shift) preservam comportamento nativo.
 
-Estado e posições de scroll sobrevivem às transições dentro da sessão da página; reload reinicia fixtures e posições em memória. A identidade da rota sobrevive via URL; isso não significa persistência de dados. Não há localStorage, sessionStorage, autenticação, OTP, envio, Match confirmado ou habilitação profissional.
+Rotas preparatórias de Splash/Acesso/Onboarding, Editor, Sessão, Histórico e Perfil subordinado: ver [tabela e políticas R1](P1-R1-RECONCILIACAO-SHELL.md#rotas-e-políticas-preparatórias). Elas não implementam autenticação, telas finais ou uma jornada de convidado. `/` continua Home neutra até a integração autorizada de Acesso.
+
+Estado e posições de scroll sobrevivem às transições dentro da sessão da página; reload reinicia fixtures e posições em memória. Na Home, também é restaurado o último scroll de cada contexto; Home já ativa volta ao topo. A identidade da rota sobrevive via URL; isso não significa persistência de dados. Não há localStorage, sessionStorage, autenticação, OTP, envio, Match confirmado ou habilitação profissional.
 
 ## Execução local reproduzível
 
