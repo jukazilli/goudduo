@@ -1,10 +1,11 @@
+import type { RoutinePanel } from './routine-context';
 import type { ReactNode } from 'react';
 import type { Destination, HomeContext, Page } from './navigation';
 
 export interface HeaderAction { readonly label: string; readonly onPress: () => void; readonly disabled?: boolean }
 export interface SurfaceComposition {
   readonly content: ReactNode;
-  readonly header?: { readonly title: string; readonly action?: HeaderAction };
+  readonly header?: { readonly title: string; readonly action?: HeaderAction; readonly onBack?: () => void };
   /** Contextual footer sits above the TabBar when present; only the last region owns the bottom inset. */
   readonly footer?: ReactNode;
 }
@@ -14,8 +15,18 @@ export interface HomeCompositions {
   readonly publicacoes?: { readonly content: ReactNode; readonly pulse?: PulseSlot<'circle'> };
   readonly business?: { readonly content: ReactNode; readonly pulse?: never };
 }
+export interface ContextualOverlay {
+  readonly title: string;
+  readonly description: string;
+  readonly content: ReactNode;
+  readonly presentation: 'sheet' | 'modal';
+  readonly size?: 'library';
+  readonly initialFocus?: () => HTMLElement | null;
+}
+export type OverlayResolver = (panel: RoutinePanel) => ContextualOverlay | undefined;
 export interface SurfaceIntegrations {
   readonly home?: HomeCompositions;
+  readonly resolveOverlay?: OverlayResolver;
   readonly resolve?: (page: Exclude<Page, { destination: 'home' }>) => SurfaceComposition | undefined;
 }
 export type HeaderVariant = 'home' | 'contextual' | 'editor' | 'none';
