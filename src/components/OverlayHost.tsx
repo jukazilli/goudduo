@@ -16,11 +16,21 @@ function useReducedMotion() {
 }
 const titles: Record<Panel, string> = { search: 'Busca', create: 'Criar', activity: 'Atividade', 'routine-library': 'Biblioteca', 'routine-confirm-single': 'Confirmação', 'routine-naming': 'Nome do treino' };
 export function OverlayHost({ onPresence, resolve }: { onPresence: (present: boolean) => void; resolve?: OverlayResolver | undefined }) {
-  const { location, navigation } = useNavigation();
+  const { location, navigation, key } = useNavigation();
   const requested = location.panel;
   // Keep content mounted during exit, even after route/draft consumers stop requesting it.
   const configurationRef = useRef<ContextualOverlay | undefined>(undefined);
-  if (requested) configurationRef.current = isRoutinePanel(requested) ? resolve?.(requested) : undefined;
+  const configurationKey = useRef<string | null>(null);
+  if (requested) {
+    const configuration = isRoutinePanel(requested) ? resolve?.(requested) : undefined;
+    // A reducer may finish/resume the draft before History API closes this entry.
+    // Keep its last valid consumer for exit; a different history entry must never
+    // inherit old content when it has no valid context (Back/direct/reload).
+    if (configuration || configurationKey.current !== key) {
+      configurationRef.current = configuration;
+      configurationKey.current = key;
+    }
+  }
   const [rendered, setRendered] = useState<Panel | null>(requested);
   const [closing, setClosing] = useState(false);
   const reduced = useReducedMotion();
