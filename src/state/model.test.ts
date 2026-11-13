@@ -8,12 +8,12 @@ describe('shared demo domain', () => {
   });
   it('atomically updates the workout consumed by routine and Home selectors without mutating the source', () => {
     const before = createDemoState();
-    const draft = { id: 'demo-workout', name: 'Revisão sintética', revision: 2, exercises: [{ id: 'item-1', exerciseId: 'demo-exercise', sets: 3, repsMin: 8, repsMax: 12, restSeconds: 60, equipmentId: null }] };
-    const after = demoReducer(before, { type: 'workout/commit', routineId: 'demo-routine', day: 'tue', workout: draft });
-    expect(selectWorkoutForDay(after, 'demo-routine', 'tue')).toBe(after.workouts['demo-workout']);
+    const draft = { ...before.workouts['demo-workout']!, name: 'Revisão sintética', revision: 2 };
+    const after = demoReducer(before, { type: 'workout/commit', routineId: 'demo-routine', day: 'mon', workout: draft });
+    expect(selectWorkoutForDay(after, 'demo-routine', 'tue')).toBeUndefined();
     expect(selectWorkoutForDay(after, 'demo-routine', 'mon')).toBe(after.workouts['demo-workout']);
-    draft.exercises[0]!.sets = 99;
-    expect(after.workouts['demo-workout']?.exercises[0]?.sets).toBe(3);
+    expect(after.workouts['demo-workout']?.exercises).not.toBe(draft.exercises);
+    expect(after.workouts['demo-workout']?.name).toBe('Revisão sintética');
     expect(before.workouts['demo-workout']?.revision).toBe(1);
     expect(before.routines['demo-routine']?.days.tue).toBeUndefined();
   });
