@@ -58,6 +58,7 @@ function ExerciseCard({ item, draftId, index, count, onMove, onRemove }: {
     <article className="workout-editor__card" aria-labelledby={`exercise-title-${item.id}`}>
       <h2 id={`exercise-title-${item.id}`} tabIndex={-1}>{definition?.name ?? 'Exercício indisponível'}</h2>
       <p className="workout-editor__muscles">{definition?.muscleGroupIds?.map(id => readEntity(state.muscleGroups, id)?.name).filter(Boolean).join(' · ')}</p>
+      <div className="workout-editor__media" aria-hidden="true"/>
       <div className="workout-editor__fields">
         <PrescriptionField label="Séries" integer positive value={item.sets} onChange={value => update({ ...item, sets: value ?? Number.NaN })}/>
         <PrescriptionField label="Carga (kg)" optional value={item.loadKg} onChange={value => {
@@ -75,6 +76,10 @@ function ExerciseCard({ item, draftId, index, count, onMove, onRemove }: {
           {item.equipmentId && !availableEquipment.some(value => value.id === item.equipmentId) && <option value={item.equipmentId}>Equipamento indisponível</option>}
           {availableEquipment.map(value => <option key={value.id} value={value.id}>{value.name}</option>)}
         </select></label>
+      </div>
+      <div className="workout-editor__substitutes">
+        <button type="button" disabled><Plus size={17}/>Adicionar substituição</button>
+        {item.substituteExerciseIds?.length ? <p>{item.substituteExerciseIds.map(id => readEntity(state.exercises, id)?.name ?? 'Exercício indisponível').join(' · ')}</p> : null}
       </div>
     </article>
   </>;
