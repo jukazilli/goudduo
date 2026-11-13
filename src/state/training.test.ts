@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { createDemoState, demoReducer, selectWorkoutForDay, type DemoAction, type DemoState, type WorkoutExercise } from './model';
 import { selectHomeTraining, selectPrimaryRoutine, selectSessionPrescription, selectTrainingDay } from './selectors';
-import { validatePrescription } from './training';
+import { validateDraft, validatePrescription } from './training';
 
 const rep: WorkoutExercise = { id: 'rep-instance', exerciseId: 'demo-exercise', sets: 3, repsMin: 8, repsMax: 12, restSeconds: 60, equipmentId: null };
 const timed: WorkoutExercise = { id: 'time-instance', exerciseId: 'demo-time', measurement: 'time', sets: 2, durationSeconds: 30, restSeconds: 10, equipmentId: null };
@@ -177,7 +177,8 @@ describe('shared consumers, bindings and session compatibility', () => {
     const state: DemoState = { ...original, routines: { ...original.routines, 'demo-routine': { ...original.routines['demo-routine']!, days: { mon: 'demo-workout', tue: 'demo-workout' } } } };
     expect(selectWorkoutForDay(state, 'demo-routine', 'mon')).toBe(selectWorkoutForDay(state, 'demo-routine', 'tue'));
     const blocked = send(open(state), replace([rep]), prepare, confirm, save);
-    expect(blocked.drafts.draft!.issue).toBe('shared-workout-pending'); unchangedSaved(state, blocked);
+    expect(blocked.drafts.draft!.issue).toBe('shared-workout-pending');
+    expect(validateDraft(state, blocked.drafts.draft!)).toBe('shared-workout-pending'); unchangedSaved(state, blocked);
     expect(demoReducer(original, { type: 'workout/commit', routineId: 'demo-routine', day: 'tue', workout: { ...original.workouts['demo-workout']!, revision: 2 } })).toBe(original);
   });
   it('independent workout identities on two days do not propagate edits', () => {

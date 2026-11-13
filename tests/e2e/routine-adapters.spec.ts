@@ -1,0 +1,77 @@
+import { test, expect } from '@playwright/test';
+let errors: string[];
+test.beforeEach(async ({ page }) => {
+  errors = []; page.on('pageerror', error => errors.push(error.message));
+  page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
+  await page.goto('http://127.0.0.1:4175/rotinas');
+  await page.getByLabel('Viewport', { exact: true }).selectOption(String(page.viewportSize()!.width));
+  await page.getByLabel('Cenário técnico de adapters').check();
+});
+test.afterEach(() => expect(errors).toEqual([]));
+
+test('B2 technical save flow preserves chrome and gates confirmation/name before committing', async ({ page }) => {
+  await page.getByRole('button', { name: 'Abrir Editor técnico', exact: true }).click();
+  const draft = await page.getByTestId('technical-draft').textContent();
+  await expect(page.locator('[data-header="editor"]')).toHaveCount(1);
+  await expect(page.getByRole('button', { name: 'Salvar', exact: true })).toBeEnabled();
+  await expect(page.getByRole('navigation', { name: 'Navegação principal' }).getByRole('link')).toHaveCount(5);
+  await expect(page.getByRole('link', { name: 'Rotinas', exact: true })).toHaveAttribute('aria-current', 'page');
+  await page.getByRole('button', { name: 'Salvar', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Confirmar exercício técnico único' })).toBeVisible();
+  await expect(page.getByTestId('technical-revision')).toHaveText('1');
+  await page.getByRole('button', { name: 'Continuar edição técnica' }).click();
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+  await expect(page.getByTestId('technical-draft')).toHaveText(draft!);
+  await page.getByRole('button', { name: 'Salvar', exact: true }).click();
+  await page.getByRole('button', { name: 'Confirmar exercício técnico único' }).click();
+  const field = page.getByLabel('Nome técnico final');
+  await expect(field).toHaveValue('Treino de segunda-feira');
+  await field.fill('  '); await page.getByRole('button', { name: 'Confirmar nome técnico' }).click();
+  await expect(page.getByRole('dialog').getByRole('status')).toHaveText('name-required');
+  await expect(page.getByTestId('technical-revision')).toHaveText('1');
+  await field.fill('Treino final sintético'); await page.getByRole('button', { name: 'Confirmar nome técnico' }).click();
+  await expect(page).toHaveURL(/\/rotinas$/); await expect(page.getByRole('dialog')).toHaveCount(0);
+  await expect(page.getByTestId('technical-revision')).toHaveText('2');
+  await expect(page.getByTestId('technical-count')).toHaveText('0');
+  await expect(page.locator('#main-content h1')).toBeFocused();
+});
+
+test('B2 Library consumer preserves draft, keyboard, focus, history, gesture and reload fallback', async ({ page }) => {
+  await page.getByRole('button', { name: 'Abrir Editor técnico', exact: true }).click();
+  const draft = await page.getByTestId('technical-draft').textContent();
+  const trigger = page.getByRole('button', { name: 'Abrir Biblioteca técnica', exact: true });
+  await trigger.click();
+  const dialog = page.getByRole('dialog');
+  await expect(page.getByLabel('Campo técnico de foco')).toBeFocused();
+  await expect(page.locator('#root')).toHaveAttribute('inert');
+  const geometry = await dialog.evaluate(element => ({ height: element.getBoundingClientRect().height, overflow: getComputedStyle(element).overflowY, viewport: innerHeight, width: element.clientWidth, scrollWidth: element.scrollWidth }));
+  expect(geometry.height).toBeCloseTo(geometry.viewport * .75, 0); expect(geometry.overflow).toBe('auto');
+  expect(geometry.scrollWidth).toBeLessThanOrEqual(geometry.width);
+  await dialog.evaluate(element => { element.scrollTop = 200; }); await expect.poll(() => dialog.evaluate(element => element.scrollTop)).toBeGreaterThan(0);
+  await page.getByRole('button', { name: 'Adicionar item sintético' }).click();
+  await expect(dialog).toBeVisible(); await expect(page.getByTestId('technical-draft')).toHaveText(draft!);
+  await page.keyboard.press('Escape'); await expect(dialog).toHaveCount(0); await expect(trigger).toBeFocused();
+  await page.goForward(); await expect(dialog).toBeVisible();
+  await page.goBack(); await expect(dialog).toHaveCount(0);
+  await trigger.click();
+  const bounds = await page.locator('.sheet-handle').boundingBox(); const client = await page.context().newCDPSession(page);
+  const point = { x: bounds!.x + bounds!.width / 2, y: bounds!.y + 10 };
+  await client.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [point] });
+  await client.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ ...point, y: point.y + 100 }] });
+  await client.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+  await expect(dialog).toHaveCount(0); await expect(page.getByTestId('technical-revision')).toHaveText('1');
+  expect(await page.evaluate(() => Object.keys(history.state).sort())).toEqual(['depth', 'goudduoP1', 'key']);
+  expect(page.url()).not.toContain(draft!);
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.getByRole('button', { name: 'Salvar', exact: true }).click();
+  await expect(page.getByRole('dialog')).toHaveCSS('animation-name', 'none');
+  await expect(page.getByLabel('Nome técnico final')).toBeVisible(); // two items bypass single confirmation
+  await page.keyboard.press('Escape'); await expect(dialog).toHaveCount(0);
+  await page.getByRole('button', { name: 'Voltar', exact: true }).click();
+  await expect(page).toHaveURL(/\/rotinas$/); await expect(page.getByTestId('technical-count')).toHaveText('1');
+  await page.goForward(); await expect(page.getByTestId('technical-draft')).toHaveText(draft!);
+  await page.reload(); await expect(page.getByRole('button', { name: 'Salvar', exact: true })).toHaveCount(0);
+  await page.getByLabel('Cenário técnico de adapters').check();
+  await expect(page.getByTestId('technical-draft')).toHaveText('context-unavailable');
+  await expect(page.getByRole('button', { name: 'Salvar', exact: true })).toHaveCount(0);
+});

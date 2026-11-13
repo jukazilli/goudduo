@@ -61,3 +61,6 @@ body { margin: 0; min-width: 0; }
 .immersive-return { position: sticky; top: 0; z-index: 1; }
 
 .surface-footer[data-safe-bottom] { padding-bottom: calc(12px + var(--safe-bottom)); }
+
+/* Opt-in Library presentation only; existing Home panels keep their original geometry. */
+.is-sheet .overlay-panel[data-overlay-size="library"] { height: calc((100dvh - var(--safe-top)) * .75); max-height: 100%; }
