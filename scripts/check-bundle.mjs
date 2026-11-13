@@ -17,7 +17,7 @@ export async function auditBundle(directory, bundleTarget) {
     if (/\.(js|css|html|json|svg)$/.test(name)) {
       const text = bytes.toString('utf8');
       if (/gh[pousr]_[A-Za-z0-9]{30,}|AKIA[A-Z0-9]{16}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|GODUOIT|DUPPLLA|Gooduu|serviceWorker\.register|sourceMappingURL/i.test(text)) throw new Error(`Forbidden source/content: ${name}`);
-      if (bundleTarget === 'app' && /Visual Lab|Inspetor do Visual Lab|Nome sintético do cenário|Cenário longo de scroll|Consumidor técnico P2-B2|Campo técnico de foco|Cenário de Rotinas/.test(text)) throw new Error(`Lab leaked into app: ${name}`);
+      if (bundleTarget === 'app' && /Visual Lab|Inspetor do Visual Lab|Nome sintético do cenário|Cenário longo de scroll|Consumidor técnico P2-B2|Campo técnico de foco|Cenário de Rotinas|Adicionar prescrição sintética ao rascunho/.test(text)) throw new Error(`Lab leaked into app: ${name}`);
     }
     files.push({ path: name, bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') });
   }

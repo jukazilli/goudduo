@@ -83,13 +83,13 @@ describe('integrated Routines Home', () => {
     fireEvent.click(within(region).getByRole('button', { name: 'Adicionar treino' }));
     expect(view.state().workouts).toBe(saved); expect(view.state().routines['demo-routine']!.days.sun).toBeUndefined();
     const draft = Object.values(view.state().drafts)[0]!; expect(draft.exercises).toEqual([]); expect(draft.baseRevision).toBe(0);
-    expect(screen.queryByRole('button', { name: 'Salvar' })).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Salvar' })).toBeDisabled();
   });
-  it('opens only the unavailable Editor, reuses its draft on return, and never creates a saved workout', async () => {
+  it('opens the real Editor, reuses its draft on return, and never commits by navigation', async () => {
     const view = setup(); fireEvent.click(screen.getByRole('button', { name: 'Expandir Rotina de demonstração' }));
     const saved = view.state().workouts; fireEvent.click(screen.getByRole('button', { name: 'Ver treino' }));
-    expect(location.pathname).toBe('/treinos/demo-workout/editar'); expect(screen.queryByRole('button', { name: 'Salvar' })).not.toBeInTheDocument();
-    expect(screen.getByText('Esta superfície ainda não está disponível.')).toBeInTheDocument();
+    expect(location.pathname).toBe('/treinos/demo-workout/editar'); expect(screen.getByRole('button', { name: 'Salvar' })).toBeEnabled();
+    expect(screen.getByRole('region', { name: 'Editor de treino' })).toBeInTheDocument();
     const draft = Object.values(view.state().drafts)[0]!;
     act(() => navigation.back()); await waitFor(() => expect(location.pathname).toBe('/rotinas'));
     expect(screen.getByRole('button', { name: 'Recolher Rotina de demonstração' })).toHaveAttribute('aria-expanded', 'true');

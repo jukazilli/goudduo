@@ -31,8 +31,8 @@ test('B3 integrated Bento restores order and preserves day, draft and scroll thr
   const position = await main.evaluate(element => element.scrollTop);
   await preview.getByRole('button', { name: 'Ver treino', exact: true }).click();
   await expect(page).toHaveURL(/\/treinos\/demo-home-workout\/editar$/);
-  await expect(page.getByText('Esta superfície ainda não está disponível.')).toBeVisible();
-  await expect(page.getByRole('button', { name: 'Salvar', exact: true })).toHaveCount(0);
+  await expect(page.getByRole('region', { name: 'Editor de treino' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Salvar', exact: true })).toBeEnabled();
   await expect(page.getByRole('dialog')).toHaveCount(0);
   await page.getByRole('button', { name: 'Voltar', exact: true }).click();
   await expect(page).toHaveURL(/\/rotinas$/);
