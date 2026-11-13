@@ -35,10 +35,33 @@ describe('Editor display adapters', () => {
   });
 });
 describe('real Workout Editor integrated with one reducer', () => {
+  it('preserves Back edits, confirms discard, and removes only that draft while keeping saved data', async () => {
+    const view = setup(); openPrimary(); const saved = view.state().workouts;
+    const draft = Object.values(view.state().drafts)[0]!;
+    view.dispatch({ type: 'draft/open', routineId: 'demo-routine', day: 'thu', workoutId: 'demo-primary-thu', draftId: 'other-editor' });
+    change('Séries', '5');
+    act(() => navigation.back()); await waitFor(() => expect(location.pathname).toBe('/rotinas'));
+    fireEvent.click(screen.getByRole('button', { name: 'Ver treino' })); expect(screen.getByLabelText('Séries')).toHaveValue('5');
+    fireEvent.click(screen.getByRole('button', { name: 'Descartar rascunho' }));
+    await waitFor(() => expect(screen.getByRole('dialog', { name: 'Descartar rascunho?' })).toBeInTheDocument());
+    fireEvent.click(screen.getByRole('button', { name: 'Continuar editando' }));
+    await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument());
+    expect(view.state().drafts[draft.id]!.exercises[0]!.sets).toBe(5);
+    fireEvent.click(screen.getByRole('button', { name: 'Descartar rascunho' }));
+    await waitFor(() => expect(screen.getByRole('button', { name: 'Descartar alterações' })).toBeInTheDocument());
+    fireEvent.click(screen.getByRole('button', { name: 'Descartar alterações' }));
+    await waitFor(() => expect(location.pathname).toBe('/rotinas'));
+    expect(view.state().drafts[draft.id]).toBeUndefined(); expect(view.state().drafts['other-editor']).toBeDefined(); expect(view.state().workouts).toBe(saved);
+  });
   it('edits independent repetition fields, optional load, rest and equipment by ID, keeping saved data isolated', () => {
     const view = setup(); openPrimary(); const saved = view.state().workouts['demo-workout'];
     change('Séries', '3'); change('Rep min', '8'); change('Rep max', '12'); change('Carga (kg)', '12,5');
-    change('Descanso (HH:MM:SS)', '00:01:30'); change('Equipamento', 'demo-equipment');
+    change('Descanso (HH:MM:SS)', '00:01:30');
+    const currentDraft = Object.values(view.state().drafts)[0]!;
+    view.dispatch({ type: 'draft/update', draftId: currentDraft.id, exercise: { ...currentDraft.exercises[0]!, equipmentId: 'demo-equipment' } });
+    expect(screen.getByLabelText('Equipamento')).toHaveAttribute('readonly');
+    expect(screen.getByLabelText('Equipamento')).toHaveValue('Equipamento sintético');
+    expect(screen.queryByRole('combobox')).not.toBeInTheDocument();
     const item = Object.values(view.state().drafts)[0]!.exercises[0]!;
     expect(item).toMatchObject({ id: 'demo-item', exerciseId: 'demo-exercise', sets: 3, repsMin: 8, repsMax: 12, loadKg: 12.5, restSeconds: 90, equipmentId: 'demo-equipment' });
     expect(view.state().workouts['demo-workout']).toBe(saved);

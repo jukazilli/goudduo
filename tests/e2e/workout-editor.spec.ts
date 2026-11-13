@@ -25,7 +25,8 @@ test('B4 real single-exercise editing validates fields, stages naming and commit
   await page.getByLabel('Carga (kg)', { exact: true }).fill('12,5');
   await page.getByLabel('Descanso (HH:MM:SS)', { exact: true }).fill('00:70:00'); await expect(save(page)).toBeDisabled();
   await page.getByLabel('Descanso (HH:MM:SS)', { exact: true }).fill('00:01:30');
-  await page.getByLabel('Equipamento', { exact: true }).selectOption('demo-equipment');
+  await expect(page.getByLabel('Equipamento', { exact: true })).toHaveAttribute('readonly');
+  await expect(page.getByRole('combobox')).toHaveCount(0);
   await expect(save(page)).toBeEnabled();
   const footer = await page.locator('.surface-footer').boundingBox(), tabbar = await page.locator('.tab-bar').boundingBox();
   expect(footer!.y + footer!.height).toBeLessThanOrEqual(tabbar!.y + 1);
@@ -59,7 +60,7 @@ test('B4 real single-exercise editing validates fields, stages naming and commit
   await page.getByRole('button', { name: 'Ver treino', exact: true }).click();
   await expect(page.getByLabel('Séries', { exact: true })).toHaveValue('3');
   await expect(page.getByLabel('Carga (kg)', { exact: true })).toHaveValue('12.5');
-  await expect(page.getByLabel('Equipamento', { exact: true })).toHaveValue('demo-equipment');
+  await expect(page.getByLabel('Equipamento', { exact: true })).toHaveValue('Sem equipamento');
 });
 
 test('B4 measurements, reordering, removal, zero block and honest Library preserve the draft', async ({ page }) => {
@@ -69,7 +70,14 @@ test('B4 measurements, reordering, removal, zero block and honest Library preser
   await expect(page.getByLabel('Rep min', { exact: true })).toHaveCount(0); await page.getByLabel('Duração (s)', { exact: true }).fill('45');
   await page.getByRole('button', { name: 'Opções do exercício' }).click(); await page.getByRole('button', { name: 'Mover para cima' }).click();
   await expect(page.getByText('1 / 3', { exact: true })).toBeVisible();
-  await page.getByRole('button', { name: 'Próximo exercício' }).click(); await page.getByRole('button', { name: 'Próximo exercício' }).click();
+  const mediaBox = await page.locator('.workout-editor__media').boundingBox();
+  const swipeClient = await page.context().newCDPSession(page);
+  const swipeStart = { x: mediaBox!.x + mediaBox!.width * .75, y: mediaBox!.y + 40 };
+  await swipeClient.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [swipeStart] });
+  await swipeClient.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ ...swipeStart, x: swipeStart.x - 90 }] });
+  await swipeClient.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] }); await swipeClient.detach();
+  await expect(page.getByText('2 / 3', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Próximo exercício' }).click();
   await page.getByLabel('Distância (m)', { exact: true }).fill('250');
   await expect(page.getByLabel('Duração (s)', { exact: true })).toHaveCount(0);
   await save(page).click(); await expect(page.getByRole('dialog', { name: 'Nome do treino', exact: true })).toBeVisible();
@@ -114,4 +122,23 @@ test('B4 empty-day context and Lab-only synthetic input commit a new workout wit
   await page.getByLabel('Séries', { exact: true }).fill('4');
   await page.getByRole('button', { name: 'Alterar treino sintético', exact: true }).click(); await expect(save(page)).toBeDisabled();
   await expect(page.getByText('Este treino foi atualizado em outra edição.', { exact: false })).toBeVisible();
+});
+
+
+test('B4 Back preserves edits and explicit discard requires confirmation without changing the saved workout', async ({ page }) => {
+  await openPrimary(page);
+  await page.getByLabel('Séries', { exact: true }).fill('5');
+  await page.getByRole('button', { name: 'Voltar', exact: true }).click(); await expect(page).toHaveURL(/\/rotinas$/);
+  await page.getByRole('button', { name: 'Ver treino', exact: true }).click();
+  await expect(page.getByLabel('Séries', { exact: true })).toHaveValue('5');
+  await page.getByRole('button', { name: 'Descartar rascunho', exact: true }).click();
+  let dialog = page.getByRole('dialog', { name: 'Descartar rascunho?', exact: true });
+  await expect(dialog).toBeVisible(); await dialog.getByRole('button', { name: 'Continuar editando' }).click();
+  await expect(dialog).toHaveCount(0); await expect(page.getByLabel('Séries', { exact: true })).toHaveValue('5');
+  await page.getByRole('button', { name: 'Descartar rascunho', exact: true }).click();
+  dialog = page.getByRole('dialog', { name: 'Descartar rascunho?', exact: true });
+  await dialog.getByRole('button', { name: 'Descartar alterações', exact: true }).click();
+  await expect(page).toHaveURL(/\/rotinas$/); await expect(dialog).toHaveCount(0);
+  await page.getByRole('button', { name: 'Ver treino', exact: true }).click();
+  await expect(page.getByLabel('Séries', { exact: true })).toHaveValue('1');
 });
