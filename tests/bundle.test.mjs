@@ -24,6 +24,7 @@ test('source maps and unexpected files block distribution', () => fixture(async 
 test('laboratory content and credential patterns block the common application', () => fixture(async root => {
   const path = join(root, 'assets', 'entry.js');
   await writeFile(path, 'Visual Lab'); await assert.rejects(auditBundle(root, 'app'), /Lab leaked/);
+  await writeFile(path, 'Consumidor técnico P2-B2'); await assert.rejects(auditBundle(root, 'app'), /Lab leaked/);
   await writeFile(path, 'ghp_' + 'x'.repeat(40)); await assert.rejects(auditBundle(root, 'app'), /Forbidden source/);
 }));
 test('symlinks cannot carry files across the publication boundary', () => fixture(async root => {
