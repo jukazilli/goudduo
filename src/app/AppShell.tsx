@@ -82,6 +82,6 @@ export function AppShell({ contentExtension, integrations }: { contentExtension?
         main.current?.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
       }}/>}
     </div>
-    <OverlayHost onPresence={onPresence}/>
+    <OverlayHost onPresence={onPresence} resolve={integrations?.resolveOverlay}/>
   </>;
 }

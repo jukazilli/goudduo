@@ -1,3 +1,4 @@
+import type { RoutineEditorContext, RoutinePanel } from './routine-context';
 export type HomeContext = 'treinos' | 'publicacoes' | 'business';
 export type Destination = 'home' | 'rotinas' | 'match' | 'mensagens' | 'perfil';
 export type AccessStep = 'splash' | 'login' | 'cadastro' | 'otp' | 'recuperacao' | 'termos' | 'privacidade';
@@ -10,14 +11,14 @@ export type Page = { readonly destination: 'home'; readonly context: HomeContext
   { readonly destination: 'session'; readonly sessionId: string } |
   { readonly destination: 'profile-visited'; readonly userId: string } |
   { readonly destination: 'pulse-viewer'; readonly pulseId: string };
-export type Panel = 'search' | 'create' | 'activity';
+export type Panel = 'search' | 'create' | 'activity' | RoutinePanel;
 export interface Location { readonly page: Page; readonly panel: Panel | null }
-export interface NavigationEntry { readonly location: Location; readonly key: string; readonly depth: number }
+export interface NavigationEntry { readonly location: Location; readonly key: string; readonly depth: number; readonly routineContext?: RoutineEditorContext }
 const accessSteps: readonly string[] = ['splash', 'login', 'cadastro', 'otp', 'recuperacao', 'termos', 'privacidade'];
 const standalonePaths = { onboarding: '/onboarding', 'profile-edit': '/perfil/editar', interests: '/perfil/interesses', settings: '/configuracoes', history: '/historico' } as const;
 // Opaque identifiers only. No names, email, credentials or health data in URLs.
 const idPattern = /^[A-Za-z0-9_-]{1,80}$/;
-const panels: readonly string[] = ['search', 'create', 'activity'];
+const panels: readonly string[] = ['search', 'create', 'activity', 'routine-library', 'routine-confirm-single', 'routine-naming'];
 export function parseLocation(url: URL): Location {
   const path = url.pathname.replace(/\/$/, '') || '/';
   let page: Page;
@@ -81,6 +82,7 @@ export class BrowserNavigation {
   private positions = new Map<string, number>();
   private homePositions = new Map<HomeContext, number>();
   private entry: NavigationEntry;
+  private routineContexts = new Map<string, RoutineEditorContext>();
   private lastHome: HomeContext = 'treinos';
   private pendingPanelClose: string | null = null;
   panelOpener: HTMLElement | null = null;
@@ -88,7 +90,7 @@ export class BrowserNavigation {
     const state: unknown = this.browser.history.state;
     const marker = isMarker(state) ? state : this.marker(0);
     if (!isMarker(state)) this.browser.history.replaceState(marker, '');
-    this.entry = { location: parseLocation(new URL(this.browser.location.href)), key: marker.key, depth: marker.depth };
+    this.entry = { location: parseLocation(new URL(this.browser.location.href)), key: marker.key, depth: marker.depth, ...(this.routineContexts.has(marker.key) ? { routineContext: this.routineContexts.get(marker.key)! } : {}) };
     this.pendingPanelClose = null;
     if (this.entry.location.page.destination === 'home') this.lastHome = this.entry.location.page.context;
     this.emit();
@@ -107,28 +109,33 @@ export class BrowserNavigation {
   getSnapshot = () => this.entry;
   homePage = (): Page => ({ destination: 'home', context: this.lastHome });
   subscribe = (listener: () => void) => { this.listeners.add(listener); return () => { this.listeners.delete(listener); }; };
-  dispose = () => { this.browser.removeEventListener('popstate', this.pop); this.listeners.clear(); };
+  dispose = () => { this.browser.removeEventListener('popstate', this.pop); this.listeners.clear(); this.routineContexts.clear(); };
   saveScroll = (position: number) => {
     const value = Math.max(0, position);
     this.positions.set(this.entry.key, value);
     if (this.entry.location.page.destination === 'home') this.homePositions.set(this.entry.location.page.context, value);
   };
   scrollPosition = () => this.positions.get(this.entry.key) ?? 0;
-  navigate = (location: Location, replace = false) => {
-    if (locationPath(location) === locationPath(this.entry.location)) return;
+  navigate = (location: Location, replace = false, options: { readonly routineContext?: RoutineEditorContext; readonly scroll?: number } = {}) => {
+    if (locationPath(location) === locationPath(this.entry.location) && (!options.routineContext || options.routineContext.draftId === this.entry.routineContext?.draftId)) return;
     const marker = this.marker(replace ? this.entry.depth : this.entry.depth + 1);
     if (pagePath(location.page) === pagePath(this.entry.location.page) && (location.panel || this.entry.location.panel)) this.positions.set(marker.key, this.scrollPosition());
     else if (location.page.destination === 'home') this.positions.set(marker.key, this.homePositions.get(location.page.context) ?? 0);
+    if (options.scroll !== undefined) this.positions.set(marker.key, Math.max(0, options.scroll));
+    const context = options.routineContext ?? (pagePath(location.page) === pagePath(this.entry.location.page) ? this.entry.routineContext : undefined);
+    if (context && location.page.destination === 'editor' && location.page.workoutId === context.workoutId) {
+      this.routineContexts.set(marker.key, { ...context, origin: { ...context.origin, page: { ...context.origin.page } } });
+    }
     this.browser.history[replace ? 'replaceState' : 'pushState'](marker, '', locationPath(location));
-    this.entry = { location, key: marker.key, depth: marker.depth };
+    this.entry = { location, key: marker.key, depth: marker.depth, ...(this.routineContexts.has(marker.key) ? { routineContext: this.routineContexts.get(marker.key)! } : {}) };
     this.pendingPanelClose = null;
     if (location.page.destination === 'home') this.lastHome = location.page.context;
     this.emit();
   };
-  openPanel = (panel: Panel, trigger?: HTMLElement) => {
+  openPanel = (panel: Panel, trigger?: HTMLElement, replace = false) => {
     const active = this.browser.document.activeElement;
-    this.panelOpener = trigger ?? (active instanceof HTMLElement ? active : null);
-    this.navigate({ ...this.entry.location, panel });
+    if (!this.entry.location.panel) this.panelOpener = trigger ?? (active instanceof HTMLElement ? active : null);
+    this.navigate({ ...this.entry.location, panel }, replace);
   };
   closePanel = () => {
     if (!this.entry.location.panel || this.pendingPanelClose === this.entry.key) return;

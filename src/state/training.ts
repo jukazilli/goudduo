@@ -74,6 +74,10 @@ function bindingIssue(state: DemoState, draft: WorkoutDraft): DraftIssue | null 
   if (bindingCount(state, draft.workoutId) > 1) return 'shared-workout-pending';
   return null;
 }
+/** Same gates used by the reducer and presentation adapters; no duplicate validation policy. */
+export function validateDraft(state: DemoState, draft: WorkoutDraft): DraftIssue | null {
+  return bindingIssue(state, draft) ?? validatePrescription(state, draft.exercises);
+}
 function commit(state: DemoState, routineId: string, day: Weekday, workout: Workout): DemoState {
   const routine = readEntity(state.routines, routineId)!;
   const saved: Workout = { ...workout, name: workout.name.trim(), exercises: clonePrescription(workout.exercises) };
@@ -122,14 +126,14 @@ export function reduceTraining(state: DemoState, action: TrainingAction | Legacy
   if (action.type === 'draft/cancel') return discardDraft(state, draft.id);
   if (action.type === 'draft/resume') return putDraft(state, { ...draft, stage: 'editing', issue: null });
   if (action.type === 'draft/prepare') {
-    const issue = bindingIssue(state, draft) ?? validatePrescription(state, draft.exercises);
+    const issue = validateDraft(state, draft);
     return putDraft(state, { ...draft, issue, stage: issue ? 'editing' : draft.exercises.length === 1 ? 'confirm-single' : 'naming' });
   }
   if (action.type === 'draft/confirm-single') {
     return draft.stage === 'confirm-single' ? putDraft(state, { ...draft, stage: 'naming', issue: null }) : state;
   }
   if (action.type === 'draft/commit') {
-    const issue = bindingIssue(state, draft) ?? validatePrescription(state, draft.exercises) ??
+    const issue = validateDraft(state, draft) ??
       (draft.stage !== 'naming' ? draft.exercises.length === 1 ? 'confirmation-required' : 'prepare-required' : null) ??
       (!action.name.trim() || action.name.trim().length > 100 ? 'name-required' : null);
     if (issue) return putDraft(state, { ...draft, issue });

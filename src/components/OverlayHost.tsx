@@ -2,6 +2,8 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useNavigation } from '../app/NavigationProvider';
 import type { Panel } from '../app/navigation';
+import { isRoutinePanel } from '../app/routine-context';
+import type { ContextualOverlay, OverlayResolver } from '../app/surface-contracts';
 import { Button } from './primitives';
 function useReducedMotion() {
   const [reduced, setReduced] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -12,10 +14,13 @@ function useReducedMotion() {
   }, []);
   return reduced;
 }
-const titles: Record<Panel, string> = { search: 'Busca', create: 'Criar', activity: 'Atividade' };
-export function OverlayHost({ onPresence }: { onPresence: (present: boolean) => void }) {
+const titles: Record<Panel, string> = { search: 'Busca', create: 'Criar', activity: 'Atividade', 'routine-library': 'Biblioteca', 'routine-confirm-single': 'Confirmação', 'routine-naming': 'Nome do treino' };
+export function OverlayHost({ onPresence, resolve }: { onPresence: (present: boolean) => void; resolve?: OverlayResolver | undefined }) {
   const { location, navigation } = useNavigation();
   const requested = location.panel;
+  // Keep content mounted during exit, even after route/draft consumers stop requesting it.
+  const configurationRef = useRef<ContextualOverlay | undefined>(undefined);
+  if (requested) configurationRef.current = isRoutinePanel(requested) ? resolve?.(requested) : undefined;
   const [rendered, setRendered] = useState<Panel | null>(requested);
   const [closing, setClosing] = useState(false);
   const reduced = useReducedMotion();
@@ -39,13 +44,14 @@ export function OverlayHost({ onPresence }: { onPresence: (present: boolean) => 
     const previous = document.body.style.overflow; document.body.style.overflow = 'hidden';
     const root = document.getElementById('root'), wasInert = root?.inert ?? false;
     if (root) root.inert = true;
-    dialog.current?.focus();
+    const initial = configurationRef.current?.initialFocus?.();
+    if (initial && dialog.current?.contains(initial)) initial.focus(); else dialog.current?.focus();
     const keyboard = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         event.preventDefault(); if (requestedRef.current) navigation.closePanel();
       }
       if (event.key !== 'Tab') return;
-      const items = Array.from(dialog.current?.querySelectorAll<HTMLElement>('button:not(:disabled),a[href],input:not(:disabled),[tabindex="0"]') ?? []);
+      const items = Array.from(dialog.current?.querySelectorAll<HTMLElement>('button:not(:disabled),a[href],input:not(:disabled),textarea:not(:disabled),select:not(:disabled),[tabindex="0"]') ?? []);
       const first = items[0], last = items.at(-1);
       if (!first || !last) { event.preventDefault(); dialog.current?.focus(); return; }
       if (!dialog.current?.contains(document.activeElement)) { event.preventDefault(); first.focus(); }
@@ -58,26 +64,33 @@ export function OverlayHost({ onPresence }: { onPresence: (present: boolean) => 
       document.body.style.overflow = previous; document.removeEventListener('keydown', keyboard);
       const target = restoreFocus.current;
       window.requestAnimationFrame(() => {
-        if (target?.isConnected && !document.querySelector('[role="dialog"]') && JSON.stringify(navigation.getSnapshot().location.page) === originPage) target.focus();
+        if (document.querySelector('[role="dialog"]')) return;
+        if (JSON.stringify(navigation.getSnapshot().location.page) === originPage) {
+          if (target?.isConnected) target.focus();
+        } else {
+          const destination = document.querySelector<HTMLElement>('#main-content h1[tabindex="-1"]') ?? document.querySelector<HTMLElement>('#main-content');
+          destination?.focus({ preventScroll: true });
+        }
       });
     };
   }, [rendered, navigation, onPresence]);
   if (!rendered) return null;
-  const sheet = rendered === 'search' || rendered === 'create';
+  const configuration = configurationRef.current;
+  const sheet = configuration ? configuration.presentation === 'sheet' : rendered === 'search' || rendered === 'create' || rendered === 'routine-library';
   const close = () => { if (!closing && requestedRef.current) navigation.closePanel(); };
   return createPortal(<div data-foundation className={`overlay-backdrop ${closing ? 'is-closing' : ''} ${sheet ? 'is-sheet' : ''}`}
     data-testid="overlay-backdrop" onClick={event => { if (event.target === event.currentTarget) close(); }}>
     <div ref={dialog} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="panel-title" aria-describedby="panel-description"
-      className="overlay-panel">
+      className="overlay-panel" data-overlay-size={configuration?.size}>
       {sheet && <div className="sheet-handle" aria-hidden="true" onPointerDown={event => {
         pointer.current = { id: event.pointerId, y: event.clientY }; event.currentTarget.setPointerCapture(event.pointerId);
       }} onPointerUp={event => {
         if (pointer.current?.id === event.pointerId && event.clientY - pointer.current.y > 72) close();
         pointer.current = null;
       }} onPointerCancel={() => { pointer.current = null; }}><span/></div>}
-      <h2 id="panel-title">{titles[rendered]}</h2>
-      <p id="panel-description">Esta opção ainda não está disponível.</p>
-      <Button onClick={close}>Fechar</Button>
+      <h2 id="panel-title">{configuration?.title ?? titles[rendered]}</h2>
+      <p id="panel-description">{configuration?.description ?? 'Esta opção ainda não está disponível.'}</p>
+      {configuration?.content ?? <Button onClick={close}>Fechar</Button>}
     </div>
   </div>, document.body);
 }
