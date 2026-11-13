@@ -2,7 +2,7 @@
 
 Entrega estrutural para revisão, **sem superfícies finais, merge ou deploy**. Coordenação [#29](https://github.com/jukazilli/goudduo/issues/29). Base: P2-B1 [PR #33](https://github.com/jukazilli/goudduo/pull/33), integrada pelo proprietário em `86d0b968d402ab7bf2edf323d80a4be429c81acb`. Workspace estava limpo; branch `feat/p2b2-contextual-routine-adapters` criada da main nesse SHA. A árvore do merge é idêntica ao head P2-B1 `91ec755e50ec68a205063deb2e5bfb2b20ea20b7`.
 
-CI do head P2-B1 aprovada na [execução43352952328](https://github.com/jukazilli/goudduo/actions/runs/43352952328). O merge86d0b968 não possuía check próprio no preflight; não confundimos essas evidências. Nenhuma PR P2-B2 concorrente foi encontrada; as PRs abertas de laboratório/Acesso/Perfil não foram integradas ou modificadas.
+CI do head P2-B1 aprovada na [execução 43352952328](https://github.com/jukazilli/goudduo/actions/runs/43352952328). O merge `86d0b968` não possuía check próprio no preflight; não confundimos essas evidências. Nenhuma PR P2-B2 concorrente foi encontrada; as PRs abertas de laboratório/Acesso/Perfil não foram integradas ou modificadas.
 
 ## Diagnóstico apresentado antes de editar
 

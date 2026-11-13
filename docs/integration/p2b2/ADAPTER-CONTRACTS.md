@@ -35,6 +35,6 @@ Intenção transitória em ref correlaciona a ação com o próximo resultado do
 
 Renderers contextuais recebem RoutineOverlayContract: contexto, rascunho, issue, suggestedName e ações close/continueEditing/confirmSingle/submitName. Retornam content e initialFocus opcional. Sem renderer ou etapa compatível, resolver retorna undefined: host exibe estado neutro, sem simular uma interface concluída.
 
-Sugestão de nome: Treino de segunda-feira etc.; somente sugestão na etapa final, não commit antecipado. Limite100 e validação da P2-B1 foram preservados; diferença com maxlength60 do HTML continua gate de produto, não foi resolvida por mudança silenciosa.
+Sugestão de nome: Treino de segunda-feira etc.; somente sugestão na etapa final, não commit antecipado. Limite 100 e validação da P2-B1 foram preservados; diferença com maxlength 60 do HTML continua gate de produto, não foi resolvida por mudança silenciosa.
 
 O consumidor técnico em src/lab/RoutineAdapterScenario.tsx não contém catálogo real/busca funcional. Ele usa campo de foco, item sintético temporal, texto longo para scroll e controles explicitamente técnicos de confirmação/nomeação. Não é implementação antecipada de Editor/Biblioteca V7.4.

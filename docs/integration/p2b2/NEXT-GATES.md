@@ -7,7 +7,7 @@
 - Header único com título contextual/ação real, chevron e check existentes.
 - Rotina/dia/workout/draft/revisão/origem em navegação efêmera, retorno e scroll.
 - Estado único, rascunhos isolados e gates prepare/confirm-single/naming/commit.
-- Biblioteca sheet75% e modais por resolvedores de conteúdo no host existente.
+- Biblioteca sheet 75% e modais por resolvedores de conteúdo no host existente.
 - Foco/fechamento/saída/reduced-motion e neutralidade de rota sem contexto.
 - Consumidores de prova isolados no Lab, guardados contra inclusão no bundle comum.
 
@@ -24,7 +24,7 @@ Antes de construir, fechar escopo de operações de rotina/ordem/capa e estado v
 | Cópia/referência por dia | Sem decisão padrão; gravação multiassociada continua bloqueada |
 | Back versus descartar | Back preserva; adapter exige confirmação explícita de descarte; UX final de confirmação pendente |
 | Persistência/recuperação de reload | Inexistente por escopo; não foi introduzida |
-| IDs e nomes | Sugestão contextual disponível; limite final60 HTML versus100 domínio continua decisão da superfície |
+| IDs e nomes | Sugestão contextual disponível; limite final 60 HTML versus 100 domínio continua decisão da superfície |
 | Movimento local V7.4 | Duração global preservada; eventual exceção depende de aprovação |
 | Biblioteca independente | Não substituída pelo sheet contextual; catálogo completo/busca/equipamento visual continuam fora do lote |
 | Mídia e código privado | Nenhum port autorizado por esta entrega; seleção/direitos continuam granulares |
