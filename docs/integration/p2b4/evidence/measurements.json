@@ -1,0 +1,714 @@
+{
+  "referenceCommit": "3f8b2c7c93a33a713c780305e672e1ec7998ceaf",
+  "referenceBlob": "122275b3cb03bd996b477375d1bbc73ae29c5c3e",
+  "sourcesSHA256": {
+    "src/app/PrototypeApp.tsx": "2604564971166990d105215d3d8103537c4d50bfb87b30eaab221ddf574baf99",
+    "src/surfaces/routines/WorkoutEditor.tsx": "c18b1efa0d7f3646f74be611fb7755c76192d2b66f51a146df2493d5ea6c2480",
+    "src/surfaces/routines/WorkoutSaveOverlays.tsx": "f83a5903a1f96b919c9692904b4ac6cd9e77197ee7e70aedb32e9d0deb64d94a",
+    "src/surfaces/routines/editor-fields.ts": "1d0c13ed1250fb1e0168dd8985a1852b621fefed9158548574be4af1bcbae088",
+    "src/surfaces/routines/workout-editor.css": "7ff9ccb70775dc8ffe45dd32af3e3061663fee58cb53a94877124991be253dae"
+  },
+  "viewports": [
+    {
+      "width": 320,
+      "captures": [
+        {
+          "file": "react-editor-320.png",
+          "sha256": "8c829a80f3fada60b55dfc2e1dbe661e314d5f57b4b6fce4724bba6cdb516b2e"
+        },
+        {
+          "file": "react-confirmation-320.png",
+          "sha256": "5ef680c2494c12d11c44c6a085685803164f892e5eed0148b0a3b5434dfa3a82"
+        },
+        {
+          "file": "react-naming-320.png",
+          "sha256": "690b2014403e6d3bc9c1bc00d7d876d19a19204d6b1c1cd8265d135743f14dfb"
+        },
+        {
+          "file": "react-invalid-320.png",
+          "sha256": "58021bc781890659b461660dd3654df0ed7d6b2e2fa224e24ffdb12e199fa804"
+        },
+        {
+          "file": "react-library-unavailable-320.png",
+          "sha256": "0ce4638a654e18ba406c5170b6fa50401ccaef96fbd00d090ff5b4cde2d1b04a"
+        },
+        {
+          "file": "react-empty-320.png",
+          "sha256": "e53fec91677b60b3dc246ddb16b4dd316a00f2f006786054ceb847799f8962cc"
+        },
+        {
+          "file": "react-time-320.png",
+          "sha256": "2aead0ffa4bedb88b5b84a3c9768cda9b2a0a9321c49d8da31385a8030f46e34"
+        },
+        {
+          "file": "react-distance-320.png",
+          "sha256": "1bf52b8e9563435a3550c590a1890605346bafffe9860fd4ce25706063e355cd"
+        },
+        {
+          "file": "reference-editor-raw-320.png",
+          "sha256": "8f0279b4e928c42553f65e6dbc2e359f09a8dbdb92176acccc6c182868b65d0f"
+        },
+        {
+          "file": "reference-editor-normalized-320.png",
+          "sha256": "65e243e81fcd398698e1771c4139059aed7cdf8f23aa5a02d9f460e0525d97b5"
+        },
+        {
+          "file": "react-editor-content-320.png",
+          "sha256": "4775268af6e198745077418d3e1d72b333dab251f3825d85c2a5767765bbd3b3"
+        }
+      ],
+      "reactGeometry": {
+        "width": 284,
+        "radius": "20px",
+        "padding": "16px",
+        "titleSize": "18px",
+        "fields": [
+          {
+            "label": "Séries",
+            "width": 119.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Carga (kg)",
+            "width": 119.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep min",
+            "width": 119.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep max",
+            "width": 119.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Descanso (HH:MM:SS)",
+            "width": 119.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Equipamento",
+            "width": 119.5,
+            "height": 44,
+            "fontSize": "16px"
+          }
+        ]
+      },
+      "referenceGeometry": {
+        "width": 284,
+        "radius": "20px",
+        "padding": "16px",
+        "titleSize": "18px",
+        "illustrationHeight": 125,
+        "fields": [
+          {
+            "label": "Séries",
+            "width": 119.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Carga (kg)",
+            "width": 119.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep. mín.",
+            "width": 119.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep. máx.",
+            "width": 119.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Descanso",
+            "width": 119.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Equipamento",
+            "width": 119.5,
+            "height": 43,
+            "fontSize": "16px"
+          }
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "width": 375,
+      "captures": [
+        {
+          "file": "react-editor-375.png",
+          "sha256": "d3abd09138aaa9a2bd1e139c33302055bd6cf19ec633595901aacd39df0a1c75"
+        },
+        {
+          "file": "react-confirmation-375.png",
+          "sha256": "a3c8cff4074455d376cfe732a8137046d622c22a49de5d1443c791db6543a578"
+        },
+        {
+          "file": "react-naming-375.png",
+          "sha256": "f17b2c3943d54c4023588d56231be3a7c901386b93bb00255c31b380ca2d8ec2"
+        },
+        {
+          "file": "react-invalid-375.png",
+          "sha256": "2f99a748ddcfd4ffa58aa8587b55d36b9e0d85aa1ba4aba0b20d1b82d352de38"
+        },
+        {
+          "file": "react-library-unavailable-375.png",
+          "sha256": "a295b75a8bba65817997611298eaaf4d89aad1af2ebb937c6349d6e7e1de2649"
+        },
+        {
+          "file": "react-empty-375.png",
+          "sha256": "26a0bbb474b2021dc74f1a61dc2c688010751e16fc9812d6a2affaa33ad4bc17"
+        },
+        {
+          "file": "react-time-375.png",
+          "sha256": "7a8bdb047728c6782302d84ef03ead3ba11191ae7928f84cbbf1d52447e55576"
+        },
+        {
+          "file": "react-distance-375.png",
+          "sha256": "d04dc05fb6028918968cb47434c13fab240482977d8767d2e41a5ab95de69a73"
+        },
+        {
+          "file": "reference-editor-raw-375.png",
+          "sha256": "6255ab245c931695d560905722b9faa2edc91065cadaaf332eccdab90dadf868"
+        },
+        {
+          "file": "reference-editor-normalized-375.png",
+          "sha256": "fb07725d40c2b411d66b98c077d397f0501fb63682398ea8a1bff33d7c7c54fe"
+        },
+        {
+          "file": "react-editor-content-375.png",
+          "sha256": "f5cd9e188e1e0c0846dd2189ccd428cd10bffe430b04f58cab530ebaaaa29974"
+        }
+      ],
+      "reactGeometry": {
+        "width": 339,
+        "radius": "20px",
+        "padding": "16px",
+        "titleSize": "18px",
+        "fields": [
+          {
+            "label": "Séries",
+            "width": 147,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Carga (kg)",
+            "width": 147,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep min",
+            "width": 147,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep max",
+            "width": 147,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Descanso (HH:MM:SS)",
+            "width": 147,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Equipamento",
+            "width": 147,
+            "height": 44,
+            "fontSize": "16px"
+          }
+        ]
+      },
+      "referenceGeometry": {
+        "width": 339,
+        "radius": "20px",
+        "padding": "16px",
+        "titleSize": "18px",
+        "illustrationHeight": 125,
+        "fields": [
+          {
+            "label": "Séries",
+            "width": 147,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Carga (kg)",
+            "width": 147,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep. mín.",
+            "width": 147,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep. máx.",
+            "width": 147,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Descanso",
+            "width": 147,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Equipamento",
+            "width": 147,
+            "height": 43,
+            "fontSize": "16px"
+          }
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "captures": [
+        {
+          "file": "react-editor-390.png",
+          "sha256": "10ee6502c6e25386bdde1a5570b07bc0c4c5694a4018e7d4c01dc13cb6548d74"
+        },
+        {
+          "file": "react-confirmation-390.png",
+          "sha256": "2f426e60229f0d7750363f4fd9656ee8dffaae9380c0ae820f4db2151a4e5d7a"
+        },
+        {
+          "file": "react-naming-390.png",
+          "sha256": "3d49294d806908af1c02d4be2566534d244fe4c905347d47dc8f9a655bbc907b"
+        },
+        {
+          "file": "react-invalid-390.png",
+          "sha256": "82055b0ab7cbe0c5fd1d95b4060dbd02844813a16c24aeb7f3f6e04a03c6ecb3"
+        },
+        {
+          "file": "react-library-unavailable-390.png",
+          "sha256": "c735b3c4f907dde169428eca8b01bea1728f55932479a585315ef2fda5ff0036"
+        },
+        {
+          "file": "react-empty-390.png",
+          "sha256": "845c1afc57361ac1a1370b005db96c63ae9a41cc595aeae6976389da369b9430"
+        },
+        {
+          "file": "react-time-390.png",
+          "sha256": "696a91fe2b0e63fb266250c785e8608eb0b47276d9c803eca0fbff45958e700a"
+        },
+        {
+          "file": "react-distance-390.png",
+          "sha256": "7866128165634867d58bb659b275729fac4986a12b13ddb2a8c04dec93eee38a"
+        },
+        {
+          "file": "reference-editor-raw-390.png",
+          "sha256": "3c72702690ced73c0ec35c9426017a2ff1418892d7e7bdfe908ba674631ed9ce"
+        },
+        {
+          "file": "reference-editor-normalized-390.png",
+          "sha256": "bfa970a64d9e26ed992061baf602a2aecb5ee6e0818799ddd8567c784c0c97ca"
+        },
+        {
+          "file": "react-editor-content-390.png",
+          "sha256": "b4350ee603d1fba828561a7563fd1d026c0b6916f0634d8adf32dd5ede69395b"
+        }
+      ],
+      "reactGeometry": {
+        "width": 354,
+        "radius": "20px",
+        "padding": "16px",
+        "titleSize": "18px",
+        "fields": [
+          {
+            "label": "Séries",
+            "width": 154.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Carga (kg)",
+            "width": 154.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep min",
+            "width": 154.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep max",
+            "width": 154.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Descanso (HH:MM:SS)",
+            "width": 154.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Equipamento",
+            "width": 154.5,
+            "height": 44,
+            "fontSize": "16px"
+          }
+        ]
+      },
+      "referenceGeometry": {
+        "width": 354,
+        "radius": "20px",
+        "padding": "16px",
+        "titleSize": "18px",
+        "illustrationHeight": 125,
+        "fields": [
+          {
+            "label": "Séries",
+            "width": 154.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Carga (kg)",
+            "width": 154.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep. mín.",
+            "width": 154.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep. máx.",
+            "width": 154.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Descanso",
+            "width": 154.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Equipamento",
+            "width": 154.5,
+            "height": 43,
+            "fontSize": "16px"
+          }
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "width": 414,
+      "captures": [
+        {
+          "file": "react-editor-414.png",
+          "sha256": "4aecbedca9327428d430e65e8bdc165c13620c77f06b9c7ec34f348149d46aff"
+        },
+        {
+          "file": "react-confirmation-414.png",
+          "sha256": "071f966c150347cb4b8015e7ef421f12d10520e85e112e2efb3b92bfeb81d544"
+        },
+        {
+          "file": "react-naming-414.png",
+          "sha256": "be914fb3a4e33465cf4404d636b60cb705fe9b0e680a4970c29e43229ab09a98"
+        },
+        {
+          "file": "react-invalid-414.png",
+          "sha256": "006a12c9564346bb81607cf25c09e7f2a327795c030954afa0833f668b1ee760"
+        },
+        {
+          "file": "react-library-unavailable-414.png",
+          "sha256": "c2b3698553ed1480f4318c2d28e866fe1f7fbf46d0ef0f40b0045c7746e0f54f"
+        },
+        {
+          "file": "react-empty-414.png",
+          "sha256": "a0a4b8cb12aa5b989a184149e346ee2d268dfe5e37e6f5866961c0851b2d3524"
+        },
+        {
+          "file": "react-time-414.png",
+          "sha256": "790dbfc66a364ada5a2de8772ed9be10740c59c27359a18c2ffc743bfe8c00ca"
+        },
+        {
+          "file": "react-distance-414.png",
+          "sha256": "a03499585d05fd27370823437ea1928e89422c864f61388f37cdef9a7426fe68"
+        },
+        {
+          "file": "reference-editor-raw-414.png",
+          "sha256": "7c91d68e56f149807769f04ba6fec050a36e7c30fff02847531bdf3d8448ff9b"
+        },
+        {
+          "file": "reference-editor-normalized-414.png",
+          "sha256": "fc02d0236c1102b1f535029cc4998ba3bacfcbcc96ec4c64093d40121395bb85"
+        },
+        {
+          "file": "react-editor-content-414.png",
+          "sha256": "4971b9ab864f918f35362f4c89a23bf48557738a7447306aec82d4e6d4220ddb"
+        }
+      ],
+      "reactGeometry": {
+        "width": 378,
+        "radius": "20px",
+        "padding": "16px",
+        "titleSize": "18px",
+        "fields": [
+          {
+            "label": "Séries",
+            "width": 166.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Carga (kg)",
+            "width": 166.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep min",
+            "width": 166.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep max",
+            "width": 166.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Descanso (HH:MM:SS)",
+            "width": 166.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Equipamento",
+            "width": 166.5,
+            "height": 44,
+            "fontSize": "16px"
+          }
+        ]
+      },
+      "referenceGeometry": {
+        "width": 378,
+        "radius": "20px",
+        "padding": "16px",
+        "titleSize": "18px",
+        "illustrationHeight": 125,
+        "fields": [
+          {
+            "label": "Séries",
+            "width": 166.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Carga (kg)",
+            "width": 166.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep. mín.",
+            "width": 166.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep. máx.",
+            "width": 166.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Descanso",
+            "width": 166.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Equipamento",
+            "width": 166.5,
+            "height": 43,
+            "fontSize": "16px"
+          }
+        ]
+      },
+      "pageErrors": []
+    },
+    {
+      "width": 430,
+      "captures": [
+        {
+          "file": "react-editor-430.png",
+          "sha256": "53c054f69b915b4718bd2114fa315a1a9c13bacd729c9eaf6ed6a10994480a1c"
+        },
+        {
+          "file": "react-confirmation-430.png",
+          "sha256": "3179c0300ac6aacfcd742840ca16424b226f385f5f9309d5d167bb13696ea82f"
+        },
+        {
+          "file": "react-naming-430.png",
+          "sha256": "6456237da399e73864eb7059c604c9d3d41dbf34e9694b719b5074c1c0653b3e"
+        },
+        {
+          "file": "react-invalid-430.png",
+          "sha256": "6d7ce1eaf61e329644e5771f2e20fd4a8b86ee7fcc5e7f48f0e3faa7af9ac2eb"
+        },
+        {
+          "file": "react-library-unavailable-430.png",
+          "sha256": "189ea11699364b4f288aab90ac0d3687649d194bbb435b3f6fc7598076fe6d50"
+        },
+        {
+          "file": "react-empty-430.png",
+          "sha256": "57ff2a256d3797c698747df9948b0e48896945e0a492046a02cb95c124f58d36"
+        },
+        {
+          "file": "react-time-430.png",
+          "sha256": "d8ea9f700a75537784e59045eeb58bed68b198d9890cd7080806c3d32b271a54"
+        },
+        {
+          "file": "react-distance-430.png",
+          "sha256": "2830619b66975e28c8d62244f2d3e6505898d8b03a2f8e65088dd5913b2b56ea"
+        },
+        {
+          "file": "reference-editor-raw-430.png",
+          "sha256": "ebac1ebbe707f66f940c0a6c06a3282a3321ca7ade884d6afacf4d91867d975b"
+        },
+        {
+          "file": "reference-editor-normalized-430.png",
+          "sha256": "a27a04a16abd056a686c33ebc008e45cbfdf721527d411a29b86f7aafdb775d6"
+        },
+        {
+          "file": "react-editor-content-430.png",
+          "sha256": "85c0ebf24d833045181009b533e1f3eb5368fb0db5e1d884170ae1a914e7d8f2"
+        }
+      ],
+      "reactGeometry": {
+        "width": 394,
+        "radius": "20px",
+        "padding": "16px",
+        "titleSize": "18px",
+        "fields": [
+          {
+            "label": "Séries",
+            "width": 174.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Carga (kg)",
+            "width": 174.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep min",
+            "width": 174.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep max",
+            "width": 174.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Descanso (HH:MM:SS)",
+            "width": 174.5,
+            "height": 44,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Equipamento",
+            "width": 174.5,
+            "height": 44,
+            "fontSize": "16px"
+          }
+        ]
+      },
+      "referenceGeometry": {
+        "width": 394,
+        "radius": "20px",
+        "padding": "16px",
+        "titleSize": "18px",
+        "illustrationHeight": 125,
+        "fields": [
+          {
+            "label": "Séries",
+            "width": 174.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Carga (kg)",
+            "width": 174.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep. mín.",
+            "width": 174.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Rep. máx.",
+            "width": 174.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Descanso",
+            "width": 174.5,
+            "height": 43,
+            "fontSize": "16px"
+          },
+          {
+            "label": "Equipamento",
+            "width": 174.5,
+            "height": 43,
+            "fontSize": "16px"
+          }
+        ]
+      },
+      "pageErrors": []
+    }
+  ],
+  "overlayLifecycleSourceSHA256": "b658aee387823ad8b821952214be571e83b64349aa1c845c667b51deebc2fbff",
+  "notes": [
+    "All captures use the final Editor media reservation and overlay lifecycle implementation.",
+    "Reference includes raw and font-normalized body captures; application includes full-view and content-only captures.",
+    "Closing lifecycle is verified separately by browser tests."
+  ]
+}
