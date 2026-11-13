@@ -1,0 +1,5522 @@
+[
+  {
+    "width": 320,
+    "referenceCommit": "3f8b2c7c93a33a713c780305e672e1ec7998ceaf",
+    "referenceFontsBefore": [],
+    "states": [
+      {
+        "state": "collapsed",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 320,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 320,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-collapsed-320.png",
+            "sha256": "861978dccfc960882e1182a33a7ef6505f906a057bc210cbda5db9da46f633c2"
+          },
+          {
+            "file": "react-collapsed-320.png",
+            "sha256": "db9ded66e9803e1676147ed7e785628c286807d2eb1d50fcd8ea6d850cfcb8f2"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 284,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 284,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [],
+        "reactDays": []
+      },
+      {
+        "state": "expanded",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 320,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 320,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-expanded-320.png",
+            "sha256": "173ff47654346fabb9b08e04d3666fd2fe1057340fcb850d8c260751a8799aea"
+          },
+          {
+            "file": "react-expanded-320.png",
+            "sha256": "6972044e169e131cf02db4eeb0f0ff40a3809d719ea114f4ea3ba7ef5e735a7b"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 284,
+            "height": 343.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 284,
+            "height": 366.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 32.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 32.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 32.5625,
+            "height": 40
+          },
+          {
+            "selected": true,
+            "planned": true,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 32.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 32.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 32.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 32.578125,
+            "height": 40
+          }
+        ],
+        "reactDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": true,
+            "planned": true,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "state": "day-empty",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 320,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 320,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-day-empty-320.png",
+            "sha256": "73b6d2a02ef70d32fdfe550f88245ea9148ba8e69ba6dc4189c9780e9e393c03"
+          },
+          {
+            "file": "react-day-empty-320.png",
+            "sha256": "0583ef55bbd7107ed6f1229111e849b542adea12ddcc7464169179ea3055438c"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 284,
+            "height": 298.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 284,
+            "height": 321.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 32.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 32.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 32.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 32.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 32.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 32.578125,
+            "height": 40
+          },
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 32.578125,
+            "height": 40
+          }
+        ],
+        "reactDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 44,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "state": "restored",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 320,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 320,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-restored-320.png",
+            "sha256": "861978dccfc960882e1182a33a7ef6505f906a057bc210cbda5db9da46f633c2"
+          },
+          {
+            "file": "react-restored-320.png",
+            "sha256": "db9ded66e9803e1676147ed7e785628c286807d2eb1d50fcd8ea6d850cfcb8f2"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 284,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 284,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 138,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [],
+        "reactDays": []
+      },
+      {
+        "state": "right-expanded",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 320,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 320,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-right-expanded-320.png",
+            "sha256": "4ea7fbb793c0b089fa8741c32c33813a7bdf6ed443dd964bb15437f77a33323e"
+          },
+          {
+            "file": "react-right-expanded-320.png",
+            "sha256": "2f09b6a92671f0d5b3b45f79d50200f654cdfd3576fd105e9f5fc10c9f8243e6"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 284,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 284,
+            "height": 298.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 284,
+            "height": 172,
+            "cardHeight": 145,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 284,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 284,
+            "height": 321.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 138,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 284,
+            "height": 172,
+            "cardHeight": 145,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 32.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 32.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 32.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 32.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 32.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 32.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 32.578125,
+            "height": 40
+          }
+        ],
+        "reactDays": [
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "state": "no-routines",
+        "cropHeight": 629,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 320,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 12,
+          "y": 153.953125,
+          "width": 320,
+          "height": 629
+        },
+        "screenshots": [
+          {
+            "file": "reference-no-routines-320.png",
+            "sha256": "c6cdf09d94cc77aafa66182f0b9ad218d96d82ddd6161c054d8b57ecace9b5ea"
+          },
+          {
+            "file": "react-no-routines-320.png",
+            "sha256": "f72f233c93a818f924dfa4c0294f9abe43d5c63f0c0ae6f43c2c51df5ea27aab"
+          }
+        ],
+        "referenceCards": [],
+        "reactCards": [],
+        "referenceDays": [],
+        "reactDays": []
+      }
+    ],
+    "referencePlatformFontsBefore": [
+      {
+        "familyName": "Noto Sans",
+        "postScriptName": "NotoSans-Bold",
+        "isCustomFont": false,
+        "glyphCount": 11
+      }
+    ],
+    "reactPlatformFonts": [
+      {
+        "familyName": "Plus Jakarta Sans ExtraBold",
+        "postScriptName": "PlusJakartaSans-ExtraBold",
+        "isCustomFont": true,
+        "glyphCount": 21
+      }
+    ],
+    "rawReference": {
+      "file": "reference-raw-collapsed-320.png",
+      "sha256": "8200d6173a27c679e050b6712cafc11f91331435300f0fd1c86e8f0aafb182ed"
+    },
+    "referencePlatformFontsAfter": [
+      {
+        "familyName": "Plus Jakarta Sans ExtraBold",
+        "postScriptName": "PlusJakartaSans-ExtraBold",
+        "isCustomFont": true,
+        "glyphCount": 11
+      }
+    ],
+    "referenceFontsAfter": [
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "500",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "600",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "800",
+        "status": "loaded"
+      }
+    ],
+    "referencePageErrors": [],
+    "reactPageErrors": [],
+    "implementationFilesSHA256": {
+      "src/surfaces/routines/RoutinesHome.tsx": "19829d3d88e24d315789f5b6ba0a6171a2a185ae6bd4dfca9ea2aae080ddbe5b",
+      "src/surfaces/routines/routines.css": "7ff9119a6bbf2b121a7fa32754af144dc3859b57ba401d728f381e0276dc0f4d",
+      "src/surfaces/routines/layout.ts": "fc10cf4651c3b27191d6158ab216b3aed86a5e167ece124fe1a6e15c1c7cca81",
+      "src/app/PrototypeApp.tsx": "4c9b1fc0312fb17da8fd8f1a21ab7ddcf322eb0ee2b43c4c2b2be88f410e1168",
+      "src/state/model.ts": "2bf980a1903109b2c201e879158aa21aeb5a2f992ce5dce99806e1ed695ebd3f",
+      "src/state/routine-fixtures.ts": "48dc31ad601bdebb3acdd5d07fc7c337042cc2808ba7e38bf22d2065b6fcc5a7"
+    }
+  },
+  {
+    "width": 375,
+    "referenceCommit": "3f8b2c7c93a33a713c780305e672e1ec7998ceaf",
+    "referenceFontsBefore": [],
+    "states": [
+      {
+        "state": "collapsed",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 375,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 375,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-collapsed-375.png",
+            "sha256": "2dd2ea87629200e4f4cd84781c6809f3a46ea4d90db723ae30d3a76129b1c99a"
+          },
+          {
+            "file": "react-collapsed-375.png",
+            "sha256": "3c7276e927ab97a90f078d936eb98dd4bb785e1e80835f844e90ac5b0d58296a"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 339,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 339,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [],
+        "reactDays": []
+      },
+      {
+        "state": "expanded",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 375,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 375,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-expanded-375.png",
+            "sha256": "49ca58979a6a4d9f9290ad487349616523310c3308de8883cbf3edd103ca2405"
+          },
+          {
+            "file": "react-expanded-375.png",
+            "sha256": "17cc766d402925209081e03b272101f8ce7b4f1dff138217a21bbee707f227f2"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 339,
+            "height": 343.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 339,
+            "height": 366.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 40.421875,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 40.421875,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 40.4375,
+            "height": 40
+          },
+          {
+            "selected": true,
+            "planned": true,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 40.421875,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 40.4375,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 40.421875,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 40.421875,
+            "height": 40
+          }
+        ],
+        "reactDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": true,
+            "planned": true,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "state": "day-empty",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 375,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 375,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-day-empty-375.png",
+            "sha256": "65294b999307619936b921c65ac691ad3ffd0926eaa57921c4585e45b63feba5"
+          },
+          {
+            "file": "react-day-empty-375.png",
+            "sha256": "a1c80c5b9de923aced7e3a9b9af4fb38c6f1d9cc80abe86248d693e455683396"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 339,
+            "height": 298.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 339,
+            "height": 321.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 40.421875,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 40.421875,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 40.4375,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 40.421875,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 40.4375,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 40.421875,
+            "height": 40
+          },
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 40.421875,
+            "height": 40
+          }
+        ],
+        "reactDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 44,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "state": "restored",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 375,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 375,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-restored-375.png",
+            "sha256": "2dd2ea87629200e4f4cd84781c6809f3a46ea4d90db723ae30d3a76129b1c99a"
+          },
+          {
+            "file": "react-restored-375.png",
+            "sha256": "3c7276e927ab97a90f078d936eb98dd4bb785e1e80835f844e90ac5b0d58296a"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 339,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 339,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 164,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [],
+        "reactDays": []
+      },
+      {
+        "state": "right-expanded",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 375,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 375,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-right-expanded-375.png",
+            "sha256": "e998fbf5cf36a72a0127779ea621365932e08da9700059ee069c47e6805a1f68"
+          },
+          {
+            "file": "react-right-expanded-375.png",
+            "sha256": "18d004438cdee54825da064d57b03c9a539b92cfbba72b914b604252bf64cd3b"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 339,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 339,
+            "height": 298.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 339,
+            "height": 172,
+            "cardHeight": 145,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 339,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 339,
+            "height": 321.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 164,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 339,
+            "height": 172,
+            "cardHeight": 145,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 40.421875,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 40.421875,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 40.4375,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 40.421875,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 40.4375,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 40.421875,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 40.421875,
+            "height": 40
+          }
+        ],
+        "reactDays": [
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "state": "no-routines",
+        "cropHeight": 629,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 375,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 12,
+          "y": 153.953125,
+          "width": 375,
+          "height": 629
+        },
+        "screenshots": [
+          {
+            "file": "reference-no-routines-375.png",
+            "sha256": "7d762d60e22d7aff09d39f2a0d84db38b8edec673094620c31d00b8579ed2ab2"
+          },
+          {
+            "file": "react-no-routines-375.png",
+            "sha256": "47ddd22eedd02d8f438c245cee0cb1ad3b5dadec31e857c6601aba66b2d54917"
+          }
+        ],
+        "referenceCards": [],
+        "reactCards": [],
+        "referenceDays": [],
+        "reactDays": []
+      }
+    ],
+    "referencePlatformFontsBefore": [
+      {
+        "familyName": "Noto Sans",
+        "postScriptName": "NotoSans-Bold",
+        "isCustomFont": false,
+        "glyphCount": 11
+      }
+    ],
+    "reactPlatformFonts": [
+      {
+        "familyName": "Plus Jakarta Sans ExtraBold",
+        "postScriptName": "PlusJakartaSans-ExtraBold",
+        "isCustomFont": true,
+        "glyphCount": 21
+      }
+    ],
+    "rawReference": {
+      "file": "reference-raw-collapsed-375.png",
+      "sha256": "759500f657f53420cca2fc3aa0718d4a3dd8d3e2463a545c514808e1edb5069a"
+    },
+    "referencePlatformFontsAfter": [
+      {
+        "familyName": "Plus Jakarta Sans ExtraBold",
+        "postScriptName": "PlusJakartaSans-ExtraBold",
+        "isCustomFont": true,
+        "glyphCount": 11
+      }
+    ],
+    "referenceFontsAfter": [
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "500",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "600",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "800",
+        "status": "loaded"
+      }
+    ],
+    "referencePageErrors": [],
+    "reactPageErrors": [],
+    "implementationFilesSHA256": {
+      "src/surfaces/routines/RoutinesHome.tsx": "19829d3d88e24d315789f5b6ba0a6171a2a185ae6bd4dfca9ea2aae080ddbe5b",
+      "src/surfaces/routines/routines.css": "7ff9119a6bbf2b121a7fa32754af144dc3859b57ba401d728f381e0276dc0f4d",
+      "src/surfaces/routines/layout.ts": "fc10cf4651c3b27191d6158ab216b3aed86a5e167ece124fe1a6e15c1c7cca81",
+      "src/app/PrototypeApp.tsx": "4c9b1fc0312fb17da8fd8f1a21ab7ddcf322eb0ee2b43c4c2b2be88f410e1168",
+      "src/state/model.ts": "2bf980a1903109b2c201e879158aa21aeb5a2f992ce5dce99806e1ed695ebd3f",
+      "src/state/routine-fixtures.ts": "48dc31ad601bdebb3acdd5d07fc7c337042cc2808ba7e38bf22d2065b6fcc5a7"
+    }
+  },
+  {
+    "width": 390,
+    "referenceCommit": "3f8b2c7c93a33a713c780305e672e1ec7998ceaf",
+    "referenceFontsBefore": [],
+    "states": [
+      {
+        "state": "collapsed",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 390,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 390,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-collapsed-390.png",
+            "sha256": "90d2e1e2eb35afb62b3272767bd8c15d39fbced0e0466100b0a6f5063c35ef66"
+          },
+          {
+            "file": "react-collapsed-390.png",
+            "sha256": "465b9b8631685960b158e8e6c88f78977add6940bd7701b1dadd6f88e59d777d"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 354,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 354,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [],
+        "reactDays": []
+      },
+      {
+        "state": "expanded",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 390,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 390,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-expanded-390.png",
+            "sha256": "973345c72ef327b96d810b8629012fbe34a5e566a00fc38048a9fff9b533c91e"
+          },
+          {
+            "file": "react-expanded-390.png",
+            "sha256": "aa9a446cdc7840197907f9ffe8e258e2d1215ea90a3976bd26d30b91af90c4cb"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 354,
+            "height": 343.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 354,
+            "height": 366.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 42.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 42.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 42.5625,
+            "height": 40
+          },
+          {
+            "selected": true,
+            "planned": true,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 42.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 42.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 42.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 42.578125,
+            "height": 40
+          }
+        ],
+        "reactDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": true,
+            "planned": true,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "state": "day-empty",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 390,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 390,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-day-empty-390.png",
+            "sha256": "d3421b30cd4d43c44de923c5c0c0685d8048633f0a8036831cca2302e4f46ec0"
+          },
+          {
+            "file": "react-day-empty-390.png",
+            "sha256": "2adbd6ff3ba514593ad67ba2bf882bb0460d40c8be82afbb0b8f81cae674784f"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 354,
+            "height": 298.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 354,
+            "height": 321.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 42.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 42.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 42.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 42.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 42.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 42.578125,
+            "height": 40
+          },
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 42.578125,
+            "height": 40
+          }
+        ],
+        "reactDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 44,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "state": "restored",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 390,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 390,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-restored-390.png",
+            "sha256": "90d2e1e2eb35afb62b3272767bd8c15d39fbced0e0466100b0a6f5063c35ef66"
+          },
+          {
+            "file": "react-restored-390.png",
+            "sha256": "465b9b8631685960b158e8e6c88f78977add6940bd7701b1dadd6f88e59d777d"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 354,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 354,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 171.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [],
+        "reactDays": []
+      },
+      {
+        "state": "right-expanded",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 390,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 390,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-right-expanded-390.png",
+            "sha256": "ad9e4c5c134fd0437e932c55c3a2f9109cf71540df33feba0dc26b0d4e1230da"
+          },
+          {
+            "file": "react-right-expanded-390.png",
+            "sha256": "342b76d4b89e169b9e7a36dea8b63565955db561e0e51946ef84eca9f3572281"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 354,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 354,
+            "height": 298.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 354,
+            "height": 172,
+            "cardHeight": 145,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 354,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 354,
+            "height": 321.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 171.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 354,
+            "height": 172,
+            "cardHeight": 145,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 42.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 42.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 42.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 42.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 42.5625,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 42.578125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 42.578125,
+            "height": 40
+          }
+        ],
+        "reactDays": [
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 44,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "state": "no-routines",
+        "cropHeight": 629,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 390,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 12,
+          "y": 153.953125,
+          "width": 390,
+          "height": 629
+        },
+        "screenshots": [
+          {
+            "file": "reference-no-routines-390.png",
+            "sha256": "23fd0456fe52925b67f13e4da83024122c06566911f12c63867ebe7086b0f8c0"
+          },
+          {
+            "file": "react-no-routines-390.png",
+            "sha256": "dbb2702f8ebfebc0b0c92d2ec92b4099ffa22dfc99436e11c53b2b85618b90d4"
+          }
+        ],
+        "referenceCards": [],
+        "reactCards": [],
+        "referenceDays": [],
+        "reactDays": []
+      }
+    ],
+    "referencePlatformFontsBefore": [
+      {
+        "familyName": "Noto Sans",
+        "postScriptName": "NotoSans-Bold",
+        "isCustomFont": false,
+        "glyphCount": 11
+      }
+    ],
+    "reactPlatformFonts": [
+      {
+        "familyName": "Plus Jakarta Sans ExtraBold",
+        "postScriptName": "PlusJakartaSans-ExtraBold",
+        "isCustomFont": true,
+        "glyphCount": 21
+      }
+    ],
+    "rawReference": {
+      "file": "reference-raw-collapsed-390.png",
+      "sha256": "e99f7cc047ca834f9124eb06feab800d6ec8ebce3d25d118d746e9de2ed90eb6"
+    },
+    "referencePlatformFontsAfter": [
+      {
+        "familyName": "Plus Jakarta Sans ExtraBold",
+        "postScriptName": "PlusJakartaSans-ExtraBold",
+        "isCustomFont": true,
+        "glyphCount": 11
+      }
+    ],
+    "referenceFontsAfter": [
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "500",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "600",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "800",
+        "status": "loaded"
+      }
+    ],
+    "referencePageErrors": [],
+    "reactPageErrors": [],
+    "implementationFilesSHA256": {
+      "src/surfaces/routines/RoutinesHome.tsx": "19829d3d88e24d315789f5b6ba0a6171a2a185ae6bd4dfca9ea2aae080ddbe5b",
+      "src/surfaces/routines/routines.css": "7ff9119a6bbf2b121a7fa32754af144dc3859b57ba401d728f381e0276dc0f4d",
+      "src/surfaces/routines/layout.ts": "fc10cf4651c3b27191d6158ab216b3aed86a5e167ece124fe1a6e15c1c7cca81",
+      "src/app/PrototypeApp.tsx": "4c9b1fc0312fb17da8fd8f1a21ab7ddcf322eb0ee2b43c4c2b2be88f410e1168",
+      "src/state/model.ts": "2bf980a1903109b2c201e879158aa21aeb5a2f992ce5dce99806e1ed695ebd3f",
+      "src/state/routine-fixtures.ts": "48dc31ad601bdebb3acdd5d07fc7c337042cc2808ba7e38bf22d2065b6fcc5a7"
+    }
+  },
+  {
+    "width": 414,
+    "referenceCommit": "3f8b2c7c93a33a713c780305e672e1ec7998ceaf",
+    "referenceFontsBefore": [],
+    "states": [
+      {
+        "state": "collapsed",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 414,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 414,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-collapsed-414.png",
+            "sha256": "8e26cb6da1f9bddc5e4cd2fe41d63f620d8192cce8fda39c1d0890df2b7427e4"
+          },
+          {
+            "file": "react-collapsed-414.png",
+            "sha256": "7ca2a591b2e576baac509716c373fccdbfb6d5552962b40a7a625ac8e30aa228"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 378,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 378,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [],
+        "reactDays": []
+      },
+      {
+        "state": "expanded",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 414,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 414,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-expanded-414.png",
+            "sha256": "9c3fc367586aa5bb31d3156961d3dda36568226c7809ef976dc4cfbfa5393458"
+          },
+          {
+            "file": "react-expanded-414.png",
+            "sha256": "95c77ac9f5d6438c804430ff631ecaca62d6e193b2b2da071b0b5bbda21dfc5b"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 378,
+            "height": 343.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 378,
+            "height": 366.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": true,
+            "planned": true,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 46,
+            "height": 40
+          }
+        ],
+        "reactDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": true,
+            "planned": true,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 46,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "state": "day-empty",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 414,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 414,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-day-empty-414.png",
+            "sha256": "62cef0e215f778fbbefdc99b607980b195a882c2966226c6203637ca3647bb95"
+          },
+          {
+            "file": "react-day-empty-414.png",
+            "sha256": "7da4339c442ac9bdfd5ca3858be4f5fe36a724bf267b67eaaec6fb38792904b1"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 378,
+            "height": 298.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 378,
+            "height": 321.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 46,
+            "height": 40
+          }
+        ],
+        "reactDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 46,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "state": "restored",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 414,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 414,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-restored-414.png",
+            "sha256": "8e26cb6da1f9bddc5e4cd2fe41d63f620d8192cce8fda39c1d0890df2b7427e4"
+          },
+          {
+            "file": "react-restored-414.png",
+            "sha256": "7ca2a591b2e576baac509716c373fccdbfb6d5552962b40a7a625ac8e30aa228"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 378,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 378,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 183.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [],
+        "reactDays": []
+      },
+      {
+        "state": "right-expanded",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 414,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 414,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-right-expanded-414.png",
+            "sha256": "7bb357cf94e8e64d379fc1d183ba910dd63c6f02bfe67f89509c643685168de1"
+          },
+          {
+            "file": "react-right-expanded-414.png",
+            "sha256": "22e225c5c16f257e715d5401ea00ea66961003f855a0d9854101c72232b6bc1c"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 378,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 378,
+            "height": 298.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 378,
+            "height": 172,
+            "cardHeight": 145,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 378,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 378,
+            "height": 321.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 183.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 378,
+            "height": 172,
+            "cardHeight": 145,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 46,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 46,
+            "height": 40
+          }
+        ],
+        "reactDays": [
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 46,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 46,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "state": "no-routines",
+        "cropHeight": 629,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 414,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 12,
+          "y": 153.953125,
+          "width": 414,
+          "height": 629
+        },
+        "screenshots": [
+          {
+            "file": "reference-no-routines-414.png",
+            "sha256": "8f309578aa3dc1e18879f1b04d895b631b427939b2069dce4dd3b533956f8106"
+          },
+          {
+            "file": "react-no-routines-414.png",
+            "sha256": "46b0d0cd6595ff4fd45822e76cd4bb32dfdb0ca7fabed0f5cba76704f19a6460"
+          }
+        ],
+        "referenceCards": [],
+        "reactCards": [],
+        "referenceDays": [],
+        "reactDays": []
+      }
+    ],
+    "referencePlatformFontsBefore": [
+      {
+        "familyName": "Noto Sans",
+        "postScriptName": "NotoSans-Bold",
+        "isCustomFont": false,
+        "glyphCount": 11
+      }
+    ],
+    "reactPlatformFonts": [
+      {
+        "familyName": "Plus Jakarta Sans ExtraBold",
+        "postScriptName": "PlusJakartaSans-ExtraBold",
+        "isCustomFont": true,
+        "glyphCount": 22
+      }
+    ],
+    "rawReference": {
+      "file": "reference-raw-collapsed-414.png",
+      "sha256": "bda5feb07316153e1b2450303433c01e00a075ebe03bb1bce5855f5b5ec390c6"
+    },
+    "referencePlatformFontsAfter": [
+      {
+        "familyName": "Plus Jakarta Sans ExtraBold",
+        "postScriptName": "PlusJakartaSans-ExtraBold",
+        "isCustomFont": true,
+        "glyphCount": 11
+      }
+    ],
+    "referenceFontsAfter": [
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "500",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "600",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "800",
+        "status": "loaded"
+      }
+    ],
+    "referencePageErrors": [],
+    "reactPageErrors": [],
+    "implementationFilesSHA256": {
+      "src/surfaces/routines/RoutinesHome.tsx": "19829d3d88e24d315789f5b6ba0a6171a2a185ae6bd4dfca9ea2aae080ddbe5b",
+      "src/surfaces/routines/routines.css": "7ff9119a6bbf2b121a7fa32754af144dc3859b57ba401d728f381e0276dc0f4d",
+      "src/surfaces/routines/layout.ts": "fc10cf4651c3b27191d6158ab216b3aed86a5e167ece124fe1a6e15c1c7cca81",
+      "src/app/PrototypeApp.tsx": "4c9b1fc0312fb17da8fd8f1a21ab7ddcf322eb0ee2b43c4c2b2be88f410e1168",
+      "src/state/model.ts": "2bf980a1903109b2c201e879158aa21aeb5a2f992ce5dce99806e1ed695ebd3f",
+      "src/state/routine-fixtures.ts": "48dc31ad601bdebb3acdd5d07fc7c337042cc2808ba7e38bf22d2065b6fcc5a7"
+    }
+  },
+  {
+    "width": 430,
+    "referenceCommit": "3f8b2c7c93a33a713c780305e672e1ec7998ceaf",
+    "referenceFontsBefore": [],
+    "states": [
+      {
+        "state": "collapsed",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 430,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 430,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-collapsed-430.png",
+            "sha256": "38fdda2857333de1df5b7583f5fa29267059963ff7b1e158f7c998d7fafab4b8"
+          },
+          {
+            "file": "react-collapsed-430.png",
+            "sha256": "44f3399f6870438bae5b65a3b9c7fb2ed6bf9d79882e3b264f3cc1c7704d9dae"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 394,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 394,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [],
+        "reactDays": []
+      },
+      {
+        "state": "expanded",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 430,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 430,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-expanded-430.png",
+            "sha256": "c6edc61da7f4fcd6bf7eb827cead9385275e42383ba56febfaf2812f6dd3a4da"
+          },
+          {
+            "file": "react-expanded-430.png",
+            "sha256": "12af634d48343b73021a9ca69ba639f38c35d80321c46a63aa1f331e4e7507fe"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 394,
+            "height": 343.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 394,
+            "height": 366.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 48.28125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 48.28125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 48.28125,
+            "height": 40
+          },
+          {
+            "selected": true,
+            "planned": true,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 48.296875,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 48.28125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 48.28125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 48.28125,
+            "height": 40
+          }
+        ],
+        "reactDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 48.28125,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 48.28125,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 48.28125,
+            "height": 44
+          },
+          {
+            "selected": true,
+            "planned": true,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 48.296875,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 48.28125,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 48.28125,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 48.28125,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "state": "day-empty",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 430,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 430,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-day-empty-430.png",
+            "sha256": "f86d7f3c66de77907536b850fb311ef302e3320c310d10d3685c4e9f6542b143"
+          },
+          {
+            "file": "react-day-empty-430.png",
+            "sha256": "13934aafcb34a1db461bf126504914296a30b8b5d479c27606d8d8888c0f42f5"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 394,
+            "height": 298.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 394,
+            "height": 321.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 48.28125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 48.28125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 48.28125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 48.296875,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 48.28125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 48.28125,
+            "height": 40
+          },
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 48.28125,
+            "height": 40
+          }
+        ],
+        "reactDays": [
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 48.28125,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 48.28125,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 48.28125,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 48.296875,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 48.28125,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 48.28125,
+            "height": 44
+          },
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 48.28125,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "state": "restored",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 430,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 430,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-restored-430.png",
+            "sha256": "38fdda2857333de1df5b7583f5fa29267059963ff7b1e158f7c998d7fafab4b8"
+          },
+          {
+            "file": "react-restored-430.png",
+            "sha256": "44f3399f6870438bae5b65a3b9c7fb2ed6bf9d79882e3b264f3cc1c7704d9dae"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 394,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 394,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 191.5,
+            "height": 198,
+            "cardHeight": 171,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [],
+        "reactDays": []
+      },
+      {
+        "state": "right-expanded",
+        "cropHeight": 675,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 430,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 0,
+          "y": 61,
+          "width": 430,
+          "height": 733
+        },
+        "screenshots": [
+          {
+            "file": "reference-right-expanded-430.png",
+            "sha256": "94a67136dc3f16cacbfdf3370f3f2596faf2883c0005a417e1a1a5c9128c4a7e"
+          },
+          {
+            "file": "react-right-expanded-430.png",
+            "sha256": "64920898e325e2a26233ef6a52d0bb508794a36a466df08b6e6778ab77a18e78"
+          }
+        ],
+        "referenceCards": [
+          {
+            "id": "r1",
+            "width": 394,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r3",
+            "width": 394,
+            "height": 298.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r2",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r4",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "r5",
+            "width": 394,
+            "height": 172,
+            "cardHeight": 145,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "reactCards": [
+          {
+            "id": "demo-routine",
+            "width": 394,
+            "height": 219,
+            "cardHeight": 192,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(231, 239, 245), rgb(191, 205, 221))",
+            "fontSize": "25px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-home",
+            "width": 394,
+            "height": 321.796875,
+            "cardHeight": 124,
+            "radius": "17px 17px 0px 0px",
+            "background": "linear-gradient(118deg, rgb(251, 240, 230), rgb(240, 220, 213))",
+            "fontSize": "19px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-alternative",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(235, 242, 238), rgb(213, 225, 221))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-run",
+            "width": 191.5,
+            "height": 174,
+            "cardHeight": 147,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(236, 234, 247), rgb(213, 213, 232))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          },
+          {
+            "id": "demo-mobility",
+            "width": 394,
+            "height": 172,
+            "cardHeight": 145,
+            "radius": "18px",
+            "background": "linear-gradient(118deg, rgb(240, 241, 242), rgb(218, 221, 223))",
+            "fontSize": "16px",
+            "fontWeight": "850"
+          }
+        ],
+        "referenceDays": [
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 48.28125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 48.28125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 48.28125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 48.296875,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 48.28125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 48.28125,
+            "height": 40
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(111, 133, 143)",
+            "width": 48.28125,
+            "height": 40
+          }
+        ],
+        "reactDays": [
+          {
+            "selected": true,
+            "planned": false,
+            "background": "rgb(32, 54, 66)",
+            "color": "rgb(255, 255, 255)",
+            "width": 48.28125,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": true,
+            "background": "rgb(220, 239, 250)",
+            "color": "rgb(25, 103, 134)",
+            "width": 48.28125,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 48.28125,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 48.296875,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 48.28125,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 48.28125,
+            "height": 44
+          },
+          {
+            "selected": false,
+            "planned": false,
+            "background": "rgb(234, 240, 242)",
+            "color": "rgb(82, 107, 119)",
+            "width": 48.28125,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "state": "no-routines",
+        "cropHeight": 629,
+        "referenceViewport": {
+          "x": 0,
+          "y": 108,
+          "width": 430,
+          "height": 675
+        },
+        "reactViewport": {
+          "x": 12,
+          "y": 152.953125,
+          "width": 430,
+          "height": 629
+        },
+        "screenshots": [
+          {
+            "file": "reference-no-routines-430.png",
+            "sha256": "8be6aa1e617e4d5afb6ee776def40513d16f277f21b3851f25170e49645893d1"
+          },
+          {
+            "file": "react-no-routines-430.png",
+            "sha256": "c8ebbde12a8b6be71cfff9560f2fb4f7e980210b22d03d98fff145edc1ca1b3a"
+          }
+        ],
+        "referenceCards": [],
+        "reactCards": [],
+        "referenceDays": [],
+        "reactDays": []
+      }
+    ],
+    "referencePlatformFontsBefore": [
+      {
+        "familyName": "Noto Sans",
+        "postScriptName": "NotoSans-Bold",
+        "isCustomFont": false,
+        "glyphCount": 11
+      }
+    ],
+    "reactPlatformFonts": [
+      {
+        "familyName": "Plus Jakarta Sans ExtraBold",
+        "postScriptName": "PlusJakartaSans-ExtraBold",
+        "isCustomFont": true,
+        "glyphCount": 22
+      }
+    ],
+    "rawReference": {
+      "file": "reference-raw-collapsed-430.png",
+      "sha256": "01dd72afa8ebe0bc310a2bc986b6a3c01d8e03ca70df7f5c36a0c9cffea1e90c"
+    },
+    "referencePlatformFontsAfter": [
+      {
+        "familyName": "Plus Jakarta Sans ExtraBold",
+        "postScriptName": "PlusJakartaSans-ExtraBold",
+        "isCustomFont": true,
+        "glyphCount": 11
+      }
+    ],
+    "referenceFontsAfter": [
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "500",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "600",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "\"Plus Jakarta Sans\"",
+        "weight": "800",
+        "status": "loaded"
+      }
+    ],
+    "referencePageErrors": [],
+    "reactPageErrors": [],
+    "implementationFilesSHA256": {
+      "src/surfaces/routines/RoutinesHome.tsx": "19829d3d88e24d315789f5b6ba0a6171a2a185ae6bd4dfca9ea2aae080ddbe5b",
+      "src/surfaces/routines/routines.css": "7ff9119a6bbf2b121a7fa32754af144dc3859b57ba401d728f381e0276dc0f4d",
+      "src/surfaces/routines/layout.ts": "fc10cf4651c3b27191d6158ab216b3aed86a5e167ece124fe1a6e15c1c7cca81",
+      "src/app/PrototypeApp.tsx": "4c9b1fc0312fb17da8fd8f1a21ab7ddcf322eb0ee2b43c4c2b2be88f410e1168",
+      "src/state/model.ts": "2bf980a1903109b2c201e879158aa21aeb5a2f992ce5dce99806e1ed695ebd3f",
+      "src/state/routine-fixtures.ts": "48dc31ad601bdebb3acdd5d07fc7c337042cc2808ba7e38bf22d2065b6fcc5a7"
+    }
+  }
+]

@@ -1,7 +1,7 @@
 import { RoutineAdapterScenario } from './RoutineAdapterScenario';
 import { StrictMode, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { AppShell } from '../app/AppShell';
+import { PrototypeApp } from '../app/PrototypeApp';
 import { BrowserNavigation, pagePath, parseLocation, type Page } from '../app/navigation';
 import { NavigationProvider, useNavigation } from '../app/NavigationProvider';
 import { DemoProvider, useDemoDispatch, useDemoState } from '../state/DemoProvider';
@@ -38,11 +38,14 @@ function LabApp() {
       <Button onClick={() => navigation.openPanel('activity')}>Testar modal</Button>
       <label className="lab-check"><input type="checkbox" checked={stress} onChange={event => setStress(event.target.checked)}/>Cenário longo de scroll</label>
       <label className="lab-check"><input type="checkbox" checked={routineAdapters} onChange={event => setRoutineAdapters(event.target.checked)}/>Cenário técnico de adapters</label>
+      <label className="foundation-field">Cenário de Rotinas<select aria-label="Cenário de Rotinas" value={Object.keys(state.routines).length === 0 ? 'none' : Object.keys(state.routines).length === 1 ? 'one' : 'multiple'} onChange={event => dispatch({ type: 'scenario/routines', scenario: event.target.value as 'none' | 'one' | 'multiple' })}>
+        <option value="multiple">Várias rotinas</option><option value="one">Uma rotina</option><option value="none">Sem rotinas</option>
+      </select></label>
       <Button onClick={() => dispatch({ type: 'scenario/reset' })}>Reiniciar cenário</Button>
       <p role="status">Perfil profissional: {state.user.professional}. Nenhum serviço real é ativado.</p>
     </aside>
     <div className="lab-frame" style={{ maxWidth: `${width}px` }}>
-      {routineAdapters ? <RoutineAdapterScenario/> : <AppShell contentExtension={stress ? <section aria-label="Conteúdo longo de teste">{Array.from({ length: 30 }, (_, i) => <p key={i}>Linha sintética de scroll {i + 1}</p>)}</section> : undefined}/>}
+      {routineAdapters ? <RoutineAdapterScenario/> : <PrototypeApp contentExtension={stress ? <section aria-label="Conteúdo longo de teste">{Array.from({ length: 30 }, (_, i) => <p key={i}>Linha sintética de scroll {i + 1}</p>)}</section> : undefined}/>}
     </div>
   </div>;
 }
