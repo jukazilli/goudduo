@@ -1,3 +1,4 @@
+import { additionalRoutineFixtures } from './routine-fixtures';
 /** P1 contracts authored independently. Synthetic data only; no persistence or services. */
 import type { Equipment, Exercise, MuscleGroup, Routine, Weekday, Workout } from '../domain/training';
 import { readEntity, reduceTraining, type TrainingAction, type WorkoutDraft } from './training';
@@ -19,21 +20,23 @@ export type DemoAction = TrainingAction
   | { readonly type: 'user/name'; readonly name: string }
   | { readonly type: 'workout/commit'; readonly routineId: string; readonly day: Weekday; readonly workout: Workout }
   | { readonly type: 'social/toggle'; readonly collection: keyof DemoState['social']; readonly id: string }
-  | { readonly type: 'scenario/reset' };
+  | { readonly type: 'scenario/reset' }
+  | { readonly type: 'scenario/routines'; readonly scenario: 'none' | 'one' | 'multiple' };
 
 export function createDemoState(): DemoState {
+  const additional = additionalRoutineFixtures();
   return {
     user: { id: 'demo-user', displayName: 'Pessoa demonstrativa', professional: 'not_requested' },
     exercises: {
-      'demo-exercise': { id: 'demo-exercise', name: 'Exercício de demonstração', measurements: ['repetitions'] },
+      'demo-exercise': { id: 'demo-exercise', name: 'Exercício de demonstração', measurements: ['repetitions'], muscleGroupIds: ['demo-muscle'] },
       'demo-time': { id: 'demo-time', name: 'Exercício sintético por tempo', measurements: ['time'] },
       'demo-distance': { id: 'demo-distance', name: 'Exercício sintético por distância', measurements: ['distance'] },
     },
     equipment: { 'demo-equipment': { id: 'demo-equipment', name: 'Equipamento sintético' } },
     muscleGroups: { 'demo-muscle': { id: 'demo-muscle', name: 'Grupo sintético' } },
     drafts: {}, selectedDayByRoutine: { 'demo-routine': 'mon' },
-    workouts: { 'demo-workout': { id: 'demo-workout', name: 'Treino de demonstração', revision: 1, exercises: [{ id: 'demo-item', exerciseId: 'demo-exercise', sets: 1, repsMin: 1, repsMax: 1, restSeconds: 0, equipmentId: null }] } },
-    routines: { 'demo-routine': { id: 'demo-routine', name: 'Rotina de demonstração', days: { mon: 'demo-workout' } } },
+    workouts: { ...additional.workouts, 'demo-workout': { id: 'demo-workout', name: 'Treino de demonstração', revision: 1, exercises: [{ id: 'demo-item', exerciseId: 'demo-exercise', sets: 1, repsMin: 1, repsMax: 1, restSeconds: 0, equipmentId: null }] } },
+    routines: { 'demo-routine': { id: 'demo-routine', name: 'Rotina de demonstração', modality: 'Musculação', days: { mon: 'demo-workout', thu: 'demo-primary-thu' } }, ...additional.routines },
     primaryRoutineId: 'demo-routine', social: { liked: {}, saved: {}, reposted: {}, hidden: {}, followed: {} },
   };
 }
@@ -51,6 +54,13 @@ export function demoReducer(state: DemoState, action: DemoAction): DemoState {
         ...state.social[action.collection], [action.id]: !state.social[action.collection][action.id],
       } } } : state;
     case 'scenario/reset': return createDemoState();
+    case 'scenario/routines': {
+      const fresh = createDemoState();
+      if (action.scenario === 'multiple') return fresh;
+      return { ...fresh, routines: action.scenario === 'none' ? {} : { 'demo-routine': fresh.routines['demo-routine']! },
+        primaryRoutineId: action.scenario === 'none' ? null : 'demo-routine',
+        selectedDayByRoutine: action.scenario === 'none' ? {} : { 'demo-routine': 'mon' } };
+    }
     default: return reduceTraining(state, action);
   }
 }
