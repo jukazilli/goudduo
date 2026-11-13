@@ -18,7 +18,7 @@ const accessSteps: readonly string[] = ['splash', 'login', 'cadastro', 'otp', 'r
 const standalonePaths = { onboarding: '/onboarding', 'profile-edit': '/perfil/editar', interests: '/perfil/interesses', settings: '/configuracoes', history: '/historico' } as const;
 // Opaque identifiers only. No names, email, credentials or health data in URLs.
 const idPattern = /^[A-Za-z0-9_-]{1,80}$/;
-const panels: readonly string[] = ['search', 'create', 'activity', 'routine-library', 'routine-confirm-single', 'routine-naming'];
+const panels: readonly string[] = ['search', 'create', 'activity', 'routine-library', 'routine-confirm-single', 'routine-naming', 'routine-discard'];
 export function parseLocation(url: URL): Location {
   const path = url.pathname.replace(/\/$/, '') || '/';
   let page: Page;

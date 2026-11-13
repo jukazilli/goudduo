@@ -27,7 +27,7 @@ export function PrototypeApp({ contentExtension }: { contentExtension?: ReactNod
     content: <RoutinesHome expandedId={expandedId} onExpand={setExpandedId} onOpenEditor={openEditor}/>,
   } : page.destination === 'editor' && adapter.status === 'ready' && adapter.draft && adapter.header ? {
     header: adapter.header,
-    content: <WorkoutEditor key={adapter.draft.id} draft={adapter.draft} issue={adapter.issue}/>,
+    content: <WorkoutEditor key={adapter.draft.id} draft={adapter.draft} issue={adapter.issue} onDiscard={adapter.requestDiscard}/>,
     footer: <AddExerciseFooter onPress={adapter.openLibrary}/>,
   } : undefined }}/>;
 }

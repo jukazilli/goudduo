@@ -14,7 +14,7 @@ function useReducedMotion() {
   }, []);
   return reduced;
 }
-const titles: Record<Panel, string> = { search: 'Busca', create: 'Criar', activity: 'Atividade', 'routine-library': 'Biblioteca', 'routine-confirm-single': 'Confirmação', 'routine-naming': 'Nome do treino' };
+const titles: Record<Panel, string> = { search: 'Busca', create: 'Criar', activity: 'Atividade', 'routine-library': 'Biblioteca', 'routine-confirm-single': 'Confirmação', 'routine-naming': 'Nome do treino', 'routine-discard': 'Descartar rascunho?' };
 export function OverlayHost({ onPresence, resolve }: { onPresence: (present: boolean) => void; resolve?: OverlayResolver | undefined }) {
   const { location, navigation, key } = useNavigation();
   const requested = location.panel;

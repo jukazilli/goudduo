@@ -19,9 +19,9 @@ export const draftIssueText: Record<DraftIssue, string> = {
   'prepare-required': 'Prepare o treino antes de salvar.',
 };
 
-function PrescriptionField({ label, value, onChange, rest = false, optional = false, integer = false, positive = false }: {
+function PrescriptionField({ label, value, onChange, rest = false, optional = false, integer = false }: {
   label: string; value: number | undefined; onChange: (value: number | undefined) => void;
-  rest?: boolean; optional?: boolean; integer?: boolean; positive?: boolean;
+  rest?: boolean; optional?: boolean; integer?: boolean;
 }) {
   const display = (next: number | undefined) => next === undefined || !Number.isFinite(next) ? '' : rest ? formatRest(next) : String(next);
   const parse = (text: string) => optional && !text.trim() ? undefined : rest ? parseRest(text) : parseNumeric(text);
@@ -30,7 +30,7 @@ function PrescriptionField({ label, value, onChange, rest = false, optional = fa
   // belongs to the existing draft; invalid/empty required fields cannot silently save old data.
   useEffect(() => { setText(previous => Object.is(parse(previous), value) ? previous : display(value)); }, [value, rest, optional]);
   const numeric = parse(text);
-  const invalid = numeric === undefined ? !optional : !Number.isFinite(numeric) || numeric < 0 || (integer && !Number.isInteger(numeric)) || (positive && numeric <= 0);
+  const invalid = numeric === undefined ? !optional : !Number.isFinite(numeric);
   return <label className="workout-editor__field"><span>{label}</span><input value={text} onChange={event => {
     setText(event.target.value); onChange(parse(event.target.value));
   }} aria-invalid={invalid || undefined} inputMode={rest ? 'text' : integer ? 'numeric' : 'decimal'} autoComplete="off" spellCheck={false}/></label>;
@@ -45,7 +45,6 @@ function ExerciseCard({ item, draftId, index, count, onMove, onRemove }: {
   const update = (exercise: WorkoutExercise) => dispatch({ type: 'draft/update', draftId, exercise });
   const [options, setOptions] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
-  const availableEquipment = Object.values(state.equipment).filter(equipment => !definition?.equipmentIds || definition.equipmentIds.includes(equipment.id));
   return <>
     <div className="workout-editor__options">
       <button ref={menuButton} type="button" aria-label="Opções do exercício" aria-expanded={options} aria-controls={`exercise-options-${item.id}`} onClick={() => setOptions(!options)}><MoreHorizontal size={22}/></button>
@@ -60,22 +59,18 @@ function ExerciseCard({ item, draftId, index, count, onMove, onRemove }: {
       <p className="workout-editor__muscles">{definition?.muscleGroupIds?.map(id => readEntity(state.muscleGroups, id)?.name).filter(Boolean).join(' · ')}</p>
       <div className="workout-editor__media" aria-hidden="true"/>
       <div className="workout-editor__fields">
-        <PrescriptionField label="Séries" integer positive value={item.sets} onChange={value => update({ ...item, sets: value ?? Number.NaN })}/>
+        <PrescriptionField label="Séries" integer value={item.sets} onChange={value => update({ ...item, sets: value ?? Number.NaN })}/>
         <PrescriptionField label="Carga (kg)" optional value={item.loadKg} onChange={value => {
           const { loadKg: _load, ...withoutLoad } = item;
           update(value === undefined ? withoutLoad : { ...item, loadKg: value });
         }}/>
-        {item.measurement === 'time' ? <PrescriptionField label="Duração (s)" positive value={item.durationSeconds} onChange={value => update({ ...item, durationSeconds: value ?? Number.NaN })}/> :
-          item.measurement === 'distance' ? <PrescriptionField label="Distância (m)" positive value={item.distanceMeters} onChange={value => update({ ...item, distanceMeters: value ?? Number.NaN })}/> : <>
+        {item.measurement === 'time' ? <PrescriptionField label="Duração (s)" value={item.durationSeconds} onChange={value => update({ ...item, durationSeconds: value ?? Number.NaN })}/> :
+          item.measurement === 'distance' ? <PrescriptionField label="Distância (m)" value={item.distanceMeters} onChange={value => update({ ...item, distanceMeters: value ?? Number.NaN })}/> : <>
             <PrescriptionField label="Rep min" integer value={item.repsMin} onChange={value => update({ ...item, repsMin: value ?? Number.NaN })}/>
             <PrescriptionField label="Rep max" integer value={item.repsMax} onChange={value => update({ ...item, repsMax: value ?? Number.NaN })}/>
           </>}
         <PrescriptionField label="Descanso (HH:MM:SS)" rest integer value={item.restSeconds} onChange={value => update({ ...item, restSeconds: value ?? Number.NaN })}/>
-        <label className="workout-editor__field" htmlFor={`equipment-${item.id}`}><span id={`equipment-label-${item.id}`}>Equipamento</span><select id={`equipment-${item.id}`} aria-labelledby={`equipment-label-${item.id}`} value={item.equipmentId ?? ''} onChange={event => update({ ...item, equipmentId: event.target.value || null })}>
-          <option value="">Sem equipamento</option>
-          {item.equipmentId && !availableEquipment.some(value => value.id === item.equipmentId) && <option value={item.equipmentId}>Equipamento indisponível</option>}
-          {availableEquipment.map(value => <option key={value.id} value={value.id}>{value.name}</option>)}
-        </select></label>
+        <label className="workout-editor__field"><span>Equipamento</span><input readOnly value={item.equipmentId ? readEntity(state.equipment, item.equipmentId)?.name ?? 'Equipamento indisponível' : 'Sem equipamento'} title="A seleção será integrada pela Biblioteca."/></label>
       </div>
       <div className="workout-editor__substitutes">
         <button type="button" disabled><Plus size={17}/>Adicionar substituição</button>
@@ -85,7 +80,7 @@ function ExerciseCard({ item, draftId, index, count, onMove, onRemove }: {
   </>;
 }
 
-export function WorkoutEditor({ draft, issue }: { draft: WorkoutDraft; issue: DraftIssue | null }) {
+export function WorkoutEditor({ draft, issue, onDiscard }: { draft: WorkoutDraft; issue: DraftIssue | null; onDiscard: (trigger: HTMLElement) => void }) {
   const dispatch = useDemoDispatch();
   const [activeId, setActiveId] = useState<string | null>(draft.exercises[0]?.id ?? null);
   const activeIndex = Math.max(0, draft.exercises.findIndex(item => item.id === activeId));
@@ -124,6 +119,7 @@ export function WorkoutEditor({ draft, issue }: { draft: WorkoutDraft; issue: Dr
       </div>
     </> : <div className="workout-editor__empty"><h2>Seu treino está vazio</h2><p>Adicione exercícios para começar.</p></div>}
     {issue && issue !== 'empty' && <p role="status" className="workout-editor__issue">{draftIssueText[issue]}</p>}
+    <button className="workout-editor__discard" type="button" onClick={event => onDiscard(event.currentTarget)}>Descartar rascunho</button>
   </section>;
 }
 

@@ -26,6 +26,7 @@
 .workout-editor__empty { text-align: center; padding: 56px 0 24px; }
 .workout-editor__empty h2 { font-size: 20px; letter-spacing: -.5px; }
 .workout-editor__empty p, .workout-editor__issue { color: #526b77; line-height: 1.6; }
+.workout-editor__discard { min-height: 44px; border: 0; background: transparent; padding: 8px 0; text-decoration: underline; font-size: 13px; }
 .workout-editor-footer button { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; border: 0; border-radius: 14px; padding: 12px; background: #203642; color: white; font-size: 14px; font-weight: 700; }
 .workout-editor-dialog { font-size: 14px; color: #203844; }
 .workout-editor-dialog label { font-size: 13px; font-weight: 600; display: block; margin-bottom: 8px; }
