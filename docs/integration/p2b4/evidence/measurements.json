@@ -2,11 +2,15 @@
   "referenceCommit": "3f8b2c7c93a33a713c780305e672e1ec7998ceaf",
   "referenceBlob": "122275b3cb03bd996b477375d1bbc73ae29c5c3e",
   "sourcesSHA256": {
-    "src/app/PrototypeApp.tsx": "2604564971166990d105215d3d8103537c4d50bfb87b30eaab221ddf574baf99",
-    "src/surfaces/routines/WorkoutEditor.tsx": "c18b1efa0d7f3646f74be611fb7755c76192d2b66f51a146df2493d5ea6c2480",
-    "src/surfaces/routines/WorkoutSaveOverlays.tsx": "f83a5903a1f96b919c9692904b4ac6cd9e77197ee7e70aedb32e9d0deb64d94a",
+    "src/app/PrototypeApp.tsx": "5d81f208596932991e7277f1672643c4355cdd068a84c455474be0ec4bcfd191",
+    "src/surfaces/routines/WorkoutEditor.tsx": "0301b71712eb14dec202616c203a5289fb466754970f8c115c6bbd7be7e2675e",
+    "src/surfaces/routines/WorkoutSaveOverlays.tsx": "8111b0de59fcb82d8239bb292459d000b343aa7d031e32aca73d53a9d02968d1",
     "src/surfaces/routines/editor-fields.ts": "1d0c13ed1250fb1e0168dd8985a1852b621fefed9158548574be4af1bcbae088",
-    "src/surfaces/routines/workout-editor.css": "7ff9ccb70775dc8ffe45dd32af3e3061663fee58cb53a94877124991be253dae"
+    "src/surfaces/routines/workout-editor.css": "63167a8b557f5020e90549bf4946a7cba79de78ea97944796c7d96b6daf639fb",
+    "src/app/useRoutineEditorAdapter.ts": "e54b8841f4765152568e56cb2f9fac311effa65debe0986b32a106012a19c481",
+    "src/app/routine-context.ts": "54b8a0fa62ea42cef2938da17c6f9544ca98384f4b31c873db1a6b62af2a4b1c",
+    "src/app/navigation.ts": "ad4bb862230cfd0c019505442c114b01f0a3ede729ccd2e3f278ac5934723928",
+    "src/state/training.ts": "9652b63d81f5183836650707d421be4961a4674dc6c3cb7f06ef0198f7a976d4"
   },
   "viewports": [
     {
@@ -14,19 +18,23 @@
       "captures": [
         {
           "file": "react-editor-320.png",
-          "sha256": "8c829a80f3fada60b55dfc2e1dbe661e314d5f57b4b6fce4724bba6cdb516b2e"
+          "sha256": "3f6213191d62fcade68d9d475618df557d7f152374c15efe1bc17a47321fdc83"
+        },
+        {
+          "file": "react-discard-320.png",
+          "sha256": "9bcd1e2f27d850ae64a0a41fe0c6044b287751ac10d61fc96930ad8b4c4f0fbe"
         },
         {
           "file": "react-confirmation-320.png",
-          "sha256": "5ef680c2494c12d11c44c6a085685803164f892e5eed0148b0a3b5434dfa3a82"
+          "sha256": "d6381f7406a27c703944b9c5952d680ca1c0f6c7e2222e859edbff656ed150f2"
         },
         {
           "file": "react-naming-320.png",
-          "sha256": "690b2014403e6d3bc9c1bc00d7d876d19a19204d6b1c1cd8265d135743f14dfb"
+          "sha256": "118cc3db01af19bde569403f7fc464a3309912443682991f81f6dc8eecf40d7e"
         },
         {
           "file": "react-invalid-320.png",
-          "sha256": "58021bc781890659b461660dd3654df0ed7d6b2e2fa224e24ffdb12e199fa804"
+          "sha256": "7009a993ab918d42db575c04f3eaf6819f347bc58dcffc5990a019f8babe9491"
         },
         {
           "file": "react-library-unavailable-320.png",
@@ -34,15 +42,15 @@
         },
         {
           "file": "react-empty-320.png",
-          "sha256": "e53fec91677b60b3dc246ddb16b4dd316a00f2f006786054ceb847799f8962cc"
+          "sha256": "5820ae6b18b308aa7f479aa269d9932a9f23060f30d6fe9339e5b883cfd3b96f"
         },
         {
           "file": "react-time-320.png",
-          "sha256": "2aead0ffa4bedb88b5b84a3c9768cda9b2a0a9321c49d8da31385a8030f46e34"
+          "sha256": "94f3d30a2379ab0150410111096d47106448d2e4709b6bf26895501cce4f9a3b"
         },
         {
           "file": "react-distance-320.png",
-          "sha256": "1bf52b8e9563435a3550c590a1890605346bafffe9860fd4ce25706063e355cd"
+          "sha256": "0bba2fefa7a8190f68875fd1793ec1e75e7a29ba8fe791931bcbbbbaf1538cfb"
         },
         {
           "file": "reference-editor-raw-320.png",
@@ -54,7 +62,7 @@
         },
         {
           "file": "react-editor-content-320.png",
-          "sha256": "4775268af6e198745077418d3e1d72b333dab251f3825d85c2a5767765bbd3b3"
+          "sha256": "e0acc7b66abe696df00dea00f3455396356d4cf81eafd352e0ea42d619a230c2"
         }
       ],
       "reactGeometry": {
@@ -153,19 +161,23 @@
       "captures": [
         {
           "file": "react-editor-375.png",
-          "sha256": "d3abd09138aaa9a2bd1e139c33302055bd6cf19ec633595901aacd39df0a1c75"
+          "sha256": "03df67cfc0a5197b16a7f2e7e1139d636c4bdf906ee86829eaa6fe4454f9b36f"
+        },
+        {
+          "file": "react-discard-375.png",
+          "sha256": "ea7b77bb88b8873c8af6f76b612ff04470a6758d3636a82bdc4bf20e97156426"
         },
         {
           "file": "react-confirmation-375.png",
-          "sha256": "a3c8cff4074455d376cfe732a8137046d622c22a49de5d1443c791db6543a578"
+          "sha256": "fa485fbd0421f6bc4355aada0aebe46c8b08ab199ef195c3ba001051e81bc6a6"
         },
         {
           "file": "react-naming-375.png",
-          "sha256": "f17b2c3943d54c4023588d56231be3a7c901386b93bb00255c31b380ca2d8ec2"
+          "sha256": "26109f9ac034b5e445fc3f2edfdad91f9a45c7bb11f661e50a05cdacc49fa4d2"
         },
         {
           "file": "react-invalid-375.png",
-          "sha256": "2f99a748ddcfd4ffa58aa8587b55d36b9e0d85aa1ba4aba0b20d1b82d352de38"
+          "sha256": "c8232a47b1d700ffde2245386b57a47104f350ad55e2fb859538a5e9e05e73a1"
         },
         {
           "file": "react-library-unavailable-375.png",
@@ -173,15 +185,15 @@
         },
         {
           "file": "react-empty-375.png",
-          "sha256": "26a0bbb474b2021dc74f1a61dc2c688010751e16fc9812d6a2affaa33ad4bc17"
+          "sha256": "527c74694c2fb065b9ff3924763be8cb6dc04bdb7bd845c36af234e4d77c5fc0"
         },
         {
           "file": "react-time-375.png",
-          "sha256": "7a8bdb047728c6782302d84ef03ead3ba11191ae7928f84cbbf1d52447e55576"
+          "sha256": "38d4f344a4886bbe3970f1b892199592d20f94beeaf173cef5434396c41c8368"
         },
         {
           "file": "react-distance-375.png",
-          "sha256": "d04dc05fb6028918968cb47434c13fab240482977d8767d2e41a5ab95de69a73"
+          "sha256": "f1567acde8342e88a533168a068a013312d4b6b06f572def22dbfb946eaaddc3"
         },
         {
           "file": "reference-editor-raw-375.png",
@@ -189,11 +201,11 @@
         },
         {
           "file": "reference-editor-normalized-375.png",
-          "sha256": "fb07725d40c2b411d66b98c077d397f0501fb63682398ea8a1bff33d7c7c54fe"
+          "sha256": "6e1e9949046d2a069b92842b0e2f350ee78b58b9dedd233712a92f3da5323246"
         },
         {
           "file": "react-editor-content-375.png",
-          "sha256": "f5cd9e188e1e0c0846dd2189ccd428cd10bffe430b04f58cab530ebaaaa29974"
+          "sha256": "9baae1bac5190df6614975080ac7bbcc31ff1611ff80520c3ae58398613d2769"
         }
       ],
       "reactGeometry": {
@@ -292,19 +304,23 @@
       "captures": [
         {
           "file": "react-editor-390.png",
-          "sha256": "10ee6502c6e25386bdde1a5570b07bc0c4c5694a4018e7d4c01dc13cb6548d74"
+          "sha256": "1327968b3ab8b742edd113b6615f0a7b73c56a12419e0d2cb8d2d02454601b4c"
+        },
+        {
+          "file": "react-discard-390.png",
+          "sha256": "fb3d7374fb949de571d18bd01480fc3c0b09059eff2601db50584a85614a4cad"
         },
         {
           "file": "react-confirmation-390.png",
-          "sha256": "2f426e60229f0d7750363f4fd9656ee8dffaae9380c0ae820f4db2151a4e5d7a"
+          "sha256": "62301fea7a3052f0bc4d9a92f4ed25f501161158de289131a078002680183f80"
         },
         {
           "file": "react-naming-390.png",
-          "sha256": "3d49294d806908af1c02d4be2566534d244fe4c905347d47dc8f9a655bbc907b"
+          "sha256": "4a3f7dfc42419834961b3d34f95741fbb74d0b56d4c1453c5b817a5e9ecdb4f9"
         },
         {
           "file": "react-invalid-390.png",
-          "sha256": "82055b0ab7cbe0c5fd1d95b4060dbd02844813a16c24aeb7f3f6e04a03c6ecb3"
+          "sha256": "2b2b76e9937c94a24622a2e06fe1266a717c4db6e74fb10f357193cc4d97296e"
         },
         {
           "file": "react-library-unavailable-390.png",
@@ -312,15 +328,15 @@
         },
         {
           "file": "react-empty-390.png",
-          "sha256": "845c1afc57361ac1a1370b005db96c63ae9a41cc595aeae6976389da369b9430"
+          "sha256": "164ad56e362b63004061ebee6987d8007c8dd159d277ec9152b8ae82c49f3f9d"
         },
         {
           "file": "react-time-390.png",
-          "sha256": "696a91fe2b0e63fb266250c785e8608eb0b47276d9c803eca0fbff45958e700a"
+          "sha256": "29be66973f77e5e1f086d899d23e5582bf2c0f2b8fd0985a852c1d6484be594d"
         },
         {
           "file": "react-distance-390.png",
-          "sha256": "7866128165634867d58bb659b275729fac4986a12b13ddb2a8c04dec93eee38a"
+          "sha256": "c5884ed2a1996b950e9c7a9dc05bb11272aac098f7ca2fce6d4d1376b356e154"
         },
         {
           "file": "reference-editor-raw-390.png",
@@ -328,11 +344,11 @@
         },
         {
           "file": "reference-editor-normalized-390.png",
-          "sha256": "bfa970a64d9e26ed992061baf602a2aecb5ee6e0818799ddd8567c784c0c97ca"
+          "sha256": "28e8a3a779dcb2d927fe2c2264640f52b0084ec0302b536443149857c091d6d0"
         },
         {
           "file": "react-editor-content-390.png",
-          "sha256": "b4350ee603d1fba828561a7563fd1d026c0b6916f0634d8adf32dd5ede69395b"
+          "sha256": "f37470f17f86a81eae26879e7d1d3baa74708634f4b535205331444f11509958"
         }
       ],
       "reactGeometry": {
@@ -431,19 +447,23 @@
       "captures": [
         {
           "file": "react-editor-414.png",
-          "sha256": "4aecbedca9327428d430e65e8bdc165c13620c77f06b9c7ec34f348149d46aff"
+          "sha256": "64e889e0d56d8cb36cf494b742c8b7f5014805fa36004e401cd0f9811edd94e6"
+        },
+        {
+          "file": "react-discard-414.png",
+          "sha256": "a2793632896cbf12b909318216460731bda1930a6e1dccaef82044755f09ec10"
         },
         {
           "file": "react-confirmation-414.png",
-          "sha256": "071f966c150347cb4b8015e7ef421f12d10520e85e112e2efb3b92bfeb81d544"
+          "sha256": "6abd2fc472d514804da4a2abd024e251126a260d43b8001387155a8b46e8e7d1"
         },
         {
           "file": "react-naming-414.png",
-          "sha256": "be914fb3a4e33465cf4404d636b60cb705fe9b0e680a4970c29e43229ab09a98"
+          "sha256": "e7aed7d406c2fab6a49f2642ab5e059b32ff8947ed1bf633ecd44e994b040dc6"
         },
         {
           "file": "react-invalid-414.png",
-          "sha256": "006a12c9564346bb81607cf25c09e7f2a327795c030954afa0833f668b1ee760"
+          "sha256": "9ead3cbe1ae16205d357e38b7084d7c7460ea1a0e4ace98bc84b1eeee3fbf86a"
         },
         {
           "file": "react-library-unavailable-414.png",
@@ -451,15 +471,15 @@
         },
         {
           "file": "react-empty-414.png",
-          "sha256": "a0a4b8cb12aa5b989a184149e346ee2d268dfe5e37e6f5866961c0851b2d3524"
+          "sha256": "b7b9b75f591cd04f2056cec9712452dbd08a3a37bd444807381a1f1420963f7d"
         },
         {
           "file": "react-time-414.png",
-          "sha256": "790dbfc66a364ada5a2de8772ed9be10740c59c27359a18c2ffc743bfe8c00ca"
+          "sha256": "4dd4dc6eae03d271ba32438d6f06a44e577dd9bb121beb3b012589349aec1f5e"
         },
         {
           "file": "react-distance-414.png",
-          "sha256": "a03499585d05fd27370823437ea1928e89422c864f61388f37cdef9a7426fe68"
+          "sha256": "abeb9cb1a16c6e190b19af68e3a7ce17dcbdb5f5c2db9ade203ed3bcff56319f"
         },
         {
           "file": "reference-editor-raw-414.png",
@@ -467,11 +487,11 @@
         },
         {
           "file": "reference-editor-normalized-414.png",
-          "sha256": "fc02d0236c1102b1f535029cc4998ba3bacfcbcc96ec4c64093d40121395bb85"
+          "sha256": "9174aa797371a703036be60af3f356db5d9492479c14bb0a1771d16b9b8a8014"
         },
         {
           "file": "react-editor-content-414.png",
-          "sha256": "4971b9ab864f918f35362f4c89a23bf48557738a7447306aec82d4e6d4220ddb"
+          "sha256": "053ab886fe187fb29088e392845180121ae014d1264ed7848065e23dff93db93"
         }
       ],
       "reactGeometry": {
@@ -570,19 +590,23 @@
       "captures": [
         {
           "file": "react-editor-430.png",
-          "sha256": "53c054f69b915b4718bd2114fa315a1a9c13bacd729c9eaf6ed6a10994480a1c"
+          "sha256": "98510c1deb710ad7400e6a05e3a7d644cceddefefb777e2f37d161229c91195f"
+        },
+        {
+          "file": "react-discard-430.png",
+          "sha256": "bc8fb6fe8be3f3d623050a2137cc371ad414e246a44df858d97a62c1802add86"
         },
         {
           "file": "react-confirmation-430.png",
-          "sha256": "3179c0300ac6aacfcd742840ca16424b226f385f5f9309d5d167bb13696ea82f"
+          "sha256": "27aa18ee95fb858e98bb12b34a9881c52805d6f4f85b35c64d3a3f9a4e1023e5"
         },
         {
           "file": "react-naming-430.png",
-          "sha256": "6456237da399e73864eb7059c604c9d3d41dbf34e9694b719b5074c1c0653b3e"
+          "sha256": "c4a69bbd1a8556c5c3014f98ef94e512e16492bb7ba75aeedb381c58a8800bf3"
         },
         {
           "file": "react-invalid-430.png",
-          "sha256": "6d7ce1eaf61e329644e5771f2e20fd4a8b86ee7fcc5e7f48f0e3faa7af9ac2eb"
+          "sha256": "af4b51b5d8c2e2761086ac87f00a9fb1980467cfb6354af7cea7c3a8c366e443"
         },
         {
           "file": "react-library-unavailable-430.png",
@@ -590,15 +614,15 @@
         },
         {
           "file": "react-empty-430.png",
-          "sha256": "57ff2a256d3797c698747df9948b0e48896945e0a492046a02cb95c124f58d36"
+          "sha256": "e65284802428e73c1b90684da3d472719f3a6da2b894cc7bf007c3c06128300e"
         },
         {
           "file": "react-time-430.png",
-          "sha256": "d8ea9f700a75537784e59045eeb58bed68b198d9890cd7080806c3d32b271a54"
+          "sha256": "d33198efbaef814e08a916980dd921a5ffd166b471eaf08ea6ffefb595fd4ccf"
         },
         {
           "file": "react-distance-430.png",
-          "sha256": "2830619b66975e28c8d62244f2d3e6505898d8b03a2f8e65088dd5913b2b56ea"
+          "sha256": "8f68149df8fcb4a66fe74f1d82d9ae47f597e390b519e378311245e90dff36fa"
         },
         {
           "file": "reference-editor-raw-430.png",
@@ -610,7 +634,7 @@
         },
         {
           "file": "react-editor-content-430.png",
-          "sha256": "85c0ebf24d833045181009b533e1f3eb5368fb0db5e1d884170ae1a914e7d8f2"
+          "sha256": "dd5cd311841d24958aefbbde84cd5f40b85dcf73f5aca0ecfff37d661797c84e"
         }
       ],
       "reactGeometry": {
@@ -705,7 +729,7 @@
       "pageErrors": []
     }
   ],
-  "overlayLifecycleSourceSHA256": "b658aee387823ad8b821952214be571e83b64349aa1c845c667b51deebc2fbff",
+  "overlayLifecycleSourceSHA256": "fe61b333f34b0c40b2c5b7ff2c833c690a08713c84886da65b85c5cd49fc5d5b",
   "notes": [
     "All captures use the final Editor media reservation and overlay lifecycle implementation.",
     "Reference includes raw and font-normalized body captures; application includes full-view and content-only captures.",

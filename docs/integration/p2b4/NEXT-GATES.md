@@ -23,7 +23,7 @@ Sheet contextual ~75%, pesquisa/sugestões/lista reais do catálogo autorizado, 
 | Substitutos | Referências de domínio preservadas; UI operacional e regras avançadas requerem recorte próprio |
 | Navegação entre exercícios | Descoberta continua pendente em #28; sem tutorial, sticky, carrossel/strip ou indicadores novos |
 | Cópia/referência | shared-workout-pending protegido; sem propagação ou cópia automática entre dias |
-| Descarte/reload | Back preserva rascunho em memória; UX explícita de descarte e recuperação persistente continuam fora do lote |
+| Descarte/reload | Back preserva rascunho em memória; confirmação de descarte implementada; recuperação persistente continua fora do lote |
 | QA físico | Safari/iPhone e Android, VoiceOver, teclado/insets reais permanecem para avaliação |
 | Outras superfícies | Home Treinos, Pulse, Feed/Publicações, Business e Sessão não implementados |
 | Hospedagem | Sem deploy ou preparação adicional; eventual publicação requer gate próprio de artefato/audiência |

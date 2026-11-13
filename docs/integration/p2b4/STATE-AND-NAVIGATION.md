@@ -1,6 +1,6 @@
 # Estado, campos e salvamento
 
-DemoProvider, training reducer, seletores e modelo de domínio permanecem os homologados. O Editor consulta `adapter.draft`; cada edição dispara `draft/update`, remoção `draft/remove` e ordem `draft/reorder`. Nunca escreve diretamente em workouts/routines. Arrays/IDs são preservados pelo reducer existente. Catálogo e exercício prescrito continuam distintos.
+DemoProvider, regras do training reducer, seletores e modelo de domínio permanecem os homologados. validateWorkoutName e o limite existente de 100 foram extraídos para uso compartilhado por reducer/formulário, sem nova regra de produto. O Editor consulta `adapter.draft`; cada edição dispara `draft/update`, remoção `draft/remove` e ordem `draft/reorder`. Nunca escreve diretamente em workouts/routines. Arrays/IDs são preservados pelo reducer existente. Catálogo e exercício prescrito continuam distintos.
 
 ## Campos e unidades
 
@@ -10,7 +10,7 @@ Descanso aceita HH:MM:SS com minutos/segundos 00–59 e horas com pelo menos doi
 
 Cada campo mantém apenas texto transitório para digitação (ex.: vírgula). O número interpretado pertence ao draft único. Campo obrigatório incompleto/inválido é representado por NaN no rascunho em memória, já rejeitado por validatePrescription/validateDraft; isso impede salvar silenciosamente o valor anterior. Não é dado salvo, persistido ou transportado em URL/history.state. Ao trocar de exercício, um valor inválido volta como campo vazio e continua bloqueando o commit até correção. Não foi criado store paralelo de valores válidos.
 
-Equipamento referencia Equipment.id ou null. O select deriva das entidades existentes e de Exercise.equipmentIds quando informado; não importa fotografia nem catálogo real. Identidade desconhecida/ilegítima mantém bloqueio de validação, sem substituição silenciosa.
+Equipamento referencia Equipment.id ou null. O campo somente leitura resolve o nome da identidade existente; não altera o vínculo, não abre dropdown e não simula seleção. Identidade desconhecida/ilegítima mantém bloqueio do domínio, sem substituição silenciosa. Seleção e pesquisa aguardam a Biblioteca.
 
 ## Fluxo real
 
@@ -22,7 +22,7 @@ Equipamento referencia Equipment.id ou null. O select deriva das entidades exist
 6. Salvar treino chama submitName → draft/commit; o reducer revalida revisão/vínculo/compartilhamento e confirma atomicamente. Somente remoção do draft e revisão base+1 fazem o adapter retornar à origem capturada.
 7. Home Rotinas e selectHomeTraining observam imediatamente a mesma entidade/revisão. Nenhum card Home Treinos foi implementado.
 
-Rascunho obsoleto ou treino multiassociado não pode sobrescrever outra edição/dia. Não foi definida semântica de cópia/referência. Cancelamento explícito de todo o Editor continua sem nova UX de descarte; Back preserva o draft. O índice de apresentação do exercício volta ao primeiro ao remontar o Editor, sem perder parâmetros ou ordem do rascunho.
+Rascunho obsoleto ou treino multiassociado não pode sobrescrever outra edição/dia. Não foi definida semântica de cópia/referência. Descartar rascunho abre confirmação no mesmo host: Continuar editando preserva tudo; Descartar alterações chama cancelEditing(true) e draft/cancel apenas para aquele ID, retornando à origem e preservando dados salvos e outros rascunhos. Back preserva o draft. O índice de apresentação do exercício volta ao primeiro ao remontar o Editor, sem perder parâmetros ou ordem do rascunho.
 
 ## Navegação e lifecycle
 
@@ -31,3 +31,5 @@ Mesmo BrowserNavigation e mapa de contexto efêmero. URLs contêm somente workou
 OverlayHost mantém motor/foco/trap/inert/scroll lock/gesto/Escape/back/reduced-motion. Uma correção mínima retém o conteúdo do painel enquanto sua mesma entrada encerra/resume o draft antes de History API fechar. A retenção é por chave; outra entrada sem contexto não recebe o formulário anterior. Busca/Criar/Atividade mantêm seus conteúdos e testes.
 
 Retorno utiliza origem/dia/scroll P2-B2 e expansão da Home P2-B3. Entradas antigas do Editor podem continuar no histórico após salvar, mas sem draft recebem estado neutro. Nenhuma reconstrução de histórico, persistência ou segundo router foi adicionada.
+
+O novo panel routine-discard é apenas uma intenção contextual no mesmo histórico e host. Nenhum destino global, rota de entidade, contexto serializado ou sistema de confirmação paralelo foi adicionado.
