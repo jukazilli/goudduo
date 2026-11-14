@@ -9,7 +9,7 @@
     "src/app/useRoutineEditorAdapter.ts": "40a323eae6db5ff0bb8f0d554e2367f052a99699fe4b0c9d7a0ea9c37a96d382",
     "src/surfaces/routines/ContextualExerciseLibrary.tsx": "87ff6be550bfb161bc58136491cbefbae52f2954c099e08c6840933d378c1796",
     "src/surfaces/routines/library-model.ts": "9f036640740779f8fce1f53a696e4531c1b7a1cd9d158de2feb776fc59dfb0ba",
-    "src/surfaces/routines/contextual-library.css": "14eedd75947ada26bf67e813bc1cc13c10479226e0fbfd2b0f669cc808f7e917",
+    "src/surfaces/routines/contextual-library.css": "73dceec7860f0d6d7f8f5e7eb7b819e19f770d7f24eef424e8fd3e4996816bdc",
     "src/surfaces/routines/WorkoutSaveOverlays.tsx": "4915fbcd3ea6a63075b380c3ccbf66c93aefe60a16b57fa0d7a39f89c231e991"
   },
   "viewports": [
@@ -21,11 +21,11 @@
           "captures": [
             {
               "file": "reference-open-320.png",
-              "sha256": "454376f127b9c49b6622aad7c599fc7223f606c68086866115aea31338fb3617"
+              "sha256": "963926a778a9bed4681d9f252fb0355d814f251966e4a4cd3a15ff12321ab87b"
             },
             {
               "file": "react-open-320.png",
-              "sha256": "0dda9e6c229967be5b11ea2bfc0568020e0f11cf4c190892b00ca967e0c0a9ab"
+              "sha256": "6e36b6a6d9130e39ad66e564fe3c094788b5ade01d8e7a313ac3a70980e1e2a7"
             }
           ],
           "referenceBox": {
@@ -46,11 +46,11 @@
           "captures": [
             {
               "file": "reference-search-320.png",
-              "sha256": "276ece0c24f79eb81d59d6b30d44ab4252643af976838a034315c1b19fa99b59"
+              "sha256": "94a31ada116fdd1e9eec15988174d7f87cdf40281aca100e1e4a3dff6185b8ad"
             },
             {
               "file": "react-search-320.png",
-              "sha256": "0499ae1e742aefe034490fe97f540f7aaeb54a9e6ee553c317fe98ccaa55aa7b"
+              "sha256": "2423b96ab768a3080b4b98e9d54bbef308ee604cad0e2f182a0e2cc43be42f39"
             }
           ],
           "referenceBox": {
@@ -71,11 +71,11 @@
           "captures": [
             {
               "file": "reference-filtered-320.png",
-              "sha256": "daf57725e3945d11e3eb328cfafb50276fb79ae9083dbaa2abab66d659c22a52"
+              "sha256": "1aeea780226ca92aab400d53c40fd331e8e347a516675c9ebe1c5b8fd0764979"
             },
             {
               "file": "react-filtered-320.png",
-              "sha256": "c2c150c88081c04fee3718973a8c78021a59a6f82b89c61cd3fd1b4790ed5236"
+              "sha256": "d49baae77caf15f3d90b52928d341113ed633e49df58f098fa135d487ceb72bd"
             }
           ],
           "referenceBox": {
@@ -96,11 +96,11 @@
           "captures": [
             {
               "file": "reference-added-320.png",
-              "sha256": "bc26d03f40fe147d7aeff79f656cea720bd2f53a0e0d476ed21b93c2d4088894"
+              "sha256": "fd16dfdf19641952f26b0e2e483c44428ab5667942294c02ff7afadc683e5887"
             },
             {
               "file": "react-added-320.png",
-              "sha256": "3f25ed68a4fd166a46ac459b73ffefbc1910597ef3407b8a4e16c019550670c5"
+              "sha256": "8aa62b5f6f9dbd5c88b950061f6f435167cdf9868b77f249714c1c0dfde1d853"
             }
           ],
           "referenceBox": {
@@ -121,11 +121,11 @@
           "captures": [
             {
               "file": "reference-multiple-320.png",
-              "sha256": "612cbacb5101063ee576be17d9674870be7b03d343c0d64a9634db6e9bb2352e"
+              "sha256": "e009276ea1af3fe1a01334fe320fdc7dec876dc37eb430893bac33a006f53166"
             },
             {
               "file": "react-multiple-320.png",
-              "sha256": "81b8a884247f59c3ef12d4adc9fbecb93f19c5a1876523c69422913844c0029d"
+              "sha256": "ac5aa5c1da4305fdefea6c3fa951de5682fa4e47b0b11f4cc995f4fd4f79cbcd"
             }
           ],
           "referenceBox": {
@@ -146,11 +146,11 @@
           "captures": [
             {
               "file": "reference-no-results-320.png",
-              "sha256": "57d40abe64bc7a669b738ac47b6e1a8a624a732fbd857907723b8967ddd6170d"
+              "sha256": "98fe6978b4ab1abd1d17324ef0b34344d42b4861e7a4400d48f5c7ed5195cfd0"
             },
             {
               "file": "react-no-results-320.png",
-              "sha256": "f798d0b21856851c370532f37dece617f4c1ce4564220a955fafcfc79d79cc86"
+              "sha256": "befb5a9db92a31b515f547db1511825fd6fd4e6bf839bbce3163607decc212e6"
             }
           ],
           "referenceBox": {
@@ -171,11 +171,11 @@
           "captures": [
             {
               "file": "reference-editor-updated-320.png",
-              "sha256": "171bd6d2e39ab3bb1b3c886fd3a3e511566b04056fda70255bd15b048da7dc6f"
+              "sha256": "dfb1115f2fbdeb85fd854d39be2813efd247bee3448ba318c4679595dbd79db3"
             },
             {
               "file": "react-editor-updated-320.png",
-              "sha256": "c2b4e06d46c07a84fd847a04245339ab44271852a7d15278320eebbf48bc5fc5"
+              "sha256": "0d1afa2c598cedf6ad97a76be12860374d5ca44cd3997f6a7791d1aa506e3012"
             }
           ],
           "referenceBox": {
@@ -196,11 +196,11 @@
           "captures": [
             {
               "file": "reference-reopened-320.png",
-              "sha256": "70605c7d69d2244c64daf02dc023bb830f75980cdc1fc9437735f9db1b3886e7"
+              "sha256": "339e05a66bb1f4da3a11aba54911c1afc914646bcac4335beb9e9d1454dadf68"
             },
             {
               "file": "react-reopened-320.png",
-              "sha256": "c792b08e423b828e8cd2afee692d3e737673cbeb6c5c1772abdaaa674912df57"
+              "sha256": "054cedd422b03d1c5bd6c58a438ce0a5dc73e396abfa6fcd90c890e8b468a668"
             }
           ],
           "referenceBox": {
@@ -245,11 +245,11 @@
           "captures": [
             {
               "file": "reference-open-375.png",
-              "sha256": "e93fc2c43526d59ffb9a2e37c890b09b8b10ccd178020ba3d2061b7828b96fc6"
+              "sha256": "a55573d4d59248a55443e9cc4e48a4f537b9ad8cdb4bbb957e55b1b4d9eb76cb"
             },
             {
               "file": "react-open-375.png",
-              "sha256": "c4cee490b13100cc1dcd8ed88ddf143364dd4c3db8438dc2e7587b6c39a08972"
+              "sha256": "3a9d587ff0f757a811c0d6f769c482064302b74969e19c0f2ac8231d90919d26"
             }
           ],
           "referenceBox": {
@@ -270,11 +270,11 @@
           "captures": [
             {
               "file": "reference-search-375.png",
-              "sha256": "5beb589bda1e923ca04171dafe572e620dd649515a074f74f4061bea557f785a"
+              "sha256": "55987416fa49f194be91d330fda6dd13ad1b885fa13553f0f3851162e74012ed"
             },
             {
               "file": "react-search-375.png",
-              "sha256": "4d2ccbe2c79bb7bc94ca6f8b812cb4bf79f3facca8b1d0f0051f1d3b4436cf9d"
+              "sha256": "c112853c7afb4b1bb4093f300eecef86a5ca3217f75f0998bdd46185989cdd84"
             }
           ],
           "referenceBox": {
@@ -295,11 +295,11 @@
           "captures": [
             {
               "file": "reference-filtered-375.png",
-              "sha256": "32f3b102d70f2996234119cc2ee834a8cdd58cdd662e233156d0f3fea8edf44c"
+              "sha256": "be8b67f7265d01588501034ff726d258eba1d1b3e0559e92c1f1a2d18135d32e"
             },
             {
               "file": "react-filtered-375.png",
-              "sha256": "c3938bf2191ace5ab282b21f7ef930644c8cd8f68ee26f05eaaa69a4151feadb"
+              "sha256": "5240a3bbc0ad5c8299047f8d9c73fe3eb275273bd55e7c47a3e433e967d3a03a"
             }
           ],
           "referenceBox": {
@@ -320,11 +320,11 @@
           "captures": [
             {
               "file": "reference-added-375.png",
-              "sha256": "3c36a6a0d15f41b31d02219116087772365014f58d0e2ecade3160ab6c73f9a4"
+              "sha256": "190b4172b3ab5f04f60bd11c5f7c551e1a6c3dd66fb1854edcb732e1567a26b4"
             },
             {
               "file": "react-added-375.png",
-              "sha256": "0e5bb13fde0934663d4d4608affe5d627d9111ddcaec6438cb5000b4905216c0"
+              "sha256": "e57f37634d80691fe0de5d34ddbc8d15ddddc6e51900cf17989a128f9f0f19b0"
             }
           ],
           "referenceBox": {
@@ -345,11 +345,11 @@
           "captures": [
             {
               "file": "reference-multiple-375.png",
-              "sha256": "cdeb181633bb18e3c5e634d754d9ca2d22882c6f337f0c46d949ec4610499cb2"
+              "sha256": "75398113e06b1f84001c202b0927712f6547247f55b1a4a88a617005f50a579b"
             },
             {
               "file": "react-multiple-375.png",
-              "sha256": "2c278b3af9a0ae2de071855b450c8fffa0c6142c8b671fc061cce709617c3546"
+              "sha256": "0a15615c736378ef83b1c45381f63f4dd986e75472f820b0e213685738e7db1d"
             }
           ],
           "referenceBox": {
@@ -370,11 +370,11 @@
           "captures": [
             {
               "file": "reference-no-results-375.png",
-              "sha256": "2f37ef8f4d529b01c19a0b3e298f0832a1292bf169bc260ec5fe11ae8e7d19af"
+              "sha256": "5d1ef75fc273068799fd3a9a8fd4dd8f12e2a1fabafec41df381d2dfa6789082"
             },
             {
               "file": "react-no-results-375.png",
-              "sha256": "894481544dc9540ba3d00efd6bd97edcb964581ed4936345b8ecf46b0f7b1f72"
+              "sha256": "ecfe91e69b8aafe3a30d3b60e625f42fbaaad150f98c3d597af327cbf03b061e"
             }
           ],
           "referenceBox": {
@@ -395,11 +395,11 @@
           "captures": [
             {
               "file": "reference-editor-updated-375.png",
-              "sha256": "f903bd59abe0fcb637d8164793534908390eca188a83a8b1661f43a949e3e2dd"
+              "sha256": "6c338a1dc0a1aac88c8fe67469b4c16dd328a08477e655225b343678119b2f39"
             },
             {
               "file": "react-editor-updated-375.png",
-              "sha256": "480b4dd194ace9c0e84202df0a6c865064c14cf37a055cf89c3d1b21bd1fc82a"
+              "sha256": "ce3cf78eaf6d52c5158f86f53cd6513bb1d08489af0815cfa3baeb74fce9eb21"
             }
           ],
           "referenceBox": {
@@ -420,11 +420,11 @@
           "captures": [
             {
               "file": "reference-reopened-375.png",
-              "sha256": "22b1a6fb74989e8c9cdd39a78e1f9b0fd7173983d89c92d3efef460eac10b88c"
+              "sha256": "6fa1ccce8712ef7f812c0ca6ef1d87adc0f96da529c860b6e6628fac06159969"
             },
             {
               "file": "react-reopened-375.png",
-              "sha256": "b10add931428adeac2d67dbf26da6363a418a7b174d40b7a150d5732004035ae"
+              "sha256": "2a40bf177dbfd73e3be51dca157e38bbe85eba6030f2451c42e0ec6f5336e42d"
             }
           ],
           "referenceBox": {
@@ -469,11 +469,11 @@
           "captures": [
             {
               "file": "reference-open-390.png",
-              "sha256": "6bbe7f7b981e3924d9e85a64ba5804a51790d73f0c44f2859d325d96d8a1f8eb"
+              "sha256": "36f4775afd5c8f525672e3a867507ef55ba2d994a15125febda1040fb7f5c5cb"
             },
             {
               "file": "react-open-390.png",
-              "sha256": "2b70a347c0fe559886082df8d8a0d2f8755c9f7dfa61f9deeb9b1c79287b44da"
+              "sha256": "c2b83bdab27101e81bc0821996a6b5265e249c007a1b176cc7d4b86c6eb08295"
             }
           ],
           "referenceBox": {
@@ -494,11 +494,11 @@
           "captures": [
             {
               "file": "reference-search-390.png",
-              "sha256": "0e0f91e6cf8abfedfe380a3292c16cccfc16c83266051d595aa745ce4cfece93"
+              "sha256": "cc35c5cb18103bfb8b648bc88877838646c33fd345e5f73803a4d26c3429d4ea"
             },
             {
               "file": "react-search-390.png",
-              "sha256": "285052fd42ff87f46ae5adb79bf82fbab32b2d60464259418760b6f7c2de0a3e"
+              "sha256": "344843be7e35d8c5d270556bded04af24e5f3f01e07a5fb0b4bd5d27dff01eca"
             }
           ],
           "referenceBox": {
@@ -519,11 +519,11 @@
           "captures": [
             {
               "file": "reference-filtered-390.png",
-              "sha256": "726f17e1ca8d99bbca99ba12e1bfc7970b47472f07679b7e875d9c6d4134a051"
+              "sha256": "26782271fe964c27395ffa51ce90649815c094dc1ec5b2fc437c09d2586cf696"
             },
             {
               "file": "react-filtered-390.png",
-              "sha256": "3a63a8299dab8b9dca9a6d104ac480a6d99eb50da4935e739bd7be2a85378473"
+              "sha256": "ce5b92e99eb772408eeec7069f9d8d33387a714a726c32efa65b9f5dcd32ebb5"
             }
           ],
           "referenceBox": {
@@ -544,11 +544,11 @@
           "captures": [
             {
               "file": "reference-added-390.png",
-              "sha256": "d6ea874a8073ef8c2f60c3492183fff955c3416e002e0dbc4c08496d5b55d90a"
+              "sha256": "f32cfa8703060f022ca12fcb531d9695c4909e62fc842b18a9db23b25a13ef95"
             },
             {
               "file": "react-added-390.png",
-              "sha256": "fccf253b44ed7f7cf7b51f709326dc844e1d0767d95d5a7b7e402f0c5a0033f9"
+              "sha256": "7938950d00120a31aafa8002b85e7af611cf7d87eb8ed9f4dadb39ce1a8ca68c"
             }
           ],
           "referenceBox": {
@@ -569,11 +569,11 @@
           "captures": [
             {
               "file": "reference-multiple-390.png",
-              "sha256": "ad6e1dc91da8fdc471fdb140cd1e5587b7dbc897dbdbb7fbd358186e85127092"
+              "sha256": "fcfbd02b59cc27f2e29e3a8ffec2f4e580440016a9c061cb303efcca14b7f0ff"
             },
             {
               "file": "react-multiple-390.png",
-              "sha256": "9cdff35670629fad7d0be30ad1295ae808d9d4e086a42ef77b2fff76c2b11c55"
+              "sha256": "2ab6b31959d434423de459d4af5f8957be6cd813eb687c485cb498da6919d213"
             }
           ],
           "referenceBox": {
@@ -594,11 +594,11 @@
           "captures": [
             {
               "file": "reference-no-results-390.png",
-              "sha256": "3701ed6d4b9a74811179d55190783aef18d6b5d74c4986344599a5862a360e70"
+              "sha256": "a5c3a1ac7d8b8696b09969c9a09b967b171ae9fcb88cb9a07294516ea7c0dca2"
             },
             {
               "file": "react-no-results-390.png",
-              "sha256": "fe90796948e271a18e0935dfe9d3b45f2ba2c8344666eb5459fcc1499a74b108"
+              "sha256": "b68bce1c7d23df80c4cbd0914380fe0535b8eb090e86378e4bfc9b3cc5445c19"
             }
           ],
           "referenceBox": {
@@ -619,11 +619,11 @@
           "captures": [
             {
               "file": "reference-editor-updated-390.png",
-              "sha256": "76e78a6a9f9a934a394229868900838415372fde0493b04648435e94ee418f08"
+              "sha256": "ceee3231e1df2380c48a202c3dfa4a545a0def159ca9a238303c1f9d7da84ddf"
             },
             {
               "file": "react-editor-updated-390.png",
-              "sha256": "f697f50f6ddc737b8f9086d0f747b2a51ef34f389c4e4fef326f839025a5c1a7"
+              "sha256": "f67f76db359bf925b05743e411716df6888621c2a5c30b5ba759142324ec32c2"
             }
           ],
           "referenceBox": {
@@ -644,11 +644,11 @@
           "captures": [
             {
               "file": "reference-reopened-390.png",
-              "sha256": "d586dd917dfd0ccce937df9b5123dab2ae8d80e1a02d59c18744d755d2ec2f4e"
+              "sha256": "35c6ad1c0a53199faae55cf653dcddbf68c1e58d84833da91500faadd83ba49d"
             },
             {
               "file": "react-reopened-390.png",
-              "sha256": "83399ef206c12c8ad55495dc1e1ec00de81adc10beed6165b2a700441fbfb6e5"
+              "sha256": "551b0cce600b9a07e0bd49f07443fb717651e82004bb03f176651a1dfeb23f86"
             }
           ],
           "referenceBox": {
@@ -693,11 +693,11 @@
           "captures": [
             {
               "file": "reference-open-414.png",
-              "sha256": "68dae272f29e677f6c91e68087fc3751f4fe9043bdb93adaf5d234e3ad4b743e"
+              "sha256": "7036fe8cb35b972d2068bf45d0530360767d45a8531e5541cde8cdaa6ac76234"
             },
             {
               "file": "react-open-414.png",
-              "sha256": "982dfdbe0d0efc1cdba91bc618a475bf24c201c93623fd158bb82c5667f88be3"
+              "sha256": "a58d0c4af9b350d31ed3dc3c03e943733561f1f2293ad358dbb28248c03bf34f"
             }
           ],
           "referenceBox": {
@@ -718,11 +718,11 @@
           "captures": [
             {
               "file": "reference-search-414.png",
-              "sha256": "e9946445ffe9f67839d6d3cd01e4f1085f03237ad2e9c1c18c26d6c78f286cc7"
+              "sha256": "a3fa20aecef6b2cb5a20418509ebc213767f1deafb0db7608989557dfd9bc968"
             },
             {
               "file": "react-search-414.png",
-              "sha256": "fc19fc5f5b001229c5520e3743535ca7ccb8909aff8e5d51b9812b5ab8244afa"
+              "sha256": "79a441eafe155105b78351f50a7fd2c701b6be307625097a4b32abf829173a72"
             }
           ],
           "referenceBox": {
@@ -743,11 +743,11 @@
           "captures": [
             {
               "file": "reference-filtered-414.png",
-              "sha256": "7d782fca8e8207257580c09aa9daea7ee23f73e9d493fa0ce933ec36896406bf"
+              "sha256": "559a8e570f2029d4c17a01cc781673074172511ff3268d5b1c0171be9f2439e0"
             },
             {
               "file": "react-filtered-414.png",
-              "sha256": "892c05f0629f7cde2fb8f4614f634d275ac54179d628aaec6317d7b6ce92cdce"
+              "sha256": "1574e43fd925d21c084450de6751676a77cf81ce7453265dae31f884e09ddb8d"
             }
           ],
           "referenceBox": {
@@ -768,11 +768,11 @@
           "captures": [
             {
               "file": "reference-added-414.png",
-              "sha256": "e3a3a9533125e0a118a09975c303254bf6223cd6e6aa192e525aacad58b7abc0"
+              "sha256": "36af717d48f06264f64b4e58115968eeb98c7c692dea9a7937b6a44319f9834e"
             },
             {
               "file": "react-added-414.png",
-              "sha256": "188c0c08282e719bceacd99e9267f9dd4c5c8b8e7236d8306190c674a1f190ee"
+              "sha256": "d1035242d9efd67ac785b3451eeeadc92a3b2ff7c3650b772c9c3c6d84c23b44"
             }
           ],
           "referenceBox": {
@@ -793,11 +793,11 @@
           "captures": [
             {
               "file": "reference-multiple-414.png",
-              "sha256": "5180353aa588d8be98823b99409cc282c7c79c79e9c2b1f44b52a0bfc5a0089d"
+              "sha256": "96a54c9242abef676d56d4f01cb0c9f3e88151ffa6b02ca2842a2a5e5fcb1f0b"
             },
             {
               "file": "react-multiple-414.png",
-              "sha256": "fcb9c148855f7a2e1fcf21da4160e1b7b4ac9388fbc0989f8ee291afcce2603c"
+              "sha256": "4b302842127283e0a673bf7249c14a5a01fceb5a5cf160692bf9ba70a06f7601"
             }
           ],
           "referenceBox": {
@@ -818,11 +818,11 @@
           "captures": [
             {
               "file": "reference-no-results-414.png",
-              "sha256": "0b52142b81fad6c360382c8a9919fecbdbd051d510f8ff73024e64a21a0f39fe"
+              "sha256": "8e13709d7e58b5a4f7be6e4485139603fbd327d346ba1a77d27586be80bd6d35"
             },
             {
               "file": "react-no-results-414.png",
-              "sha256": "fd8db5bebd4c52f900732ed593dc6341c89633ae85aac653cb7a41e56a6546d2"
+              "sha256": "8ba84fdf4c036b3d41a74e0586f50aba1fa4639542d3680d41e60aa01bf91939"
             }
           ],
           "referenceBox": {
@@ -843,11 +843,11 @@
           "captures": [
             {
               "file": "reference-editor-updated-414.png",
-              "sha256": "eb7cbf0d6257dd807462ade66773c0c316386a8695133ad984769e9819a485b4"
+              "sha256": "b071b4abd80bb1e57af6073ff993dbde4cdf415df9aa082fe2b72fb0c48933d9"
             },
             {
               "file": "react-editor-updated-414.png",
-              "sha256": "369e833a4aa1edeaa60512a44bb6b5f877214bf1d51598e60bda7c0d05b9e4c2"
+              "sha256": "c219aeab55c78955d38eb0a2ae21b26c3399f9941b5090819b96e3943938f7e1"
             }
           ],
           "referenceBox": {
@@ -868,11 +868,11 @@
           "captures": [
             {
               "file": "reference-reopened-414.png",
-              "sha256": "43d84eebd6393ec3733ddd212c35958c233635642e5dfd901e346c9c299c2d62"
+              "sha256": "d0adb613e14cd83b573c406648137d579a336db81e8f30fd4a5eeba6dc4958f0"
             },
             {
               "file": "react-reopened-414.png",
-              "sha256": "3c0c44a10550822556f342a5dad0893f99e860b32a37b9e8c13e121488faf48c"
+              "sha256": "2e96383bd3411723eccfd0099202fa96ebe9b6076ff53e69b0a7ff15e5e31655"
             }
           ],
           "referenceBox": {
@@ -917,11 +917,11 @@
           "captures": [
             {
               "file": "reference-open-430.png",
-              "sha256": "a2b3bb6286d9f37c645d86f49180dbf9608c2fc7c1fb01a533e7c6abd1be989a"
+              "sha256": "4c4eccf7409170e4122b019f14c6f0c5ff4e2e5a361e0cccad222568ce40c0b6"
             },
             {
               "file": "react-open-430.png",
-              "sha256": "caede982078b60c7fbeb151d1c7f4c5e1a6ceb108ce50f3e143e5898cf173d9d"
+              "sha256": "77ebe4ed8d221d3eb1b079b81fba4ae7cde56183c638a6b0164ff36c09469386"
             }
           ],
           "referenceBox": {
@@ -942,11 +942,11 @@
           "captures": [
             {
               "file": "reference-search-430.png",
-              "sha256": "2637057fa0c894cece3513f26f7fb74d66e12aa129bfa3e7f3e17cbe2be1e166"
+              "sha256": "8aabf76fa8384f3f00f5525a4a12f2951f54bcc4ee34fad47dd3aecd2fd390b9"
             },
             {
               "file": "react-search-430.png",
-              "sha256": "ceb7d19cca84ddcedf16a0dae099ab25c7776a23c8354e3ac3ef29028f1adb2a"
+              "sha256": "71768a960fb12ba227989b058d4a1ebb65e063cad7c27fb2b0bc90b0db3a1bc0"
             }
           ],
           "referenceBox": {
@@ -967,11 +967,11 @@
           "captures": [
             {
               "file": "reference-filtered-430.png",
-              "sha256": "64b01c5026931bd683ff5c17ce1069b69b5b2c1ee4d0cab2293b5ad62f4fa8b1"
+              "sha256": "faf4306770e3513cc352223348a5a5dd4b0095174e51d9691c09fb129774b5bd"
             },
             {
               "file": "react-filtered-430.png",
-              "sha256": "5c4ec04d9faf5ce7a4f3c81c578d07775d16273c77001bf4e15dc3c738cace19"
+              "sha256": "438fd2b30316f1d81390687f403064d0dca44c26ea3931031991001bc7e791b4"
             }
           ],
           "referenceBox": {
@@ -992,11 +992,11 @@
           "captures": [
             {
               "file": "reference-added-430.png",
-              "sha256": "39282eade60f6683a0d634868ec465e67c0ec018fd7a171c93fdb941b20529ab"
+              "sha256": "dff80a210d0a7852f94f040cff08923aff4f0389f1d334c000f42dde0ff075c0"
             },
             {
               "file": "react-added-430.png",
-              "sha256": "12a61f4c399371366ad35178dbd3390820ca14ef39ed3a4cb190b1168a0ee8bf"
+              "sha256": "ad2c0d1e98c591a45bb372af397bee8493a086c3e7d2326a3af5d17d37bd8fb9"
             }
           ],
           "referenceBox": {
@@ -1017,11 +1017,11 @@
           "captures": [
             {
               "file": "reference-multiple-430.png",
-              "sha256": "f5d0ad986d45c239b73782993ded485e5f52d6ca57ed199e6995adc237a972ed"
+              "sha256": "6996d50da086c9d27e9cea9d1bb9b68b7a266fe5259aeff6e240d6409d0880b3"
             },
             {
               "file": "react-multiple-430.png",
-              "sha256": "e563ebeb3047a649e158ff8e8e2580a46d147b3c64cd90f0849421111c04f36b"
+              "sha256": "b91e32c0461f4bf542eccb2ca2aef3327c57bf2e2e7900c36d7b9e9b30c83c8a"
             }
           ],
           "referenceBox": {
@@ -1042,11 +1042,11 @@
           "captures": [
             {
               "file": "reference-no-results-430.png",
-              "sha256": "6e40ceb67c3d5d3a7760f071a7f9b48c2df5517168ffa51e3496222351da2b4f"
+              "sha256": "1b4d90fa17bd7a84b66dca3ba274d8c787eecb7f249b023e8ed0f55a4535cca8"
             },
             {
               "file": "react-no-results-430.png",
-              "sha256": "a5ed80c80fae7cd548793e68e1026fa1c33685407438c81b3c751b58e1f34fdc"
+              "sha256": "74cd6e3850d1fc8460c15572983956e42e7be1a0bfc60d2d8d1477c4e831509a"
             }
           ],
           "referenceBox": {
@@ -1067,11 +1067,11 @@
           "captures": [
             {
               "file": "reference-editor-updated-430.png",
-              "sha256": "4f697d513a2eb45fa66daf1d84d8d4eab6e64763b3e12a4da114521b39777edf"
+              "sha256": "22c02a2578295ebf824bd81105db0e1041acf23b6767d8b3eb0788d27bba9f3a"
             },
             {
               "file": "react-editor-updated-430.png",
-              "sha256": "d0534128a0eb6a90edd7e4ddd8474d58aeb175edecceaf544d7dd9a9b43cfc1c"
+              "sha256": "6782283c0fec5116cdef82aea3a4045708786f3356ab8786a5d7f23106d3c60b"
             }
           ],
           "referenceBox": {
@@ -1092,11 +1092,11 @@
           "captures": [
             {
               "file": "reference-reopened-430.png",
-              "sha256": "1186e103ed67c5f2186bf7108c5ec5ea8a849e75d0878ec93adbf57c765d6c29"
+              "sha256": "c9f69064959a35300123ae94def6f34540d95274747193e496a28a314d979755"
             },
             {
               "file": "react-reopened-430.png",
-              "sha256": "33842fdb75c175fa626d3e254006cc60a82446d734dd3bf81bf8a3a25698574b"
+              "sha256": "3ec657eb7deb5f07fdb5034b1d7b959213f5396bd709c5b1d9b5a4ef80515ed3"
             }
           ],
           "referenceBox": {
@@ -1133,5 +1133,6 @@
       },
       "pageErrors": []
     }
-  ]
+  ],
+  "browserVersion": "141.0.7390.37 (Playwright Chromium Headless Shell v1194)"
 }

@@ -4,7 +4,7 @@ Fonte pública imutável: [HTML V7.4](https://github.com/jukazilli/goudduo/blob/
 
 ## Método
 
-Chromium touch, DPR 1, 320/375/390/414/430 ×844. Referência e React percorrem o mesmo estado semântico, com dados próprios: domingo vazio, sheet, busca, adição, múltiplos, sem resultado, fechamento e reabertura. A referência possui outro catálogo; nomes/metadados/query literal não são forçados a coincidir com fixtures React.
+Chromium 141.0.7390.37 do Playwright, touch, DPR 1, 320/375/390/414/430 ×844. Referência e React percorrem o mesmo estado semântico, com dados próprios: domingo vazio, sheet, busca, adição, múltiplos, sem resultado, fechamento e reabertura. A referência possui outro catálogo; nomes/metadados/query literal não são forçados a coincidir com fixtures React.
 
 Capturas só do painel contextual; para Editor atualizado, somente .gd-content/#main-content. Não se compara Shell/status/frame experimental com a fundação React. A referência declara Plus Jakarta Sans sem carregar a fonte; para comparação, o harness carrega somente FontFaces públicos 400/500/600/700/800 do mesmo pacote do app. Bytes/layout/scripts do HTML permanecem intactos. As imagens reference-* são normalizadas por fonte, não uma alegação sobre o fallback original.
 
@@ -27,6 +27,7 @@ Capturas só do painel contextual; para Editor atualizado, somente .gd-content/#
 | Feedback | Adicionado transitório | Mesmo texto/1.350 ms, status live com chave por inclusão efetiva; área reservada evita saltos |
 | Campos ao fechar | Exemplos HTML predefinidos | Campos obrigatórios em branco por segurança, sem prescrição profissional inventada; requer configuração antes de salvar |
 | Dados | Catálogo do protótipo | 12 definições explicitamente demonstrativas na fonte compartilhada |
+| Estabilidade | Ancoragem automática padrão do navegador | overflow-anchor:none somente na lista elimina salto funcional reproduzido na CI 141 |
 | Motion | 250/260 ms local | Motor homologado 300/310 ms, reduced-motion preservado |
 
 São diferenças documentadas para o refinamento posterior. Não se declara pixel parity. Nenhuma falha funcional, corte ou sobreposição é classificada como cosmética.

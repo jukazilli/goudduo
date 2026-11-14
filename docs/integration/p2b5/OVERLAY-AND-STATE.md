@@ -12,7 +12,7 @@ O painel real torna-se flex: handle/título/pesquisa/meta/feedback ficam estáve
 
 - Botão Adicionar exercício abre o painel pelo adapter existente e preserva routineId/day/workoutId/draftId/baseRevision/origem.
 - Foco inicial no campo de pesquisa. Digitar altera query local e reinicia somente o scroll de resultados para a nova busca.
-- Atualizações do reducer não alteram a query nem zeram a posição de lista; linhas usam chaves estáveis por catálogo. O foco fica na linha acionada ao adicionar, em vez de ser perdido ao desabilitar nativamente o botão.
+- Atualizações do reducer não alteram a query nem zeram a posição de lista; overflow-anchor:none bloqueia o salto nativo observado no Chromium 141 ao atualizar o estado de adicionado, sem impedir scroll/foco solicitados pela pessoa; linhas usam chaves estáveis por catálogo. O foco fica na linha acionada ao adicionar, em vez de ser perdido ao desabilitar nativamente o botão.
 - Escape, Back, backdrop e gesto no handle usam o host homologado. Fechar não cancela, não salva e não elimina o draft.
 - Durante a saída, conteúdo permanece até o unmount do host; não há nova animação/timer de fechamento no consumidor.
 - Após fechamento completo e reabertura, query volta vazia. Isso reproduz `s.search=''` do handler open-exercise-library no HTML fixo. Reabertura que interrompe uma saída ainda em curso conserva a instância transitória do host, sem persistência.

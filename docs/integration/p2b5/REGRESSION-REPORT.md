@@ -1,6 +1,6 @@
 # Regressão, testes e segurança P2-B5
 
-Base fba23be34bbd370e2dccef4d94d2c6a23265e6c1, integração controlada da P2-B4. Node 24.22.1/pnpm 11.25.0 fixados; Playwright 1.56.1 e Chromium 156.0.8078.79 local. Nenhuma atualização de dependência ou lockfile.
+Base fba23be34bbd370e2dccef4d94d2c6a23265e6c1, integração controlada da P2-B4. Node 24.22.1/pnpm 11.25.0 fixados; Playwright 1.56.1 e Chromium 156.0.8078.79 na rodada local inicial; Chromium 141.0.7390.37 do pacote Playwright na reprodução e validação final, igual ao runner de CI. Nenhuma atualização de dependência ou lockfile.
 
 ## Resultados observados
 
@@ -11,11 +11,11 @@ Base fba23be34bbd370e2dccef4d94d2c6a23265e6c1, integração controlada da P2-B4.
 | pnpm test | **93 PASS /9 arquivos**, 13 casos novos e 80 anteriores preservados |
 | pnpm run build / build:lab | PASS, artefatos app/Lab separados e auditados |
 | node --test tests/bundle.test.mjs | **4 PASS** |
-| pnpm exec playwright test | **100 PASS**, zero falhas/skips/flaky; 25 novos e 75 regressões |
+| pnpm exec playwright test | **100 PASS no Chromium 141 do projeto**, zero falhas/skips/flaky; 25 novos e 75 regressões |
 | Capturas | 80, oito estados pareados × cinco larguras, medidas/fontes/hashes; zero pageerrors |
 | Links/hash/diff | PASS: 8 documentos, 80 hashes de capturas, hashes de fontes e links relativos conferidos |
 
-Logs locais em /workspace/scratch/p2b5/, report JSON e traces em test-results/ ignorados; regeneráveis pelos scripts. Playwright local usa PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium. A CI no head publicado será confirmada na PR/entrega, sem inferir sucesso futuro. Builds são regenerados no commit limpo para build-info com SHA/dirty=false/hash do lock. Cloudflare somente dry-run do workflow existente, sem comandos extras de publicação/preparação nesta missão.
+Logs locais em /workspace/scratch/p2b5/, report JSON e traces em test-results/ ignorados; regeneráveis pelos scripts. A rodada inicial usou PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium; a final usa o navegador padrão instalado pelo próprio Playwright, sem override de executável. A CI no head publicado será confirmada na PR/entrega, sem inferir sucesso futuro. Builds são regenerados no commit limpo para build-info com SHA/dirty=false/hash do lock. Cloudflare somente dry-run do workflow existente, sem comandos extras de publicação/preparação nesta missão.
 
 ## Novas verificações
 
@@ -50,3 +50,9 @@ Código/arquivos privados transportados: **nenhum**. A allowlist P2-A continua p
 ## Limitações
 
 Sem Safari/iPhone/Android físicos, teclado virtual/VoiceOver ou insets reais. Não se certifica Feed privado por comparação visual nova: proteção verificável é ausência de mudanças nas superfícies e regressão da fundação pública. Catálogo profissional, Biblioteca independente, equipamento selecionável, substitutos, limite final de nome, cópia/referência e refinamento visual continuam gates. Nenhum deploy/preview público ou início de P2-B6.
+
+## Correção de scroll após a primeira CI
+
+No head inicial 39f2292, a CI (Chromium 141) passou 93 unitários e 95 E2E, mas falhou nos cinco casos de scroll: esperado 100 px, observado 0 px após inclusão. Chromium 156 local tinha passado os 100. A falha foi reproduzida com o Chromium 141 do mesmo pacote Playwright. Instrumentação confirmou a mesma lista DOM, sem setter JS de reset após o clique; desabilitar somente a ancoragem automática do navegador conservou 100→100.
+
+Correção: overflow-anchor:none apenas em contextual-library__results. Não há reposicionamento global, cache de scroll concorrente, alteração de query/foco ou relaxamento da asserção. O teste mantém igualdade exata da posição e passa a conferir também a propriedade CSS. Os cinco casos alvo e a suíte completa final de 100 testes passaram no Chromium 141, sem falhas/skips/flaky. A nova CI repete os checks no mesmo engine. Artefato remoto não pôde ser baixado neste ambiente; diagnóstico baseado nos logs CI e reprodução instrumentada local.
