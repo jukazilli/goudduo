@@ -1,0 +1,2158 @@
+{
+  "referenceCommit": "073183253fce5fcd0b3474c725e84ff67d3dfec5",
+  "referenceBlob": "8c698708dd79449472d6f5c7e536664939de4951",
+  "referenceSHA256": "7cb2bedd0af72c09c703337f889e94cb4e223ab9d5ff6104b584d62895ffb18f",
+  "browserVersion": "141.0.7390.37",
+  "normalization": "Raw captures preserved. Paired reference captures apply only public Plus Jakarta Sans fonts and font-family within Home. Original bytes, layout rules and scripts unchanged. Empty/neutral states have no canonical equivalent and no reconstructed reference.",
+  "sourcesSHA256": {
+    "src/app/PrototypeApp.tsx": "ad4a52ab8c7f45dad311df54e8a96a927096d801aeb77b78ba809ae1a2bcbe63",
+    "src/surfaces/home/HomeTraining.tsx": "e908c6790afe464dcc08e59edba9be01feb3f7ca60712037eb07680a8177ae86",
+    "src/surfaces/home/home-training.css": "a3bd3148ffd5fb992778c726e9f1e5e0101df8c1bcb8db729be793ff75b0102d",
+    "src/surfaces/home/layout.ts": "df19ff0894ff79dfd88b79531b1b9ec2f7553c680ea41737433257fc6287d343",
+    "src/surfaces/home/training-data.ts": "1c134eb4a1a8ca017bc5dd16845280401c2db85d9c0cd23cf98830dcad67fc7c"
+  },
+  "viewports": [
+    {
+      "width": 320,
+      "states": [
+        {
+          "name": "initial",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-initial-320.png",
+              "sha256": "06eb0c1212ff0b38e255f18fc0925b04cb8fe3d52867f65873673589caaaeb7b",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 320,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-initial-320.png",
+              "sha256": "0ff4017457b3c8161c685f1c985d77b784b7070382ed240f1b66bb8a088065d0",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 320,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "ranking-expanded",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-ranking-expanded-320.png",
+              "sha256": "46a485793285269bcdca43357e0cc21ba8bc9d481e168d6d1b3b734613cf269a",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 320,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-ranking-expanded-320.png",
+              "sha256": "e0e9de241caac3b2c0ddb3b0b635292099e4ab88ab375308a7c1c07eaadb92f5",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 320,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "status-expanded",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-status-expanded-320.png",
+              "sha256": "d97392e030d413cd82df8dcb30637ee66c281df4be9f9ba6d7fcf6de57b45fe9",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 320,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-status-expanded-320.png",
+              "sha256": "2250b14511119d4843e45ca958ae0326638d3e1a72925b9e086f4bbf9a589f04",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 320,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "hero-valid",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-hero-valid-320.png",
+              "sha256": "2143a6f17ad1b0fa31e945932176027cdfec7ec1fa6d51aaba916cd26558f71b",
+              "box": {
+                "x": 10,
+                "y": 471.796875,
+                "width": 300,
+                "height": 236
+              }
+            },
+            {
+              "file": "react-hero-valid-320.png",
+              "sha256": "ef9b2b28b149d6fd64e8d58015ed24e4fc093ef7631c06245cbb8690fda5e4e2",
+              "box": {
+                "x": 10,
+                "y": 445.796875,
+                "width": 300,
+                "height": 240.03125
+              }
+            }
+          ]
+        },
+        {
+          "name": "lower-expanded",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-lower-expanded-320.png",
+              "sha256": "4bf4b582e466caa478db615f5af1ebc5cf276da82084f4e7cf9de350d6721b70",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 320,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-lower-expanded-320.png",
+              "sha256": "ddcb4bf8ca81367f433c6064c2e12f00d8503515d292dca382b011206da196d6",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 320,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "restored",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-restored-320.png",
+              "sha256": "06eb0c1212ff0b38e255f18fc0925b04cb8fe3d52867f65873673589caaaeb7b",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 320,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-restored-320.png",
+              "sha256": "e120e6f6e64ddcc4b51ec5f927c516a4bea8aae02314c0dd1c2d11f70bf86740",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 320,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "hero-empty",
+          "referenceEquivalent": false,
+          "captures": [
+            {
+              "file": "react-hero-empty-320.png",
+              "sha256": "c1258b7cc7e39dd491ae0df3b2ef1f8a315e9b69d151becc9c609aae7fc9cb03",
+              "box": {
+                "x": 10,
+                "y": 445.796875,
+                "width": 300,
+                "height": 236
+              }
+            }
+          ]
+        },
+        {
+          "name": "progress-neutral",
+          "referenceEquivalent": false,
+          "captures": [
+            {
+              "file": "react-progress-neutral-320.png",
+              "sha256": "414753d2b2af876d16212257f1411beadbf50aa19c4a3202ee8f00651da3b415",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 320,
+                "height": 683
+              }
+            }
+          ]
+        }
+      ],
+      "referenceMetrics": {
+        "grid": {
+          "box": {
+            "x": 10,
+            "y": 245.796875,
+            "width": 300,
+            "height": 873,
+            "top": 245.796875,
+            "right": 310,
+            "bottom": 1118.796875,
+            "left": 10
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "8px",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "ranking": {
+          "box": {
+            "x": 10,
+            "y": 245.796875,
+            "width": 146,
+            "height": 218,
+            "top": 245.796875,
+            "right": 156,
+            "bottom": 463.796875,
+            "left": 10
+          },
+          "background": "rgb(227, 240, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "status": {
+          "box": {
+            "x": 164,
+            "y": 245.796875,
+            "width": 146,
+            "height": 105,
+            "top": 245.796875,
+            "right": 310,
+            "bottom": 350.796875,
+            "left": 164
+          },
+          "background": "rgb(239, 248, 224) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "weight": {
+          "box": {
+            "x": 164,
+            "y": 358.796875,
+            "width": 146,
+            "height": 105,
+            "top": 358.796875,
+            "right": 310,
+            "bottom": 463.796875,
+            "left": 164
+          },
+          "background": "rgb(243, 243, 243) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "hero": {
+          "box": {
+            "x": 10,
+            "y": 471.796875,
+            "width": 300,
+            "height": 236,
+            "top": 471.796875,
+            "right": 310,
+            "bottom": 707.796875,
+            "left": 10
+          },
+          "background": "radial-gradient(86% 94% at 84% 43%, rgba(94, 109, 119, 0.22) 0%, rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(132deg, rgb(32, 38, 45) 0%, rgb(48, 54, 60) 56%, rgb(28, 34, 40) 100%) repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "26px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "consistency": {
+          "box": {
+            "x": 10,
+            "y": 1019.796875,
+            "width": 300,
+            "height": 99,
+            "top": 1019.796875,
+            "right": 310,
+            "bottom": 1118.796875,
+            "left": 10
+          },
+          "background": "rgb(244, 247, 248) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "pulse": {
+          "box": {
+            "x": 10,
+            "y": 151,
+            "width": 300,
+            "height": 77.796875,
+            "top": 151,
+            "right": 310,
+            "bottom": 228.796875,
+            "left": 10
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        }
+      },
+      "reactMetrics": {
+        "grid": {
+          "box": {
+            "x": 10,
+            "y": 219.796875,
+            "width": 300,
+            "height": 877.03125,
+            "top": 219.796875,
+            "right": 310,
+            "bottom": 1096.828125,
+            "left": 10
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "8px",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "ranking": {
+          "box": {
+            "x": 10,
+            "y": 219.796875,
+            "width": 146,
+            "height": 218,
+            "top": 219.796875,
+            "right": 156,
+            "bottom": 437.796875,
+            "left": 10
+          },
+          "background": "rgb(227, 240, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "status": {
+          "box": {
+            "x": 164,
+            "y": 219.796875,
+            "width": 146,
+            "height": 105,
+            "top": 219.796875,
+            "right": 310,
+            "bottom": 324.796875,
+            "left": 164
+          },
+          "background": "rgb(239, 248, 224) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "weight": {
+          "box": {
+            "x": 164,
+            "y": 332.796875,
+            "width": 146,
+            "height": 105,
+            "top": 332.796875,
+            "right": 310,
+            "bottom": 437.796875,
+            "left": 164
+          },
+          "background": "rgb(243, 243, 243) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "hero": {
+          "box": {
+            "x": 10,
+            "y": 445.796875,
+            "width": 300,
+            "height": 240.03125,
+            "top": 445.796875,
+            "right": 310,
+            "bottom": 685.828125,
+            "left": 10
+          },
+          "background": "radial-gradient(86% 94% at 84% 43%, rgba(94, 109, 119, 0.22) 0%, rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(132deg, rgb(32, 38, 45), rgb(48, 54, 60) 56%, rgb(28, 34, 40)) repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "26px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "consistency": {
+          "box": {
+            "x": 10,
+            "y": 997.828125,
+            "width": 300,
+            "height": 99,
+            "top": 997.828125,
+            "right": 310,
+            "bottom": 1096.828125,
+            "left": 10
+          },
+          "background": "rgb(244, 247, 248) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "pulse": {
+          "box": {
+            "x": 0,
+            "y": 111,
+            "width": 320,
+            "height": 108.796875,
+            "top": 111,
+            "right": 320,
+            "bottom": 219.796875,
+            "left": 0
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        }
+      },
+      "reactOrphanWidth": 300,
+      "referenceOrphanWidth": 300,
+      "pageErrors": []
+    },
+    {
+      "width": 375,
+      "states": [
+        {
+          "name": "initial",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-initial-375.png",
+              "sha256": "ebd2a1845d12487ea36c3bf4dcef6200e0eba5fd4786f2860a9b32c5da0aff65",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 375,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-initial-375.png",
+              "sha256": "8a6fa9d6523ef486e0775132ef16d581bbde71cd4f7ebdfcf0e370bd427a3327",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 375,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "ranking-expanded",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-ranking-expanded-375.png",
+              "sha256": "623e3b72516990c8a5ba33d210f2533419e4cd8534594a26f407cd4b5fef0ef9",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 375,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-ranking-expanded-375.png",
+              "sha256": "04a712c8490c8d3a5c65c974aa376b9eec40f2e2f8518c69acd810a4cd046102",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 375,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "status-expanded",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-status-expanded-375.png",
+              "sha256": "cabdc47ca093e654ce3ad2172cfbb529bf692cc072a349483a6445e63c4f962c",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 375,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-status-expanded-375.png",
+              "sha256": "cba56bac5747cab9cea2ad22ca7eb432d489e9a40ea8ceb97bb8596f76726a02",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 375,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "hero-valid",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-hero-valid-375.png",
+              "sha256": "38d405fe3b77afc5198411b84ef27f8bdf118a6808dab5fcf624fc881058e6a7",
+              "box": {
+                "x": 13,
+                "y": 477.796875,
+                "width": 349,
+                "height": 236
+              }
+            },
+            {
+              "file": "react-hero-valid-375.png",
+              "sha256": "5842257e251de0cd7d2104ee094341aecce8f3f6e9bd1a422d11be643f15f70d",
+              "box": {
+                "x": 13,
+                "y": 451.796875,
+                "width": 349,
+                "height": 247.5
+              }
+            }
+          ]
+        },
+        {
+          "name": "lower-expanded",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-lower-expanded-375.png",
+              "sha256": "e36a95843cd688cba3424071533b6b36996178bc8c91b37c236d292aff58e258",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 375,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-lower-expanded-375.png",
+              "sha256": "ab65dabcd08852b0d58a054ab167555a544bf1cde4e5c83f3d070c912b0bd95b",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 375,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "restored",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-restored-375.png",
+              "sha256": "ebd2a1845d12487ea36c3bf4dcef6200e0eba5fd4786f2860a9b32c5da0aff65",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 375,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-restored-375.png",
+              "sha256": "8a6fa9d6523ef486e0775132ef16d581bbde71cd4f7ebdfcf0e370bd427a3327",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 375,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "hero-empty",
+          "referenceEquivalent": false,
+          "captures": [
+            {
+              "file": "react-hero-empty-375.png",
+              "sha256": "0b2fd104ff58d1097c388742cdf8442ab7121a2c47101f69f58759ad33d7f5de",
+              "box": {
+                "x": 13,
+                "y": 451.796875,
+                "width": 349,
+                "height": 236
+              }
+            }
+          ]
+        },
+        {
+          "name": "progress-neutral",
+          "referenceEquivalent": false,
+          "captures": [
+            {
+              "file": "react-progress-neutral-375.png",
+              "sha256": "9341d9c64d845cb098d7ed6fc832b240463f89ae2b65dd2f3e68c00a293f9f6c",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 375,
+                "height": 683
+              }
+            }
+          ]
+        }
+      ],
+      "referenceMetrics": {
+        "grid": {
+          "box": {
+            "x": 13,
+            "y": 249.796875,
+            "width": 349,
+            "height": 884.3125,
+            "top": 249.796875,
+            "right": 362,
+            "bottom": 1134.109375,
+            "left": 13
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "10px",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "ranking": {
+          "box": {
+            "x": 13,
+            "y": 249.796875,
+            "width": 169.5,
+            "height": 218,
+            "top": 249.796875,
+            "right": 182.5,
+            "bottom": 467.796875,
+            "left": 13
+          },
+          "background": "rgb(227, 240, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "status": {
+          "box": {
+            "x": 192.5,
+            "y": 249.796875,
+            "width": 169.5,
+            "height": 103.75,
+            "top": 249.796875,
+            "right": 362,
+            "bottom": 353.546875,
+            "left": 192.5
+          },
+          "background": "rgb(239, 248, 224) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "weight": {
+          "box": {
+            "x": 192.5,
+            "y": 363.546875,
+            "width": 169.5,
+            "height": 104.25,
+            "top": 363.546875,
+            "right": 362,
+            "bottom": 467.796875,
+            "left": 192.5
+          },
+          "background": "rgb(243, 243, 243) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "hero": {
+          "box": {
+            "x": 13,
+            "y": 477.796875,
+            "width": 349,
+            "height": 236,
+            "top": 477.796875,
+            "right": 362,
+            "bottom": 713.796875,
+            "left": 13
+          },
+          "background": "radial-gradient(86% 94% at 84% 43%, rgba(94, 109, 119, 0.22) 0%, rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(132deg, rgb(32, 38, 45) 0%, rgb(48, 54, 60) 56%, rgb(28, 34, 40) 100%) repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "26px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "consistency": {
+          "box": {
+            "x": 13,
+            "y": 1031.796875,
+            "width": 349,
+            "height": 102.3125,
+            "top": 1031.796875,
+            "right": 362,
+            "bottom": 1134.109375,
+            "left": 13
+          },
+          "background": "rgb(244, 247, 248) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "pulse": {
+          "box": {
+            "x": 13,
+            "y": 151,
+            "width": 349,
+            "height": 81.796875,
+            "top": 151,
+            "right": 362,
+            "bottom": 232.796875,
+            "left": 13
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        }
+      },
+      "reactMetrics": {
+        "grid": {
+          "box": {
+            "x": 13,
+            "y": 223.796875,
+            "width": 349,
+            "height": 892.5,
+            "top": 223.796875,
+            "right": 362,
+            "bottom": 1116.296875,
+            "left": 13
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "10px",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "ranking": {
+          "box": {
+            "x": 13,
+            "y": 223.796875,
+            "width": 169.5,
+            "height": 218,
+            "top": 223.796875,
+            "right": 182.5,
+            "bottom": 441.796875,
+            "left": 13
+          },
+          "background": "rgb(227, 240, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "status": {
+          "box": {
+            "x": 192.5,
+            "y": 223.796875,
+            "width": 169.5,
+            "height": 104,
+            "top": 223.796875,
+            "right": 362,
+            "bottom": 327.796875,
+            "left": 192.5
+          },
+          "background": "rgb(239, 248, 224) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "weight": {
+          "box": {
+            "x": 192.5,
+            "y": 337.796875,
+            "width": 169.5,
+            "height": 104,
+            "top": 337.796875,
+            "right": 362,
+            "bottom": 441.796875,
+            "left": 192.5
+          },
+          "background": "rgb(243, 243, 243) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "hero": {
+          "box": {
+            "x": 13,
+            "y": 451.796875,
+            "width": 349,
+            "height": 247.5,
+            "top": 451.796875,
+            "right": 362,
+            "bottom": 699.296875,
+            "left": 13
+          },
+          "background": "radial-gradient(86% 94% at 84% 43%, rgba(94, 109, 119, 0.22) 0%, rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(132deg, rgb(32, 38, 45), rgb(48, 54, 60) 56%, rgb(28, 34, 40)) repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "26px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "consistency": {
+          "box": {
+            "x": 13,
+            "y": 1017.296875,
+            "width": 349,
+            "height": 99,
+            "top": 1017.296875,
+            "right": 362,
+            "bottom": 1116.296875,
+            "left": 13
+          },
+          "background": "rgb(244, 247, 248) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "pulse": {
+          "box": {
+            "x": 0,
+            "y": 111,
+            "width": 375,
+            "height": 112.796875,
+            "top": 111,
+            "right": 375,
+            "bottom": 223.796875,
+            "left": 0
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        }
+      },
+      "reactOrphanWidth": 349,
+      "referenceOrphanWidth": 349,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "states": [
+        {
+          "name": "initial",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-initial-390.png",
+              "sha256": "dc13fb2181eac14cdba0d2c6a51401fb0261149f493e95e661f06c5cb0f3232a",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 390,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-initial-390.png",
+              "sha256": "3efcd58ba6f4eea11055dee99b7fc0d8c5f25516c3fe4107bb309f9ea4787ccf",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 390,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "ranking-expanded",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-ranking-expanded-390.png",
+              "sha256": "77da0951d764e72ef313c7d93e36db3d1d09ed136f346c0dd3322f3a2380b108",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 390,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-ranking-expanded-390.png",
+              "sha256": "5055a9cb63bc84705fae20b06fb38f376545ad6af700633c41e8a48796ee0217",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 390,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "status-expanded",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-status-expanded-390.png",
+              "sha256": "cd769fae42c26cb934d8cee3efaf3c80b9bd1b04bbc99584354e868ac8f0e2cd",
+              "box": {
+                "x": 0,
+                "y": 49,
+                "width": 390,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-status-expanded-390.png",
+              "sha256": "e5ca38297348926534b199e5a9a54b76e39c555eaf41d3b6bf027966f8ab83a5",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 390,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "hero-valid",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-hero-valid-390.png",
+              "sha256": "4a78b859a8b73b5ac6ebafbdaae52cbc3c61858a61b8bceb0177cbff1d56dc66",
+              "box": {
+                "x": 13,
+                "y": 264.796875,
+                "width": 364,
+                "height": 236
+              }
+            },
+            {
+              "file": "react-hero-valid-390.png",
+              "sha256": "106527882f0b66bd6354bf837f7ca2cde37e962b9046e40a18456fa36166b44c",
+              "box": {
+                "x": 13,
+                "y": 451.796875,
+                "width": 364,
+                "height": 247.5
+              }
+            }
+          ]
+        },
+        {
+          "name": "lower-expanded",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-lower-expanded-390.png",
+              "sha256": "d12676477ffb4220841f4e656e040790dea38400cf1e50a25dd699d632284717",
+              "box": {
+                "x": 0,
+                "y": 49,
+                "width": 390,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-lower-expanded-390.png",
+              "sha256": "971e2b79d4cbcef2ae067f4880a0d06290918c9d729ae52cb354aa3d596bbb8e",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 390,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "restored",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-restored-390.png",
+              "sha256": "dc13fb2181eac14cdba0d2c6a51401fb0261149f493e95e661f06c5cb0f3232a",
+              "box": {
+                "x": 0,
+                "y": 49,
+                "width": 390,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-restored-390.png",
+              "sha256": "3efcd58ba6f4eea11055dee99b7fc0d8c5f25516c3fe4107bb309f9ea4787ccf",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 390,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "hero-empty",
+          "referenceEquivalent": false,
+          "captures": [
+            {
+              "file": "react-hero-empty-390.png",
+              "sha256": "5c8e3e24f11dc7d183ac425b4e6bf8ea33c73dc8f4bce3c070b25f8c08ab1b81",
+              "box": {
+                "x": 13,
+                "y": 451.796875,
+                "width": 364,
+                "height": 236
+              }
+            }
+          ]
+        },
+        {
+          "name": "progress-neutral",
+          "referenceEquivalent": false,
+          "captures": [
+            {
+              "file": "react-progress-neutral-390.png",
+              "sha256": "93af64b36e4ce6e9214adb7c875b019e11163f5992fac83c0b477cdf351cbc18",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 390,
+                "height": 683
+              }
+            }
+          ]
+        }
+      ],
+      "referenceMetrics": {
+        "grid": {
+          "box": {
+            "x": 13,
+            "y": 249.796875,
+            "width": 364,
+            "height": 884.3125,
+            "top": 249.796875,
+            "right": 377,
+            "bottom": 1134.109375,
+            "left": 13
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "10px",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "ranking": {
+          "box": {
+            "x": 13,
+            "y": 249.796875,
+            "width": 177,
+            "height": 218,
+            "top": 249.796875,
+            "right": 190,
+            "bottom": 467.796875,
+            "left": 13
+          },
+          "background": "rgb(227, 240, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "status": {
+          "box": {
+            "x": 200,
+            "y": 249.796875,
+            "width": 177,
+            "height": 103.75,
+            "top": 249.796875,
+            "right": 377,
+            "bottom": 353.546875,
+            "left": 200
+          },
+          "background": "rgb(239, 248, 224) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "weight": {
+          "box": {
+            "x": 200,
+            "y": 363.546875,
+            "width": 177,
+            "height": 104.25,
+            "top": 363.546875,
+            "right": 377,
+            "bottom": 467.796875,
+            "left": 200
+          },
+          "background": "rgb(243, 243, 243) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "hero": {
+          "box": {
+            "x": 13,
+            "y": 477.796875,
+            "width": 364,
+            "height": 236,
+            "top": 477.796875,
+            "right": 377,
+            "bottom": 713.796875,
+            "left": 13
+          },
+          "background": "radial-gradient(86% 94% at 84% 43%, rgba(94, 109, 119, 0.22) 0%, rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(132deg, rgb(32, 38, 45) 0%, rgb(48, 54, 60) 56%, rgb(28, 34, 40) 100%) repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "26px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "consistency": {
+          "box": {
+            "x": 13,
+            "y": 1031.796875,
+            "width": 364,
+            "height": 102.3125,
+            "top": 1031.796875,
+            "right": 377,
+            "bottom": 1134.109375,
+            "left": 13
+          },
+          "background": "rgb(244, 247, 248) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "pulse": {
+          "box": {
+            "x": 13,
+            "y": 151,
+            "width": 364,
+            "height": 81.796875,
+            "top": 151,
+            "right": 377,
+            "bottom": 232.796875,
+            "left": 13
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        }
+      },
+      "reactMetrics": {
+        "grid": {
+          "box": {
+            "x": 13,
+            "y": 223.796875,
+            "width": 364,
+            "height": 892.5,
+            "top": 223.796875,
+            "right": 377,
+            "bottom": 1116.296875,
+            "left": 13
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "10px",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "ranking": {
+          "box": {
+            "x": 13,
+            "y": 223.796875,
+            "width": 177,
+            "height": 218,
+            "top": 223.796875,
+            "right": 190,
+            "bottom": 441.796875,
+            "left": 13
+          },
+          "background": "rgb(227, 240, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "status": {
+          "box": {
+            "x": 200,
+            "y": 223.796875,
+            "width": 177,
+            "height": 104,
+            "top": 223.796875,
+            "right": 377,
+            "bottom": 327.796875,
+            "left": 200
+          },
+          "background": "rgb(239, 248, 224) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "weight": {
+          "box": {
+            "x": 200,
+            "y": 337.796875,
+            "width": 177,
+            "height": 104,
+            "top": 337.796875,
+            "right": 377,
+            "bottom": 441.796875,
+            "left": 200
+          },
+          "background": "rgb(243, 243, 243) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "hero": {
+          "box": {
+            "x": 13,
+            "y": 451.796875,
+            "width": 364,
+            "height": 247.5,
+            "top": 451.796875,
+            "right": 377,
+            "bottom": 699.296875,
+            "left": 13
+          },
+          "background": "radial-gradient(86% 94% at 84% 43%, rgba(94, 109, 119, 0.22) 0%, rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(132deg, rgb(32, 38, 45), rgb(48, 54, 60) 56%, rgb(28, 34, 40)) repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "26px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "consistency": {
+          "box": {
+            "x": 13,
+            "y": 1017.296875,
+            "width": 364,
+            "height": 99,
+            "top": 1017.296875,
+            "right": 377,
+            "bottom": 1116.296875,
+            "left": 13
+          },
+          "background": "rgb(244, 247, 248) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "pulse": {
+          "box": {
+            "x": 0,
+            "y": 111,
+            "width": 390,
+            "height": 112.796875,
+            "top": 111,
+            "right": 390,
+            "bottom": 223.796875,
+            "left": 0
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        }
+      },
+      "reactOrphanWidth": 364,
+      "referenceOrphanWidth": 364,
+      "pageErrors": []
+    },
+    {
+      "width": 414,
+      "states": [
+        {
+          "name": "initial",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-initial-414.png",
+              "sha256": "fee4cce79658c97a863adcfb01087f2a0d44ade004d95573aa6f282e18ec1dbd",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 414,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-initial-414.png",
+              "sha256": "8d53f5f153f402ef67e1ac9667f47b9e129c14e5dab6ad7671afac79b668d495",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 414,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "ranking-expanded",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-ranking-expanded-414.png",
+              "sha256": "717cff8d47162b3cda09aef4a75b78eb45dd88bfd2bb6e90e4fb21b1b703082a",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 414,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-ranking-expanded-414.png",
+              "sha256": "532ce7c641378206c9915f65d71e591f4e5d656deb2088eb6cb18fd3463ae21f",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 414,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "status-expanded",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-status-expanded-414.png",
+              "sha256": "c8c584eee2b0c2ea82f61e82fedf71ba9baadf1505ad1a79c9a169ae211b9986",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 414,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-status-expanded-414.png",
+              "sha256": "7abc0e28dc851647e8a450a83ad110c42a592b98e280dfce5bb381b0fc6732d4",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 414,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "hero-valid",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-hero-valid-414.png",
+              "sha256": "88d5a8d90c28e26ef08853786eed1ff6d3b11b615d2648420b3c1201348cb02e",
+              "box": {
+                "x": 13,
+                "y": 477.796875,
+                "width": 388,
+                "height": 236
+              }
+            },
+            {
+              "file": "react-hero-valid-414.png",
+              "sha256": "5ef3e795dacd93e51f695a2376a42f277c83935cb4e2904062f9d4b344d2cc5d",
+              "box": {
+                "x": 13,
+                "y": 451.796875,
+                "width": 388,
+                "height": 247.5
+              }
+            }
+          ]
+        },
+        {
+          "name": "lower-expanded",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-lower-expanded-414.png",
+              "sha256": "d0ed6a9dada5e3ae9f0316c3de61cdf89da11c0a480afbbe418914305ded006b",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 414,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-lower-expanded-414.png",
+              "sha256": "cb0a95acac6c708d1d8a72f67b0383cdd3e567f92e77b30ce5d27d09e2252610",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 414,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "restored",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-restored-414.png",
+              "sha256": "fee4cce79658c97a863adcfb01087f2a0d44ade004d95573aa6f282e18ec1dbd",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 414,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-restored-414.png",
+              "sha256": "8d53f5f153f402ef67e1ac9667f47b9e129c14e5dab6ad7671afac79b668d495",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 414,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "hero-empty",
+          "referenceEquivalent": false,
+          "captures": [
+            {
+              "file": "react-hero-empty-414.png",
+              "sha256": "ec94f3b9aaa54918e95b461c8070180d5b5222d9eeaab53312ed807d4974f3a8",
+              "box": {
+                "x": 13,
+                "y": 451.796875,
+                "width": 388,
+                "height": 236
+              }
+            }
+          ]
+        },
+        {
+          "name": "progress-neutral",
+          "referenceEquivalent": false,
+          "captures": [
+            {
+              "file": "react-progress-neutral-414.png",
+              "sha256": "a797ffb3f7b83566e0b82b707fbb9389d0c6765c133ffdab51b5452001a1135e",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 414,
+                "height": 683
+              }
+            }
+          ]
+        }
+      ],
+      "referenceMetrics": {
+        "grid": {
+          "box": {
+            "x": 13,
+            "y": 249.796875,
+            "width": 388,
+            "height": 884.3125,
+            "top": 249.796875,
+            "right": 401,
+            "bottom": 1134.109375,
+            "left": 13
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "10px",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "ranking": {
+          "box": {
+            "x": 13,
+            "y": 249.796875,
+            "width": 189,
+            "height": 218,
+            "top": 249.796875,
+            "right": 202,
+            "bottom": 467.796875,
+            "left": 13
+          },
+          "background": "rgb(227, 240, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "status": {
+          "box": {
+            "x": 212,
+            "y": 249.796875,
+            "width": 189,
+            "height": 103.75,
+            "top": 249.796875,
+            "right": 401,
+            "bottom": 353.546875,
+            "left": 212
+          },
+          "background": "rgb(239, 248, 224) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "weight": {
+          "box": {
+            "x": 212,
+            "y": 363.546875,
+            "width": 189,
+            "height": 104.25,
+            "top": 363.546875,
+            "right": 401,
+            "bottom": 467.796875,
+            "left": 212
+          },
+          "background": "rgb(243, 243, 243) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "hero": {
+          "box": {
+            "x": 13,
+            "y": 477.796875,
+            "width": 388,
+            "height": 236,
+            "top": 477.796875,
+            "right": 401,
+            "bottom": 713.796875,
+            "left": 13
+          },
+          "background": "radial-gradient(86% 94% at 84% 43%, rgba(94, 109, 119, 0.22) 0%, rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(132deg, rgb(32, 38, 45) 0%, rgb(48, 54, 60) 56%, rgb(28, 34, 40) 100%) repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "26px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "consistency": {
+          "box": {
+            "x": 13,
+            "y": 1031.796875,
+            "width": 388,
+            "height": 102.3125,
+            "top": 1031.796875,
+            "right": 401,
+            "bottom": 1134.109375,
+            "left": 13
+          },
+          "background": "rgb(244, 247, 248) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "pulse": {
+          "box": {
+            "x": 13,
+            "y": 151,
+            "width": 388,
+            "height": 81.796875,
+            "top": 151,
+            "right": 401,
+            "bottom": 232.796875,
+            "left": 13
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        }
+      },
+      "reactMetrics": {
+        "grid": {
+          "box": {
+            "x": 13,
+            "y": 223.796875,
+            "width": 388,
+            "height": 892.5,
+            "top": 223.796875,
+            "right": 401,
+            "bottom": 1116.296875,
+            "left": 13
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "10px",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "ranking": {
+          "box": {
+            "x": 13,
+            "y": 223.796875,
+            "width": 189,
+            "height": 218,
+            "top": 223.796875,
+            "right": 202,
+            "bottom": 441.796875,
+            "left": 13
+          },
+          "background": "rgb(227, 240, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "status": {
+          "box": {
+            "x": 212,
+            "y": 223.796875,
+            "width": 189,
+            "height": 104,
+            "top": 223.796875,
+            "right": 401,
+            "bottom": 327.796875,
+            "left": 212
+          },
+          "background": "rgb(239, 248, 224) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "weight": {
+          "box": {
+            "x": 212,
+            "y": 337.796875,
+            "width": 189,
+            "height": 104,
+            "top": 337.796875,
+            "right": 401,
+            "bottom": 441.796875,
+            "left": 212
+          },
+          "background": "rgb(243, 243, 243) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "hero": {
+          "box": {
+            "x": 13,
+            "y": 451.796875,
+            "width": 388,
+            "height": 247.5,
+            "top": 451.796875,
+            "right": 401,
+            "bottom": 699.296875,
+            "left": 13
+          },
+          "background": "radial-gradient(86% 94% at 84% 43%, rgba(94, 109, 119, 0.22) 0%, rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(132deg, rgb(32, 38, 45), rgb(48, 54, 60) 56%, rgb(28, 34, 40)) repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "26px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "consistency": {
+          "box": {
+            "x": 13,
+            "y": 1017.296875,
+            "width": 388,
+            "height": 99,
+            "top": 1017.296875,
+            "right": 401,
+            "bottom": 1116.296875,
+            "left": 13
+          },
+          "background": "rgb(244, 247, 248) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "pulse": {
+          "box": {
+            "x": 0,
+            "y": 111,
+            "width": 414,
+            "height": 112.796875,
+            "top": 111,
+            "right": 414,
+            "bottom": 223.796875,
+            "left": 0
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        }
+      },
+      "reactOrphanWidth": 388,
+      "referenceOrphanWidth": 388,
+      "pageErrors": []
+    },
+    {
+      "width": 430,
+      "states": [
+        {
+          "name": "initial",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-initial-430.png",
+              "sha256": "6e13bdfd2c719e3f9e2d405d7a39a2164a591741b88ecbf837244820f2220926",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 430,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-initial-430.png",
+              "sha256": "1d51a419d6255bc9719515afca0aab197c056d9c2e020efec8cbb128b7125ef1",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 430,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "ranking-expanded",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-ranking-expanded-430.png",
+              "sha256": "b0f27c7f9df829719a6032cf355bfac6571cc5e78fb113e80ca83e2e2f07daf9",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 430,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-ranking-expanded-430.png",
+              "sha256": "34f056bbaaf60bf33069561a2d2d0e74ffa2e08fa2942db4df8378b4f525feb8",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 430,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "status-expanded",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-status-expanded-430.png",
+              "sha256": "2464dc57173ed5808339f2bcf8b04892424ea815a05d65d567a7f3fe985d36f0",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 430,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-status-expanded-430.png",
+              "sha256": "3a968d7cd7ac2895fe93bf102791c195951a1886936384dcd3dc5f1470385c53",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 430,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "hero-valid",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-hero-valid-430.png",
+              "sha256": "1f4029464a9a459cd15eec5b54157f06a2ad7b31c21b677d76594e9dd27e0164",
+              "box": {
+                "x": 13,
+                "y": 477.796875,
+                "width": 404,
+                "height": 236
+              }
+            },
+            {
+              "file": "react-hero-valid-430.png",
+              "sha256": "81d5cf781dfa3f2ad5feb7f8fc942a3d02340ae5d8dfc62f94bf35d45eba55a7",
+              "box": {
+                "x": 13,
+                "y": 451.796875,
+                "width": 404,
+                "height": 247.5
+              }
+            }
+          ]
+        },
+        {
+          "name": "lower-expanded",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-lower-expanded-430.png",
+              "sha256": "7d7f91426e5026d21771f4e8f5f338869ead7d67c72aad8b92b8d50f23001ff2",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 430,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-lower-expanded-430.png",
+              "sha256": "66ea04c2376dd6a41908945943a96ac2a0c322b85ed6e4e6918f20472975d9ee",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 430,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "restored",
+          "referenceEquivalent": true,
+          "captures": [
+            {
+              "file": "reference-restored-430.png",
+              "sha256": "f8f5e59cf66fe87db64cc8e0a537f2894da1225e33bbb3071c4d00230cc33fef",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 430,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-restored-430.png",
+              "sha256": "1d51a419d6255bc9719515afca0aab197c056d9c2e020efec8cbb128b7125ef1",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 430,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "hero-empty",
+          "referenceEquivalent": false,
+          "captures": [
+            {
+              "file": "react-hero-empty-430.png",
+              "sha256": "0fef15f5ede0edd5b5a5dee41cb9131af62d1a24d32c2ce90d817ca766eec4b1",
+              "box": {
+                "x": 13,
+                "y": 451.796875,
+                "width": 404,
+                "height": 236
+              }
+            }
+          ]
+        },
+        {
+          "name": "progress-neutral",
+          "referenceEquivalent": false,
+          "captures": [
+            {
+              "file": "react-progress-neutral-430.png",
+              "sha256": "f8c54c350416f208ee5659483091c4f5774bc746d1b74219b995e3c0e9457994",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 430,
+                "height": 683
+              }
+            }
+          ]
+        }
+      ],
+      "referenceMetrics": {
+        "grid": {
+          "box": {
+            "x": 13,
+            "y": 249.796875,
+            "width": 404,
+            "height": 884.3125,
+            "top": 249.796875,
+            "right": 417,
+            "bottom": 1134.109375,
+            "left": 13
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "10px",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "ranking": {
+          "box": {
+            "x": 13,
+            "y": 249.796875,
+            "width": 197,
+            "height": 218,
+            "top": 249.796875,
+            "right": 210,
+            "bottom": 467.796875,
+            "left": 13
+          },
+          "background": "rgb(227, 240, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "status": {
+          "box": {
+            "x": 220,
+            "y": 249.796875,
+            "width": 197,
+            "height": 103.75,
+            "top": 249.796875,
+            "right": 417,
+            "bottom": 353.546875,
+            "left": 220
+          },
+          "background": "rgb(239, 248, 224) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "weight": {
+          "box": {
+            "x": 220,
+            "y": 363.546875,
+            "width": 197,
+            "height": 104.25,
+            "top": 363.546875,
+            "right": 417,
+            "bottom": 467.796875,
+            "left": 220
+          },
+          "background": "rgb(243, 243, 243) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "hero": {
+          "box": {
+            "x": 13,
+            "y": 477.796875,
+            "width": 404,
+            "height": 236,
+            "top": 477.796875,
+            "right": 417,
+            "bottom": 713.796875,
+            "left": 13
+          },
+          "background": "radial-gradient(86% 94% at 84% 43%, rgba(94, 109, 119, 0.22) 0%, rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(132deg, rgb(32, 38, 45) 0%, rgb(48, 54, 60) 56%, rgb(28, 34, 40) 100%) repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "26px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "consistency": {
+          "box": {
+            "x": 13,
+            "y": 1031.796875,
+            "width": 404,
+            "height": 102.3125,
+            "top": 1031.796875,
+            "right": 417,
+            "bottom": 1134.109375,
+            "left": 13
+          },
+          "background": "rgb(244, 247, 248) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "pulse": {
+          "box": {
+            "x": 13,
+            "y": 151,
+            "width": 404,
+            "height": 81.796875,
+            "top": 151,
+            "right": 417,
+            "bottom": 232.796875,
+            "left": 13
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        }
+      },
+      "reactMetrics": {
+        "grid": {
+          "box": {
+            "x": 13,
+            "y": 223.796875,
+            "width": 404,
+            "height": 892.5,
+            "top": 223.796875,
+            "right": 417,
+            "bottom": 1116.296875,
+            "left": 13
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "10px",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "ranking": {
+          "box": {
+            "x": 13,
+            "y": 223.796875,
+            "width": 197,
+            "height": 218,
+            "top": 223.796875,
+            "right": 210,
+            "bottom": 441.796875,
+            "left": 13
+          },
+          "background": "rgb(227, 240, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "status": {
+          "box": {
+            "x": 220,
+            "y": 223.796875,
+            "width": 197,
+            "height": 104,
+            "top": 223.796875,
+            "right": 417,
+            "bottom": 327.796875,
+            "left": 220
+          },
+          "background": "rgb(239, 248, 224) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "weight": {
+          "box": {
+            "x": 220,
+            "y": 337.796875,
+            "width": 197,
+            "height": 104,
+            "top": 337.796875,
+            "right": 417,
+            "bottom": 441.796875,
+            "left": 220
+          },
+          "background": "rgb(243, 243, 243) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "hero": {
+          "box": {
+            "x": 13,
+            "y": 451.796875,
+            "width": 404,
+            "height": 247.5,
+            "top": 451.796875,
+            "right": 417,
+            "bottom": 699.296875,
+            "left": 13
+          },
+          "background": "radial-gradient(86% 94% at 84% 43%, rgba(94, 109, 119, 0.22) 0%, rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(132deg, rgb(32, 38, 45), rgb(48, 54, 60) 56%, rgb(28, 34, 40)) repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "26px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "consistency": {
+          "box": {
+            "x": 13,
+            "y": 1017.296875,
+            "width": 404,
+            "height": 99,
+            "top": 1017.296875,
+            "right": 417,
+            "bottom": 1116.296875,
+            "left": 13
+          },
+          "background": "rgb(244, 247, 248) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "23px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        },
+        "pulse": {
+          "box": {
+            "x": 0,
+            "y": 111,
+            "width": 430,
+            "height": 112.796875,
+            "top": 111,
+            "right": 430,
+            "bottom": 223.796875,
+            "left": 0
+          },
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "gap": "normal",
+          "radius": "0px",
+          "font": "\"Plus Jakarta Sans\", sans-serif"
+        }
+      },
+      "reactOrphanWidth": 404,
+      "referenceOrphanWidth": 404,
+      "pageErrors": []
+    }
+  ],
+  "rawCaptures": [
+    {
+      "file": "reference-raw-320.png",
+      "sha256": "3ad2402f6417855c684e857af910da48908a03d92dd997f7f308a6ee62e3f1ae"
+    },
+    {
+      "file": "reference-raw-375.png",
+      "sha256": "170848eff9c90b46fa8694b574f97945653e97b393e8d1053405a11d611da306"
+    },
+    {
+      "file": "reference-raw-390.png",
+      "sha256": "fb7251572ebb0d1f07fe4d6632ec41fcb95d98b660aa63b9085367b0f313f881"
+    },
+    {
+      "file": "reference-raw-414.png",
+      "sha256": "98c1457feeba891e3a8bea2d73257387184a5d15a55f829b71e5e957e121fd53"
+    },
+    {
+      "file": "reference-raw-430.png",
+      "sha256": "73fb4ac773f1e0681a293668a0fe8ba36d8da65942729905e69e80a07808296f"
+    }
+  ]
+}
