@@ -20,7 +20,7 @@ export interface RoutineOverlayContract {
   readonly submitName: (name: string) => void;
   readonly cancelEditing: (confirmed: boolean) => 'confirmation-required' | 'cancelled';
 }
-export type RoutineOverlayRenderers = Partial<Record<RoutinePanel, (contract: RoutineOverlayContract) => Pick<ContextualOverlay, 'content' | 'initialFocus'>>>;
+export type RoutineOverlayRenderers = Partial<Record<RoutinePanel, (contract: RoutineOverlayContract) => Pick<ContextualOverlay, 'content' | 'initialFocus'> & Partial<Pick<ContextualOverlay, 'title'>>>>;
 function returnToOrigin(navigation: BrowserNavigation, value: RoutineEditorContext) {
   navigation.navigate({ page: value.origin.page, panel: null }, true, { scroll: value.origin.scroll });
 }
