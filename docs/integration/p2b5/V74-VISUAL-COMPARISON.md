@@ -27,7 +27,7 @@ Capturas só do painel contextual; para Editor atualizado, somente .gd-content/#
 | Feedback | Adicionado transitório | Mesmo texto/1.350 ms, status live com chave por inclusão efetiva; área reservada evita saltos |
 | Campos ao fechar | Exemplos HTML predefinidos | Campos obrigatórios em branco por segurança, sem prescrição profissional inventada; requer configuração antes de salvar |
 | Dados | Catálogo do protótipo | 12 definições explicitamente demonstrativas na fonte compartilhada |
-| Estabilidade | Ancoragem automática padrão do navegador | overflow-anchor:none somente na lista elimina salto funcional reproduzido na CI 141 |
+| Estabilidade | Ancoragem automática padrão do navegador | overflow-anchor:none local; preservação medida com ponteiro real sobre linha inteiramente visível, sem scrollIntoView da automação |
 | Motion | 250/260 ms local | Motor homologado 300/310 ms, reduced-motion preservado |
 
 São diferenças documentadas para o refinamento posterior. Não se declara pixel parity. Nenhuma falha funcional, corte ou sobreposição é classificada como cosmética.
