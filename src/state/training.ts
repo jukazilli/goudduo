@@ -78,6 +78,11 @@ function bindingIssue(state: DemoState, draft: WorkoutDraft): DraftIssue | null 
 export function validateDraft(state: DemoState, draft: WorkoutDraft): DraftIssue | null {
   return bindingIssue(state, draft) ?? validatePrescription(state, draft.exercises);
 }
+export const WORKOUT_NAME_MAX_LENGTH = 100;
+/** One name policy for the reducer and its UI consumer; no new product limit. */
+export function validateWorkoutName(name: string): DraftIssue | null {
+  return !name.trim() || name.trim().length > WORKOUT_NAME_MAX_LENGTH ? 'name-required' : null;
+}
 function commit(state: DemoState, routineId: string, day: Weekday, workout: Workout): DemoState {
   const routine = readEntity(state.routines, routineId)!;
   const saved: Workout = { ...workout, name: workout.name.trim(), exercises: clonePrescription(workout.exercises) };
@@ -135,7 +140,7 @@ export function reduceTraining(state: DemoState, action: TrainingAction | Legacy
   if (action.type === 'draft/commit') {
     const issue = validateDraft(state, draft) ??
       (draft.stage !== 'naming' ? draft.exercises.length === 1 ? 'confirmation-required' : 'prepare-required' : null) ??
-      (!action.name.trim() || action.name.trim().length > 100 ? 'name-required' : null);
+      validateWorkoutName(action.name);
     if (issue) return putDraft(state, { ...draft, issue });
     return discardDraft(commit(state, draft.routineId, draft.day, { ...readEntity(state.workouts, draft.workoutId), id: draft.workoutId,
       name: action.name, revision: draft.baseRevision + 1, exercises: draft.exercises }), draft.id);

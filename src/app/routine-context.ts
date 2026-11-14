@@ -8,7 +8,7 @@ export interface RoutineEditorContext {
   readonly draftId: string; readonly baseRevision: number;
   readonly origin: { readonly page: RoutineOriginPage; readonly scroll: number };
 }
-export type RoutinePanel = 'routine-library' | 'routine-confirm-single' | 'routine-naming';
+export type RoutinePanel = 'routine-library' | 'routine-confirm-single' | 'routine-naming' | 'routine-discard';
 export function isRoutinePanel(panel: string): panel is RoutinePanel {
-  return ['routine-library', 'routine-confirm-single', 'routine-naming'].includes(panel);
+  return ['routine-library', 'routine-confirm-single', 'routine-naming', 'routine-discard'].includes(panel);
 }

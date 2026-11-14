@@ -18,6 +18,7 @@ export interface RoutineOverlayContract {
   readonly continueEditing: () => void;
   readonly confirmSingle: () => void;
   readonly submitName: (name: string) => void;
+  readonly cancelEditing: (confirmed: boolean) => 'confirmation-required' | 'cancelled';
 }
 export type RoutineOverlayRenderers = Partial<Record<RoutinePanel, (contract: RoutineOverlayContract) => Pick<ContextualOverlay, 'content' | 'initialFocus'>>>;
 function returnToOrigin(navigation: BrowserNavigation, value: RoutineEditorContext) {
@@ -68,6 +69,10 @@ export function useRoutineEditorAdapter(renderers: RoutineOverlayRenderers = {})
     pending.current = { kind: 'commit', context }; dispatch({ type: 'draft/commit', draftId: context.draftId, name });
   };
   const issue = context && draft ? validateDraft(state, draft) ?? draft.issue : null;
+  const cancelEditing = (confirmed: boolean) => {
+    if (!context || !confirmed) return 'confirmation-required' as const;
+    dispatch({ type: 'draft/cancel', draftId: context.draftId }); returnToOrigin(navigation, context); return 'cancelled' as const;
+  };
   const header: SurfaceComposition['header'] = context && draft ? {
     title: readEntity(state.workouts, context.workoutId)?.name ?? suggestWorkoutName(context.day),
     action: { label: 'Salvar', onPress: requestSave, disabled: Boolean(validateDraft(state, draft)) },
@@ -76,10 +81,10 @@ export function useRoutineEditorAdapter(renderers: RoutineOverlayRenderers = {})
   const resolveOverlay: OverlayResolver = panel => {
     const render = renderers[panel];
     if (!context || !draft || !render || (panel === 'routine-confirm-single' && draft.stage !== 'confirm-single') || (panel === 'routine-naming' && draft.stage !== 'naming')) return undefined;
-    return { title: panel === 'routine-library' ? 'Biblioteca' : panel === 'routine-confirm-single' ? 'Confirmar treino' : 'Nome do treino',
-      description: panel === 'routine-library' ? 'Exercícios do rascunho atual.' : panel === 'routine-confirm-single' ? 'Treino com um exercício.' : 'Nomeação final do treino.',
+    return { title: panel === 'routine-library' ? 'Biblioteca' : panel === 'routine-confirm-single' ? 'Confirmar treino' : panel === 'routine-discard' ? 'Descartar rascunho?' : 'Nome do treino',
+      description: panel === 'routine-library' ? 'Exercícios do rascunho atual.' : panel === 'routine-confirm-single' ? 'Treino com um exercício.' : panel === 'routine-discard' ? 'As alterações não salvas serão descartadas. O treino salvo será preservado.' : 'Nomeação final do treino.',
       presentation: panel === 'routine-library' ? 'sheet' : 'modal', ...(panel === 'routine-library' ? { size: 'library' as const } : {}),
-      ...render({ context, draft, issue, suggestedName: suggestWorkoutName(context.day), close, continueEditing, confirmSingle, submitName }),
+      ...render({ context, draft, issue, suggestedName: suggestWorkoutName(context.day), close, continueEditing, confirmSingle, submitName, cancelEditing }),
     };
   };
   return { status: context ? 'ready' as const : 'context-unavailable' as const, context, draft: context ? draft : undefined, issue, header, resolveOverlay,
@@ -97,11 +102,9 @@ export function useRoutineEditorAdapter(renderers: RoutineOverlayRenderers = {})
       return true;
     },
     openLibrary: (trigger?: HTMLElement) => { if (context) navigation.openPanel('routine-library', trigger); },
+    requestDiscard: (trigger?: HTMLElement) => { if (context) navigation.openPanel('routine-discard', trigger); },
     requestSave, continueEditing, confirmSingle, submitName,
     /** A future confirmation UI must call with true; Back never calls draft/cancel. */
-    cancelEditing: (confirmed: boolean) => {
-      if (!context || !confirmed) return 'confirmation-required' as const;
-      dispatch({ type: 'draft/cancel', draftId: context.draftId }); returnToOrigin(navigation, context); return 'cancelled' as const;
-    },
+    cancelEditing,
   };
 }

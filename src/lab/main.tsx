@@ -1,4 +1,5 @@
 import { RoutineAdapterScenario } from './RoutineAdapterScenario';
+import { EditorDraftTools } from './EditorDraftTools';
 import { StrictMode, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { PrototypeApp } from '../app/PrototypeApp';
@@ -42,6 +43,7 @@ function LabApp() {
         <option value="multiple">Várias rotinas</option><option value="one">Uma rotina</option><option value="none">Sem rotinas</option>
       </select></label>
       <Button onClick={() => dispatch({ type: 'scenario/reset' })}>Reiniciar cenário</Button>
+      <EditorDraftTools/>
       <p role="status">Perfil profissional: {state.user.professional}. Nenhum serviço real é ativado.</p>
     </aside>
     <div className="lab-frame" style={{ maxWidth: `${width}px` }}>

@@ -1,0 +1,37 @@
+/* V7.4 Editor consumers only. Official Shell and host retain layout/inset ownership. */
+.workout-editor { color: #203844; padding: 14px 18px 24px; font-size: 14px; }
+.workout-editor *, .workout-editor-dialog *, .workout-editor-footer * { box-sizing: border-box; }
+.workout-editor button, .workout-editor-dialog button, .workout-editor-footer button { font: inherit; cursor: pointer; color: inherit; }
+.workout-editor button:disabled, .workout-editor-dialog button:disabled { opacity: .45; cursor: default; }
+.workout-editor button:focus-visible, .workout-editor input:focus-visible, .workout-editor select:focus-visible, .workout-editor-dialog :focus-visible, .workout-editor-footer :focus-visible { outline: 2px solid #006da9; outline-offset: 2px; }
+.workout-editor__sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.workout-editor__navigation { display: flex; gap: 5px; align-items: center; width: fit-content; min-height: 44px; }
+.workout-editor__navigation button, .workout-editor__options > button { display: inline-grid; place-items: center; width: 44px; height: 44px; border: 1px solid #e1e8ed; border-radius: 10px; background: white; padding: 0; }
+.workout-editor__navigation span { color: #354c58; font-size: 12px; font-weight: 700; min-width: 40px; text-align: center; }
+.workout-editor__options { position: relative; display: flex; justify-content: flex-end; width: 44px; margin-left: auto; margin-top: -44px; }
+.workout-editor__options > button { border: 0; }
+.workout-editor__menu { position: absolute; top: 44px; right: 0; z-index: 2; width: 230px; max-width: calc(100vw - 36px); border: 1px solid #e1e8ec; border-radius: 14px; background: white; box-shadow: 0 8px 24px #2038441a; overflow: hidden; }
+.workout-editor__menu button { display: block; width: 100%; min-height: 44px; background: white; text-align: left; padding: 10px 14px; border: 0; }
+.workout-editor__card { border: 1px solid #e1e8ec; border-radius: 20px; padding: 16px; margin: 15px 0 14px; touch-action: pan-y; }
+.workout-editor__card h2 { font-size: 18px; font-weight: 800; letter-spacing: -.5px; line-height: 1.2; margin: 0; }
+.workout-editor__muscles { font-size: 11px; color: #526b77; margin: 5px 0 14px; }
+.workout-editor__media { height: 125px; border-radius: 13px; background: linear-gradient(90deg,#f4f6f7,#e7edf1); margin: 14px 0; }
+.workout-editor__substitutes { border-top: 1px solid #edf0f3; margin-top: 13px; padding-top: 8px; }
+.workout-editor__substitutes button { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; background: transparent; border: 0; padding: 0; font-size: 12px; font-weight: 600; }
+.workout-editor__substitutes p { color: #526b77; font-size: 12px; }
+.workout-editor__fields { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 11px; }
+.workout-editor__field { min-width: 0; display: flex; flex-direction: column; gap: 5px; font-size: 11px; font-weight: 600; color: #52636d; }
+.workout-editor__field input, .workout-editor__field select { width: 100%; min-width: 0; height: 44px; background: #f7f9fa; border: 1px solid #e4e9eb; border-radius: 11px; padding: 8px 10px; font: inherit; font-size: 16px; font-weight: 400; color: #273f49; }
+.workout-editor__field input[aria-invalid=true] { border-color: #a62b30; }
+.workout-editor__empty { text-align: center; padding: 56px 0 24px; }
+.workout-editor__empty h2 { font-size: 20px; letter-spacing: -.5px; }
+.workout-editor__empty p, .workout-editor__issue { color: #526b77; line-height: 1.6; }
+.workout-editor__discard { min-height: 44px; border: 0; background: transparent; padding: 8px 0; text-decoration: underline; font-size: 13px; }
+.workout-editor-footer button { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; border: 0; border-radius: 14px; padding: 12px; background: #203642; color: white; font-size: 14px; font-weight: 700; }
+.workout-editor-dialog { font-size: 14px; color: #203844; }
+.workout-editor-dialog label { font-size: 13px; font-weight: 600; display: block; margin-bottom: 8px; }
+.workout-editor-dialog input { width: 100%; min-width: 0; min-height: 48px; font: inherit; font-size: 16px; border-radius: 11px; border: 1px solid #aebfc9; padding: 10px; color: #203844; }
+.workout-editor-dialog__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.workout-editor-dialog button { border: 1px solid #d6e0e5; border-radius: 12px; padding: 10px 14px; min-height: 44px; background: #fff; }
+.workout-editor-dialog__actions button { flex: 1; }
+.workout-editor-dialog__actions button:last-child { background: #203642; color: white; }
