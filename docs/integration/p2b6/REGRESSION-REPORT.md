@@ -11,11 +11,11 @@ Base7e421cfb97e8a8ab2c6ba3271571a604b2d501ea, merge controlado da P2-B5. Node24.
 | Unitários/integração | 102 PASS/10 arquivos: 93 anteriores e9 novos |
 | Build app/Lab | PASS, saída e guard separados |
 | Bundle | 4 PASS; guard público intacto |
-| Playwright | Resultado final registrado na PR/entrega; rodada integral inclui100 anteriores e25 novos |
+| Playwright | **125 PASS**,100 anteriores e25 novos, zero falhas/skips/flaky na rodada final local |
 | Capturas | 75:6 estados pareados×5 larguras +2 estados só React×5 +5 referências brutas; zero pageerrors |
 | Segurança e diff | Sem port/mídia/dependência/backend/persistência; arquivos protegidos sem diff |
 
-Logs/harness de investigação em /workspace/scratch/p2b6, fora do Git; relatório/traces de execução em test-results ignorados. Capturas e medidas/hashes estão na documentação. CI do head efetivo será confirmada na PR, sem presumir aprovação por resultado local. Cloudflare somente dry-run da CI preexistente; nenhum comando adicional de deploy/preparação ou mudança de configuração.
+Logs/harness de investigação em /workspace/scratch/p2b6, fora do Git; relatório/traces de execução em test-results ignorados. Capturas e medidas/hashes estão na documentação. O estado efetivo da CI fica na [PR #39](https://github.com/jukazilli/goudduo/pull/39), sem presumir aprovação remota por resultado local. A rodada local final usa os builds do commit dc6d183a5c30f8ad3a64d1e3d6b8f3572efca241; a atualização posterior deste relatório é exclusivamente documental, com fontes/capturas idênticas. Cloudflare somente dry-run da CI preexistente; nenhum comando adicional de deploy/preparação ou mudança de configuração.
 
 ## Cobertura nova
 

@@ -1,6 +1,6 @@
 # P2-B6 — Home Treinos V5.3 integrada
 
-Entrega para revisão do proprietário, vinculada à [Issue #29](https://github.com/jukazilli/goudduo/issues/29). Branch `feat/p2b6-home-treinos-v53`, base **7e421cfb97e8a8ab2c6ba3271571a604b2d501ea**. Não houve merge da implementação P2-B6, deploy ou início de P2-B7.
+Entrega na [PR Draft #39](https://github.com/jukazilli/goudduo/pull/39), para revisão do proprietário, vinculada à [Issue #29](https://github.com/jukazilli/goudduo/issues/29). Branch `feat/p2b6-home-treinos-v53`, base **7e421cfb97e8a8ab2c6ba3271571a604b2d501ea**. Não houve merge da implementação P2-B6, deploy ou início de P2-B7.
 
 ## Homologação P2-B5
 
@@ -23,3 +23,5 @@ Um único AppShell, DemoProvider/reducer, histórico e OverlayHost. CTA Ver trei
 - [Gates para P2-B7](NEXT-GATES.md)
 
 Node24.22.x/pnpm11.25.x fixados. `pnpm install --frozen-lockfile`, `pnpm typecheck`, `pnpm test`, `pnpm run build`, `pnpm run build:lab`, `node --test tests/bundle.test.mjs`, `pnpm exec playwright test`. App e Lab continuam builds separados. Sem novo backend/persistência/dependência/asset privado.
+
+Validação local concluída:102 unitários/integração,125 Playwright,4 bundle, typecheck e builds app/Lab aprovados. A CI do SHA efetivo está vinculada à PR. Safari/iPhone e Android físicos continuam pendentes.
