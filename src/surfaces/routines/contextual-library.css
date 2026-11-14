@@ -11,7 +11,7 @@
 .contextual-library :focus-visible { outline: 2px solid #006da9; outline-offset: -2px; }
 .contextual-library__meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex: none; padding: 14px 0 10px; font-size: 11px; color: #526b77; }
 .contextual-library__meta strong { color: #203844; font-size: 12px; }
-.contextual-library__results { min-height: 0; overflow-y: auto; overscroll-behavior-y: contain; flex: 1; scrollbar-gutter: stable; }
+.contextual-library__results { min-height: 0; overflow-y: auto; overscroll-behavior-y: contain; overflow-anchor: none; flex: 1; scrollbar-gutter: stable; }
 .contextual-library__results button { font: inherit; display: flex; align-items: center; gap: 9px; width: 100%; min-height: 64px; padding: 12px 4px; background: white; color: #203844; border: 0; border-bottom: 1px solid #edf0f2; text-align: left; cursor: pointer; }
 .contextual-library__results button[aria-disabled=true] { cursor: default; }
 .contextual-library__name { flex: 1; min-width: 0; font-size: 12px; font-weight: 700; overflow-wrap: anywhere; }

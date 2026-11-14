@@ -105,6 +105,7 @@ test('B5 sheet accessibility, independent scroll, search/acknowledgement, duplic
   await page.locator('[data-exercise-id="demo-exercise"]').dblclick({ force: true }); await expect(page.getByText('1 exercício no treino', { exact: true })).toBeVisible();
   await page.getByRole('searchbox').fill('não existe'); await expect(page.getByText('Nenhum exercício encontrado.')).toBeVisible();
   await page.getByRole('searchbox').fill('demonstração'); const list = page.getByRole('list', { name: 'Exercícios da biblioteca' });
+  await expect(list).toHaveCSS('overflow-anchor', 'none');
   await list.evaluate(element => { element.scrollTop = 100; }); const position = await list.evaluate(element => element.scrollTop); expect(position).toBeGreaterThan(0);
   const result = page.locator('[data-exercise-id="demo-row"]'); await result.click(); await expect(result).toBeFocused();
   await expect(page.getByRole('searchbox')).toHaveValue('demonstração');
