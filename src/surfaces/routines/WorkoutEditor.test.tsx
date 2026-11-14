@@ -119,13 +119,13 @@ describe('real Workout Editor integrated with one reducer', () => {
     expect(selectHomeTraining(view.state())).toMatchObject({ status: 'ready', name: 'Treino revisado', revision: 2 });
     expect(view.state().drafts).toEqual({});
   });
-  it('opens an empty day honestly, keeps unavailable Library safe, and commits new association only after valid domain input', async () => {
+  it('opens an empty day honestly, keeps contextual Library safe, and commits new association only after valid domain input', async () => {
     const view = setup(); openPrimary('Dom, dia livre'); const draft = Object.values(view.state().drafts)[0]!;
     expect(screen.getByRole('heading', { name: 'Seu treino está vazio' })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Salvar' })).toBeDisabled();
     fireEvent.click(screen.getByRole('button', { name: 'Adicionar exercício' }));
-    await waitFor(() => expect(screen.getByText('A Biblioteca contextual ainda não está disponível.')).toBeInTheDocument());
-    fireEvent.click(screen.getByRole('button', { name: 'Fechar' }));
+    await waitFor(() => expect(screen.getByRole('searchbox', { name: 'Pesquisar exercícios na biblioteca' })).toBeInTheDocument());
+    fireEvent.keyDown(document, { key: 'Escape' });
     await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument());
     expect(view.state().routines['demo-routine']!.days.sun).toBeUndefined();
     view.dispatch({ type: 'draft/add', draftId: draft.id, exercise: { ...view.state().workouts['demo-workout']!.exercises[0]!, id: 'technical-test-item' } });
