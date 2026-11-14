@@ -68,7 +68,7 @@ function putDraft(state: DemoState, draft: WorkoutDraft): DemoState {
 function discardDraft(state: DemoState, id: string): DemoState {
   const drafts = { ...state.drafts }; delete drafts[id]; return { ...state, drafts };
 }
-function bindingIssue(state: DemoState, draft: WorkoutDraft): DraftIssue | null {
+export function validateDraftContext(state: DemoState, draft: WorkoutDraft): DraftIssue | null {
   if ((readEntity(state.routines, draft.routineId)?.days[draft.day] ?? null) !== draft.originalBinding || !readEntity(state.routines, draft.routineId)) return 'binding-changed';
   if ((readEntity(state.workouts, draft.workoutId)?.revision ?? 0) !== draft.baseRevision) return 'stale-revision';
   if (bindingCount(state, draft.workoutId) > 1) return 'shared-workout-pending';
@@ -76,7 +76,7 @@ function bindingIssue(state: DemoState, draft: WorkoutDraft): DraftIssue | null 
 }
 /** Same gates used by the reducer and presentation adapters; no duplicate validation policy. */
 export function validateDraft(state: DemoState, draft: WorkoutDraft): DraftIssue | null {
-  return bindingIssue(state, draft) ?? validatePrescription(state, draft.exercises);
+  return validateDraftContext(state, draft) ?? validatePrescription(state, draft.exercises);
 }
 export const WORKOUT_NAME_MAX_LENGTH = 100;
 /** One name policy for the reducer and its UI consumer; no new product limit. */
@@ -148,10 +148,14 @@ export function reduceTraining(state: DemoState, action: TrainingAction | Legacy
   let items: readonly WorkoutExercise[] = draft.exercises;
   switch (action.type) {
     case 'draft/replace-exercises': items = action.exercises; break;
-    case 'draft/add':
+    case 'draft/add': {
+      const contextIssue = validateDraftContext(state, draft);
+      if (contextIssue) return putDraft(state, { ...draft, issue: contextIssue });
+      if (!readEntity(state.exercises, action.exercise.exerciseId) || !action.exercise.id.trim()) return putDraft(state, { ...draft, issue: 'invalid-prescription' });
       if (items.some(item => item.exerciseId === action.exercise.exerciseId)) return putDraft(state, { ...draft, issue: 'duplicate-exercise' });
       if (items.some(item => item.id === action.exercise.id)) return putDraft(state, { ...draft, issue: 'invalid-prescription' });
       items = [...items, action.exercise]; break;
+    }
     case 'draft/update':
       if (!items.some(item => item.id === action.exercise.id) || items.some(item => item.id !== action.exercise.id && item.exerciseId === action.exercise.exerciseId)) return state;
       items = items.map(item => item.id === action.exercise.id ? action.exercise : item); break;

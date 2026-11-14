@@ -3,6 +3,7 @@ import type { RoutineOverlayContract, RoutineOverlayRenderers } from '../../app/
 import { useDemoState } from '../../state/DemoProvider';
 import { readEntity, validateWorkoutName, WORKOUT_NAME_MAX_LENGTH } from '../../state/training';
 import { draftIssueText } from './WorkoutEditor';
+import { ContextualExerciseLibrary } from './ContextualExerciseLibrary';
 
 function SingleExerciseConfirmation({ contract }: { contract: RoutineOverlayContract }) {
   return <div className="workout-editor-dialog">
@@ -30,7 +31,7 @@ function FinalWorkoutName({ contract }: { contract: RoutineOverlayContract }) {
 }
 export const workoutOverlayRenderers: RoutineOverlayRenderers = {
   'routine-discard': contract => ({ content: <div className="workout-editor-dialog"><div className="workout-editor-dialog__actions"><button type="button" onClick={contract.continueEditing}>Continuar editando</button><button type="button" onClick={() => contract.cancelEditing(true)}>Descartar alterações</button></div></div> }),
-  'routine-library': contract => ({ content: <div className="workout-editor-dialog"><p>A Biblioteca contextual ainda não está disponível.</p><button type="button" onClick={contract.close}>Fechar</button></div> }),
+  'routine-library': contract => ({ title: 'Adicionar exercício', content: <ContextualExerciseLibrary key={contract.context.draftId} contract={contract}/>, initialFocus: () => document.getElementById('contextual-exercise-search') }),
   'routine-confirm-single': contract => ({ content: <SingleExerciseConfirmation contract={contract}/> }),
   'routine-naming': contract => ({ content: <FinalWorkoutName key={contract.draft.id} contract={contract}/>, initialFocus: () => document.getElementById('final-workout-name') }),
 };
