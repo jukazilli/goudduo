@@ -84,9 +84,9 @@ test('B4 measurements, reordering, removal, zero block and honest Library preser
   await expect(page.getByRole('button', { name: 'Salvar assim mesmo' })).toHaveCount(0);
   await page.keyboard.press('Escape'); await expect(page.getByRole('dialog')).toHaveCount(0);
   const add = page.getByRole('button', { name: 'Adicionar exercício', exact: true }); await add.click();
-  const library = page.getByRole('dialog', { name: 'Biblioteca', exact: true });
-  await expect(library.getByText('A Biblioteca contextual ainda não está disponível.')).toBeVisible();
-  await expect(library.getByRole('searchbox')).toHaveCount(0);
+  const library = page.getByRole('dialog', { name: 'Adicionar exercício', exact: true });
+  await expect(library.getByRole('searchbox', { name: 'Pesquisar exercícios na biblioteca' })).toBeFocused();
+  await expect(library.getByRole('list', { name: 'Exercícios da biblioteca' })).toBeVisible();
   await page.keyboard.press('Escape'); await expect(library).toHaveCount(0); await expect(add).toBeFocused();
   await add.click(); await page.goBack(); await expect(library).toHaveCount(0); await page.goForward(); await expect(library).toBeVisible();
   const handle = library.locator('.sheet-handle');

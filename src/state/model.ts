@@ -1,4 +1,5 @@
 import { additionalRoutineFixtures } from './routine-fixtures';
+import { additionalExerciseFixtures } from './exercise-fixtures';
 /** P1 contracts authored independently. Synthetic data only; no persistence or services. */
 import type { Equipment, Exercise, MuscleGroup, Routine, Weekday, Workout } from '../domain/training';
 import { readEntity, reduceTraining, type TrainingAction, type WorkoutDraft } from './training';
@@ -31,6 +32,7 @@ export function createDemoState(): DemoState {
       'demo-exercise': { id: 'demo-exercise', name: 'Exercício de demonstração', measurements: ['repetitions'], muscleGroupIds: ['demo-muscle'] },
       'demo-time': { id: 'demo-time', name: 'Exercício sintético por tempo', measurements: ['time'] },
       'demo-distance': { id: 'demo-distance', name: 'Exercício sintético por distância', measurements: ['distance'] },
+      ...additionalExerciseFixtures(),
     },
     equipment: { 'demo-equipment': { id: 'demo-equipment', name: 'Equipamento sintético' } },
     muscleGroups: { 'demo-muscle': { id: 'demo-muscle', name: 'Grupo sintético' } },

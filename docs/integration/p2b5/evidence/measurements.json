@@ -1,0 +1,1138 @@
+{
+  "referenceCommit": "3f8b2c7c93a33a713c780305e672e1ec7998ceaf",
+  "referenceBlob": "122275b3cb03bd996b477375d1bbc73ae29c5c3e",
+  "referenceFonts": "Public Plus Jakarta Sans normalized only; body/HTML/scripts unchanged",
+  "sourcesSHA256": {
+    "src/state/exercise-fixtures.ts": "d2a6c0de64cfe17d52b7e337746fdf5056fc47d52221ae6b7060aaa62b9f5e42",
+    "src/state/model.ts": "d8c4c78912f7b772aa2f8fd8d878a8e24b5f2ff4ad8787b5e639a1a352e097ff",
+    "src/state/training.ts": "e720679f3e8f55b4a78c209927ff30163ef507e4da1dfee4fa99faea3ee0a0d5",
+    "src/app/useRoutineEditorAdapter.ts": "40a323eae6db5ff0bb8f0d554e2367f052a99699fe4b0c9d7a0ea9c37a96d382",
+    "src/surfaces/routines/ContextualExerciseLibrary.tsx": "87ff6be550bfb161bc58136491cbefbae52f2954c099e08c6840933d378c1796",
+    "src/surfaces/routines/library-model.ts": "9f036640740779f8fce1f53a696e4531c1b7a1cd9d158de2feb776fc59dfb0ba",
+    "src/surfaces/routines/contextual-library.css": "73dceec7860f0d6d7f8f5e7eb7b819e19f770d7f24eef424e8fd3e4996816bdc",
+    "src/surfaces/routines/WorkoutSaveOverlays.tsx": "4915fbcd3ea6a63075b380c3ccbf66c93aefe60a16b57fa0d7a39f89c231e991"
+  },
+  "viewports": [
+    {
+      "width": 320,
+      "states": [
+        {
+          "name": "open",
+          "captures": [
+            {
+              "file": "reference-open-320.png",
+              "sha256": "963926a778a9bed4681d9f252fb0355d814f251966e4a4cd3a15ff12321ab87b"
+            },
+            {
+              "file": "react-open-320.png",
+              "sha256": "6e36b6a6d9130e39ad66e564fe3c094788b5ade01d8e7a313ac3a70980e1e2a7"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 320,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 320,
+            "height": 633
+          }
+        },
+        {
+          "name": "search",
+          "captures": [
+            {
+              "file": "reference-search-320.png",
+              "sha256": "94a31ada116fdd1e9eec15988174d7f87cdf40281aca100e1e4a3dff6185b8ad"
+            },
+            {
+              "file": "react-search-320.png",
+              "sha256": "2423b96ab768a3080b4b98e9d54bbef308ee604cad0e2f182a0e2cc43be42f39"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 320,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 320,
+            "height": 633
+          }
+        },
+        {
+          "name": "filtered",
+          "captures": [
+            {
+              "file": "reference-filtered-320.png",
+              "sha256": "1aeea780226ca92aab400d53c40fd331e8e347a516675c9ebe1c5b8fd0764979"
+            },
+            {
+              "file": "react-filtered-320.png",
+              "sha256": "d49baae77caf15f3d90b52928d341113ed633e49df58f098fa135d487ceb72bd"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 320,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 320,
+            "height": 633
+          }
+        },
+        {
+          "name": "added",
+          "captures": [
+            {
+              "file": "reference-added-320.png",
+              "sha256": "fd16dfdf19641952f26b0e2e483c44428ab5667942294c02ff7afadc683e5887"
+            },
+            {
+              "file": "react-added-320.png",
+              "sha256": "8aa62b5f6f9dbd5c88b950061f6f435167cdf9868b77f249714c1c0dfde1d853"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 320,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 320,
+            "height": 633
+          }
+        },
+        {
+          "name": "multiple",
+          "captures": [
+            {
+              "file": "reference-multiple-320.png",
+              "sha256": "e009276ea1af3fe1a01334fe320fdc7dec876dc37eb430893bac33a006f53166"
+            },
+            {
+              "file": "react-multiple-320.png",
+              "sha256": "ac5aa5c1da4305fdefea6c3fa951de5682fa4e47b0b11f4cc995f4fd4f79cbcd"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 320,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 320,
+            "height": 633
+          }
+        },
+        {
+          "name": "no-results",
+          "captures": [
+            {
+              "file": "reference-no-results-320.png",
+              "sha256": "98fe6978b4ab1abd1d17324ef0b34344d42b4861e7a4400d48f5c7ed5195cfd0"
+            },
+            {
+              "file": "react-no-results-320.png",
+              "sha256": "befb5a9db92a31b515f547db1511825fd6fd4e6bf839bbce3163607decc212e6"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 320,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 320,
+            "height": 633
+          }
+        },
+        {
+          "name": "editor-updated",
+          "captures": [
+            {
+              "file": "reference-editor-updated-320.png",
+              "sha256": "dfb1115f2fbdeb85fd854d39be2813efd247bee3448ba318c4679595dbd79db3"
+            },
+            {
+              "file": "react-editor-updated-320.png",
+              "sha256": "0d1afa2c598cedf6ad97a76be12860374d5ca44cd3997f6a7791d1aa506e3012"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 108,
+            "width": 320,
+            "height": 605
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 61,
+            "width": 320,
+            "height": 661
+          }
+        },
+        {
+          "name": "reopened",
+          "captures": [
+            {
+              "file": "reference-reopened-320.png",
+              "sha256": "339e05a66bb1f4da3a11aba54911c1afc914646bcac4335beb9e9d1454dadf68"
+            },
+            {
+              "file": "react-reopened-320.png",
+              "sha256": "054cedd422b03d1c5bd6c58a438ce0a5dc73e396abfa6fcd90c890e8b468a668"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 320,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 320,
+            "height": 633
+          }
+        }
+      ],
+      "referenceMetrics": {
+        "height": 596.25,
+        "width": 320,
+        "padding": "12px 18px 16px",
+        "radius": "23px 23px 0px 0px",
+        "searchHeight": 48,
+        "searchFont": "16px",
+        "rowHeight": 60
+      },
+      "reactMetrics": {
+        "height": 633,
+        "width": 320,
+        "padding": "12px 18px 16px",
+        "radius": "24px 24px 0px 0px",
+        "searchHeight": 48,
+        "searchFont": "16px",
+        "rowHeight": 69
+      },
+      "pageErrors": []
+    },
+    {
+      "width": 375,
+      "states": [
+        {
+          "name": "open",
+          "captures": [
+            {
+              "file": "reference-open-375.png",
+              "sha256": "a55573d4d59248a55443e9cc4e48a4f537b9ad8cdb4bbb957e55b1b4d9eb76cb"
+            },
+            {
+              "file": "react-open-375.png",
+              "sha256": "3a9d587ff0f757a811c0d6f769c482064302b74969e19c0f2ac8231d90919d26"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 375,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 375,
+            "height": 633
+          }
+        },
+        {
+          "name": "search",
+          "captures": [
+            {
+              "file": "reference-search-375.png",
+              "sha256": "55987416fa49f194be91d330fda6dd13ad1b885fa13553f0f3851162e74012ed"
+            },
+            {
+              "file": "react-search-375.png",
+              "sha256": "c112853c7afb4b1bb4093f300eecef86a5ca3217f75f0998bdd46185989cdd84"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 375,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 375,
+            "height": 633
+          }
+        },
+        {
+          "name": "filtered",
+          "captures": [
+            {
+              "file": "reference-filtered-375.png",
+              "sha256": "be8b67f7265d01588501034ff726d258eba1d1b3e0559e92c1f1a2d18135d32e"
+            },
+            {
+              "file": "react-filtered-375.png",
+              "sha256": "5240a3bbc0ad5c8299047f8d9c73fe3eb275273bd55e7c47a3e433e967d3a03a"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 375,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 375,
+            "height": 633
+          }
+        },
+        {
+          "name": "added",
+          "captures": [
+            {
+              "file": "reference-added-375.png",
+              "sha256": "190b4172b3ab5f04f60bd11c5f7c551e1a6c3dd66fb1854edcb732e1567a26b4"
+            },
+            {
+              "file": "react-added-375.png",
+              "sha256": "e57f37634d80691fe0de5d34ddbc8d15ddddc6e51900cf17989a128f9f0f19b0"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 375,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 375,
+            "height": 633
+          }
+        },
+        {
+          "name": "multiple",
+          "captures": [
+            {
+              "file": "reference-multiple-375.png",
+              "sha256": "75398113e06b1f84001c202b0927712f6547247f55b1a4a88a617005f50a579b"
+            },
+            {
+              "file": "react-multiple-375.png",
+              "sha256": "0a15615c736378ef83b1c45381f63f4dd986e75472f820b0e213685738e7db1d"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 375,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 375,
+            "height": 633
+          }
+        },
+        {
+          "name": "no-results",
+          "captures": [
+            {
+              "file": "reference-no-results-375.png",
+              "sha256": "5d1ef75fc273068799fd3a9a8fd4dd8f12e2a1fabafec41df381d2dfa6789082"
+            },
+            {
+              "file": "react-no-results-375.png",
+              "sha256": "ecfe91e69b8aafe3a30d3b60e625f42fbaaad150f98c3d597af327cbf03b061e"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 375,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 375,
+            "height": 633
+          }
+        },
+        {
+          "name": "editor-updated",
+          "captures": [
+            {
+              "file": "reference-editor-updated-375.png",
+              "sha256": "6c338a1dc0a1aac88c8fe67469b4c16dd328a08477e655225b343678119b2f39"
+            },
+            {
+              "file": "react-editor-updated-375.png",
+              "sha256": "ce3cf78eaf6d52c5158f86f53cd6513bb1d08489af0815cfa3baeb74fce9eb21"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 108,
+            "width": 375,
+            "height": 605
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 61,
+            "width": 375,
+            "height": 661
+          }
+        },
+        {
+          "name": "reopened",
+          "captures": [
+            {
+              "file": "reference-reopened-375.png",
+              "sha256": "6fa1ccce8712ef7f812c0ca6ef1d87adc0f96da529c860b6e6628fac06159969"
+            },
+            {
+              "file": "react-reopened-375.png",
+              "sha256": "2a40bf177dbfd73e3be51dca157e38bbe85eba6030f2451c42e0ec6f5336e42d"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 375,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 375,
+            "height": 633
+          }
+        }
+      ],
+      "referenceMetrics": {
+        "height": 596.25,
+        "width": 375,
+        "padding": "12px 18px 16px",
+        "radius": "23px 23px 0px 0px",
+        "searchHeight": 48,
+        "searchFont": "16px",
+        "rowHeight": 60
+      },
+      "reactMetrics": {
+        "height": 633,
+        "width": 375,
+        "padding": "12px 18px 16px",
+        "radius": "24px 24px 0px 0px",
+        "searchHeight": 48,
+        "searchFont": "16px",
+        "rowHeight": 69
+      },
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "states": [
+        {
+          "name": "open",
+          "captures": [
+            {
+              "file": "reference-open-390.png",
+              "sha256": "36f4775afd5c8f525672e3a867507ef55ba2d994a15125febda1040fb7f5c5cb"
+            },
+            {
+              "file": "react-open-390.png",
+              "sha256": "c2b83bdab27101e81bc0821996a6b5265e249c007a1b176cc7d4b86c6eb08295"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 390,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 390,
+            "height": 633
+          }
+        },
+        {
+          "name": "search",
+          "captures": [
+            {
+              "file": "reference-search-390.png",
+              "sha256": "cc35c5cb18103bfb8b648bc88877838646c33fd345e5f73803a4d26c3429d4ea"
+            },
+            {
+              "file": "react-search-390.png",
+              "sha256": "344843be7e35d8c5d270556bded04af24e5f3f01e07a5fb0b4bd5d27dff01eca"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 390,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 390,
+            "height": 633
+          }
+        },
+        {
+          "name": "filtered",
+          "captures": [
+            {
+              "file": "reference-filtered-390.png",
+              "sha256": "26782271fe964c27395ffa51ce90649815c094dc1ec5b2fc437c09d2586cf696"
+            },
+            {
+              "file": "react-filtered-390.png",
+              "sha256": "ce5b92e99eb772408eeec7069f9d8d33387a714a726c32efa65b9f5dcd32ebb5"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 390,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 390,
+            "height": 633
+          }
+        },
+        {
+          "name": "added",
+          "captures": [
+            {
+              "file": "reference-added-390.png",
+              "sha256": "f32cfa8703060f022ca12fcb531d9695c4909e62fc842b18a9db23b25a13ef95"
+            },
+            {
+              "file": "react-added-390.png",
+              "sha256": "7938950d00120a31aafa8002b85e7af611cf7d87eb8ed9f4dadb39ce1a8ca68c"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 390,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 390,
+            "height": 633
+          }
+        },
+        {
+          "name": "multiple",
+          "captures": [
+            {
+              "file": "reference-multiple-390.png",
+              "sha256": "fcfbd02b59cc27f2e29e3a8ffec2f4e580440016a9c061cb303efcca14b7f0ff"
+            },
+            {
+              "file": "react-multiple-390.png",
+              "sha256": "2ab6b31959d434423de459d4af5f8957be6cd813eb687c485cb498da6919d213"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 390,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 390,
+            "height": 633
+          }
+        },
+        {
+          "name": "no-results",
+          "captures": [
+            {
+              "file": "reference-no-results-390.png",
+              "sha256": "a5c3a1ac7d8b8696b09969c9a09b967b171ae9fcb88cb9a07294516ea7c0dca2"
+            },
+            {
+              "file": "react-no-results-390.png",
+              "sha256": "b68bce1c7d23df80c4cbd0914380fe0535b8eb090e86378e4bfc9b3cc5445c19"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 390,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 390,
+            "height": 633
+          }
+        },
+        {
+          "name": "editor-updated",
+          "captures": [
+            {
+              "file": "reference-editor-updated-390.png",
+              "sha256": "ceee3231e1df2380c48a202c3dfa4a545a0def159ca9a238303c1f9d7da84ddf"
+            },
+            {
+              "file": "react-editor-updated-390.png",
+              "sha256": "f67f76db359bf925b05743e411716df6888621c2a5c30b5ba759142324ec32c2"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 108,
+            "width": 390,
+            "height": 605
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 61,
+            "width": 390,
+            "height": 661
+          }
+        },
+        {
+          "name": "reopened",
+          "captures": [
+            {
+              "file": "reference-reopened-390.png",
+              "sha256": "35c6ad1c0a53199faae55cf653dcddbf68c1e58d84833da91500faadd83ba49d"
+            },
+            {
+              "file": "react-reopened-390.png",
+              "sha256": "551b0cce600b9a07e0bd49f07443fb717651e82004bb03f176651a1dfeb23f86"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 390,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 390,
+            "height": 633
+          }
+        }
+      ],
+      "referenceMetrics": {
+        "height": 596.25,
+        "width": 390,
+        "padding": "12px 18px 16px",
+        "radius": "23px 23px 0px 0px",
+        "searchHeight": 48,
+        "searchFont": "16px",
+        "rowHeight": 60
+      },
+      "reactMetrics": {
+        "height": 633,
+        "width": 390,
+        "padding": "12px 18px 16px",
+        "radius": "24px 24px 0px 0px",
+        "searchHeight": 48,
+        "searchFont": "16px",
+        "rowHeight": 69
+      },
+      "pageErrors": []
+    },
+    {
+      "width": 414,
+      "states": [
+        {
+          "name": "open",
+          "captures": [
+            {
+              "file": "reference-open-414.png",
+              "sha256": "7036fe8cb35b972d2068bf45d0530360767d45a8531e5541cde8cdaa6ac76234"
+            },
+            {
+              "file": "react-open-414.png",
+              "sha256": "a58d0c4af9b350d31ed3dc3c03e943733561f1f2293ad358dbb28248c03bf34f"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 414,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 414,
+            "height": 633
+          }
+        },
+        {
+          "name": "search",
+          "captures": [
+            {
+              "file": "reference-search-414.png",
+              "sha256": "a3fa20aecef6b2cb5a20418509ebc213767f1deafb0db7608989557dfd9bc968"
+            },
+            {
+              "file": "react-search-414.png",
+              "sha256": "79a441eafe155105b78351f50a7fd2c701b6be307625097a4b32abf829173a72"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 414,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 414,
+            "height": 633
+          }
+        },
+        {
+          "name": "filtered",
+          "captures": [
+            {
+              "file": "reference-filtered-414.png",
+              "sha256": "559a8e570f2029d4c17a01cc781673074172511ff3268d5b1c0171be9f2439e0"
+            },
+            {
+              "file": "react-filtered-414.png",
+              "sha256": "1574e43fd925d21c084450de6751676a77cf81ce7453265dae31f884e09ddb8d"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 414,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 414,
+            "height": 633
+          }
+        },
+        {
+          "name": "added",
+          "captures": [
+            {
+              "file": "reference-added-414.png",
+              "sha256": "36af717d48f06264f64b4e58115968eeb98c7c692dea9a7937b6a44319f9834e"
+            },
+            {
+              "file": "react-added-414.png",
+              "sha256": "d1035242d9efd67ac785b3451eeeadc92a3b2ff7c3650b772c9c3c6d84c23b44"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 414,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 414,
+            "height": 633
+          }
+        },
+        {
+          "name": "multiple",
+          "captures": [
+            {
+              "file": "reference-multiple-414.png",
+              "sha256": "96a54c9242abef676d56d4f01cb0c9f3e88151ffa6b02ca2842a2a5e5fcb1f0b"
+            },
+            {
+              "file": "react-multiple-414.png",
+              "sha256": "4b302842127283e0a673bf7249c14a5a01fceb5a5cf160692bf9ba70a06f7601"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 414,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 414,
+            "height": 633
+          }
+        },
+        {
+          "name": "no-results",
+          "captures": [
+            {
+              "file": "reference-no-results-414.png",
+              "sha256": "8e13709d7e58b5a4f7be6e4485139603fbd327d346ba1a77d27586be80bd6d35"
+            },
+            {
+              "file": "react-no-results-414.png",
+              "sha256": "8ba84fdf4c036b3d41a74e0586f50aba1fa4639542d3680d41e60aa01bf91939"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 414,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 414,
+            "height": 633
+          }
+        },
+        {
+          "name": "editor-updated",
+          "captures": [
+            {
+              "file": "reference-editor-updated-414.png",
+              "sha256": "b071b4abd80bb1e57af6073ff993dbde4cdf415df9aa082fe2b72fb0c48933d9"
+            },
+            {
+              "file": "react-editor-updated-414.png",
+              "sha256": "c219aeab55c78955d38eb0a2ae21b26c3399f9941b5090819b96e3943938f7e1"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 108,
+            "width": 414,
+            "height": 605
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 61,
+            "width": 414,
+            "height": 661
+          }
+        },
+        {
+          "name": "reopened",
+          "captures": [
+            {
+              "file": "reference-reopened-414.png",
+              "sha256": "d0adb613e14cd83b573c406648137d579a336db81e8f30fd4a5eeba6dc4958f0"
+            },
+            {
+              "file": "react-reopened-414.png",
+              "sha256": "2e96383bd3411723eccfd0099202fa96ebe9b6076ff53e69b0a7ff15e5e31655"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 414,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 414,
+            "height": 633
+          }
+        }
+      ],
+      "referenceMetrics": {
+        "height": 596.25,
+        "width": 414,
+        "padding": "12px 18px 16px",
+        "radius": "23px 23px 0px 0px",
+        "searchHeight": 48,
+        "searchFont": "16px",
+        "rowHeight": 60
+      },
+      "reactMetrics": {
+        "height": 633,
+        "width": 414,
+        "padding": "12px 18px 16px",
+        "radius": "24px 24px 0px 0px",
+        "searchHeight": 48,
+        "searchFont": "16px",
+        "rowHeight": 69
+      },
+      "pageErrors": []
+    },
+    {
+      "width": 430,
+      "states": [
+        {
+          "name": "open",
+          "captures": [
+            {
+              "file": "reference-open-430.png",
+              "sha256": "4c4eccf7409170e4122b019f14c6f0c5ff4e2e5a361e0cccad222568ce40c0b6"
+            },
+            {
+              "file": "react-open-430.png",
+              "sha256": "77ebe4ed8d221d3eb1b079b81fba4ae7cde56183c638a6b0164ff36c09469386"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 430,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 430,
+            "height": 633
+          }
+        },
+        {
+          "name": "search",
+          "captures": [
+            {
+              "file": "reference-search-430.png",
+              "sha256": "8aabf76fa8384f3f00f5525a4a12f2951f54bcc4ee34fad47dd3aecd2fd390b9"
+            },
+            {
+              "file": "react-search-430.png",
+              "sha256": "71768a960fb12ba227989b058d4a1ebb65e063cad7c27fb2b0bc90b0db3a1bc0"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 430,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 430,
+            "height": 633
+          }
+        },
+        {
+          "name": "filtered",
+          "captures": [
+            {
+              "file": "reference-filtered-430.png",
+              "sha256": "faf4306770e3513cc352223348a5a5dd4b0095174e51d9691c09fb129774b5bd"
+            },
+            {
+              "file": "react-filtered-430.png",
+              "sha256": "438fd2b30316f1d81390687f403064d0dca44c26ea3931031991001bc7e791b4"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 430,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 430,
+            "height": 633
+          }
+        },
+        {
+          "name": "added",
+          "captures": [
+            {
+              "file": "reference-added-430.png",
+              "sha256": "dff80a210d0a7852f94f040cff08923aff4f0389f1d334c000f42dde0ff075c0"
+            },
+            {
+              "file": "react-added-430.png",
+              "sha256": "ad2c0d1e98c591a45bb372af397bee8493a086c3e7d2326a3af5d17d37bd8fb9"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 430,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 430,
+            "height": 633
+          }
+        },
+        {
+          "name": "multiple",
+          "captures": [
+            {
+              "file": "reference-multiple-430.png",
+              "sha256": "6996d50da086c9d27e9cea9d1bb9b68b7a266fe5259aeff6e240d6409d0880b3"
+            },
+            {
+              "file": "react-multiple-430.png",
+              "sha256": "b91e32c0461f4bf542eccb2ca2aef3327c57bf2e2e7900c36d7b9e9b30c83c8a"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 430,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 430,
+            "height": 633
+          }
+        },
+        {
+          "name": "no-results",
+          "captures": [
+            {
+              "file": "reference-no-results-430.png",
+              "sha256": "1b4d90fa17bd7a84b66dca3ba274d8c787eecb7f249b023e8ed0f55a4535cca8"
+            },
+            {
+              "file": "react-no-results-430.png",
+              "sha256": "74cd6e3850d1fc8460c15572983956e42e7be1a0bfc60d2d8d1477c4e831509a"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 430,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 430,
+            "height": 633
+          }
+        },
+        {
+          "name": "editor-updated",
+          "captures": [
+            {
+              "file": "reference-editor-updated-430.png",
+              "sha256": "22c02a2578295ebf824bd81105db0e1041acf23b6767d8b3eb0788d27bba9f3a"
+            },
+            {
+              "file": "react-editor-updated-430.png",
+              "sha256": "6782283c0fec5116cdef82aea3a4045708786f3356ab8786a5d7f23106d3c60b"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 108,
+            "width": 430,
+            "height": 605
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 61,
+            "width": 430,
+            "height": 661
+          }
+        },
+        {
+          "name": "reopened",
+          "captures": [
+            {
+              "file": "reference-reopened-430.png",
+              "sha256": "c9f69064959a35300123ae94def6f34540d95274747193e496a28a314d979755"
+            },
+            {
+              "file": "react-reopened-430.png",
+              "sha256": "3ec657eb7deb5f07fdb5034b1d7b959213f5396bd709c5b1d9b5a4ef80515ed3"
+            }
+          ],
+          "referenceBox": {
+            "x": 0,
+            "y": 247.75,
+            "width": 430,
+            "height": 596.25
+          },
+          "reactBox": {
+            "x": 0,
+            "y": 211,
+            "width": 430,
+            "height": 633
+          }
+        }
+      ],
+      "referenceMetrics": {
+        "height": 596.25,
+        "width": 430,
+        "padding": "12px 18px 16px",
+        "radius": "23px 23px 0px 0px",
+        "searchHeight": 48,
+        "searchFont": "16px",
+        "rowHeight": 60
+      },
+      "reactMetrics": {
+        "height": 633,
+        "width": 430,
+        "padding": "12px 18px 16px",
+        "radius": "24px 24px 0px 0px",
+        "searchHeight": 48,
+        "searchFont": "16px",
+        "rowHeight": 69
+      },
+      "pageErrors": []
+    }
+  ],
+  "browserVersion": "141.0.7390.37 (Playwright Chromium Headless Shell v1194)"
+}
