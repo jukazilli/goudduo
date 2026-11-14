@@ -1,0 +1,74 @@
+/* V5.3 content only: no global tokens, resets, chrome or social selectors. */
+.home-training-v53 { padding: 0 13px 24px; color: #17232d; }
+.home-training-v53 *, .home-training-v53__pulse-slot { box-sizing: border-box; }
+.home-training-v53__pulse-slot { height: 112.8px; pointer-events: none; }
+.home-training-v53__sr { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.home-training-v53__grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; align-items: stretch; }
+.home-training-v53 button { font: inherit; color: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.home-training-v53 :focus-visible { outline: 3px solid #006da9; outline-offset: -3px; }
+.home-training-v53__widget { min-width: 0; min-height: 144px; border-radius: 23px; padding: 16px; background: #f3f3f3; }
+.home-training-v53__card-top { display: flex; align-items: flex-start; gap: 4px; }
+.home-training-v53__toggle { width: 100%; min-width: 0; min-height: 44px; border: 0; background: transparent; text-align: left; padding: 0; border-radius: 8px; }
+.home-training-v53__widget-head { display: flex; align-items: center; justify-content: space-between; min-height: 38px; gap: 6px; font-size: 12.5px; font-weight: 700; line-height: 1.15; letter-spacing: -.25px; }
+.home-training-v53__icon { flex: none; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 15px; background: rgb(255 255 255 / .93); }
+.home-training-v53__value { display: block; margin-top: 14px; font-size: 17px; line-height: 1.25; font-weight: 700; letter-spacing: -.35px; overflow-wrap: anywhere; }
+.home-training-v53 [data-home-card=ranking] { background: #e3f0ff; grid-row: span 2; min-height: 218px; padding: 19px 16px 18px; }
+.home-training-v53 [data-home-card=ranking] .home-training-v53__widget-head { flex-direction: column-reverse; justify-content: center; gap: 10px; margin-top: 7px; }
+.home-training-v53 [data-home-card=ranking] .home-training-v53__icon { width: 48px; height: 48px; border-radius: 50%; }
+.home-training-v53 [data-home-card=ranking] .home-training-v53__value { text-align: center; margin-top: 18px; font-size: 20px; }
+.home-training-v53 [data-home-card=status], .home-training-v53 [data-home-card=weight] { min-height: 104px; padding: 11px 13px; }
+.home-training-v53 [data-home-card=status] { background: #eff8e0; }
+.home-training-v53 [data-home-card=status] .home-training-v53__widget-head, .home-training-v53 [data-home-card=weight] .home-training-v53__widget-head { min-height: 29px; }
+.home-training-v53 [data-home-card=status] .home-training-v53__icon, .home-training-v53 [data-home-card=weight] .home-training-v53__icon { width: 32px; height: 32px; border-radius: 13px; }
+.home-training-v53 [data-home-card=status] .home-training-v53__value, .home-training-v53 [data-home-card=weight] .home-training-v53__value { margin-top: 7px; font-size: 15px; }
+.home-training-v53 [data-home-card=measures] { background: #f2f4ff; }
+.home-training-v53 [data-home-card=library] { background: #f1f6f9; }
+.home-training-v53 [data-home-card=photos] { background: #f6f0fb; }
+.home-training-v53 [data-home-card=records] { background: #fff7ea; }
+.home-training-v53 [data-home-card=consistency] { background: #f4f7f8; grid-column: span 2; min-height: 99px; padding: 15px 18px; }
+.home-training-v53 [data-home-card=consistency] .home-training-v53__widget-head { justify-content: flex-start; gap: 10px; }
+.home-training-v53 [data-home-card=consistency] .home-training-v53__icon { order: -1; width: 33px; height: 33px; border-radius: 50%; }
+.home-training-v53 [data-home-card=consistency] .home-training-v53__value { margin: 0 0 0 43px; }
+.home-training-v53__reveal { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 360ms ease, opacity 280ms ease; }
+.home-training-v53__reveal > div { overflow: hidden; min-height: 0; }
+.home-training-v53__inside { border-top: 1px solid #e1e8ec; margin-top: 13px; padding-top: 16px; }
+.home-training-v53__inside h2 { font-size: 14px; margin: 0 0 12px; }
+.home-training-v53__inside p { margin: 0; font-size: 14px; line-height: 1.5; }
+.home-training-v53__close { flex: none; width: 44px; height: 44px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 50%; background: #f2f5f6; }
+.home-training-v53__grid[data-expansion=top] [data-home-card=ranking] { grid-row: auto; min-height: 146px; padding: 16px; }
+.home-training-v53__grid[data-expansion=top] [data-home-card=ranking] .home-training-v53__widget-head { flex-direction: row; justify-content: space-between; margin: 0; }
+.home-training-v53__grid[data-expansion=top] [data-home-card=ranking] .home-training-v53__icon { width: 38px; height: 38px; border-radius: 15px; }
+.home-training-v53__grid[data-expansion=top] [data-home-card=ranking] .home-training-v53__value { text-align: left; }
+.home-training-v53__grid[data-expansion=top] [data-home-card=status], .home-training-v53__grid[data-expansion=top] [data-home-card=weight] { min-height: 145px; padding: 16px; }
+.home-training-v53 .home-training-v53__widget.is-orphan { grid-column: span 2; min-height: 112px; }
+.home-training-v53 .home-training-v53__widget.is-expanded { grid-column: span 2; grid-row: auto; min-height: 0; background: #fff; border: 1px solid #e9edf0; padding: 18px; box-shadow: 0 10px 28px #20384415; }
+.home-training-v53 .is-expanded .home-training-v53__widget-head { flex-direction: row; justify-content: space-between; margin: 0; }
+.home-training-v53 .is-expanded .home-training-v53__value { text-align: left; margin: 7px 0 0; font-size: 18px; }
+.home-training-v53 .is-expanded .home-training-v53__icon { width: 38px; height: 38px; border-radius: 15px; }
+.home-training-v53 .is-expanded .home-training-v53__reveal { grid-template-rows: 1fr; opacity: 1; }
+.home-training-v53__hero-cell { min-width: 0; grid-column: span 2; }
+.home-training-v53__hero { min-height: 236px; padding: 22px 19px 18px; border: 1px solid rgb(255 255 255 / .035); border-radius: 26px; background: radial-gradient(ellipse 86% 94% at 84% 43%,rgb(94 109 119 / .22) 0%,transparent 75%),linear-gradient(132deg,#20262d 0%,#30363c 56%,#1c2228 100%); box-shadow: 0 9px 25px rgb(29 38 45 / .11); color: #f5f7f8; touch-action: pan-y; }
+.home-training-v53__eyebrow { color: #bfc9cf; font-size: 10px; font-weight: 700; letter-spacing: .75px; text-transform: uppercase; }
+.home-training-v53__hero h2 { font-size: 23px; font-weight: 800; line-height: 1.12; letter-spacing: -.65px; max-width: 60%; color: white; margin: 29px 0 7px; overflow-wrap: anywhere; }
+.home-training-v53__hero p { color: #c4ced3; font-size: 12.5px; font-weight: 500; margin: 0 0 5px; line-height: 1.4; }
+.home-training-v53__hero-bottom { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+.home-training-v53 .home-training-v53__cta { min-height: 44px; min-width: 145px; padding: 10px 17px; border: 0; border-radius: 999px; background: white; color: #1b2228; font-size: 12.5px; font-weight: 700; }
+.home-training-v53__dots { display: flex; flex-wrap: wrap; margin-left: auto; }
+.home-training-v53__dots button { border: 0; background: transparent; width: 44px; height: 44px; padding: 0; display: grid; place-items: center; }
+.home-training-v53__dots span { display: block; width: 7px; height: 7px; border-radius: 999px; background: #9daab1; transition: width 250ms ease; }
+.home-training-v53__dots [aria-pressed=true] span { width: 19px; background: white; }
+.home-training-v53__hero :focus-visible { outline-color: white; }
+@media(max-width:355px) {
+  .home-training-v53 { padding-inline: 10px; }
+  .home-training-v53__pulse-slot { height: 108.8px; }
+  .home-training-v53__grid { gap: 8px; }
+  .home-training-v53 [data-home-card=ranking] { padding-inline: 11px; }
+  .home-training-v53 [data-home-card=status], .home-training-v53 [data-home-card=weight] { min-height: 105px; padding: 10px; }
+  .home-training-v53 [data-home-card=status] .home-training-v53__widget-head, .home-training-v53 [data-home-card=weight] .home-training-v53__widget-head { font-size: 11.5px; }
+  .home-training-v53__hero { padding: 20px 16px 17px; }
+  .home-training-v53__hero h2 { font-size: 21px; max-width: 61%; }
+  .home-training-v53 .home-training-v53__cta { min-width: 135px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .home-training-v53__reveal, .home-training-v53__dots span { transition: none; }
+}
