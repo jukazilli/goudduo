@@ -105,9 +105,18 @@ test('B5 sheet accessibility, independent scroll, search/acknowledgement, duplic
   await page.locator('[data-exercise-id="demo-exercise"]').dblclick({ force: true }); await expect(page.getByText('1 exercício no treino', { exact: true })).toBeVisible();
   await page.getByRole('searchbox').fill('não existe'); await expect(page.getByText('Nenhum exercício encontrado.')).toBeVisible();
   await page.getByRole('searchbox').fill('demonstração'); const list = page.getByRole('list', { name: 'Exercícios da biblioteca' });
+  await dialog.evaluate(async element => { await Promise.all(element.getAnimations().map(animation => animation.finished)); });
   await expect(list).toHaveCSS('overflow-anchor', 'none');
   await list.evaluate(element => { element.scrollTop = 100; }); const position = await list.evaluate(element => element.scrollTop); expect(position).toBeGreaterThan(0);
-  const result = page.locator('[data-exercise-id="demo-row"]'); await result.click(); await expect(result).toBeFocused();
+  const result = page.locator('[data-exercise-id="demo-row"]');
+  const listBox = await list.boundingBox(), rowBox = await result.boundingBox();
+  expect(rowBox!.y).toBeGreaterThanOrEqual(listBox!.y);
+  expect(rowBox!.y + rowBox!.height).toBeLessThanOrEqual(listBox!.y + listBox!.height);
+  // A real pointer click in an entirely visible row. Locator.click() calls the
+  // browser's scrollIntoViewIfNeeded first, which itself scrolls this nested flex
+  // viewport in Chromium 141; that would measure the automation, not the update.
+  await page.mouse.click(rowBox!.x + rowBox!.width / 2, rowBox!.y + rowBox!.height / 2);
+  await expect(result).toBeFocused();
   await expect(page.getByRole('searchbox')).toHaveValue('demonstração');
   expect(await list.evaluate(element => element.scrollTop)).toBe(position);
   await expect(page.getByText('Adicionado', { exact: true })).toBeVisible(); await expect(page.getByText('Adicionado', { exact: true })).toHaveCount(0, { timeout: 2500 });
