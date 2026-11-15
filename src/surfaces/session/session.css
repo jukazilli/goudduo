@@ -38,3 +38,9 @@
 @media(prefers-reduced-motion:reduce) { .session-core * { scroll-behavior: auto; } }
 
 .session-core__dialog .session-core__exit { color: #c83535; background: white; }
+
+.session-core__footer--result { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+.session-core__footer--result > button:first-child { grid-column: 1/-1; }
+.session-core__footer--result a { display: flex; align-items: center; justify-content: center; min-height: 44px; border: 1px solid #dce8ed; border-radius: 12px; padding: 8px; color: #006da9; font: inherit; }
+
+.session-core__footer--result a:only-of-type { grid-column: 1/-1; }

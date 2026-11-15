@@ -8,8 +8,10 @@ import { useNavigation } from './NavigationProvider';
 export function useTrainingSession(onReturnRoutine?: (routineId: string) => void) {
   const state = useDemoState(), dispatch = useDemoDispatch();
   const { navigation, location } = useNavigation();
-  const session = location.page.destination === 'session' ? readEntity(state.trainingSessions, location.page.sessionId) : undefined;
-  const active = state.activeTrainingSessionId ? readEntity(state.trainingSessions, state.activeTrainingSessionId) : undefined;
+  const candidate = location.page.destination === 'session' ? readEntity(state.trainingSessions, location.page.sessionId) : undefined;
+  const session = candidate?.userId === state.user.id ? candidate : undefined;
+  const activeCandidate = state.activeTrainingSessionId ? readEntity(state.trainingSessions, state.activeTrainingSessionId) : undefined;
+  const active = activeCandidate?.userId === state.user.id ? activeCandidate : undefined;
   const pending = useRef<string | null>(null);
   const [now, setNow] = useState(Date.now);
   const [startError, setStartError] = useState<string | null>(null);
