@@ -204,9 +204,11 @@ test('R1 safe-area ownership, scoped styles and overlay on a surface without glo
   expect(await snapshot()).toEqual(before);
   await expect(page.locator('[data-pulse-shape]')).toHaveCount(1);
   await expect(page.locator('[data-pulse-shape]')).toHaveAttribute('data-pulse-shape', 'squircle');
-  await expect(page.getByTestId('training-pulse-slot')).toBeEmpty();
-  await expect(page.getByTestId('training-pulse-slot')).toHaveAttribute('aria-hidden', 'true');
-  await expect(page.locator('[data-pulse-shape] button,[data-pulse-shape] a')).toHaveCount(0);
+  await expect(page.getByTestId('training-pulse-slot').getByRole('listitem')).toHaveCount(2);
+  await expect(page.locator('[data-pulse-shape] button')).toHaveCount(1);
+  await expect(page.locator('[data-pulse-shape] button')).toBeDisabled();
+  await expect(page.locator('[data-pulse-shape] a')).toHaveCount(0);
+  await expect(page.locator('[data-pulse-shape] [data-view-state=unknown]')).toHaveCount(2);
   await page.getByRole('tab', { name: 'Publicações' }).click();
   await expect(page.locator('[data-pulse-shape]')).toHaveCount(0);
   expect(await snapshot()).toEqual(before);

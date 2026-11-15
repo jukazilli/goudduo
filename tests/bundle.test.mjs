@@ -27,6 +27,8 @@ test('laboratory content and credential patterns block the common application', 
   await writeFile(path, 'Consumidor técnico P2-B2'); await assert.rejects(auditBundle(root, 'app'), /Lab leaked/);
   await writeFile(path, 'Cenário de Rotinas'); await assert.rejects(auditBundle(root, 'app'), /Lab leaked/);
   await writeFile(path, 'Adicionar prescrição sintética ao rascunho'); await assert.rejects(auditBundle(root, 'app'), /Lab leaked/);
+  await writeFile(path, 'Apresentação técnica P2-B7'); await assert.rejects(auditBundle(root, 'app'), /Lab leaked/);
+  await writeFile(path, 'technical-pulse-0'); await assert.rejects(auditBundle(root, 'app'), /Lab leaked/);
   await writeFile(path, 'ghp_' + 'x'.repeat(40)); await assert.rejects(auditBundle(root, 'app'), /Forbidden source/);
 }));
 test('symlinks cannot carry files across the publication boundary', () => fixture(async root => {

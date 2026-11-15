@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import { useRef, useState, type ReactNode } from 'react';
 import { AppShell } from './AppShell';
 import { useNavigation } from './NavigationProvider';
 import { useRoutineEditorAdapter } from './useRoutineEditorAdapter';
@@ -7,11 +7,13 @@ import type { Weekday } from '../domain/training';
 import { RoutinesHome } from '../surfaces/routines/RoutinesHome';
 import { WorkoutEditor, AddExerciseFooter } from '../surfaces/routines/WorkoutEditor';
 import { workoutOverlayRenderers } from '../surfaces/routines/WorkoutSaveOverlays';
-import { HomeTraining, TrainingPulseRegion } from '../surfaces/home/HomeTraining';
+import { HomeTraining } from '../surfaces/home/HomeTraining';
+import { TrainingPulseRegion } from '../surfaces/home/TrainingPulse';
 import type { HomeWidget } from '../surfaces/home/layout';
 /** One integrated application. Presentation state survives route changes; entities stay in DemoProvider. */
 export function PrototypeApp({ contentExtension }: { contentExtension?: ReactNode } = {}) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const trainingPulseScroll = useRef(0);
   const [homeExpanded, setHomeExpanded] = useState<HomeWidget | null>(null);
   const state = useDemoState(), dispatch = useDemoDispatch();
   const { navigation, location } = useNavigation();
@@ -27,7 +29,7 @@ export function PrototypeApp({ contentExtension }: { contentExtension?: ReactNod
     } else adapter.openEditor({ routineId, day, workoutId: workoutId ?? crypto.randomUUID(), draftId: crypto.randomUUID() });
   };
   return <AppShell contentExtension={contentExtension} integrations={{ home: { treinos: {
-    pulse: { shape: 'squircle', content: <TrainingPulseRegion/> },
+    pulse: { shape: 'squircle', content: <TrainingPulseRegion scrollMemory={trainingPulseScroll}/> },
     content: <HomeTraining expanded={homeExpanded} onExpand={setHomeExpanded} onOpenRoutines={() => {
       setExpandedId(state.primaryRoutineId);
       navigation.navigate({ page: { destination: 'rotinas' }, panel: null });

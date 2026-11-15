@@ -1,0 +1,1413 @@
+{
+  "referenceCommit": "073183253fce5fcd0b3474c725e84ff67d3dfec5",
+  "referenceBlob": "8c698708dd79449472d6f5c7e536664939de4951",
+  "referenceSHA256": "7cb2bedd0af72c09c703337f889e94cb4e223ab9d5ff6104b584d62895ffb18f",
+  "institutionalAsset": "assets/brand/goudduo/goudduo-wordmark-white.svg",
+  "institutionalBlob": "7a07c1ec6c42f16ec7b536f93b7e60049228168f",
+  "browserVersion": "141.0.7390.37",
+  "normalization": "Raw reference preserved; paired reference only normalizes public Plus Jakarta Sans font-family/font faces. Technical Lab frame width normalized without component CSS changes. No equivalent reference for synthetic states/quantities; no reconstructed canonical reference.",
+  "sourcesSHA256": {
+    "src/app/PrototypeApp.tsx": "d40014a00e93e2fd6d6d1453fb4132f828683a0064709c2b2799bb9da877a6d6",
+    "src/surfaces/home/TrainingPulse.tsx": "6e23eb2ef53895dc07d3d8c496cfd3d75683c19f6dced1042f6c5bf8b547e613",
+    "src/surfaces/home/pulse-presentation.ts": "25c5faa3c4e5f7789775207aa080663478d04e69964b09ded67ee04d44433d6e",
+    "src/surfaces/home/training-pulse.css": "938ae90a72eb734c7181b4cad483a94a625c261db43b79f728ddbb12b6cdf2c9",
+    "src/surfaces/home/HomeTraining.tsx": "2d7a1d46b709aa86d88b2ed83d311d4df93005b4385e088e3f2222100381ac14",
+    "src/surfaces/home/home-training.css": "f0ec722c888b7016e511037c1858d587b1c6483b660e1a2aebc8207d84a3b935",
+    "src/lab/TrainingPulseScenario.tsx": "c36837f096f45233b06bd106422e09a99c29a1237c41031d674dbad885bdd412",
+    "src/lab/main.tsx": "48eb7f5429976ddf4fa83c77915c0954f1d43feaa0542183c95ae6d2c27bdb33"
+  },
+  "viewports": [
+    {
+      "width": 320,
+      "states": [
+        {
+          "name": "home",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-home-320.png",
+              "sha256": "06eb0c1212ff0b38e255f18fc0925b04cb8fe3d52867f65873673589caaaeb7b",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 320,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-home-320.png",
+              "sha256": "6f45e9fb56cd710b66d19bb79195c85553b377fbedd1cd0e6657eef94fad2b08",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 320,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "strip",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-strip-320.png",
+              "sha256": "7540728a253ce8e67d5b0c4d5e356371c5bd70bc487e109694741cd3b1f44a27",
+              "box": {
+                "x": 10,
+                "y": 151,
+                "width": 300,
+                "height": 77.796875
+              }
+            },
+            {
+              "file": "react-strip-320.png",
+              "sha256": "07efb398e5fd63100335dacb2ea4a38f2bb092c92607fcf25bbbd42966333c10",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 320,
+                "height": 108.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "own",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-own-320.png",
+              "sha256": "8073d5d303fc5e09fd72f1b63933c7f3be0fb034665baf92a0837a87a0b2ac91",
+              "box": {
+                "x": 10,
+                "y": 153,
+                "width": 54,
+                "height": 71.796875
+              }
+            },
+            {
+              "file": "react-own-320.png",
+              "sha256": "cba461fc5de95b3db87339d5125a6e66dada08aff095176c4444ace2f503b275",
+              "box": {
+                "x": 10,
+                "y": 127,
+                "width": 54,
+                "height": 71.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "institutional",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-institutional-320.png",
+              "sha256": "ac50bcb744e6df46d40d2c640a7e8980bcd5e6d38f5316dae7a417201c7ac5d5",
+              "box": {
+                "x": 74,
+                "y": 153,
+                "width": 54,
+                "height": 71.796875
+              }
+            },
+            {
+              "file": "react-institutional-320.png",
+              "sha256": "bb64bfc8a4ac762d7c7e11541c307301efd8d75ce5c73adf69dce5872ee1aace",
+              "box": {
+                "x": 74,
+                "y": 127,
+                "width": 54,
+                "height": 71.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "multiple",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-multiple-320.png",
+              "sha256": "03780f86018027a9aca4467153fe57251d5764d6aae8bda37418c3f300067edf",
+              "box": {
+                "x": 0,
+                "y": 140,
+                "width": 320,
+                "height": 108.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "seen",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-seen-320.png",
+              "sha256": "ca2bb49350938f35680109455f3c7a0bc1cc1bf2ba2135ebb95d2ac4fa039594",
+              "box": {
+                "x": 202,
+                "y": 156,
+                "width": 54,
+                "height": 71.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "unseen-neutral",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-unseen-neutral-320.png",
+              "sha256": "733e05dd3806270af4080467995ec29475ef3a58ddb9137cee74c907703467e4",
+              "box": {
+                "x": 256,
+                "y": 156,
+                "width": 54,
+                "height": 71.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "scrolled",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-scrolled-320.png",
+              "sha256": "f9e638dcb1e0a8c6631658df262fe8a7dfd95e98b7418e462135f6b7aa949845",
+              "box": {
+                "x": 0,
+                "y": 140,
+                "width": 320,
+                "height": 108.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "empty",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-empty-320.png",
+              "sha256": "64070acac01f7724cd26d3cd1a0844ab4ddeb5e5bc68b5ad811156a4250af83e",
+              "box": {
+                "x": 0,
+                "y": 140,
+                "width": 320,
+                "height": 37
+              }
+            }
+          ]
+        },
+        {
+          "name": "one",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-one-320.png",
+              "sha256": "95e3461792e0cc768c7f2a21c25dae67d82fd52905c932860e3d30d0068a5d6f",
+              "box": {
+                "x": 0,
+                "y": 140,
+                "width": 320,
+                "height": 108.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "context-return",
+          "referenceEquivalent": false,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "react-context-return-320.png",
+              "sha256": "07efb398e5fd63100335dacb2ea4a38f2bb092c92607fcf25bbbd42966333c10",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 320,
+                "height": 108.796875
+              }
+            }
+          ]
+        }
+      ],
+      "referenceMetrics": {
+        "avatar": {
+          "x": 10,
+          "y": 153,
+          "width": 54,
+          "height": 54,
+          "top": 153,
+          "right": 64,
+          "bottom": 207,
+          "left": 10
+        },
+        "radius": "18px",
+        "gap": "10px",
+        "captionFont": "10px",
+        "rankY": 108.796875,
+        "rankHeight": 218,
+        "rowWidth": 300,
+        "scrollWidth": 310
+      },
+      "reactMetrics": {
+        "avatar": {
+          "x": 10,
+          "y": 127,
+          "width": 54,
+          "height": 54,
+          "top": 127,
+          "right": 64,
+          "bottom": 181,
+          "left": 10
+        },
+        "radius": "18px",
+        "gap": "10px",
+        "captionFont": "10px",
+        "rankY": 108.796875,
+        "rankHeight": 218,
+        "rowWidth": 300,
+        "scrollWidth": 300,
+        "regionHeight": 108.796875,
+        "items": 2
+      },
+      "technicalScrollLeft": 202,
+      "pageErrors": []
+    },
+    {
+      "width": 375,
+      "states": [
+        {
+          "name": "home",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-home-375.png",
+              "sha256": "ebd2a1845d12487ea36c3bf4dcef6200e0eba5fd4786f2860a9b32c5da0aff65",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 375,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-home-375.png",
+              "sha256": "3e2eab2871d2a0f99f1fb2519e30794e9d50ae51b00d84764671c8a33d13f9a0",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 375,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "strip",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-strip-375.png",
+              "sha256": "4c74e4e127b0d82518a2e76ce7cb1b5968e043c3a54565c4047723bf7a74d650",
+              "box": {
+                "x": 13,
+                "y": 151,
+                "width": 349,
+                "height": 81.796875
+              }
+            },
+            {
+              "file": "react-strip-375.png",
+              "sha256": "a34f42d672896e09244a20fb43415fee624e5fe57cf6a30f17b1ffa8d03d5126",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 375,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "own",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-own-375.png",
+              "sha256": "4182eb29dbd5243c112230d4a0dd1d563e265e692dcad4263699ad7b856f4df6",
+              "box": {
+                "x": 13,
+                "y": 153,
+                "width": 58,
+                "height": 75.796875
+              }
+            },
+            {
+              "file": "react-own-375.png",
+              "sha256": "c9570c7bdf8958cb1eaf9d0c0ab1acb73228c76a9f3280d8b35d8fdd8bf29b8a",
+              "box": {
+                "x": 13,
+                "y": 127,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "institutional",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-institutional-375.png",
+              "sha256": "576da9ce309bf09455bb2e5835eba7a8a8b892facf38fea75c0baf675979fb28",
+              "box": {
+                "x": 81,
+                "y": 153,
+                "width": 58,
+                "height": 75.796875
+              }
+            },
+            {
+              "file": "react-institutional-375.png",
+              "sha256": "eb6995170245c52a77ae7db743ce5d29bd1ce9869e8bb8c67164135c5d709bb6",
+              "box": {
+                "x": 81,
+                "y": 127,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "multiple",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-multiple-375.png",
+              "sha256": "6e7592ae6fb99c3dc944c9e9021dd1412b5a2f926c7334a9016e1a1114ffd8fc",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 375,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "seen",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-seen-375.png",
+              "sha256": "e843173f97619d83957c84a980c1db7bd9a9dca6098b6310ed86cb5f12beb39a",
+              "box": {
+                "x": 217,
+                "y": 135,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "unseen-neutral",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-unseen-neutral-375.png",
+              "sha256": "1c5d2e63735bf9e0759f8250fbe176f69cc28f47db580b4382f3c2c58dd90123",
+              "box": {
+                "x": 285,
+                "y": 135,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "scrolled",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-scrolled-375.png",
+              "sha256": "03924af6ab94acaaddd2f075b74cfaedd7aa6bae0cf54b6faa5ef5f326fb44f4",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 375,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "empty",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-empty-375.png",
+              "sha256": "d8e0fffddce02823d617625529440e24bcc39ce730b35a4da2c6f76be2fa95c8",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 375,
+                "height": 37
+              }
+            }
+          ]
+        },
+        {
+          "name": "one",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-one-375.png",
+              "sha256": "3d8a1d89f5365dca5cb9205cad318ebdd263396db37102d30f2e0abb49e48f0c",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 375,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "context-return",
+          "referenceEquivalent": false,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "react-context-return-375.png",
+              "sha256": "a34f42d672896e09244a20fb43415fee624e5fe57cf6a30f17b1ffa8d03d5126",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 375,
+                "height": 112.796875
+              }
+            }
+          ]
+        }
+      ],
+      "referenceMetrics": {
+        "avatar": {
+          "x": 13,
+          "y": 153,
+          "width": 58,
+          "height": 58,
+          "top": 153,
+          "right": 71,
+          "bottom": 211,
+          "left": 13
+        },
+        "radius": "19px",
+        "gap": "10px",
+        "captionFont": "10px",
+        "rankY": 112.796875,
+        "rankHeight": 218,
+        "rowWidth": 349,
+        "scrollWidth": 349
+      },
+      "reactMetrics": {
+        "avatar": {
+          "x": 13,
+          "y": 127,
+          "width": 58,
+          "height": 58,
+          "top": 127,
+          "right": 71,
+          "bottom": 185,
+          "left": 13
+        },
+        "radius": "19px",
+        "gap": "10px",
+        "captionFont": "10px",
+        "rankY": 112.796875,
+        "rankHeight": 218,
+        "rowWidth": 349,
+        "scrollWidth": 349,
+        "regionHeight": 112.796875,
+        "items": 2
+      },
+      "technicalScrollLeft": 185,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "states": [
+        {
+          "name": "home",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-home-390.png",
+              "sha256": "dc13fb2181eac14cdba0d2c6a51401fb0261149f493e95e661f06c5cb0f3232a",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 390,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-home-390.png",
+              "sha256": "27c8a00f984909d3d565707e1fa412b66250112a4dcf5ff69f3e40c34524c0fa",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 390,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "strip",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-strip-390.png",
+              "sha256": "eb373d1e9bb2c72b4f01155b1cb0c310782641bde370f63088085c0d6db3a8c4",
+              "box": {
+                "x": 13,
+                "y": 151,
+                "width": 364,
+                "height": 81.796875
+              }
+            },
+            {
+              "file": "react-strip-390.png",
+              "sha256": "4aa74163c1ec9f1bb33533a8263d1f95610a10d092d59d55a3e21f130589bd75",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 390,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "own",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-own-390.png",
+              "sha256": "4182eb29dbd5243c112230d4a0dd1d563e265e692dcad4263699ad7b856f4df6",
+              "box": {
+                "x": 13,
+                "y": 153,
+                "width": 58,
+                "height": 75.796875
+              }
+            },
+            {
+              "file": "react-own-390.png",
+              "sha256": "c9570c7bdf8958cb1eaf9d0c0ab1acb73228c76a9f3280d8b35d8fdd8bf29b8a",
+              "box": {
+                "x": 13,
+                "y": 127,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "institutional",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-institutional-390.png",
+              "sha256": "576da9ce309bf09455bb2e5835eba7a8a8b892facf38fea75c0baf675979fb28",
+              "box": {
+                "x": 81,
+                "y": 153,
+                "width": 58,
+                "height": 75.796875
+              }
+            },
+            {
+              "file": "react-institutional-390.png",
+              "sha256": "eb6995170245c52a77ae7db743ce5d29bd1ce9869e8bb8c67164135c5d709bb6",
+              "box": {
+                "x": 81,
+                "y": 127,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "multiple",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-multiple-390.png",
+              "sha256": "41cb8f19f03560d58a4b84ce39464ab41479a156efbaacf25362ab3fc72c3b67",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 390,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "seen",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-seen-390.png",
+              "sha256": "e843173f97619d83957c84a980c1db7bd9a9dca6098b6310ed86cb5f12beb39a",
+              "box": {
+                "x": 217,
+                "y": 135,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "unseen-neutral",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-unseen-neutral-390.png",
+              "sha256": "1c5d2e63735bf9e0759f8250fbe176f69cc28f47db580b4382f3c2c58dd90123",
+              "box": {
+                "x": 285,
+                "y": 135,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "scrolled",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-scrolled-390.png",
+              "sha256": "e7ff0a48dbf656d6c6219d228af0afe8376171b424e88052553929e4d6af7cbd",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 390,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "empty",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-empty-390.png",
+              "sha256": "efaf75b11c26f23dbbe15b53349fb7ba9e5f3545d348ce60bd83ced5f8696851",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 390,
+                "height": 37
+              }
+            }
+          ]
+        },
+        {
+          "name": "one",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-one-390.png",
+              "sha256": "d6dcbe0e6eb62073e101418ce875a5bbbde36205f26c30d5726b06169f0043b1",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 390,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "context-return",
+          "referenceEquivalent": false,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "react-context-return-390.png",
+              "sha256": "4aa74163c1ec9f1bb33533a8263d1f95610a10d092d59d55a3e21f130589bd75",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 390,
+                "height": 112.796875
+              }
+            }
+          ]
+        }
+      ],
+      "referenceMetrics": {
+        "avatar": {
+          "x": 13,
+          "y": 153,
+          "width": 58,
+          "height": 58,
+          "top": 153,
+          "right": 71,
+          "bottom": 211,
+          "left": 13
+        },
+        "radius": "19px",
+        "gap": "10px",
+        "captionFont": "10px",
+        "rankY": 112.796875,
+        "rankHeight": 218,
+        "rowWidth": 364,
+        "scrollWidth": 364
+      },
+      "reactMetrics": {
+        "avatar": {
+          "x": 13,
+          "y": 127,
+          "width": 58,
+          "height": 58,
+          "top": 127,
+          "right": 71,
+          "bottom": 185,
+          "left": 13
+        },
+        "radius": "19px",
+        "gap": "10px",
+        "captionFont": "10px",
+        "rankY": 112.796875,
+        "rankHeight": 218,
+        "rowWidth": 364,
+        "scrollWidth": 364,
+        "regionHeight": 112.796875,
+        "items": 2
+      },
+      "technicalScrollLeft": 170,
+      "pageErrors": []
+    },
+    {
+      "width": 414,
+      "states": [
+        {
+          "name": "home",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-home-414.png",
+              "sha256": "fee4cce79658c97a863adcfb01087f2a0d44ade004d95573aa6f282e18ec1dbd",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 414,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-home-414.png",
+              "sha256": "d81673c92fcab1b1c2b56c6eebfdc1316e9929d4cbb1a2648ea22d9d747a6eac",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 414,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "strip",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-strip-414.png",
+              "sha256": "ef648a36178ac59ac3b19a1e52adc02f4e263e8c1d7bb6a53758283e6fbfc6e9",
+              "box": {
+                "x": 13,
+                "y": 151,
+                "width": 388,
+                "height": 81.796875
+              }
+            },
+            {
+              "file": "react-strip-414.png",
+              "sha256": "ebf1d2854ab68569296bb524d3aef252632581081b2a2ab67dbf0603e1df403d",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 414,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "own",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-own-414.png",
+              "sha256": "4182eb29dbd5243c112230d4a0dd1d563e265e692dcad4263699ad7b856f4df6",
+              "box": {
+                "x": 13,
+                "y": 153,
+                "width": 58,
+                "height": 75.796875
+              }
+            },
+            {
+              "file": "react-own-414.png",
+              "sha256": "c9570c7bdf8958cb1eaf9d0c0ab1acb73228c76a9f3280d8b35d8fdd8bf29b8a",
+              "box": {
+                "x": 13,
+                "y": 127,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "institutional",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-institutional-414.png",
+              "sha256": "576da9ce309bf09455bb2e5835eba7a8a8b892facf38fea75c0baf675979fb28",
+              "box": {
+                "x": 81,
+                "y": 153,
+                "width": 58,
+                "height": 75.796875
+              }
+            },
+            {
+              "file": "react-institutional-414.png",
+              "sha256": "eb6995170245c52a77ae7db743ce5d29bd1ce9869e8bb8c67164135c5d709bb6",
+              "box": {
+                "x": 81,
+                "y": 127,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "multiple",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-multiple-414.png",
+              "sha256": "623eb284b4ea1d3f21bc8c7318989d55c3eebea3a4e981add7dc27484f47e1f9",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 414,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "seen",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-seen-414.png",
+              "sha256": "e843173f97619d83957c84a980c1db7bd9a9dca6098b6310ed86cb5f12beb39a",
+              "box": {
+                "x": 217,
+                "y": 135,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "unseen-neutral",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-unseen-neutral-414.png",
+              "sha256": "1c5d2e63735bf9e0759f8250fbe176f69cc28f47db580b4382f3c2c58dd90123",
+              "box": {
+                "x": 285,
+                "y": 135,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "scrolled",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-scrolled-414.png",
+              "sha256": "f418b95b7b9a32c608d158db75fd9b47b9b1f4e36067583bf0db34c9ed1c7927",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 414,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "empty",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-empty-414.png",
+              "sha256": "323bd2a5ec52f815a21bc22e6536262628b1f3e690930c2131a1d5ae5ad1f94b",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 414,
+                "height": 37
+              }
+            }
+          ]
+        },
+        {
+          "name": "one",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-one-414.png",
+              "sha256": "d48449275a9d35493b8d79a31defbbfdebd366ac13031573a432153f751ccd91",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 414,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "context-return",
+          "referenceEquivalent": false,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "react-context-return-414.png",
+              "sha256": "ebf1d2854ab68569296bb524d3aef252632581081b2a2ab67dbf0603e1df403d",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 414,
+                "height": 112.796875
+              }
+            }
+          ]
+        }
+      ],
+      "referenceMetrics": {
+        "avatar": {
+          "x": 13,
+          "y": 153,
+          "width": 58,
+          "height": 58,
+          "top": 153,
+          "right": 71,
+          "bottom": 211,
+          "left": 13
+        },
+        "radius": "19px",
+        "gap": "10px",
+        "captionFont": "10px",
+        "rankY": 112.796875,
+        "rankHeight": 218,
+        "rowWidth": 388,
+        "scrollWidth": 388
+      },
+      "reactMetrics": {
+        "avatar": {
+          "x": 13,
+          "y": 127,
+          "width": 58,
+          "height": 58,
+          "top": 127,
+          "right": 71,
+          "bottom": 185,
+          "left": 13
+        },
+        "radius": "19px",
+        "gap": "10px",
+        "captionFont": "10px",
+        "rankY": 112.796875,
+        "rankHeight": 218,
+        "rowWidth": 388,
+        "scrollWidth": 388,
+        "regionHeight": 112.796875,
+        "items": 2
+      },
+      "technicalScrollLeft": 146,
+      "pageErrors": []
+    },
+    {
+      "width": 430,
+      "states": [
+        {
+          "name": "home",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-home-430.png",
+              "sha256": "6e13bdfd2c719e3f9e2d405d7a39a2164a591741b88ecbf837244820f2220926",
+              "box": {
+                "x": 0,
+                "y": 137,
+                "width": 430,
+                "height": 622
+              }
+            },
+            {
+              "file": "react-home-430.png",
+              "sha256": "74fed2899dc1bab0bad08b294b9491e98a65d89567e06f687bcef8a602c533be",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 430,
+                "height": 683
+              }
+            }
+          ]
+        },
+        {
+          "name": "strip",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-strip-430.png",
+              "sha256": "9ef45477fe4bd685133087bb4b12a92c553d644c5867c1fe962ee0ffc1114e9c",
+              "box": {
+                "x": 13,
+                "y": 151,
+                "width": 404,
+                "height": 81.796875
+              }
+            },
+            {
+              "file": "react-strip-430.png",
+              "sha256": "cdba79ddd8b373e89d2a998f930e0b96173dee151a367a88cf6ac6bfc0171780",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 430,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "own",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-own-430.png",
+              "sha256": "4182eb29dbd5243c112230d4a0dd1d563e265e692dcad4263699ad7b856f4df6",
+              "box": {
+                "x": 13,
+                "y": 153,
+                "width": 58,
+                "height": 75.796875
+              }
+            },
+            {
+              "file": "react-own-430.png",
+              "sha256": "c9570c7bdf8958cb1eaf9d0c0ab1acb73228c76a9f3280d8b35d8fdd8bf29b8a",
+              "box": {
+                "x": 13,
+                "y": 127,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "institutional",
+          "referenceEquivalent": true,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "reference-institutional-430.png",
+              "sha256": "576da9ce309bf09455bb2e5835eba7a8a8b892facf38fea75c0baf675979fb28",
+              "box": {
+                "x": 81,
+                "y": 153,
+                "width": 58,
+                "height": 75.796875
+              }
+            },
+            {
+              "file": "react-institutional-430.png",
+              "sha256": "eb6995170245c52a77ae7db743ce5d29bd1ce9869e8bb8c67164135c5d709bb6",
+              "box": {
+                "x": 81,
+                "y": 127,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "multiple",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-multiple-430.png",
+              "sha256": "36fac56aecce13ddb5a039163f2b8eaa06ff743b9f10126f8537e89502996462",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 430,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "seen",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-seen-430.png",
+              "sha256": "e843173f97619d83957c84a980c1db7bd9a9dca6098b6310ed86cb5f12beb39a",
+              "box": {
+                "x": 217,
+                "y": 135,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "unseen-neutral",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-unseen-neutral-430.png",
+              "sha256": "1c5d2e63735bf9e0759f8250fbe176f69cc28f47db580b4382f3c2c58dd90123",
+              "box": {
+                "x": 285,
+                "y": 135,
+                "width": 58,
+                "height": 75.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "scrolled",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-scrolled-430.png",
+              "sha256": "41abdbbe71d62723ca65562a9f208314bfa9ddb2a710049e72a37652a47c0bc9",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 430,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "empty",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-empty-430.png",
+              "sha256": "4f7b658f33757e25b02f52eccfa5a6820571ea5eb7872a98ea0e023ae579089d",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 430,
+                "height": 37
+              }
+            }
+          ]
+        },
+        {
+          "name": "one",
+          "referenceEquivalent": false,
+          "technicalLab": true,
+          "captures": [
+            {
+              "file": "react-one-430.png",
+              "sha256": "af532973421384101c4ae269c19353a6a2d73be3f839f969f88d6672935c4f63",
+              "box": {
+                "x": 0,
+                "y": 119,
+                "width": 430,
+                "height": 112.796875
+              }
+            }
+          ]
+        },
+        {
+          "name": "context-return",
+          "referenceEquivalent": false,
+          "technicalLab": false,
+          "captures": [
+            {
+              "file": "react-context-return-430.png",
+              "sha256": "cdba79ddd8b373e89d2a998f930e0b96173dee151a367a88cf6ac6bfc0171780",
+              "box": {
+                "x": 0,
+                "y": 111,
+                "width": 430,
+                "height": 112.796875
+              }
+            }
+          ]
+        }
+      ],
+      "referenceMetrics": {
+        "avatar": {
+          "x": 13,
+          "y": 153,
+          "width": 58,
+          "height": 58,
+          "top": 153,
+          "right": 71,
+          "bottom": 211,
+          "left": 13
+        },
+        "radius": "19px",
+        "gap": "10px",
+        "captionFont": "10px",
+        "rankY": 112.796875,
+        "rankHeight": 218,
+        "rowWidth": 404,
+        "scrollWidth": 404
+      },
+      "reactMetrics": {
+        "avatar": {
+          "x": 13,
+          "y": 127,
+          "width": 58,
+          "height": 58,
+          "top": 127,
+          "right": 71,
+          "bottom": 185,
+          "left": 13
+        },
+        "radius": "19px",
+        "gap": "10px",
+        "captionFont": "10px",
+        "rankY": 112.796875,
+        "rankHeight": 218,
+        "rowWidth": 404,
+        "scrollWidth": 404,
+        "regionHeight": 112.796875,
+        "items": 2
+      },
+      "technicalScrollLeft": 130,
+      "pageErrors": []
+    }
+  ],
+  "rawCaptures": [
+    {
+      "file": "reference-raw-320.png",
+      "sha256": "a791d8b1fe9b8f11065c26280cf8439c85c8d3f2da06e77139e7e070ecd01169"
+    },
+    {
+      "file": "reference-raw-375.png",
+      "sha256": "3de0fe3edd8382baa58055c3d7abcf072eb88058809e2b2a4075398d2899d1fe"
+    },
+    {
+      "file": "reference-raw-390.png",
+      "sha256": "dca3d2a14804bab81d72682929842675c6f33b1d0d453e2d6de9f738e40b1ede"
+    },
+    {
+      "file": "reference-raw-414.png",
+      "sha256": "cf434654d3d47921fcf691b45a0f693012ca315538f0424ac7c17bdccfac5591"
+    },
+    {
+      "file": "reference-raw-430.png",
+      "sha256": "76aab148b291336c8ba1877b63d98fc40b5e10598f78956441cad7d455a9af5e"
+    }
+  ]
+}
