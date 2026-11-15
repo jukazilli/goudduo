@@ -70,3 +70,6 @@
 @media(prefers-reduced-motion:reduce) {
   .home-training-v53__reveal, .home-training-v53__dots span { transition: none; }
 }
+
+/* Authorized operational session entry; existing prescription navigation remains distinct. */
+.home-training-v53 .session-start-cta { margin-bottom: 12px; min-height: 44px; }

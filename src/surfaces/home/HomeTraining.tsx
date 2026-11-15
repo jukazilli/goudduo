@@ -1,3 +1,4 @@
+import type { Weekday } from '../../domain/training';
 import { useEffect, useLayoutEffect, useRef, type PointerEvent } from 'react';
 import { BookOpen, Flame, Images, Medal, Ruler, Weight, Trophy, X } from 'lucide-react';
 import { useDemoDispatch, useDemoState } from '../../state/DemoProvider';
@@ -15,7 +16,8 @@ const widgets = {
   records: { label: 'Recordes', icon: Medal, value: 'Sem registros' },
   consistency: { label: 'Consistência', icon: Flame, value: 'Sem registros' },
 } as const;
-export function HomeTraining({ expanded, onExpand, onOpenRoutines }: {
+export function HomeTraining({ expanded, onExpand, onOpenRoutines, onStart }: {
+  onStart?: (routineId: string, day: Weekday) => void;
   expanded: HomeWidget | null; onExpand: (id: HomeWidget | null) => void; onOpenRoutines: () => void;
 }) {
   const cards = useRef(new Map<string, HTMLElement>()), before = useRef(new Map<string, DOMRect>());
@@ -57,7 +59,7 @@ export function HomeTraining({ expanded, onExpand, onOpenRoutines }: {
   }}>
     <h1 className="home-training-v53__sr" tabIndex={-1}>Treinos</h1>
     <div className="home-training-v53__grid" data-expansion={layout.mode ?? undefined}>{layout.ids.map(id => id === 'workout' ?
-      <div key={id} className="home-training-v53__hero-cell" data-home-card={id} ref={node => { if (node) cards.current.set(id, node); else cards.current.delete(id); }}><TrainingHero onOpenRoutines={onOpenRoutines}/></div> : (() => {
+      <div key={id} className="home-training-v53__hero-cell" data-home-card={id} ref={node => { if (node) cards.current.set(id, node); else cards.current.delete(id); }}><TrainingHero onOpenRoutines={onOpenRoutines} {...(onStart ? { onStart } : {})}/></div> : (() => {
         const widget = widgets[id], Icon = widget.icon, open = expanded === id;
         return <article key={id} ref={node => { if (node) cards.current.set(id, node); else cards.current.delete(id); }} data-home-card={id}
           className={`home-training-v53__widget ${open ? 'is-expanded' : ''} ${layout.orphan === id ? 'is-orphan' : ''}`}>
@@ -76,7 +78,7 @@ export function HomeTraining({ expanded, onExpand, onOpenRoutines }: {
       })())}</div>
   </section>;
 }
-function TrainingHero({ onOpenRoutines }: { onOpenRoutines: () => void }) {
+function TrainingHero({ onOpenRoutines, onStart }: { onOpenRoutines: () => void; onStart?: (routineId: string, day: Weekday) => void }) {
   const state = useDemoState(), dispatch = useDemoDispatch();
   const training = selectHomeTraining(state), choices = selectHeroChoices(state);
   const pointer = useRef<{ x: number; y: number; id: number } | null>(null);
@@ -98,6 +100,7 @@ function TrainingHero({ onOpenRoutines }: { onOpenRoutines: () => void }) {
     <h2 id="home-training-title">{training.status === 'ready' ? training.name : 'Sem treino'}</h2>
     <p>{training.routine?.name}{training.selection ? ` · ${trainingDayNames[training.selection.day]}` : ''}</p>
     {training.status === 'ready' && <p>{training.exerciseCount} {training.exerciseCount === 1 ? 'exercício' : 'exercícios'}</p>}
+    {onStart && training.status === 'ready' && training.selection && <button type="button" className="home-training-v53__cta session-start-cta" onClick={() => onStart(training.selection!.routineId, training.selection!.day)}>{state.activeTrainingSessionId && state.trainingSessions[state.activeTrainingSessionId]?.prescription.workoutId === training.workout.id && state.trainingSessions[state.activeTrainingSessionId]?.prescription.routineId === training.selection.routineId && state.trainingSessions[state.activeTrainingSessionId]?.prescription.day === training.selection.day ? 'Retomar treino' : 'Começar treino'}</button>}
     <div className="home-training-v53__hero-bottom">
       <button type="button" className="home-training-v53__cta" onClick={onOpenRoutines}>{training.status === 'ready' ? 'Ver treino' : 'Organizar treinos'}</button>
       {choices.length > 1 && <div className="home-training-v53__dots" role="group" aria-label="Selecionar treino">{choices.map(choice => <button key={choice.workout.id} type="button" aria-label={`Selecionar treino de ${trainingDayNames[choice.day]}`} aria-pressed={choice.day === training.selection?.day} onClick={() => dispatch({ type: 'training/select', routineId: choice.routineId, day: choice.day })}><span/></button>)}</div>}

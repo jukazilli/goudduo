@@ -8,7 +8,8 @@ import { routinesLayout } from './layout';
 import './routines.css';
 const days = [ ['mon', 'Seg'], ['tue', 'Ter'], ['wed', 'Qua'], ['thu', 'Qui'], ['fri', 'Sex'], ['sat', 'Sáb'], ['sun', 'Dom'] ] as const;
 const tones: Record<string, string> = { Musculação: 'blue', Hipertrofia: 'mint', Funcional: 'peach', Corrida: 'lavender', Mobilidade: 'gray' };
-export function RoutinesHome({ expandedId, onExpand, onOpenEditor }: {
+export function RoutinesHome({ expandedId, onExpand, onOpenEditor, onStart }: {
+  onStart?: (routineId: string, day: Weekday) => void;
   expandedId: string | null; onExpand: (id: string | null) => void;
   onOpenEditor: (routineId: string, day: Weekday, workoutId: string | undefined) => void;
 }) {
@@ -104,6 +105,7 @@ export function RoutinesHome({ expandedId, onExpand, onOpenEditor }: {
               {workout ? <div className="routines-v74__exercises">{workout.exercises.slice(0, 2).map(item => <span key={item.id}>{state.exercises[item.exerciseId]!.name}</span>)}
                 {workout.exercises.length > 2 && <small>+ {workout.exercises.length - 2} {workout.exercises.length === 3 ? 'exercício' : 'exercícios'}</small>}
               </div> : <p className="routines-v74__muscles">Você pode adicionar um treino a este dia.</p>}
+              {workout && onStart && <button type="button" className="routines-v74__cta" onClick={() => onStart(id, day)}>Começar treino</button>}
               <button type="button" className="routines-v74__cta" onClick={() => onOpenEditor(id, day, workout?.id)}>{workout ? 'Ver treino' : 'Adicionar treino'}</button>
             </div>
           </div>

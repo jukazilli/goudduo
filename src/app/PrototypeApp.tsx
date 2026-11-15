@@ -1,3 +1,6 @@
+import { useTrainingSession } from './useTrainingSession';
+import { isSessionPanel } from './session-context';
+import { TrainingSession, SessionFooter, resolveSessionOverlay } from '../surfaces/session/TrainingSession';
 import { useRef, useState, type ReactNode } from 'react';
 import { AppShell } from './AppShell';
 import { useNavigation } from './NavigationProvider';
@@ -18,6 +21,7 @@ export function PrototypeApp({ contentExtension }: { contentExtension?: ReactNod
   const state = useDemoState(), dispatch = useDemoDispatch();
   const { navigation, location } = useNavigation();
   const adapter = useRoutineEditorAdapter(workoutOverlayRenderers);
+  const execution = useTrainingSession(setExpandedId);
   const openEditor = (routineId: string, day: Weekday, workoutId: string | undefined) => {
     const existing = Object.values(state.drafts).find(draft => draft.routineId === routineId && draft.day === day && (!workoutId || draft.workoutId === workoutId));
     if (existing && (location.page.destination === 'rotinas' || location.page.destination === 'routine')) {
@@ -28,17 +32,20 @@ export function PrototypeApp({ contentExtension }: { contentExtension?: ReactNod
       });
     } else adapter.openEditor({ routineId, day, workoutId: workoutId ?? crypto.randomUUID(), draftId: crypto.randomUUID() });
   };
-  return <AppShell contentExtension={contentExtension} integrations={{ home: { treinos: {
+  return <AppShell contentExtension={<>{execution.startError && <p role="status">{execution.startError}</p>}{contentExtension}</>} integrations={{ home: { treinos: {
     pulse: { shape: 'squircle', content: <TrainingPulseRegion scrollMemory={trainingPulseScroll}/> },
-    content: <HomeTraining expanded={homeExpanded} onExpand={setHomeExpanded} onOpenRoutines={() => {
+    content: <HomeTraining onStart={execution.begin} expanded={homeExpanded} onExpand={setHomeExpanded} onOpenRoutines={() => {
       setExpandedId(state.primaryRoutineId);
       navigation.navigate({ page: { destination: 'rotinas' }, panel: null });
     }}/>,
-  } }, resolveOverlay: adapter.resolveOverlay, resolve: page => page.destination === 'rotinas' ? {
-    content: <RoutinesHome expandedId={expandedId} onExpand={setExpandedId} onOpenEditor={openEditor}/>,
+  } }, resolveOverlay: panel => isSessionPanel(panel) ? resolveSessionOverlay(execution, panel) : adapter.resolveOverlay(panel), resolve: page => page.destination === 'rotinas' ? {
+    content: <RoutinesHome expandedId={expandedId} onExpand={setExpandedId} onOpenEditor={openEditor} onStart={execution.begin}/>,
   } : page.destination === 'editor' && adapter.status === 'ready' && adapter.draft && adapter.header ? {
     header: adapter.header,
     content: <WorkoutEditor key={adapter.draft.id} draft={adapter.draft} issue={adapter.issue} onDiscard={adapter.requestDiscard}/>,
     footer: <AddExerciseFooter onPress={adapter.openLibrary}/>,
+  } : page.destination === 'session' && execution.session ? {
+    header: { title: execution.session.workoutName, onBack: execution.leave, ...(['running','resting','paused','prepared'].includes(execution.session.status) ? { action: { label: '?', ariaLabel: 'Ajuda da sessão', onPress: () => execution.navigation.openPanel('session-help') } } : {}) },
+    content: <TrainingSession adapter={execution}/>, footer: <SessionFooter adapter={execution}/>,
   } : undefined }}/>;
 }
