@@ -1,3 +1,4 @@
+import { buildPwa } from './pwa/build.mjs';
 import { readFile, writeFile, rename, rm } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 import { resolve } from 'node:path';
@@ -15,4 +16,9 @@ await writeFile(`${directory}/third-party-notices.txt`, await readFile('THIRD_PA
 const { createHash } = await import('node:crypto');
 await writeFile(`${directory}/build-info.json`, JSON.stringify({ target, commit, dirty, lockSha256: createHash('sha256').update(lock).digest('hex') }, null, 2) + '\n');
 await writeFile(`${directory}/_headers`, `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  X-Robots-Tag: noindex, nofollow\n  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'\n/assets/*\n  Cache-Control: public, max-age=31536000, immutable\n/index.html\n  Cache-Control: no-cache\n/build-info.json\n  Cache-Control: no-cache\n`);
+if (target === 'app') {
+  await buildPwa(directory);
+  const headers = await readFile(`${directory}/_headers`, 'utf8');
+  await writeFile(`${directory}/_headers`, headers + `/sw.js\n  Cache-Control: no-store\n  Content-Type: text/javascript; charset=utf-8\n  Service-Worker-Allowed: /\n/manifest.webmanifest\n  Cache-Control: no-cache\n  Content-Type: application/manifest+json\n/pwa/*\n  Cache-Control: no-cache\n`);
+}
 console.log(JSON.stringify({ directory, target, commit, dirty }));
