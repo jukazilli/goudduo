@@ -85,7 +85,7 @@ export function reduceSession(state: DemoState, action: SessionAction): DemoStat
       return save({ exercises: { ...session.exercises, [item.id]: { ...item, skipped: true } }, activeExerciseId: next });
     }
     case 'session/finish': case 'session/discard': {
-      if (!action.confirmed && (action.type === 'session/discard' || !sessionSummary(session).complete)) return state;
+      if (action.confirmed !== true) return state;
       return save({ status: action.type === 'session/finish' ? 'finished' : 'discarded', endedAt: action.now, activeMs: sessionActiveMs(session, action.now), runningSince: null, rest: null });
     }
   }

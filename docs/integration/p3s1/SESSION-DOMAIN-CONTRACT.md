@@ -25,3 +25,7 @@ Uma única sessão prepared/running/resting/paused por estado em memória. Cria�
 Tempos são timestamps inteiros seguros; eventos retroativos, NaN/Infinity e IDs incompatíveis com rota são rejeitados. Limite técnico de proteção do protótipo: máximo1000 séries alocadas por sessão e deadline representável com precisão inteira; isso não define limite profissional de produto. Falha de criação não apresenta sucesso nem navega para ID inexistente.
 
 Dados somente em memória. Tabela de sessões terminais permite consultar o resumo durante a mesma execução do aplicativo; não constitui serviço de Histórico, classificação, sincronização ou recuperação persistente.
+
+## Correção preventiva antes da homologação — P3-S2
+
+Toda ação session/finish e session/discard exige **confirmed:true** no reducer, inclusive execução completa. A interface já exigia confirmação, mas o domínio ainda aceitava false quando complete=true; essa exceção foi removida. A negativa é um no-op atômico e mantém a sessão ativa. Confirmação positiva preserva registros e idempotência terminal. Sem mudança nas demais políticas ou UI.

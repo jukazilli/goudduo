@@ -99,11 +99,22 @@ describe('session identity, snapshot and transition core', () => {
     const empty = start('mon'); expect(demoReducer(empty, { type: 'session/finish', sessionId, now: 3000, confirmed: false })).toBe(empty);
     const partial = demoReducer(empty, { type: 'session/finish', sessionId, now: 3000, confirmed: true }); expect(sessionSummary(session(partial)).sets).toHaveLength(0);
     const done = record(start('mon')); expect(session(done).status).toBe('running');
-    const finished = demoReducer(done, { type: 'session/finish', sessionId, now: 3000, confirmed: false });
+    const finished = demoReducer(done, { type: 'session/finish', sessionId, now: 3000, confirmed: true });
     expect(session(finished).status).toBe('finished'); expect(finished.activeTrainingSessionId).toBeNull();
     expect(sessionActiveMs(session(finished), 900000)).toBe(2000); expect(record(finished, 4000)).toBe(finished);
     expect(demoReducer(finished, { type: 'session/finish', sessionId, now: 4000, confirmed: true })).toBe(finished);
     savedUnchanged(done, finished);
+  });
+  it.each(['complete', 'partial'] as const)('requires domain confirmation even for a %s execution and commits exactly once after consent', kind => {
+    const state = record(start(kind === 'complete' ? 'mon' : 'thu'));
+    const rejected = demoReducer(state, { type: 'session/finish', sessionId, now: 3000, confirmed: false });
+    expect(rejected).toBe(state); expect(session(rejected).endedAt).toBeNull();
+    expect(rejected.activeTrainingSessionId).toBe(sessionId); savedUnchanged(state, rejected);
+    const finished = demoReducer(rejected, { type: 'session/finish', sessionId, now: 3000, confirmed: true });
+    expect(session(finished).status).toBe('finished'); expect(sessionSummary(session(finished)).sets).toHaveLength(1);
+    expect(sessionSummary(session(finished)).complete).toBe(kind === 'complete');
+    expect(demoReducer(finished, { type: 'session/finish', sessionId, now: 4000, confirmed: true })).toBe(finished);
+    savedUnchanged(state, finished);
   });
   it('requires explicit discard, keeps other completed sessions and never resumes discarded data', () => {
     const state = start('mon'); expect(demoReducer(state, { type: 'session/discard', sessionId, now: 2000, confirmed: false })).toBe(state);
