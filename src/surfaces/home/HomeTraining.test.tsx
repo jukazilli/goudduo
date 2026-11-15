@@ -75,7 +75,8 @@ describe('Hero uses authoritative prescriptions', () => {
 describe('surface boundaries and neutral widgets', () => {
   it('renders the Bento and empty Pulse region under one protected Shell', () => {
     setup(); expect(ids()).toEqual(homeOrder);
-    expect(screen.getByTestId('training-pulse-slot')).toBeEmptyDOMElement(); expect(screen.getByTestId('training-pulse-slot')).toHaveAttribute('aria-hidden', 'true');
+    expect(within(screen.getByTestId('training-pulse-slot')).getAllByRole('listitem')).toHaveLength(2);
+    expect(screen.getByRole('button', { name: 'Criar Pulse de Pessoa demonstrativa — indisponível' })).toBeDisabled();
     expect(screen.getAllByRole('banner')).toHaveLength(1); expect(within(screen.getByRole('navigation', { name: 'Navegação principal' })).getAllByRole('link')).toHaveLength(5);
     expect(screen.queryByRole('spinbutton')).not.toBeInTheDocument(); expect(document.querySelector('input[type=file]')).toBeNull();
     expect(screen.queryByText(/pts|78,4|3 de 4 treinos|Ravi/)).not.toBeInTheDocument();

@@ -84,7 +84,7 @@ test('B6 D: empty selected day stays empty and opens the real organizing flow wi
 });
 
 test('B6 E: keyboard focus, neutral progress, safe-area ownership and reduced motion preserve the protected Shell', async ({ page }) => {
-  await home(page); await expect(page.getByTestId('training-pulse-slot')).toBeEmpty(); await expect(page.getByTestId('training-pulse-slot')).toHaveAttribute('aria-hidden', 'true');
+  await home(page); await expect(page.getByTestId('training-pulse-slot').getByRole('listitem')).toHaveCount(2); await expect(page.getByTestId('training-pulse-slot').getByRole('button')).toBeDisabled();
   await expect(page.getByRole('banner')).toHaveCount(1); await expect(page.getByRole('navigation', { name: 'Navegação principal' }).getByRole('link')).toHaveCount(5);
   await expect(page.getByRole('spinbutton')).toHaveCount(0); await expect(page.locator('input[type=file]')).toHaveCount(0);
   await page.emulateMedia({ reducedMotion: 'reduce' }); const toggle = card(page, 'weight').locator('[aria-expanded]'); await toggle.focus(); await page.keyboard.press('Enter');
