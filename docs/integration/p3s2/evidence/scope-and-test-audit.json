@@ -1,0 +1,53 @@
+{
+  "baseSHA": "7bf760269fade3a9c8b38b770e3fb1c869cd1aa9",
+  "node": "24.22.1",
+  "pnpm": "11.25.0",
+  "lockSHA256": "9a0020f930e56ff8d61cc7607db9766c49cba1944eac56bed86461ed30d07e25",
+  "localResults": {
+    "frozenInstall": "pass",
+    "typecheck": "pass",
+    "vitest": 163,
+    "vitestFiles": 17,
+    "buildApp": "pass",
+    "buildLab": "pass",
+    "bundle": 4,
+    "playwright": 210,
+    "viewports": [
+      320,
+      375,
+      390,
+      414,
+      430
+    ],
+    "captures": 40,
+    "axeScans": 40,
+    "axeViolations": 0,
+    "pageErrors": 0
+  },
+  "protectedUnchanged": [
+    "src/app/AppShell.tsx",
+    "src/components/ShellHeader.tsx",
+    "src/components/TabBar.tsx",
+    "src/components/OverlayHost.tsx",
+    "src/app/NavigationProvider.tsx",
+    "src/state/model.ts",
+    "src/state/DemoProvider.tsx",
+    "src/styles/app.css",
+    "src/styles/tokens.css",
+    "src/surfaces/home",
+    "src/surfaces/routines",
+    "package.json",
+    "pnpm-lock.yaml",
+    ".github/workflows",
+    "public",
+    "wrangler.jsonc"
+  ],
+  "sourceAndCaptureHashes": "measurements.json",
+  "privateFilesTransferred": [],
+  "newDependencies": [],
+  "newAssets": [],
+  "durablePersistence": false,
+  "deploy": false,
+  "physicalQA": "not executed",
+  "cloudflare": "preexisting CI dry-run only; no config changes"
+}
