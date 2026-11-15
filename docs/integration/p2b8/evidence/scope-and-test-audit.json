@@ -1,0 +1,213 @@
+{
+  "base": "84366dc0242e37e5d4999fdf805d9b3ee0d2be45",
+  "productionFilesUnchanged": [
+    {
+      "path": ".github/workflows/foundation.yml",
+      "sha256": "b2f039b94c88386226330d63c24cf7352529f5c9893d2326198fee6dd2facdae"
+    },
+    {
+      "path": "assets/brand/goudduo/goudduo-wordmark-black.svg",
+      "sha256": "7dd6a7948ab63a5b776e3adc4c22137752cb941c1fd67df1f00a2f173d58ee47"
+    },
+    {
+      "path": "assets/brand/goudduo/goudduo-wordmark-white.svg",
+      "sha256": "e116f73cbd5f799a5058560d85a13c7faa68df6ff29a097563e8bb5cc59c0bb5"
+    },
+    {
+      "path": "package.json",
+      "sha256": "50bb27cdcb8c14f2ffad36b05664d2f79684f249882ab788df0021dbe703e8f9"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "9a0020f930e56ff8d61cc7607db9766c49cba1944eac56bed86461ed30d07e25"
+    },
+    {
+      "path": "src/app/AppShell.tsx",
+      "sha256": "b004c9bcd73526ae4ec2e1b99e8715f277e78b2e7d2a9f9ae59b555e62094746"
+    },
+    {
+      "path": "src/app/NavigationProvider.tsx",
+      "sha256": "9c6f814eeff0827991c933440234bb2a2d732654acdd3eacc6ee6a2e3e1335c1"
+    },
+    {
+      "path": "src/app/PrototypeApp.tsx",
+      "sha256": "d40014a00e93e2fd6d6d1453fb4132f828683a0064709c2b2799bb9da877a6d6"
+    },
+    {
+      "path": "src/app/navigation.ts",
+      "sha256": "ad4bb862230cfd0c019505442c114b01f0a3ede729ccd2e3f278ac5934723928"
+    },
+    {
+      "path": "src/app/routine-context.ts",
+      "sha256": "54b8a0fa62ea42cef2938da17c6f9544ca98384f4b31c873db1a6b62af2a4b1c"
+    },
+    {
+      "path": "src/app/surface-contracts.ts",
+      "sha256": "e4b0591bb62c33f8560d34d6b4c098b38a01bc2a85b8a58a03adca2e84e38665"
+    },
+    {
+      "path": "src/app/useRoutineEditorAdapter.ts",
+      "sha256": "40a323eae6db5ff0bb8f0d554e2367f052a99699fe4b0c9d7a0ea9c37a96d382"
+    },
+    {
+      "path": "src/components/OverlayHost.tsx",
+      "sha256": "fe61b333f34b0c40b2c5b7ff2c833c690a08713c84886da65b85c5cd49fc5d5b"
+    },
+    {
+      "path": "src/components/ShellHeader.tsx",
+      "sha256": "c8a338af69a8233cc5990de9998def04fac66439e617e8825082c1505413c0d9"
+    },
+    {
+      "path": "src/components/TabBar.tsx",
+      "sha256": "bdb9a7b0291762743c81713ea2338c0a8ed9aa277aa1bf933e1f31479991ebfa"
+    },
+    {
+      "path": "src/components/primitives.tsx",
+      "sha256": "297c54515afc7c1bcf33fdf1783d203f81aa179d45dc04b405716f2d72595e46"
+    },
+    {
+      "path": "src/domain/training.ts",
+      "sha256": "851b124c6de69cf75a078ae6e963f5c72f52f2284c9fbfb5a8a81f48221fbf52"
+    },
+    {
+      "path": "src/lab/EditorDraftTools.tsx",
+      "sha256": "0bd5e28072f029a3ea2103a652612deec3dcc222aa230e828e879a07d0a0d751"
+    },
+    {
+      "path": "src/lab/RoutineAdapterScenario.tsx",
+      "sha256": "dfffbbe0e066a24723d9f565dda60ae50338368fc070f837716e41767a8b9594"
+    },
+    {
+      "path": "src/lab/TrainingPulseScenario.tsx",
+      "sha256": "c36837f096f45233b06bd106422e09a99c29a1237c41031d674dbad885bdd412"
+    },
+    {
+      "path": "src/lab/lab.css",
+      "sha256": "b892a637a661717afa8a021c585bb2658d1a052c158f1fd7631dce13e2415625"
+    },
+    {
+      "path": "src/lab/main.tsx",
+      "sha256": "48eb7f5429976ddf4fa83c77915c0954f1d43feaa0542183c95ae6d2c27bdb33"
+    },
+    {
+      "path": "src/main.tsx",
+      "sha256": "011e9a8aca5f74dfa762c984ff7e613069b4d197173a344d06ddbcda928bbb5b"
+    },
+    {
+      "path": "src/state/DemoProvider.tsx",
+      "sha256": "1fc8aba8495fa8a0e8e430ee109a2e8149ff49037bad82dc19558ed205a6f082"
+    },
+    {
+      "path": "src/state/exercise-fixtures.ts",
+      "sha256": "d2a6c0de64cfe17d52b7e337746fdf5056fc47d52221ae6b7060aaa62b9f5e42"
+    },
+    {
+      "path": "src/state/model.ts",
+      "sha256": "d8c4c78912f7b772aa2f8fd8d878a8e24b5f2ff4ad8787b5e639a1a352e097ff"
+    },
+    {
+      "path": "src/state/routine-fixtures.ts",
+      "sha256": "48dc31ad601bdebb3acdd5d07fc7c337042cc2808ba7e38bf22d2065b6fcc5a7"
+    },
+    {
+      "path": "src/state/selectors.ts",
+      "sha256": "8af4d60af873256fe395139668d8834e5f18aeaca0adb762eeca317b5613e268"
+    },
+    {
+      "path": "src/state/training.ts",
+      "sha256": "e720679f3e8f55b4a78c209927ff30163ef507e4da1dfee4fa99faea3ee0a0d5"
+    },
+    {
+      "path": "src/styles/app.css",
+      "sha256": "a9d9efd210adcb6a04c855ed03e3004d77894b48d253f0279718533b01479eca"
+    },
+    {
+      "path": "src/styles/tokens.css",
+      "sha256": "c9496bd4c286bf2fee3a1c188de0bc06ac0d012aa1b0ff97e3f394257bad3fee"
+    },
+    {
+      "path": "src/surfaces/home/HomeTraining.tsx",
+      "sha256": "2d7a1d46b709aa86d88b2ed83d311d4df93005b4385e088e3f2222100381ac14"
+    },
+    {
+      "path": "src/surfaces/home/TrainingPulse.tsx",
+      "sha256": "6e23eb2ef53895dc07d3d8c496cfd3d75683c19f6dced1042f6c5bf8b547e613"
+    },
+    {
+      "path": "src/surfaces/home/home-training.css",
+      "sha256": "f0ec722c888b7016e511037c1858d587b1c6483b660e1a2aebc8207d84a3b935"
+    },
+    {
+      "path": "src/surfaces/home/layout.ts",
+      "sha256": "df19ff0894ff79dfd88b79531b1b9ec2f7553c680ea41737433257fc6287d343"
+    },
+    {
+      "path": "src/surfaces/home/pulse-presentation.ts",
+      "sha256": "25c5faa3c4e5f7789775207aa080663478d04e69964b09ded67ee04d44433d6e"
+    },
+    {
+      "path": "src/surfaces/home/training-data.ts",
+      "sha256": "1c134eb4a1a8ca017bc5dd16845280401c2db85d9c0cd23cf98830dcad67fc7c"
+    },
+    {
+      "path": "src/surfaces/home/training-pulse.css",
+      "sha256": "938ae90a72eb734c7181b4cad483a94a625c261db43b79f728ddbb12b6cdf2c9"
+    },
+    {
+      "path": "src/surfaces/routines/ContextualExerciseLibrary.tsx",
+      "sha256": "87ff6be550bfb161bc58136491cbefbae52f2954c099e08c6840933d378c1796"
+    },
+    {
+      "path": "src/surfaces/routines/RoutinesHome.tsx",
+      "sha256": "19829d3d88e24d315789f5b6ba0a6171a2a185ae6bd4dfca9ea2aae080ddbe5b"
+    },
+    {
+      "path": "src/surfaces/routines/WorkoutEditor.tsx",
+      "sha256": "0301b71712eb14dec202616c203a5289fb466754970f8c115c6bbd7be7e2675e"
+    },
+    {
+      "path": "src/surfaces/routines/WorkoutSaveOverlays.tsx",
+      "sha256": "4915fbcd3ea6a63075b380c3ccbf66c93aefe60a16b57fa0d7a39f89c231e991"
+    },
+    {
+      "path": "src/surfaces/routines/contextual-library.css",
+      "sha256": "73dceec7860f0d6d7f8f5e7eb7b819e19f770d7f24eef424e8fd3e4996816bdc"
+    },
+    {
+      "path": "src/surfaces/routines/editor-fields.ts",
+      "sha256": "1d0c13ed1250fb1e0168dd8985a1852b621fefed9158548574be4af1bcbae088"
+    },
+    {
+      "path": "src/surfaces/routines/layout.ts",
+      "sha256": "fc10cf4651c3b27191d6158ab216b3aed86a5e167ece124fe1a6e15c1c7cca81"
+    },
+    {
+      "path": "src/surfaces/routines/library-model.ts",
+      "sha256": "9f036640740779f8fce1f53a696e4531c1b7a1cd9d158de2feb776fc59dfb0ba"
+    },
+    {
+      "path": "src/surfaces/routines/routines.css",
+      "sha256": "7ff9119a6bbf2b121a7fa32754af144dc3859b57ba401d728f381e0276dc0f4d"
+    },
+    {
+      "path": "src/surfaces/routines/workout-editor.css",
+      "sha256": "63167a8b557f5020e90549bf4946a7cba79de78ea97944796c7d96b6daf639fb"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "00659b14a1a329f3a3119b12bde014a7c5eb81825587c1b9cac596d707b2e527"
+    }
+  ],
+  "lockfileSHA256": "9a0020f930e56ff8d61cc7607db9766c49cba1944eac56bed86461ed30d07e25",
+  "playwrightStats": {
+    "startTime": "2026-11-15T15:46:49.864Z",
+    "duration": 328487.27599999995,
+    "expected": 155,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "privateFilesTransferred": 0,
+  "newDependencies": 0,
+  "deployment": false
+}

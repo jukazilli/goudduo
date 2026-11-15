@@ -1,0 +1,1106 @@
+{
+  "browser": "141.0.7390.37",
+  "viewports": [
+    {
+      "width": 320,
+      "states": [
+        {
+          "file": "reference-raw-home-320.png",
+          "sha256": "3ad2402f6417855c684e857af910da48908a03d92dd997f7f308a6ee62e3f1ae",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 137,
+              "width": 320,
+              "height": 622,
+              "top": 137,
+              "right": 320,
+              "bottom": 759,
+              "left": 0
+            },
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-raw-routines-320.png",
+          "sha256": "2a4147fe9669273bb21da17e28992660ec04b2191a16cf4f851158d80de83d1e",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 108,
+              "width": 320,
+              "height": 675,
+              "top": 108,
+              "right": 320,
+              "bottom": 783,
+              "left": 0
+            },
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-home-320.png",
+          "sha256": "06eb0c1212ff0b38e255f18fc0925b04cb8fe3d52867f65873673589caaaeb7b",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 137,
+              "width": 320,
+              "height": 622,
+              "top": 137,
+              "right": 320,
+              "bottom": 759,
+              "left": 0
+            },
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "react-home-320.png",
+          "sha256": "6f45e9fb56cd710b66d19bb79195c85553b377fbedd1cd0e6657eef94fad2b08",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 111,
+              "width": 320,
+              "height": 683,
+              "top": 111,
+              "right": 320,
+              "bottom": 794,
+              "left": 0
+            },
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-routines-320.png",
+          "sha256": "69a0b9b7693f4dd6922e64afb719095aeadbe1179694a6cc4369bc0915bb4ac4",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 108,
+              "width": 320,
+              "height": 675,
+              "top": 108,
+              "right": 320,
+              "bottom": 783,
+              "left": 0
+            },
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "react-routines-320.png",
+          "sha256": "e82877ed5a7ecfdd32f86f6bc2452183dedfb8cbb7b8d61a1956127f64cee7ee",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 61,
+              "width": 320,
+              "height": 733,
+              "top": 61,
+              "right": 320,
+              "bottom": 794,
+              "left": 0
+            },
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-editor-empty-320.png",
+          "sha256": "e8ff2981641e6feb558d060e989e6b2b433a01914f369ef962b337fe10d94fda",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 108,
+              "width": 320,
+              "height": 605,
+              "top": 108,
+              "right": 320,
+              "bottom": 713,
+              "left": 0
+            },
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "react-editor-empty-320.png",
+          "sha256": "3b6f4e3ce3b23bd7570b28c21a21e668fb11f7608597e34f800affb738f5b855",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 61,
+              "width": 320,
+              "height": 661,
+              "top": 61,
+              "right": 320,
+              "bottom": 722,
+              "left": 0
+            },
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-library-320.png",
+          "sha256": "963926a778a9bed4681d9f252fb0355d814f251966e4a4cd3a15ff12321ab87b",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 247.75,
+              "width": 320,
+              "height": 596.25,
+              "top": 247.75,
+              "right": 320,
+              "bottom": 844,
+              "left": 0
+            },
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "radius": "23px 23px 0px 0px"
+          }
+        },
+        {
+          "file": "react-library-320.png",
+          "sha256": "6e36b6a6d9130e39ad66e564fe3c094788b5ade01d8e7a313ac3a70980e1e2a7",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 211,
+              "width": 320,
+              "height": 633,
+              "top": 211,
+              "right": 320,
+              "bottom": 844,
+              "left": 0
+            },
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "radius": "24px 24px 0px 0px"
+          }
+        }
+      ],
+      "accessibility": [
+        {
+          "name": "home",
+          "violations": 0,
+          "passes": 42
+        },
+        {
+          "name": "routines",
+          "violations": 0,
+          "passes": 31
+        },
+        {
+          "name": "editor-empty",
+          "violations": 0,
+          "passes": 31
+        },
+        {
+          "name": "library",
+          "violations": 0,
+          "passes": 35
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 375,
+      "states": [
+        {
+          "file": "reference-raw-home-375.png",
+          "sha256": "170848eff9c90b46fa8694b574f97945653e97b393e8d1053405a11d611da306",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 137,
+              "width": 375,
+              "height": 622,
+              "top": 137,
+              "right": 375,
+              "bottom": 759,
+              "left": 0
+            },
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-raw-routines-375.png",
+          "sha256": "266485540f94eaa887784de2c1d53f24590fefee65fad7025e329c545375304e",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 108,
+              "width": 375,
+              "height": 675,
+              "top": 108,
+              "right": 375,
+              "bottom": 783,
+              "left": 0
+            },
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-home-375.png",
+          "sha256": "ebd2a1845d12487ea36c3bf4dcef6200e0eba5fd4786f2860a9b32c5da0aff65",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 137,
+              "width": 375,
+              "height": 622,
+              "top": 137,
+              "right": 375,
+              "bottom": 759,
+              "left": 0
+            },
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "react-home-375.png",
+          "sha256": "3e2eab2871d2a0f99f1fb2519e30794e9d50ae51b00d84764671c8a33d13f9a0",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 111,
+              "width": 375,
+              "height": 683,
+              "top": 111,
+              "right": 375,
+              "bottom": 794,
+              "left": 0
+            },
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-routines-375.png",
+          "sha256": "091c28f6cc9851e0f3539b5de1566952a154f3ce8039b838dbdd2ceee99d277a",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 108,
+              "width": 375,
+              "height": 675,
+              "top": 108,
+              "right": 375,
+              "bottom": 783,
+              "left": 0
+            },
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "react-routines-375.png",
+          "sha256": "a9b902581eb4c40d29d1c892bc18e6603a40578833483f98301de4c1deed97be",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 61,
+              "width": 375,
+              "height": 733,
+              "top": 61,
+              "right": 375,
+              "bottom": 794,
+              "left": 0
+            },
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-editor-empty-375.png",
+          "sha256": "6d5eed440fe9a91f91f63d895b2fa1b1669b03e77c11962ac62117c68c1ee24d",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 108,
+              "width": 375,
+              "height": 605,
+              "top": 108,
+              "right": 375,
+              "bottom": 713,
+              "left": 0
+            },
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "react-editor-empty-375.png",
+          "sha256": "9180f53d4db636888544c2fa48b104d23f4da51cd1e3e9bb65edfbe3ee9774a4",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 61,
+              "width": 375,
+              "height": 661,
+              "top": 61,
+              "right": 375,
+              "bottom": 722,
+              "left": 0
+            },
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-library-375.png",
+          "sha256": "a55573d4d59248a55443e9cc4e48a4f537b9ad8cdb4bbb957e55b1b4d9eb76cb",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 247.75,
+              "width": 375,
+              "height": 596.25,
+              "top": 247.75,
+              "right": 375,
+              "bottom": 844,
+              "left": 0
+            },
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "radius": "23px 23px 0px 0px"
+          }
+        },
+        {
+          "file": "react-library-375.png",
+          "sha256": "3a9d587ff0f757a811c0d6f769c482064302b74969e19c0f2ac8231d90919d26",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 211,
+              "width": 375,
+              "height": 633,
+              "top": 211,
+              "right": 375,
+              "bottom": 844,
+              "left": 0
+            },
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "radius": "24px 24px 0px 0px"
+          }
+        }
+      ],
+      "accessibility": [
+        {
+          "name": "home",
+          "violations": 0,
+          "passes": 42
+        },
+        {
+          "name": "routines",
+          "violations": 0,
+          "passes": 31
+        },
+        {
+          "name": "editor-empty",
+          "violations": 0,
+          "passes": 31
+        },
+        {
+          "name": "library",
+          "violations": 0,
+          "passes": 35
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "states": [
+        {
+          "file": "reference-raw-home-390.png",
+          "sha256": "fb7251572ebb0d1f07fe4d6632ec41fcb95d98b660aa63b9085367b0f313f881",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 137,
+              "width": 390,
+              "height": 622,
+              "top": 137,
+              "right": 390,
+              "bottom": 759,
+              "left": 0
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-raw-routines-390.png",
+          "sha256": "51d61e778ae9b9fd4ce61049f9b6cf485f7747cdda3b1d8b2a737c4691d0e39f",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 108,
+              "width": 390,
+              "height": 675,
+              "top": 108,
+              "right": 390,
+              "bottom": 783,
+              "left": 0
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-home-390.png",
+          "sha256": "dc13fb2181eac14cdba0d2c6a51401fb0261149f493e95e661f06c5cb0f3232a",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 137,
+              "width": 390,
+              "height": 622,
+              "top": 137,
+              "right": 390,
+              "bottom": 759,
+              "left": 0
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "react-home-390.png",
+          "sha256": "27c8a00f984909d3d565707e1fa412b66250112a4dcf5ff69f3e40c34524c0fa",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 111,
+              "width": 390,
+              "height": 683,
+              "top": 111,
+              "right": 390,
+              "bottom": 794,
+              "left": 0
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-routines-390.png",
+          "sha256": "a2e3aaea81b22f133665801046a6e3ce60f8ba360afe3ae74b0b425c48f22625",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 108,
+              "width": 390,
+              "height": 675,
+              "top": 108,
+              "right": 390,
+              "bottom": 783,
+              "left": 0
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "react-routines-390.png",
+          "sha256": "01e4dec097301ebbbd28a6f14bd33160862e4ec8cec19f43c2f50bb6e852c916",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 61,
+              "width": 390,
+              "height": 733,
+              "top": 61,
+              "right": 390,
+              "bottom": 794,
+              "left": 0
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-editor-empty-390.png",
+          "sha256": "ef7956dd9e895df156fa8600684fd460aa9b039b98a05df6d62dd52204674a53",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 108,
+              "width": 390,
+              "height": 605,
+              "top": 108,
+              "right": 390,
+              "bottom": 713,
+              "left": 0
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "react-editor-empty-390.png",
+          "sha256": "28a5851d81f1e8bff94162f2eee221a8cc59382f93fa4be13757ceeed2fd10da",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 61,
+              "width": 390,
+              "height": 661,
+              "top": 61,
+              "right": 390,
+              "bottom": 722,
+              "left": 0
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-library-390.png",
+          "sha256": "36f4775afd5c8f525672e3a867507ef55ba2d994a15125febda1040fb7f5c5cb",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 247.75,
+              "width": 390,
+              "height": 596.25,
+              "top": 247.75,
+              "right": 390,
+              "bottom": 844,
+              "left": 0
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "radius": "23px 23px 0px 0px"
+          }
+        },
+        {
+          "file": "react-library-390.png",
+          "sha256": "c2b83bdab27101e81bc0821996a6b5265e249c007a1b176cc7d4b86c6eb08295",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 211,
+              "width": 390,
+              "height": 633,
+              "top": 211,
+              "right": 390,
+              "bottom": 844,
+              "left": 0
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "radius": "24px 24px 0px 0px"
+          }
+        }
+      ],
+      "accessibility": [
+        {
+          "name": "home",
+          "violations": 0,
+          "passes": 42
+        },
+        {
+          "name": "routines",
+          "violations": 0,
+          "passes": 31
+        },
+        {
+          "name": "editor-empty",
+          "violations": 0,
+          "passes": 31
+        },
+        {
+          "name": "library",
+          "violations": 0,
+          "passes": 35
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 414,
+      "states": [
+        {
+          "file": "reference-raw-home-414.png",
+          "sha256": "98c1457feeba891e3a8bea2d73257387184a5d15a55f829b71e5e957e121fd53",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 137,
+              "width": 414,
+              "height": 622,
+              "top": 137,
+              "right": 414,
+              "bottom": 759,
+              "left": 0
+            },
+            "scrollWidth": 414,
+            "clientWidth": 414,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-raw-routines-414.png",
+          "sha256": "d04f85f1422a3bd78cd143d30b861d2e7fad548aca8618c795075adf851dc9de",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 108,
+              "width": 414,
+              "height": 675,
+              "top": 108,
+              "right": 414,
+              "bottom": 783,
+              "left": 0
+            },
+            "scrollWidth": 414,
+            "clientWidth": 414,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-home-414.png",
+          "sha256": "fee4cce79658c97a863adcfb01087f2a0d44ade004d95573aa6f282e18ec1dbd",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 137,
+              "width": 414,
+              "height": 622,
+              "top": 137,
+              "right": 414,
+              "bottom": 759,
+              "left": 0
+            },
+            "scrollWidth": 414,
+            "clientWidth": 414,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "react-home-414.png",
+          "sha256": "d81673c92fcab1b1c2b56c6eebfdc1316e9929d4cbb1a2648ea22d9d747a6eac",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 111,
+              "width": 414,
+              "height": 683,
+              "top": 111,
+              "right": 414,
+              "bottom": 794,
+              "left": 0
+            },
+            "scrollWidth": 414,
+            "clientWidth": 414,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-routines-414.png",
+          "sha256": "68b5d813da7db99458a1e95651000e47dc6575982e05013a62d38b8513bd0c8f",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 108,
+              "width": 414,
+              "height": 675,
+              "top": 108,
+              "right": 414,
+              "bottom": 783,
+              "left": 0
+            },
+            "scrollWidth": 414,
+            "clientWidth": 414,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "react-routines-414.png",
+          "sha256": "30ba7c36e29285aca8a025a524b38ad4d5254e632cd6cc1054ed9a7f8e72409f",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 61,
+              "width": 414,
+              "height": 733,
+              "top": 61,
+              "right": 414,
+              "bottom": 794,
+              "left": 0
+            },
+            "scrollWidth": 414,
+            "clientWidth": 414,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-editor-empty-414.png",
+          "sha256": "2cde090bb5bdf61b7cca8abac0190bdb15e931af357fc9c84456c1d976af4726",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 108,
+              "width": 414,
+              "height": 605,
+              "top": 108,
+              "right": 414,
+              "bottom": 713,
+              "left": 0
+            },
+            "scrollWidth": 414,
+            "clientWidth": 414,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "react-editor-empty-414.png",
+          "sha256": "005f547a171222e12572174c066e15daa131b8e2f2557deead9f93126b5662c0",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 61,
+              "width": 414,
+              "height": 661,
+              "top": 61,
+              "right": 414,
+              "bottom": 722,
+              "left": 0
+            },
+            "scrollWidth": 414,
+            "clientWidth": 414,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-library-414.png",
+          "sha256": "7036fe8cb35b972d2068bf45d0530360767d45a8531e5541cde8cdaa6ac76234",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 247.75,
+              "width": 414,
+              "height": 596.25,
+              "top": 247.75,
+              "right": 414,
+              "bottom": 844,
+              "left": 0
+            },
+            "scrollWidth": 414,
+            "clientWidth": 414,
+            "radius": "23px 23px 0px 0px"
+          }
+        },
+        {
+          "file": "react-library-414.png",
+          "sha256": "a58d0c4af9b350d31ed3dc3c03e943733561f1f2293ad358dbb28248c03bf34f",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 211,
+              "width": 414,
+              "height": 633,
+              "top": 211,
+              "right": 414,
+              "bottom": 844,
+              "left": 0
+            },
+            "scrollWidth": 414,
+            "clientWidth": 414,
+            "radius": "24px 24px 0px 0px"
+          }
+        }
+      ],
+      "accessibility": [
+        {
+          "name": "home",
+          "violations": 0,
+          "passes": 42
+        },
+        {
+          "name": "routines",
+          "violations": 0,
+          "passes": 31
+        },
+        {
+          "name": "editor-empty",
+          "violations": 0,
+          "passes": 31
+        },
+        {
+          "name": "library",
+          "violations": 0,
+          "passes": 35
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 430,
+      "states": [
+        {
+          "file": "reference-raw-home-430.png",
+          "sha256": "73fb4ac773f1e0681a293668a0fe8ba36d8da65942729905e69e80a07808296f",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 137,
+              "width": 430,
+              "height": 622,
+              "top": 137,
+              "right": 430,
+              "bottom": 759,
+              "left": 0
+            },
+            "scrollWidth": 430,
+            "clientWidth": 430,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-raw-routines-430.png",
+          "sha256": "5b6cefc78b5d84e4fbdbee148fce5cb61baedaa6a1f922c6187190870df85905",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 108,
+              "width": 430,
+              "height": 675,
+              "top": 108,
+              "right": 430,
+              "bottom": 783,
+              "left": 0
+            },
+            "scrollWidth": 430,
+            "clientWidth": 430,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-home-430.png",
+          "sha256": "6e13bdfd2c719e3f9e2d405d7a39a2164a591741b88ecbf837244820f2220926",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 137,
+              "width": 430,
+              "height": 622,
+              "top": 137,
+              "right": 430,
+              "bottom": 759,
+              "left": 0
+            },
+            "scrollWidth": 430,
+            "clientWidth": 430,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "react-home-430.png",
+          "sha256": "74fed2899dc1bab0bad08b294b9491e98a65d89567e06f687bcef8a602c533be",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 111,
+              "width": 430,
+              "height": 683,
+              "top": 111,
+              "right": 430,
+              "bottom": 794,
+              "left": 0
+            },
+            "scrollWidth": 430,
+            "clientWidth": 430,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-routines-430.png",
+          "sha256": "256f732e043c94dc46322e6c51d5ad95d169745fd35c130a3f002a72d586c588",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 108,
+              "width": 430,
+              "height": 675,
+              "top": 108,
+              "right": 430,
+              "bottom": 783,
+              "left": 0
+            },
+            "scrollWidth": 430,
+            "clientWidth": 430,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "react-routines-430.png",
+          "sha256": "08132f01a3f894d242e0b4a2a4981e88597815e384f371b9ec6bc2f73b0b73fe",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 61,
+              "width": 430,
+              "height": 733,
+              "top": 61,
+              "right": 430,
+              "bottom": 794,
+              "left": 0
+            },
+            "scrollWidth": 430,
+            "clientWidth": 430,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-editor-empty-430.png",
+          "sha256": "f99b8d4cfa0eaa1fe9dbf69931bc02567ef0ad488f20dd0aa06f901a249d1e9c",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 108,
+              "width": 430,
+              "height": 605,
+              "top": 108,
+              "right": 430,
+              "bottom": 713,
+              "left": 0
+            },
+            "scrollWidth": 430,
+            "clientWidth": 430,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "react-editor-empty-430.png",
+          "sha256": "98cc99420fc7943b05473a7fcca9caa38efde9881b6bb8ccd7be0adefc2983e7",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 61,
+              "width": 430,
+              "height": 661,
+              "top": 61,
+              "right": 430,
+              "bottom": 722,
+              "left": 0
+            },
+            "scrollWidth": 430,
+            "clientWidth": 430,
+            "radius": "0px"
+          }
+        },
+        {
+          "file": "reference-library-430.png",
+          "sha256": "4c4eccf7409170e4122b019f14c6f0c5ff4e2e5a361e0cccad222568ce40c0b6",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 247.75,
+              "width": 430,
+              "height": 596.25,
+              "top": 247.75,
+              "right": 430,
+              "bottom": 844,
+              "left": 0
+            },
+            "scrollWidth": 430,
+            "clientWidth": 430,
+            "radius": "23px 23px 0px 0px"
+          }
+        },
+        {
+          "file": "react-library-430.png",
+          "sha256": "77ebe4ed8d221d3eb1b079b81fba4ae7cde56183c638a6b0164ff36c09469386",
+          "metrics": {
+            "box": {
+              "x": 0,
+              "y": 211,
+              "width": 430,
+              "height": 633,
+              "top": 211,
+              "right": 430,
+              "bottom": 844,
+              "left": 0
+            },
+            "scrollWidth": 430,
+            "clientWidth": 430,
+            "radius": "24px 24px 0px 0px"
+          }
+        }
+      ],
+      "accessibility": [
+        {
+          "name": "home",
+          "violations": 0,
+          "passes": 42
+        },
+        {
+          "name": "routines",
+          "violations": 0,
+          "passes": 31
+        },
+        {
+          "name": "editor-empty",
+          "violations": 0,
+          "passes": 31
+        },
+        {
+          "name": "library",
+          "violations": 0,
+          "passes": 35
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "references": {
+    "home": {
+      "commit": "073183253fce5fcd0b3474c725e84ff67d3dfec5",
+      "blob": "8c698708dd79449472d6f5c7e536664939de4951"
+    },
+    "routines": {
+      "commit": "3f8b2c7c93a33a713c780305e672e1ec7998ceaf",
+      "blob": "122275b3cb03bd996b477375d1bbc73ae29c5c3e"
+    }
+  },
+  "normalization": "Raw captures preserved. Paired references load only public Plus Jakarta Sans FontFaces; Home font-family is normalized explicitly. No layout/chrome/CSS algorithm copied or changed. Different legitimate synthetic prescriptions are not equivalent text fixtures."
+}
