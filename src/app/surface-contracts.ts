@@ -1,8 +1,9 @@
+import type { SessionPanel } from './session-context';
 import type { RoutinePanel } from './routine-context';
 import type { ReactNode } from 'react';
 import type { Destination, HomeContext, Page } from './navigation';
 
-export interface HeaderAction { readonly label: string; readonly onPress: () => void; readonly disabled?: boolean }
+export interface HeaderAction { readonly label: string; readonly ariaLabel?: string; readonly onPress: () => void; readonly disabled?: boolean }
 export interface SurfaceComposition {
   readonly content: ReactNode;
   readonly header?: { readonly title: string; readonly action?: HeaderAction; readonly onBack?: () => void };
@@ -23,7 +24,7 @@ export interface ContextualOverlay {
   readonly size?: 'library';
   readonly initialFocus?: () => HTMLElement | null;
 }
-export type OverlayResolver = (panel: RoutinePanel) => ContextualOverlay | undefined;
+export type OverlayResolver = (panel: RoutinePanel | SessionPanel) => ContextualOverlay | undefined;
 export interface SurfaceIntegrations {
   readonly home?: HomeCompositions;
   readonly resolveOverlay?: OverlayResolver;

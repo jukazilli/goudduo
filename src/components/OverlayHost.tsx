@@ -1,3 +1,4 @@
+import { isSessionPanel } from '../app/session-context';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useNavigation } from '../app/NavigationProvider';
@@ -14,7 +15,7 @@ function useReducedMotion() {
   }, []);
   return reduced;
 }
-const titles: Record<Panel, string> = { search: 'Busca', create: 'Criar', activity: 'Atividade', 'routine-library': 'Biblioteca', 'routine-confirm-single': 'Confirmação', 'routine-naming': 'Nome do treino', 'routine-discard': 'Descartar rascunho?' };
+const titles: Record<Panel, string> = { search: 'Busca', create: 'Criar', activity: 'Atividade', 'routine-library': 'Biblioteca', 'routine-confirm-single': 'Confirmação', 'routine-naming': 'Nome do treino', 'routine-discard': 'Descartar rascunho?', 'session-options': 'Opções', 'session-map': 'Mapa do treino', 'session-finish': 'Finalizar sessão?', 'session-discard': 'Descartar sessão?', 'session-help': 'Ajuda da sessão', 'session-conflict': 'Treino em andamento' };
 export function OverlayHost({ onPresence, resolve }: { onPresence: (present: boolean) => void; resolve?: OverlayResolver | undefined }) {
   const { location, navigation, key } = useNavigation();
   const requested = location.panel;
@@ -22,7 +23,7 @@ export function OverlayHost({ onPresence, resolve }: { onPresence: (present: boo
   const configurationRef = useRef<ContextualOverlay | undefined>(undefined);
   const configurationKey = useRef<string | null>(null);
   if (requested) {
-    const configuration = isRoutinePanel(requested) ? resolve?.(requested) : undefined;
+    const configuration = (isRoutinePanel(requested) || isSessionPanel(requested)) ? resolve?.(requested) : undefined;
     // A reducer may finish/resume the draft before History API closes this entry.
     // Keep its last valid consumer for exit; a different history entry must never
     // inherit old content when it has no valid context (Back/direct/reload).
@@ -75,8 +76,8 @@ export function OverlayHost({ onPresence, resolve }: { onPresence: (present: boo
       const target = restoreFocus.current;
       window.requestAnimationFrame(() => {
         if (document.querySelector('[role="dialog"]')) return;
-        if (JSON.stringify(navigation.getSnapshot().location.page) === originPage) {
-          if (target?.isConnected) target.focus();
+        if (JSON.stringify(navigation.getSnapshot().location.page) === originPage && target?.isConnected) {
+          target.focus();
         } else {
           const destination = document.querySelector<HTMLElement>('#main-content h1[tabindex="-1"]') ?? document.querySelector<HTMLElement>('#main-content');
           destination?.focus({ preventScroll: true });

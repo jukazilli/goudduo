@@ -71,7 +71,8 @@ test('B6 C: real indicator selection, context isolation, scroll and navigation w
   await hero.getByRole('button', { name: 'Ver treino', exact: true }).click(); await expect(page).toHaveURL(/\/rotinas$/); await expect(page.getByRole('tab', { name: 'Qui, com treino', exact: true })).toHaveAttribute('aria-selected', 'true');
   await page.goBack(); await expect(hero).toHaveAttribute('data-workout-id', 'demo-primary-thu'); await expect.poll(() => content.evaluate(element => element.scrollTop)).toBe(200);
   await page.getByRole('link', { name: 'Home', exact: true }).click(); await expect.poll(() => content.evaluate(element => element.scrollTop)).toBe(0);
-  await expect(page.getByRole('button', { name: 'Começar treino' })).toHaveCount(0); await expect(page.getByRole('dialog')).toHaveCount(0);
+  // P3-S1 adds a real session entry; selecting a day alone still must not start one.
+  await expect(page.getByRole('button', { name: 'Começar treino' })).toBeVisible(); await expect(page.locator('[data-session-id]')).toHaveCount(0); await expect(page.getByRole('dialog')).toHaveCount(0);
 });
 
 test('B6 D: empty selected day stays empty and opens the real organizing flow without fabricating workouts', async ({ page }) => {

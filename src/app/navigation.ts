@@ -1,3 +1,4 @@
+import type { SessionPanel } from './session-context';
 import type { RoutineEditorContext, RoutinePanel } from './routine-context';
 export type HomeContext = 'treinos' | 'publicacoes' | 'business';
 export type Destination = 'home' | 'rotinas' | 'match' | 'mensagens' | 'perfil';
@@ -11,14 +12,14 @@ export type Page = { readonly destination: 'home'; readonly context: HomeContext
   { readonly destination: 'session'; readonly sessionId: string } |
   { readonly destination: 'profile-visited'; readonly userId: string } |
   { readonly destination: 'pulse-viewer'; readonly pulseId: string };
-export type Panel = 'search' | 'create' | 'activity' | RoutinePanel;
+export type Panel = 'search' | 'create' | 'activity' | RoutinePanel | SessionPanel;
 export interface Location { readonly page: Page; readonly panel: Panel | null }
 export interface NavigationEntry { readonly location: Location; readonly key: string; readonly depth: number; readonly routineContext?: RoutineEditorContext }
 const accessSteps: readonly string[] = ['splash', 'login', 'cadastro', 'otp', 'recuperacao', 'termos', 'privacidade'];
 const standalonePaths = { onboarding: '/onboarding', 'profile-edit': '/perfil/editar', interests: '/perfil/interesses', settings: '/configuracoes', history: '/historico' } as const;
 // Opaque identifiers only. No names, email, credentials or health data in URLs.
 const idPattern = /^[A-Za-z0-9_-]{1,80}$/;
-const panels: readonly string[] = ['search', 'create', 'activity', 'routine-library', 'routine-confirm-single', 'routine-naming', 'routine-discard'];
+const panels: readonly string[] = ['search', 'create', 'activity', 'routine-library', 'routine-confirm-single', 'routine-naming', 'routine-discard','session-options','session-map','session-finish','session-discard','session-help','session-conflict'];
 export function parseLocation(url: URL): Location {
   const path = url.pathname.replace(/\/$/, '') || '/';
   let page: Page;

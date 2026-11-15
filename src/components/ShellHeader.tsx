@@ -20,6 +20,6 @@ export function ShellHeader({ variant, title, configuration }: {
   return <header className="app-header contextual-header" data-header={variant}>
     <button className="shell-icon-button" type="button" aria-label="Voltar" onClick={configuration?.onBack ?? navigation.back}><ChevronLeft size={24}/></button>
     <p className="header-title">{configuration?.title ?? title}</p>
-    <div className="header-action">{action && <button type="button" className={variant === 'editor' ? 'shell-icon-button' : 'header-text-action'} aria-label={variant === 'editor' ? 'Salvar' : undefined} disabled={action.disabled} onClick={action.onPress}>{variant === 'editor' ? <Check size={24} aria-hidden="true"/> : action.label}</button>}</div>
+    <div className="header-action">{action && <button type="button" className={variant === 'editor' ? 'shell-icon-button' : 'header-text-action'} aria-label={variant === 'editor' ? 'Salvar' : action.ariaLabel} disabled={action.disabled} onClick={action.onPress}>{variant === 'editor' ? <Check size={24} aria-hidden="true"/> : action.label}</button>}</div>
   </header>;
 }

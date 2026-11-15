@@ -1,0 +1,2065 @@
+{
+  "browser": "141.0.7390.37",
+  "reference": "Owner direction, not pixel parity with private candidate v0.3. No private captures or media included.",
+  "viewports": [
+    {
+      "width": 320,
+      "states": [
+        {
+          "name": "running",
+          "file": "running-320.png",
+          "sha256": "005f7408e08e34cd836c034c97ea67687494ea4ad823a0126e0aea84753866e6",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 320,
+                "height": 61,
+                "top": 0,
+                "right": 320,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 320,
+                "height": 713,
+                "top": 61,
+                "right": 320,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 320,
+                "height": 70,
+                "top": 774,
+                "right": 320,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 217,
+                "width": 288,
+                "height": 228,
+                "top": 217,
+                "right": 304,
+                "bottom": 445,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "rest",
+          "file": "rest-320.png",
+          "sha256": "a01e3875c0816249d5b120a0ada776e38abe6c5ecb311dda5bfa196b4d40220e",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 320,
+                "height": 61,
+                "top": 0,
+                "right": 320,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 320,
+                "height": 713,
+                "top": 61,
+                "right": 320,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 320,
+                "height": 70,
+                "top": 774,
+                "right": 320,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 217,
+                "width": 288,
+                "height": 228,
+                "top": 217,
+                "right": 304,
+                "bottom": 445,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "paused",
+          "file": "paused-320.png",
+          "sha256": "647348f23135d9461769121b8709056d11db9a3de0440469a1412f00edb92f3e",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 320,
+                "height": 61,
+                "top": 0,
+                "right": 320,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 320,
+                "height": 713,
+                "top": 61,
+                "right": 320,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 320,
+                "height": 70,
+                "top": 774,
+                "right": 320,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 217,
+                "width": 288,
+                "height": 228,
+                "top": 217,
+                "right": 304,
+                "bottom": 445,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "map",
+          "file": "map-320.png",
+          "sha256": "272940873f504649720d5de5dbdb3a580adac63d6d11699cc735e3054e155ca0",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 320,
+                "height": 61,
+                "top": 0,
+                "right": 320,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 320,
+                "height": 713,
+                "top": 61,
+                "right": 320,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 320,
+                "height": 70,
+                "top": 774,
+                "right": 320,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 217,
+                "width": 288,
+                "height": 228,
+                "top": 217,
+                "right": 304,
+                "bottom": 445,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": {
+              "box": {
+                "x": 0,
+                "y": 461.21875,
+                "width": 320,
+                "height": 382.78125,
+                "top": 461.21875,
+                "right": 320,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "8px 24px 24px"
+            }
+          }
+        },
+        {
+          "name": "finish-confirmation",
+          "file": "finish-confirmation-320.png",
+          "sha256": "d62b3cc5bc6365af17f22e933174ecf98ad10361ade37a2a14b470226c093ef1",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 320,
+                "height": 61,
+                "top": 0,
+                "right": 320,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 320,
+                "height": 713,
+                "top": 61,
+                "right": 320,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 320,
+                "height": 70,
+                "top": 774,
+                "right": 320,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 217,
+                "width": 288,
+                "height": 228,
+                "top": 217,
+                "right": 304,
+                "bottom": 445,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": {
+              "box": {
+                "x": 16,
+                "y": 271.40625,
+                "width": 288,
+                "height": 301.171875,
+                "top": 271.40625,
+                "right": 304,
+                "bottom": 572.578125,
+                "left": 16
+              },
+              "padding": "24px"
+            }
+          }
+        },
+        {
+          "name": "summary",
+          "file": "summary-320.png",
+          "sha256": "f71bb2ea9d68bdcb4201fe37b6ab852f7d1b36f24a2532a0828ed2cd0b92260d",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 320,
+                "height": 61,
+                "top": 0,
+                "right": 320,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 320,
+                "height": 715,
+                "top": 61,
+                "right": 320,
+                "bottom": 776,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 776,
+                "width": 320,
+                "height": 68,
+                "top": 776,
+                "right": 320,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": null,
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "reload-unavailable",
+          "file": "reload-unavailable-320.png",
+          "sha256": "d6c587c6766a71a624ddf762c56e9394d541cb1b1f86c887524d6c481dc2c6a6",
+          "violations": 0,
+          "geometry": {
+            ".app-header": null,
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 320,
+                "height": 844,
+                "top": 0,
+                "right": 320,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": null,
+            ".session-core__stage": null,
+            "[role=dialog]": null
+          }
+        }
+      ],
+      "errors": [],
+      "sessionId": "14e39c63-c186-4f77-ba6d-079f13abbf31"
+    },
+    {
+      "width": 375,
+      "states": [
+        {
+          "name": "running",
+          "file": "running-375.png",
+          "sha256": "4856cc0c38551487a7e6de9dd54a76d0d89aa5402a496db1f037706f9b4cb734",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 375,
+                "height": 61,
+                "top": 0,
+                "right": 375,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 375,
+                "height": 713,
+                "top": 61,
+                "right": 375,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 375,
+                "height": 70,
+                "top": 774,
+                "right": 375,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 217,
+                "width": 343,
+                "height": 228,
+                "top": 217,
+                "right": 359,
+                "bottom": 445,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "rest",
+          "file": "rest-375.png",
+          "sha256": "9ccdb72d75850a6e2345b01ec6db3343373460d6090684d47b71e7ea0b897b26",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 375,
+                "height": 61,
+                "top": 0,
+                "right": 375,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 375,
+                "height": 713,
+                "top": 61,
+                "right": 375,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 375,
+                "height": 70,
+                "top": 774,
+                "right": 375,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 217,
+                "width": 343,
+                "height": 228,
+                "top": 217,
+                "right": 359,
+                "bottom": 445,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "paused",
+          "file": "paused-375.png",
+          "sha256": "a439fb54d81d28a0e5121cefd0ff31207b7c23b7cde2e24895a049c88e121237",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 375,
+                "height": 61,
+                "top": 0,
+                "right": 375,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 375,
+                "height": 713,
+                "top": 61,
+                "right": 375,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 375,
+                "height": 70,
+                "top": 774,
+                "right": 375,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 217,
+                "width": 343,
+                "height": 228,
+                "top": 217,
+                "right": 359,
+                "bottom": 445,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "map",
+          "file": "map-375.png",
+          "sha256": "d16845c04a7725b62eb4c6407c7cbc429805731b761b4ab974ca99ef390d4bd8",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 375,
+                "height": 61,
+                "top": 0,
+                "right": 375,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 375,
+                "height": 713,
+                "top": 61,
+                "right": 375,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 375,
+                "height": 70,
+                "top": 774,
+                "right": 375,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 217,
+                "width": 343,
+                "height": 228,
+                "top": 217,
+                "right": 359,
+                "bottom": 445,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": {
+              "box": {
+                "x": 0,
+                "y": 487.609375,
+                "width": 375,
+                "height": 356.390625,
+                "top": 487.609375,
+                "right": 375,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "8px 24px 24px"
+            }
+          }
+        },
+        {
+          "name": "finish-confirmation",
+          "file": "finish-confirmation-375.png",
+          "sha256": "4bd19a62f7fe066767fb8e6d5d9507c1e364643262d2a2e1c37bcf09246c91e6",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 375,
+                "height": 61,
+                "top": 0,
+                "right": 375,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 375,
+                "height": 713,
+                "top": 61,
+                "right": 375,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 375,
+                "height": 70,
+                "top": 774,
+                "right": 375,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 217,
+                "width": 343,
+                "height": 228,
+                "top": 217,
+                "right": 359,
+                "bottom": 445,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": {
+              "box": {
+                "x": 16,
+                "y": 284.609375,
+                "width": 343,
+                "height": 274.78125,
+                "top": 284.609375,
+                "right": 359,
+                "bottom": 559.390625,
+                "left": 16
+              },
+              "padding": "24px"
+            }
+          }
+        },
+        {
+          "name": "summary",
+          "file": "summary-375.png",
+          "sha256": "6e8baefb2260bf46e694b9cede016f2edcf6b3777e5d4f1649d58306cd0b6b06",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 375,
+                "height": 61,
+                "top": 0,
+                "right": 375,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 375,
+                "height": 715,
+                "top": 61,
+                "right": 375,
+                "bottom": 776,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 776,
+                "width": 375,
+                "height": 68,
+                "top": 776,
+                "right": 375,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": null,
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "reload-unavailable",
+          "file": "reload-unavailable-375.png",
+          "sha256": "45acb2be353f31ce158a9fe42e678f8d57baf2a65989d82ce5ad84f69afcbe84",
+          "violations": 0,
+          "geometry": {
+            ".app-header": null,
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 375,
+                "height": 844,
+                "top": 0,
+                "right": 375,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": null,
+            ".session-core__stage": null,
+            "[role=dialog]": null
+          }
+        }
+      ],
+      "errors": [],
+      "sessionId": "350deea3-f02e-4a7a-be7a-1100379304ba"
+    },
+    {
+      "width": 390,
+      "states": [
+        {
+          "name": "running",
+          "file": "running-390.png",
+          "sha256": "8286643a16d20cd226f43917f5b187f96082c3f133d34a7213f936aab1a60a7a",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 390,
+                "height": 61,
+                "top": 0,
+                "right": 390,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 390,
+                "height": 713,
+                "top": 61,
+                "right": 390,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 390,
+                "height": 70,
+                "top": 774,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 217,
+                "width": 358,
+                "height": 228,
+                "top": 217,
+                "right": 374,
+                "bottom": 445,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "rest",
+          "file": "rest-390.png",
+          "sha256": "e72051e113b92edb72fc15eb44ca01b4fdd8af0e6bd11ccc413b7766156de262",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 390,
+                "height": 61,
+                "top": 0,
+                "right": 390,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 390,
+                "height": 713,
+                "top": 61,
+                "right": 390,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 390,
+                "height": 70,
+                "top": 774,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 217,
+                "width": 358,
+                "height": 228,
+                "top": 217,
+                "right": 374,
+                "bottom": 445,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "paused",
+          "file": "paused-390.png",
+          "sha256": "d7f452ce504ebd2ec8a0bb13e2716d738f2970e496c07dbad23e99f7482eca56",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 390,
+                "height": 61,
+                "top": 0,
+                "right": 390,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 390,
+                "height": 713,
+                "top": 61,
+                "right": 390,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 390,
+                "height": 70,
+                "top": 774,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 217,
+                "width": 358,
+                "height": 228,
+                "top": 217,
+                "right": 374,
+                "bottom": 445,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "map",
+          "file": "map-390.png",
+          "sha256": "77415c2c457c8bdb900322c8d5ef6e20b972f5c15a8343510b545e09bdff937e",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 390,
+                "height": 61,
+                "top": 0,
+                "right": 390,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 390,
+                "height": 713,
+                "top": 61,
+                "right": 390,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 390,
+                "height": 70,
+                "top": 774,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 217,
+                "width": 358,
+                "height": 228,
+                "top": 217,
+                "right": 374,
+                "bottom": 445,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": {
+              "box": {
+                "x": 0,
+                "y": 487.609375,
+                "width": 390,
+                "height": 356.390625,
+                "top": 487.609375,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "8px 24px 24px"
+            }
+          }
+        },
+        {
+          "name": "finish-confirmation",
+          "file": "finish-confirmation-390.png",
+          "sha256": "8c47e59b816e7c7e33d0677ff9c585c709d54f937750c0aa988d6d24c1bdc034",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 390,
+                "height": 61,
+                "top": 0,
+                "right": 390,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 390,
+                "height": 713,
+                "top": 61,
+                "right": 390,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 390,
+                "height": 70,
+                "top": 774,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 217,
+                "width": 358,
+                "height": 228,
+                "top": 217,
+                "right": 374,
+                "bottom": 445,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": {
+              "box": {
+                "x": 16,
+                "y": 284.609375,
+                "width": 358,
+                "height": 274.78125,
+                "top": 284.609375,
+                "right": 374,
+                "bottom": 559.390625,
+                "left": 16
+              },
+              "padding": "24px"
+            }
+          }
+        },
+        {
+          "name": "summary",
+          "file": "summary-390.png",
+          "sha256": "5665f24c22e6149b9efe8b010307fdf7fdeb1a87c4e85901251525c733ab8c97",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 390,
+                "height": 61,
+                "top": 0,
+                "right": 390,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 390,
+                "height": 715,
+                "top": 61,
+                "right": 390,
+                "bottom": 776,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 776,
+                "width": 390,
+                "height": 68,
+                "top": 776,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": null,
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "reload-unavailable",
+          "file": "reload-unavailable-390.png",
+          "sha256": "61f6fbf61151ab021fd63694a196e76f46d674fea4300b7b4cfb7a82c81c1151",
+          "violations": 0,
+          "geometry": {
+            ".app-header": null,
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 390,
+                "height": 844,
+                "top": 0,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": null,
+            ".session-core__stage": null,
+            "[role=dialog]": null
+          }
+        }
+      ],
+      "errors": [],
+      "sessionId": "a81323ed-19e3-481c-8ee5-1f397566583e"
+    },
+    {
+      "width": 414,
+      "states": [
+        {
+          "name": "running",
+          "file": "running-414.png",
+          "sha256": "5a9ceb023e53d01aa1f6fe3e49d56cca2d78e73317f8f2043df6dd888a3a5c4a",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 414,
+                "height": 61,
+                "top": 0,
+                "right": 414,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 414,
+                "height": 713,
+                "top": 61,
+                "right": 414,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 414,
+                "height": 70,
+                "top": 774,
+                "right": 414,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 189,
+                "width": 382,
+                "height": 228,
+                "top": 189,
+                "right": 398,
+                "bottom": 417,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "rest",
+          "file": "rest-414.png",
+          "sha256": "26bc199c048a6605f9f3b824379052d3ce55904db0341cd88a7b0c98fc52203d",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 414,
+                "height": 61,
+                "top": 0,
+                "right": 414,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 414,
+                "height": 713,
+                "top": 61,
+                "right": 414,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 414,
+                "height": 70,
+                "top": 774,
+                "right": 414,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 189,
+                "width": 382,
+                "height": 228,
+                "top": 189,
+                "right": 398,
+                "bottom": 417,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "paused",
+          "file": "paused-414.png",
+          "sha256": "b32984f362e5e0ce28547a61eef6b76591cc0d8c737975af904e9b4b05dea097",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 414,
+                "height": 61,
+                "top": 0,
+                "right": 414,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 414,
+                "height": 713,
+                "top": 61,
+                "right": 414,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 414,
+                "height": 70,
+                "top": 774,
+                "right": 414,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 189,
+                "width": 382,
+                "height": 228,
+                "top": 189,
+                "right": 398,
+                "bottom": 417,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "map",
+          "file": "map-414.png",
+          "sha256": "f068a8ed509b1ac5fad7c113843919a14309e750fcfae318b26fc1402b12d1ec",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 414,
+                "height": 61,
+                "top": 0,
+                "right": 414,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 414,
+                "height": 713,
+                "top": 61,
+                "right": 414,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 414,
+                "height": 70,
+                "top": 774,
+                "right": 414,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 189,
+                "width": 382,
+                "height": 228,
+                "top": 189,
+                "right": 398,
+                "bottom": 417,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": {
+              "box": {
+                "x": 0,
+                "y": 487.609375,
+                "width": 414,
+                "height": 356.390625,
+                "top": 487.609375,
+                "right": 414,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "8px 24px 24px"
+            }
+          }
+        },
+        {
+          "name": "finish-confirmation",
+          "file": "finish-confirmation-414.png",
+          "sha256": "7ceff2ea9179800ad9013df2ea5f47034f03d05bc344be15ffd41bb1b1a094d5",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 414,
+                "height": 61,
+                "top": 0,
+                "right": 414,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 414,
+                "height": 713,
+                "top": 61,
+                "right": 414,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 414,
+                "height": 70,
+                "top": 774,
+                "right": 414,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 189,
+                "width": 382,
+                "height": 228,
+                "top": 189,
+                "right": 398,
+                "bottom": 417,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": {
+              "box": {
+                "x": 16,
+                "y": 284.609375,
+                "width": 382,
+                "height": 274.78125,
+                "top": 284.609375,
+                "right": 398,
+                "bottom": 559.390625,
+                "left": 16
+              },
+              "padding": "24px"
+            }
+          }
+        },
+        {
+          "name": "summary",
+          "file": "summary-414.png",
+          "sha256": "d0253c0e51e5ae1113e18fc2ded7b9c06754bd8957e378b8ac687f02a2a31e89",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 414,
+                "height": 61,
+                "top": 0,
+                "right": 414,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 414,
+                "height": 715,
+                "top": 61,
+                "right": 414,
+                "bottom": 776,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 776,
+                "width": 414,
+                "height": 68,
+                "top": 776,
+                "right": 414,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": null,
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "reload-unavailable",
+          "file": "reload-unavailable-414.png",
+          "sha256": "ae7ce176e8bc5b4de3c85b380e32897aaa29bc92789b3861ee27fc39451dc7cb",
+          "violations": 0,
+          "geometry": {
+            ".app-header": null,
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 414,
+                "height": 844,
+                "top": 0,
+                "right": 414,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": null,
+            ".session-core__stage": null,
+            "[role=dialog]": null
+          }
+        }
+      ],
+      "errors": [],
+      "sessionId": "4310a492-4b7b-4d22-9720-6bd47fda44db"
+    },
+    {
+      "width": 430,
+      "states": [
+        {
+          "name": "running",
+          "file": "running-430.png",
+          "sha256": "e18611da72111e4724c61480a8ead769c4531b2fb604c2223c2f2ee94c2e47a0",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 430,
+                "height": 61,
+                "top": 0,
+                "right": 430,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 430,
+                "height": 713,
+                "top": 61,
+                "right": 430,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 430,
+                "height": 70,
+                "top": 774,
+                "right": 430,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 189,
+                "width": 398,
+                "height": 228,
+                "top": 189,
+                "right": 414,
+                "bottom": 417,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "rest",
+          "file": "rest-430.png",
+          "sha256": "a4737ad1fc2c4d5df93cc460ea0033fdf3b8859a7862398e474368057acb274d",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 430,
+                "height": 61,
+                "top": 0,
+                "right": 430,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 430,
+                "height": 713,
+                "top": 61,
+                "right": 430,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 430,
+                "height": 70,
+                "top": 774,
+                "right": 430,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 189,
+                "width": 398,
+                "height": 228,
+                "top": 189,
+                "right": 414,
+                "bottom": 417,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "paused",
+          "file": "paused-430.png",
+          "sha256": "0f8c11afbfedd93f4be66428f005adf884bfb89a0e6eb160fd5f32e528608991",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 430,
+                "height": 61,
+                "top": 0,
+                "right": 430,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 430,
+                "height": 713,
+                "top": 61,
+                "right": 430,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 430,
+                "height": 70,
+                "top": 774,
+                "right": 430,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 189,
+                "width": 398,
+                "height": 228,
+                "top": 189,
+                "right": 414,
+                "bottom": 417,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "map",
+          "file": "map-430.png",
+          "sha256": "8b2f3ad21e1738b174d3da9bd7f1f22b1a61e70a673396fc1d71d16088a82ecc",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 430,
+                "height": 61,
+                "top": 0,
+                "right": 430,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 430,
+                "height": 713,
+                "top": 61,
+                "right": 430,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 430,
+                "height": 70,
+                "top": 774,
+                "right": 430,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 189,
+                "width": 398,
+                "height": 228,
+                "top": 189,
+                "right": 414,
+                "bottom": 417,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": {
+              "box": {
+                "x": 0,
+                "y": 487.609375,
+                "width": 430,
+                "height": 356.390625,
+                "top": 487.609375,
+                "right": 430,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "8px 24px 24px"
+            }
+          }
+        },
+        {
+          "name": "finish-confirmation",
+          "file": "finish-confirmation-430.png",
+          "sha256": "31fe5a4ff8e3e7b7ddfe123f1d3fd7a27f9554844a2b0e5f455a14025469539a",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 430,
+                "height": 61,
+                "top": 0,
+                "right": 430,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 430,
+                "height": 713,
+                "top": 61,
+                "right": 430,
+                "bottom": 774,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 774,
+                "width": 430,
+                "height": 70,
+                "top": 774,
+                "right": 430,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": {
+              "box": {
+                "x": 16,
+                "y": 189,
+                "width": 398,
+                "height": 228,
+                "top": 189,
+                "right": 414,
+                "bottom": 417,
+                "left": 16
+              },
+              "padding": "0px"
+            },
+            "[role=dialog]": {
+              "box": {
+                "x": 16,
+                "y": 284.609375,
+                "width": 398,
+                "height": 274.78125,
+                "top": 284.609375,
+                "right": 414,
+                "bottom": 559.390625,
+                "left": 16
+              },
+              "padding": "24px"
+            }
+          }
+        },
+        {
+          "name": "summary",
+          "file": "summary-430.png",
+          "sha256": "99b46276fa3aba74a726f28ab7c5b4d01accf2406e77fc77138eb57ab85edb77",
+          "violations": 0,
+          "geometry": {
+            ".app-header": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 430,
+                "height": 61,
+                "top": 0,
+                "right": 430,
+                "bottom": 61,
+                "left": 0
+              },
+              "padding": "8px"
+            },
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 61,
+                "width": 430,
+                "height": 715,
+                "top": 61,
+                "right": 430,
+                "bottom": 776,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": {
+              "box": {
+                "x": 0,
+                "y": 776,
+                "width": 430,
+                "height": 68,
+                "top": 776,
+                "right": 430,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "12px 16px"
+            },
+            ".session-core__stage": null,
+            "[role=dialog]": null
+          }
+        },
+        {
+          "name": "reload-unavailable",
+          "file": "reload-unavailable-430.png",
+          "sha256": "45fe869dd7f8e77101a212248f772f1b2ae56f0eaf27428b9d19698cad77681c",
+          "violations": 0,
+          "geometry": {
+            ".app-header": null,
+            "#main-content": {
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 430,
+                "height": 844,
+                "top": 0,
+                "right": 430,
+                "bottom": 844,
+                "left": 0
+              },
+              "padding": "0px"
+            },
+            ".surface-footer": null,
+            ".session-core__stage": null,
+            "[role=dialog]": null
+          }
+        }
+      ],
+      "errors": [],
+      "sessionId": "43a197ec-1452-48ec-9074-4e87035fdffa"
+    }
+  ],
+  "sourcesSHA256": {
+    "src/domain/session.ts": "cef24f425472100f33f2dac3a38ba5cbd41c6622de15a9782cbcd777e08636ae",
+    "src/state/session.ts": "4ea58d3494407a18f5eec95cb9d4af43c6f002fe6273ff7d2dbb1d81a492db57",
+    "src/app/useTrainingSession.ts": "dbda333bd0247621ca59dde9d16ae4f5918d2386ab531d14033f7ea4f0b4c958",
+    "src/surfaces/session/TrainingSession.tsx": "b49fe193dd0b8b47b5aabb77f9e983dd5019d1f2f6c2b399a2de8a1b54da843d",
+    "src/surfaces/session/session.css": "e6b2ea23a1d29bd8c8a1e3c7fbd3f458c546e967d2761bc1173e84e12d9ba8bd",
+    "src/app/PrototypeApp.tsx": "702e737c7a1287843a59d141af12f4b9c14a277a12698cd11f60ff4d0ba74bc4",
+    "src/app/AppShell.tsx": "054d492eed0d9c6265cb04ea61f04ec2e26d8b2a81d46ab8fcb74d95bee33c5d"
+  }
+}

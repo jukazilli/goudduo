@@ -1,3 +1,5 @@
+import type { TrainingSession } from '../domain/session';
+import { reduceSession, isSessionAction, type SessionAction } from './session';
 import { additionalRoutineFixtures } from './routine-fixtures';
 import { additionalExerciseFixtures } from './exercise-fixtures';
 /** P1 contracts authored independently. Synthetic data only; no persistence or services. */
@@ -6,6 +8,8 @@ import { readEntity, reduceTraining, type TrainingAction, type WorkoutDraft } fr
 export type { Equipment, Exercise, MuscleGroup, Routine, Weekday, Workout, WorkoutExercise } from '../domain/training';
 export interface DemoUser { readonly id: string; readonly displayName: string; readonly professional: 'not_requested' }
 export interface DemoState {
+  readonly trainingSessions: Readonly<Record<string, TrainingSession>>;
+  readonly activeTrainingSessionId: string | null;
   readonly user: DemoUser;
   readonly exercises: Readonly<Record<string, Exercise>>;
   readonly workouts: Readonly<Record<string, Workout>>;
@@ -17,7 +21,7 @@ export interface DemoState {
   readonly selectedDayByRoutine: Readonly<Record<string, Weekday>>;
   readonly social: { readonly liked: Readonly<Record<string, boolean>>; readonly saved: Readonly<Record<string, boolean>>; readonly reposted: Readonly<Record<string, boolean>>; readonly hidden: Readonly<Record<string, boolean>>; readonly followed: Readonly<Record<string, boolean>> };
 }
-export type DemoAction = TrainingAction
+export type DemoAction = SessionAction | TrainingAction
   | { readonly type: 'user/name'; readonly name: string }
   | { readonly type: 'workout/commit'; readonly routineId: string; readonly day: Weekday; readonly workout: Workout }
   | { readonly type: 'social/toggle'; readonly collection: keyof DemoState['social']; readonly id: string }
@@ -27,6 +31,7 @@ export type DemoAction = TrainingAction
 export function createDemoState(): DemoState {
   const additional = additionalRoutineFixtures();
   return {
+    trainingSessions: {}, activeTrainingSessionId: null,
     user: { id: 'demo-user', displayName: 'Pessoa demonstrativa', professional: 'not_requested' },
     exercises: {
       'demo-exercise': { id: 'demo-exercise', name: 'Exercício de demonstração', measurements: ['repetitions'], muscleGroupIds: ['demo-muscle'] },
@@ -43,6 +48,7 @@ export function createDemoState(): DemoState {
   };
 }
 export function demoReducer(state: DemoState, action: DemoAction): DemoState {
+  if (isSessionAction(action)) return reduceSession(state, action);
   switch (action.type) {
     case 'user/name': {
       const name = action.name.trim();

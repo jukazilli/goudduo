@@ -4,7 +4,7 @@ import { useDemoDispatch, useDemoState } from '../state/DemoProvider';
 import { readEntity, validateDraft, type DraftIssue, type WorkoutDraft } from '../state/training';
 import type { BrowserNavigation } from './navigation';
 import { useNavigation } from './NavigationProvider';
-import type { RoutineEditorContext, RoutinePanel, RoutineOriginPage } from './routine-context';
+import { isRoutinePanel, type RoutineEditorContext, type RoutinePanel, type RoutineOriginPage } from './routine-context';
 import type { ContextualOverlay, OverlayResolver, SurfaceComposition } from './surface-contracts';
 
 const dayNames: Record<Weekday, string> = { mon: 'segunda-feira', tue: 'terça-feira', wed: 'quarta-feira', thu: 'quinta-feira', fri: 'sexta-feira', sat: 'sábado', sun: 'domingo' };
@@ -79,6 +79,7 @@ export function useRoutineEditorAdapter(renderers: RoutineOverlayRenderers = {})
     onBack: navigation.back,
   } : undefined;
   const resolveOverlay: OverlayResolver = panel => {
+    if (!isRoutinePanel(panel)) return undefined;
     const render = renderers[panel];
     if (!context || !draft || !render || (panel === 'routine-confirm-single' && draft.stage !== 'confirm-single') || (panel === 'routine-naming' && draft.stage !== 'naming')) return undefined;
     return { title: panel === 'routine-library' ? 'Biblioteca' : panel === 'routine-confirm-single' ? 'Confirmar treino' : panel === 'routine-discard' ? 'Descartar rascunho?' : 'Nome do treino',
