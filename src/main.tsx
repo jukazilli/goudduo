@@ -10,3 +10,6 @@ if (!root) throw new Error('Entrada da aplicação ausente');
 const navigation = new BrowserNavigation(window);
 createRoot(root).render(<StrictMode><DemoProvider><NavigationProvider navigation={navigation}><PrototypeApp/></NavigationProvider></DemoProvider></StrictMode>);
 if (import.meta.hot) import.meta.hot.dispose(() => navigation.dispose());
+
+// PWA belongs only to the common app entry, never the isolated Visual Lab.
+if (import.meta.env.PROD) void import('./pwa/register').then(({ registerPwa }) => registerPwa());

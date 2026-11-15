@@ -1,0 +1,35 @@
+{
+  "source": "assets/brand/goudduo/goudduo-wordmark-black.svg",
+  "sourceSHA256": "7dd6a7948ab63a5b776e3adc4c22137752cb941c1fd67df1f00a2f173d58ee47",
+  "renderer": "Playwright Chromium 141.0.7390.37",
+  "background": "#FFFFFF",
+  "wordmarkWidthRatio": 0.72,
+  "modifiedSvg": false,
+  "variants": {
+    "icon-192.png": {
+      "width": 192,
+      "height": 192,
+      "sha256": "3773acce9fdd5f6fd3d85a87620c2792b3c828e9434d36dcd874a758656b0f2d"
+    },
+    "icon-512.png": {
+      "width": 512,
+      "height": 512,
+      "sha256": "eb29df904eed0b6c4ebb294544177fff32c621c74cf6792d08e5fb1124657dc6"
+    },
+    "maskable-192.png": {
+      "width": 192,
+      "height": 192,
+      "sha256": "3773acce9fdd5f6fd3d85a87620c2792b3c828e9434d36dcd874a758656b0f2d"
+    },
+    "maskable-512.png": {
+      "width": 512,
+      "height": 512,
+      "sha256": "eb29df904eed0b6c4ebb294544177fff32c621c74cf6792d08e5fb1124657dc6"
+    },
+    "apple-touch-icon.png": {
+      "width": 180,
+      "height": 180,
+      "sha256": "8831616b7047ada905d56430dcccdeef24d6364101dd0350ed0d46c6eb660a41"
+    }
+  }
+}
