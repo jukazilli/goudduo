@@ -1,7 +1,6 @@
 /* V5.3 content only: no global tokens, resets, chrome or social selectors. */
 .home-training-v53 { padding: 0 13px 24px; color: #17232d; }
-.home-training-v53 *, .home-training-v53__pulse-slot { box-sizing: border-box; }
-.home-training-v53__pulse-slot { height: 112.8px; pointer-events: none; }
+.home-training-v53 * { box-sizing: border-box; }
 .home-training-v53__sr { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .home-training-v53__grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; align-items: stretch; }
 .home-training-v53 button { font: inherit; color: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
@@ -60,7 +59,6 @@
 .home-training-v53__hero :focus-visible { outline-color: white; }
 @media(max-width:355px) {
   .home-training-v53 { padding-inline: 10px; }
-  .home-training-v53__pulse-slot { height: 108.8px; }
   .home-training-v53__grid { gap: 8px; }
   .home-training-v53 [data-home-card=ranking] { padding-inline: 11px; }
   .home-training-v53 [data-home-card=status], .home-training-v53 [data-home-card=weight] { min-height: 105px; padding: 10px; }

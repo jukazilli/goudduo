@@ -15,8 +15,6 @@ const widgets = {
   records: { label: 'Recordes', icon: Medal, value: 'Sem registros' },
   consistency: { label: 'Consistência', icon: Flame, value: 'Sem registros' },
 } as const;
-/** Empty integration region only: no avatars, social states or interactive Pulse. */
-export function TrainingPulseRegion() { return <div className="home-training-v53__pulse-slot" data-testid="training-pulse-slot" aria-hidden="true"/>; }
 export function HomeTraining({ expanded, onExpand, onOpenRoutines }: {
   expanded: HomeWidget | null; onExpand: (id: HomeWidget | null) => void; onOpenRoutines: () => void;
 }) {
