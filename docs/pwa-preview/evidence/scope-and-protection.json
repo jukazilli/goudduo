@@ -1,0 +1,48 @@
+{
+  "sourcePR": 43,
+  "sourceSHA": "9829952e3458015c9ca36630cd666aaa838ef094",
+  "branch": "feat/pwa-protected-device-preview",
+  "published": false,
+  "publishedURL": null,
+  "remoteMutations": [],
+  "cloudflareProtection": {
+    "accessReadHTTPStatus": 403,
+    "accessErrorCode": "access.api.error.not_enabled",
+    "cfAuthenticated": false,
+    "previewDryRun": "arguments only, not executed",
+    "assetsDryRun": "pass, no bindings, no upload"
+  },
+  "protectedUnchanged": [
+    "src/app",
+    "src/state",
+    "src/domain",
+    "src/surfaces",
+    "src/styles",
+    "assets/brand",
+    "package.json",
+    "pnpm-lock.yaml",
+    ".github",
+    "lab"
+  ],
+  "newDependencies": [],
+  "privateFilesTransferred": [],
+  "iconsProvenance": "assets/pwa/PROVENANCE.json",
+  "lockSHA256": "9a0020f930e56ff8d61cc7607db9766c49cba1944eac56bed86461ed30d07e25",
+  "localResults": {
+    "typecheck": "pass",
+    "vitest": 174,
+    "playwright": 230,
+    "bundle": 8,
+    "viewports": [
+      320,
+      375,
+      390,
+      414,
+      430
+    ],
+    "chromiumManifestErrors": 0,
+    "chromiumInstallabilityErrors": 0
+  },
+  "physicalInstallation": false,
+  "remoteHttpsValidation": false
+}

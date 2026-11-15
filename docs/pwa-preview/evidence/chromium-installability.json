@@ -1,0 +1,38 @@
+{
+  "browser": "141.0.7390.37",
+  "origin": "http://127.0.0.1:4197",
+  "physicalInstallation": false,
+  "remotePreview": false,
+  "checks": [
+    {
+      "width": 320,
+      "manifestUrl": "http://127.0.0.1:4197/manifest.webmanifest",
+      "manifestErrors": [],
+      "installabilityErrors": []
+    },
+    {
+      "width": 375,
+      "manifestUrl": "http://127.0.0.1:4197/manifest.webmanifest",
+      "manifestErrors": [],
+      "installabilityErrors": []
+    },
+    {
+      "width": 390,
+      "manifestUrl": "http://127.0.0.1:4197/manifest.webmanifest",
+      "manifestErrors": [],
+      "installabilityErrors": []
+    },
+    {
+      "width": 414,
+      "manifestUrl": "http://127.0.0.1:4197/manifest.webmanifest",
+      "manifestErrors": [],
+      "installabilityErrors": []
+    },
+    {
+      "width": 430,
+      "manifestUrl": "http://127.0.0.1:4197/manifest.webmanifest",
+      "manifestErrors": [],
+      "installabilityErrors": []
+    }
+  ]
+}
