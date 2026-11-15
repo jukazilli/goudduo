@@ -52,7 +52,7 @@ export function reduceSession(state: DemoState, action: SessionAction): DemoStat
       createdAt: action.now, startedAt: null, endedAt: null, status: 'prepared', activeMs: 0, runningSince: null, lastEventAt: action.now, rest: null, origin: { ...action.origin } });
   }
   const session = readEntity(state.trainingSessions, action.sessionId);
-  if (!session || !sessionIsLive(session) || action.now < session.lastEventAt) return state;
+  if (!session || session.userId !== state.user.id || !sessionIsLive(session) || action.now < session.lastEventAt) return state;
   const save = (patch: Partial<TrainingSession>) => put(state, { ...session, ...patch, lastEventAt: action.now });
   switch (action.type) {
     case 'session/start': return session.status === 'prepared' ? save({ status: 'running', startedAt: action.now, runningSince: action.now }) : state;

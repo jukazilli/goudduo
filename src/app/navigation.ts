@@ -10,6 +10,7 @@ export type Page = { readonly destination: 'home'; readonly context: HomeContext
   { readonly destination: 'routine'; readonly routineId: string } |
   { readonly destination: 'editor'; readonly workoutId: string } |
   { readonly destination: 'session'; readonly sessionId: string } |
+  { readonly destination: 'session-result'; readonly sessionId: string } |
   { readonly destination: 'profile-visited'; readonly userId: string } |
   { readonly destination: 'pulse-viewer'; readonly pulseId: string };
 export type Panel = 'search' | 'create' | 'activity' | RoutinePanel | SessionPanel;
@@ -35,6 +36,7 @@ export function parseLocation(url: URL): Location {
     if (standalone) page = { destination: standalone[0] as keyof typeof standalonePaths };
     else if (id && idPattern.test(id) && segments.length === 3 && segments[1] === 'rotinas') page = { destination: 'routine', routineId: id };
     else if (id && idPattern.test(id) && segments.length === 4 && segments[1] === 'treinos' && segments[3] === 'editar') page = { destination: 'editor', workoutId: id };
+    else if (id && idPattern.test(id) && segments.length === 3 && segments[1] === 'historico') page = { destination: 'session-result', sessionId: id };
     else if (id && idPattern.test(id) && segments.length === 3 && segments[1] === 'sessao') page = { destination: 'session', sessionId: id };
     else if (id && idPattern.test(id) && segments.length === 3 && segments[1] === 'perfil') page = { destination: 'profile-visited', userId: id };
     else if (id && idPattern.test(id) && segments.length === 3 && segments[1] === 'pulse') page = { destination: 'pulse-viewer', pulseId: id };
@@ -48,6 +50,7 @@ export function pagePath(page: Page): string {
   if (page.destination in standalonePaths) return standalonePaths[page.destination as keyof typeof standalonePaths];
   if (page.destination === 'routine') return `/rotinas/${encodeId(page.routineId)}`;
   if (page.destination === 'editor') return `/treinos/${encodeId(page.workoutId)}/editar`;
+  if (page.destination === 'session-result') return `/historico/${encodeId(page.sessionId)}`;
   if (page.destination === 'session') return `/sessao/${encodeId(page.sessionId)}`;
   if (page.destination === 'profile-visited') return `/perfil/${encodeId(page.userId)}`;
   if (page.destination === 'pulse-viewer') return `/pulse/${encodeId(page.pulseId)}`;
@@ -61,6 +64,7 @@ export function parentPage(page: Page): Page {
   switch (page.destination) {
     case 'access': return { destination: 'access', step: page.step === 'splash' ? 'splash' : 'login' };
     case 'onboarding': return { destination: 'access', step: 'splash' };
+    case 'session-result': return { destination: 'history' };
     case 'editor': case 'routine': case 'session': case 'history': return { destination: 'rotinas' };
     case 'profile-edit': case 'settings': return { destination: 'perfil' };
     case 'interests': return { destination: 'profile-edit' };

@@ -1,3 +1,7 @@
+import { selectSessionResult } from '../../state/session-results';
+import { useDemoState } from '../../state/DemoProvider';
+import { NavLink } from '../../app/NavigationProvider';
+import { RecordedFacts, RecordedExercises } from '../history/ResultFacts';
 import { useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, ListOrdered, MoreHorizontal } from 'lucide-react';
 import type { ExecutionValues, TrainingSession as Session } from '../../domain/session';
@@ -68,8 +72,9 @@ function SessionStage({ adapter }: { adapter: TrainingSessionAdapter }) {
 }
 export function SessionFooter({ adapter }: { adapter: TrainingSessionAdapter }) {
   const { session, send, navigation } = adapter;
+  const result = selectSessionResult(useDemoState(), session?.id ?? '');
   if (!session) return null;
-  if (!['running','resting','paused','prepared'].includes(session.status)) return <div className="session-core__footer"><button type="button" onClick={adapter.leave}>Voltar à origem</button></div>;
+  if (!['running','resting','paused','prepared'].includes(session.status)) return <div className="session-core__footer session-core__footer--result"><button type="button" onClick={adapter.leave}>Voltar à origem</button><NavLink location={{ page: { destination: 'history' }, panel: null }}>Histórico</NavLink>{result && <NavLink location={{ page: { destination: 'session-result', sessionId: result.sessionId }, panel: null }}>Ver resultado</NavLink>}</div>;
   const item = session.exercises[session.activeExerciseId]!, set = item.sets.find(entry => entry.id === item.selectedSetId)!;
   const nextSet = item.sets.find(entry => entry.recordedAt === undefined), next = nextExercise(session);
   let label: string, action: () => void, disabled = false;
@@ -83,11 +88,15 @@ export function SessionFooter({ adapter }: { adapter: TrainingSessionAdapter }) 
   return <div className="session-core__footer"><button type="button" disabled={disabled} onClick={event => { if (event.detail <= 1) action(); }}>{label}</button><button type="button" aria-label="Mais opções do treino" onClick={event => navigation.openPanel('session-options', event.currentTarget)}><MoreHorizontal size={24}/></button></div>;
 }
 function SessionSummary({ session }: { session: Session }) {
+  const result = selectSessionResult(useDemoState(), session.id);
   const summary = sessionSummary(session);
+  if (session.status === 'finished' && !result) return <section className="session-core"><h1 tabIndex={-1}>Resultado indisponível</h1></section>;
   return <section className="session-core session-core__summary" data-session-status={session.status} data-session-id={session.id}>
     <h1 tabIndex={-1}>{session.status === 'discarded' ? 'Sessão descartada' : 'Resumo da sessão'}</h1><h2>{session.workoutName}</h2>
-    <p>Resumo transitório em memória.</p><dl><dt>Tempo ativo</dt><dd>{sessionClock(session.activeMs)}</dd><dt>Séries realizadas</dt><dd>{summary.sets.length}</dd><dt>Exercícios com séries realizadas</dt><dd>{summary.performedExercises.length}</dd><dt>Exercícios pulados</dt><dd>{summary.skippedExercises.length}</dd></dl>
-    {summary.performedExercises.map(item => <article key={item.id}><h3>{item.name}</h3><ul>{item.sets.filter(set => set.recordedAt !== undefined).map(set => <li key={set.id}>Série {set.index + 1}: {set.values.repetitions !== undefined ? `${set.values.repetitions} repetições` : set.values.durationSeconds !== undefined ? `${set.values.durationSeconds} s` : `${set.values.distanceMeters} m`}{set.values.loadKg !== undefined ? ` · ${set.values.loadKg} kg` : ''}</li>)}</ul></article>)}
+    <p>Resumo transitório em memória.</p>{result ? <><RecordedFacts result={result}/><RecordedExercises result={result}/></> : <>
+<dl><dt>Tempo ativo</dt><dd>{sessionClock(session.activeMs)}</dd><dt>Séries realizadas</dt><dd>{summary.sets.length}</dd><dt>Exercícios com séries realizadas</dt><dd>{summary.performedExercises.length}</dd><dt>Exercícios pulados</dt><dd>{summary.skippedExercises.length}</dd></dl>
+    {summary.performedExercises.map(item => <article key={item.id}><h3>{item.name}</h3><ul>{item.sets.filter(set => set.recordedAt !== undefined).map(set => <li key={set.id}>Série {set.index + 1}: {set.values.repetitions !== undefined ? `${set.values.repetitions} repetições` : set.values.durationSeconds !== undefined ? `${set.values.durationSeconds} s` : `${set.values.distanceMeters} m`}{set.values.loadKg !== undefined ? ` · ${set.values.loadKg} kg` : ''}</li>)}</ul></article>)}</>}
+
   </section>;
 }
 function SessionMap({ adapter }: { adapter: TrainingSessionAdapter }) {

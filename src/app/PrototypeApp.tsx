@@ -1,3 +1,5 @@
+import { SessionHistory } from '../surfaces/history/SessionHistory';
+import { SessionResult } from '../surfaces/history/SessionResult';
 import { useTrainingSession } from './useTrainingSession';
 import { isSessionPanel } from './session-context';
 import { TrainingSession, SessionFooter, resolveSessionOverlay } from '../surfaces/session/TrainingSession';
@@ -15,6 +17,7 @@ import { TrainingPulseRegion } from '../surfaces/home/TrainingPulse';
 import type { HomeWidget } from '../surfaces/home/layout';
 /** One integrated application. Presentation state survives route changes; entities stay in DemoProvider. */
 export function PrototypeApp({ contentExtension }: { contentExtension?: ReactNode } = {}) {
+  const [selectedResultId, setSelectedResultId] = useState<string | null>(null);
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const trainingPulseScroll = useRef(0);
   const [homeExpanded, setHomeExpanded] = useState<HomeWidget | null>(null);
@@ -44,6 +47,10 @@ export function PrototypeApp({ contentExtension }: { contentExtension?: ReactNod
     header: adapter.header,
     content: <WorkoutEditor key={adapter.draft.id} draft={adapter.draft} issue={adapter.issue} onDiscard={adapter.requestDiscard}/>,
     footer: <AddExerciseFooter onPress={adapter.openLibrary}/>,
+  } : page.destination === 'history' ? {
+    content: <SessionHistory selectedId={selectedResultId} onSelect={setSelectedResultId}/>,
+  } : page.destination === 'session-result' ? {
+    content: <SessionResult sessionId={page.sessionId}/>,
   } : page.destination === 'session' && execution.session ? {
     header: { title: execution.session.workoutName, onBack: execution.leave, ...(['running','resting','paused','prepared'].includes(execution.session.status) ? { action: { label: '?', ariaLabel: 'Ajuda da sessão', onPress: () => execution.navigation.openPanel('session-help') } } : {}) },
     content: <TrainingSession adapter={execution}/>, footer: <SessionFooter adapter={execution}/>,

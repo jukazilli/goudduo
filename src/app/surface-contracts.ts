@@ -57,6 +57,7 @@ export function pageTitle(page: Page): string {
     case 'routine': return 'Rotina'; case 'editor': return 'Editor'; case 'session': return 'Sessão'; case 'history': return 'Histórico';
     case 'profile-visited': return 'Perfil visitado'; case 'profile-edit': return 'Editar perfil'; case 'interests': return 'Interesses';
     case 'settings': return 'Configurações'; case 'onboarding': return 'Onboarding'; case 'pulse-viewer': return 'Pulse';
+    case 'session-result': return 'Resultado';
     case 'not-found': return 'Página não encontrada';
   }
 }
