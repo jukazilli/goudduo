@@ -7,9 +7,12 @@ import type { Weekday } from '../domain/training';
 import { RoutinesHome } from '../surfaces/routines/RoutinesHome';
 import { WorkoutEditor, AddExerciseFooter } from '../surfaces/routines/WorkoutEditor';
 import { workoutOverlayRenderers } from '../surfaces/routines/WorkoutSaveOverlays';
+import { HomeTraining, TrainingPulseRegion } from '../surfaces/home/HomeTraining';
+import type { HomeWidget } from '../surfaces/home/layout';
 /** One integrated application. Presentation state survives route changes; entities stay in DemoProvider. */
 export function PrototypeApp({ contentExtension }: { contentExtension?: ReactNode } = {}) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [homeExpanded, setHomeExpanded] = useState<HomeWidget | null>(null);
   const state = useDemoState(), dispatch = useDemoDispatch();
   const { navigation, location } = useNavigation();
   const adapter = useRoutineEditorAdapter(workoutOverlayRenderers);
@@ -23,7 +26,13 @@ export function PrototypeApp({ contentExtension }: { contentExtension?: ReactNod
       });
     } else adapter.openEditor({ routineId, day, workoutId: workoutId ?? crypto.randomUUID(), draftId: crypto.randomUUID() });
   };
-  return <AppShell contentExtension={contentExtension} integrations={{ resolveOverlay: adapter.resolveOverlay, resolve: page => page.destination === 'rotinas' ? {
+  return <AppShell contentExtension={contentExtension} integrations={{ home: { treinos: {
+    pulse: { shape: 'squircle', content: <TrainingPulseRegion/> },
+    content: <HomeTraining expanded={homeExpanded} onExpand={setHomeExpanded} onOpenRoutines={() => {
+      setExpandedId(state.primaryRoutineId);
+      navigation.navigate({ page: { destination: 'rotinas' }, panel: null });
+    }}/>,
+  } }, resolveOverlay: adapter.resolveOverlay, resolve: page => page.destination === 'rotinas' ? {
     content: <RoutinesHome expandedId={expandedId} onExpand={setExpandedId} onOpenEditor={openEditor}/>,
   } : page.destination === 'editor' && adapter.status === 'ready' && adapter.draft && adapter.header ? {
     header: adapter.header,

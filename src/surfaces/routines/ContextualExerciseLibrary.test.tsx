@@ -107,7 +107,8 @@ describe('real contextual Library', () => {
   it('renders an empty shared catalogue without fabricated results or success', async () => {
     const view = setup(); openEditor();
     const snapshot: DemoState = { ...view.state(), exercises: {} };
-    const spy = vi.spyOn(demoHooks, 'useDemoState').mockReturnValue(snapshot); restoreCatalogue = () => spy.mockRestore();
+    const readState = demoHooks.useDemoState;
+    const spy = vi.spyOn(demoHooks, 'useDemoState').mockImplementation(() => { readState(); return snapshot; }); restoreCatalogue = () => spy.mockRestore();
     await openLibrary();
     expect(document.querySelectorAll('[data-exercise-id]')).toHaveLength(0);
     expect(screen.getByText('Nenhum exercício encontrado.')).toBeInTheDocument();
