@@ -45,6 +45,7 @@ export function AppShell({ contentExtension, integrations }: { contentExtension?
   const composition = homeComposition ?? surface;
   const pulse = homeComposition?.pulse;
   const hasFooter = Boolean(surface?.footer);
+  const headerVariant = policy.mode === 'immersive' && surface?.header ? 'contextual' : policy.header;
   const homeContext: HomeContext = location.page.destination === 'home' ? location.page.context : 'treinos';
   const arrowTabs = (event: KeyboardEvent<HTMLElement>) => {
     if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
@@ -59,14 +60,14 @@ export function AppShell({ contentExtension, integrations }: { contentExtension?
       data-home-context={location.page.destination === 'home' ? location.page.context : undefined}
       inert={overlayPresent || Boolean(location.panel)} data-testid="app-shell">
       <a className="skip-link" href="#main-content">Ir para o conteúdo</a>
-      <ShellHeader variant={policy.header} title={pageTitle(location.page)} configuration={surface?.header}/>
+      <ShellHeader variant={headerVariant} title={pageTitle(location.page)} configuration={surface?.header}/>
       {location.page.destination === 'home' && <nav aria-label="Navegação da Home"><div className="home-tabs" aria-label="Contextos da Home" role="tablist" onKeyDown={arrowTabs}>
         {contexts.map(context => <NavLink key={context.id} location={{ page: { destination: 'home', context: context.id }, panel: null }}
           id={`tab-${context.id}`} role="tab" data-context={context.id} aria-controls="home-panel" aria-selected={homeContext === context.id}
           tabIndex={homeContext === context.id ? 0 : -1}>{context.label}</NavLink>)}
       </div></nav>}
       <main id="main-content" ref={main} className="app-content" tabIndex={-1}
-        data-safe-top={policy.header === 'none' || undefined} data-safe-bottom={(!policy.tabBar && !hasFooter) || undefined}
+        data-safe-top={headerVariant === 'none' || undefined} data-safe-bottom={(!policy.tabBar && !hasFooter) || undefined}
         onScroll={event => navigation.saveScroll(event.currentTarget.scrollTop)}>
         {policy.mode === 'immersive' && !surface && <button type="button" className="shell-icon-button immersive-return" aria-label="Voltar" onClick={navigation.back}><ChevronLeft size={24}/></button>}
         <section id="home-panel" role={location.page.destination === 'home' ? 'tabpanel' : undefined}
