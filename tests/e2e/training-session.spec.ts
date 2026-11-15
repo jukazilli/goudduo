@@ -9,7 +9,7 @@ async function start(page: Page, multi = true) {
   await expect(page.locator('.session-core[data-session-id]')).toHaveAttribute('data-session-status', 'running');
   return page.locator('.session-core[data-session-id]');
 }
-async function options(page: Page) { await page.getByRole('button', { name: 'Mais opções do treino', exact: true }).click(); return page.getByRole('dialog', { name: 'Opções', exact: true }); }
+async function options(page: Page) { await page.getByRole('button', { name: 'Mais opções do treino', exact: true }).click(); const dialog = page.getByRole('dialog', { name: 'Opções', exact: true }); await expect(dialog).toHaveCSS('opacity', '1'); return dialog; }
 async function close(page: Page) { await page.keyboard.press('Escape'); await expect(page.getByRole('dialog')).toHaveCount(0); }
 const footer = (page: Page, label: string) => page.locator('.session-core__footer').getByRole('button', { name: label, exact: true });
 const count = async (page: Page, label: string) => page.getByText(label, { exact: true }).evaluate(e => e.nextElementSibling?.textContent);
@@ -123,6 +123,7 @@ test('S1 F: native touch intent, focus, keyboard, reduced motion and single safe
   await page.emulateMedia({ reducedMotion: 'reduce' }); const help = page.getByRole('button', { name: 'Ajuda da sessão', exact: true });
   await help.focus(); await page.keyboard.press('Enter');
   await expect(page.getByRole('dialog', { name: 'Ajuda da sessão', exact: true })).toBeFocused();
+  await expect(page.getByRole('dialog')).toHaveCSS('opacity', '1');
   await expect(page.getByText('Tempo prescrito', { exact: true })).toBeVisible(); await expect(page.getByText('30 s', { exact: true })).toBeVisible();
   await expect(page.locator('#root')).toHaveJSProperty('inert', true); await expect(page.locator('body')).toHaveCSS('overflow', 'hidden');
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
