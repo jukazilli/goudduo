@@ -1,3 +1,4 @@
+import { TrainingPulseScenario } from './TrainingPulseScenario';
 import { RoutineAdapterScenario } from './RoutineAdapterScenario';
 import { EditorDraftTools } from './EditorDraftTools';
 import { StrictMode, useState } from 'react';
@@ -23,6 +24,7 @@ function LabApp() {
   const { navigation, location } = useNavigation();
   const [width, setWidth] = useState('390');
   const [stress, setStress] = useState(false);
+  const [pulseScenario, setPulseScenario] = useState(false);
   const [routineAdapters, setRoutineAdapters] = useState(false);
   const workout = selectWorkoutForDay(state, 'demo-routine', 'mon');
   return <div className="lab-root" data-foundation>
@@ -43,11 +45,12 @@ function LabApp() {
         <option value="multiple">Várias rotinas</option><option value="one">Uma rotina</option><option value="none">Sem rotinas</option>
       </select></label>
       <Button onClick={() => dispatch({ type: 'scenario/reset' })}>Reiniciar cenário</Button>
+      <label className="lab-check"><input type="checkbox" checked={pulseScenario} onChange={event => setPulseScenario(event.target.checked)}/>Cenário técnico de Pulse</label>
       <EditorDraftTools/>
       <p role="status">Perfil profissional: {state.user.professional}. Nenhum serviço real é ativado.</p>
     </aside>
     <div className="lab-frame" style={{ maxWidth: `${width}px` }}>
-      {routineAdapters ? <RoutineAdapterScenario/> : <PrototypeApp contentExtension={stress ? <section aria-label="Conteúdo longo de teste">{Array.from({ length: 30 }, (_, i) => <p key={i}>Linha sintética de scroll {i + 1}</p>)}</section> : undefined}/>}
+      {pulseScenario ? <TrainingPulseScenario/> : routineAdapters ? <RoutineAdapterScenario/> : <PrototypeApp contentExtension={stress ? <section aria-label="Conteúdo longo de teste">{Array.from({ length: 30 }, (_, i) => <p key={i}>Linha sintética de scroll {i + 1}</p>)}</section> : undefined}/>}
     </div>
   </div>;
 }
