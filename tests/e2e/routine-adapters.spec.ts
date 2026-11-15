@@ -54,6 +54,7 @@ test('B2 Library consumer preserves draft, keyboard, focus, history, gesture and
   await page.goForward(); await expect(dialog).toBeVisible();
   await page.goBack(); await expect(dialog).toHaveCount(0);
   await trigger.click();
+  await dialog.evaluate(async element => { await Promise.all(element.getAnimations().map(animation => animation.finished)); });
   const bounds = await page.locator('.sheet-handle').boundingBox(); const client = await page.context().newCDPSession(page);
   const point = { x: bounds!.x + bounds!.width / 2, y: bounds!.y + 10 };
   await client.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [point] });
